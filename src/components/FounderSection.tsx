@@ -4,8 +4,6 @@ import { ArrowRight } from "lucide-react";
 import blytheCasual from "@/assets/blythe-casual.png";
 import blytheProfessional from "@/assets/blythe-professional.png";
 
-const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
-
 const FounderSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
@@ -42,7 +40,7 @@ const FounderSection = () => {
               </div>
               
               {/* Floating quote card */}
-              <div className="absolute bottom-4 md:bottom-8 left-4 right-4 md:left-0 md:right-auto md:w-80 z-30 bg-secondary text-secondary-foreground p-6 rounded-lg shadow-xl">
+              <div className="absolute bottom-4 md:bottom-8 left-4 right-4 md:left-0 md:right-auto md:w-80 z-30 bg-primary text-primary-foreground p-6 rounded-lg shadow-xl">
                 <p className="text-lg italic font-medium leading-relaxed">
                   "Speed means nothing if you don't know where you're headed."
                 </p>
@@ -57,20 +55,16 @@ const FounderSection = () => {
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
             }`}
           >
-            <p className="text-sm uppercase tracking-[2px] text-primary font-semibold mb-4">
-              Leadership
-            </p>
-            
             <h2 className="text-4xl md:text-[42px] font-bold text-foreground mb-6">
               Meet Blythe Karow
             </h2>
             
             <div className="space-y-4 text-muted-foreground leading-relaxed mb-8">
               <p>
-                <span className="font-semibold text-foreground">The Karow Advisory Group</span> is led by Blythe Karow, a strategic advisor with 20+ years of MedTech and wearables experience. From startup CEO to Fortune 50 product leader, Blythe brings hands-on expertise in product strategy, commercialization, regulatory navigation, and go-to-market execution.
+                With 25+ years of experience guiding MedTech companies from concept to market, Blythe brings a rare blend of operator expertise and strategic insight. She's launched or relaunched over 25 medical devices operating in a variety of roles from startup CEO to Fortune 50 product leader.
               </p>
               <p>
-                She partners with MedTech founders, investors, and executives who need more than advice—they need someone who can step in, cut through complexity, and drive results.
+                Her superpower: navigating the technical, regulatory, and commercial hurdles while ensuring the product–and your marketing claims–actually resonate with customers who need it.
               </p>
             </div>
             
@@ -79,7 +73,7 @@ const FounderSection = () => {
               size="lg"
               className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-base font-semibold px-8 py-4 rounded-md"
             >
-              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+              <a href="/about">
                 About Blythe
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>

@@ -14,21 +14,21 @@ interface ProcessStep {
 const steps: ProcessStep[] = [
   {
     number: "1",
-    title: "Clarity",
-    subtitle: "Schedule a Clarity Call",
-    body: "We'll get to know your product, challenges, and goals – then we'll uncover the questions that matter the most to you.",
+    title: "Discovery",
+    subtitle: "Schedule a Discovery Call",
+    body: "We start by understanding where you are, where you're going, and what's in the way. A focused conversation that identifies your biggest risks and highest-leverage opportunities.",
   },
   {
     number: "2",
     title: "Strategy",
-    subtitle: "Get Your Strategic RoadMap",
-    body: "We'll align your goals with the right regulatory, clinical, and market pathways—creating a tailored commercialization plan and go-to-market model.",
+    subtitle: "Get Your Strategic Roadmap",
+    body: "We build a clear plan aligned across regulatory, clinical, commercial, and financial milestones. No guessing—just a roadmap built for execution.",
   },
   {
     number: "3",
     title: "Execution",
-    subtitle: "Move Forward With Confidence",
-    body: "With Karow Advisory driving execution, you'll accelerate your journey, pitch with clarity, and stop second-guessing what the FDA or investors expect.",
+    subtitle: "Drive Forward with Leadership",
+    body: "Whether you need fractional leadership, strategic advisory, or hands-on project management, we stay engaged to ensure plans become progress.",
   },
 ];
 
@@ -36,7 +36,7 @@ const ProcessSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <section ref={ref} className="relative overflow-visible">
+    <section id="process" ref={ref} className="relative overflow-visible scroll-mt-20">
       {/* Hero Image Section */}
       <div className="relative h-[450px] md:h-[500px]">
         {/* Background Image */}
@@ -62,7 +62,7 @@ const ProcessSection = () => {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            Work With Us in 3 Simple Steps
+            How We Work Together in 3 Steps
           </h2>
           
           {/* CTA Button */}

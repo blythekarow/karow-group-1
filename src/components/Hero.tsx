@@ -5,8 +5,8 @@ import heroImage from "@/assets/hero-building.jpg";
 const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
 
 const Hero = () => {
-  const scrollToServices = () => {
-    const element = document.getElementById("services");
+  const scrollToProcess = () => {
+    const element = document.getElementById("process");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
@@ -34,8 +34,8 @@ const Hero = () => {
             
             <div>
               <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-background leading-tight mb-6">
-                Strategic Leadership{" "}
-                <span className="text-primary">Accelerating Execution</span> in MedTech, Wearables, and DTx.
+                Strategic Leadership that{" "}
+                <span className="text-primary">Accelerates Execution</span> in MedTech, Wearables, and DTx
               </h1>
               
               <p className="text-lg md:text-xl text-background/80 mb-8 max-w-xl">
@@ -58,7 +58,7 @@ const Hero = () => {
                 <Button
                   variant="outline"
                   size="lg"
-                  onClick={scrollToServices}
+                  onClick={scrollToProcess}
                   className="border-2 border-background bg-background/10 text-background hover:bg-background/20 transition-all duration-200 text-base font-semibold px-8 py-4"
                 >
                   See How We Work
