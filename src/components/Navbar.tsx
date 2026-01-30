@@ -41,14 +41,13 @@ const Navbar = () => {
               src={logoIcon}
               alt="The Karow Advisory Group"
               className={`transition-all duration-300 ${
-                isScrolled ? "h-10 w-10" : "h-12 w-12"
+                isScrolled ? "h-12 w-12" : "h-14 w-14"
               }`}
             />
             <span
-              className={`font-bold tracking-widest text-background uppercase transition-all duration-300 hidden sm:block ${
-                isScrolled ? "text-xs" : "text-sm"
+              className={`font-semibold text-background uppercase transition-all duration-300 hidden sm:block ${
+                isScrolled ? "text-base tracking-wider" : "text-lg tracking-wider"
               }`}
-              style={{ letterSpacing: "0.15em" }}
             >
               The Karow Advisory Group
             </span>

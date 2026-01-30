@@ -1,5 +1,5 @@
 import { Linkedin, Mail, Calendar } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logoIcon from "@/assets/logo-icon.webp";
 
 const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
 const SUBSTACK_URL = "https://blythekarow.substack.com/";
@@ -18,11 +18,16 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Column 1: Brand */}
           <div>
-            <img
-              src={logo}
-              alt="The Karow Advisory Group"
-              className="h-12 mb-4 brightness-0 invert"
-            />
+            <div className="flex items-center gap-4 mb-4">
+              <img
+                src={logoIcon}
+                alt="The Karow Advisory Group"
+                className="h-12 w-12"
+              />
+              <span className="font-semibold text-lg tracking-wider text-accent-foreground uppercase">
+                The Karow Advisory Group
+              </span>
+            </div>
             <p className="text-accent-foreground/80 leading-relaxed">
               Strategic leadership for MedTech, wearables, and digital therapeutics.
             </p>
