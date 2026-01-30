@@ -74,13 +74,21 @@ const Navbar = () => {
             </button>
             <Link
               to="/services"
-              className="text-background hover:text-primary font-medium transition-colors"
+              className={`font-medium transition-colors ${
+                location.pathname === "/services" 
+                  ? "text-primary" 
+                  : "text-background hover:text-primary"
+              }`}
             >
               Services
             </Link>
             <Link
               to="/insights"
-              className="text-background hover:text-primary font-medium transition-colors"
+              className={`font-medium transition-colors ${
+                location.pathname === "/insights" 
+                  ? "text-primary" 
+                  : "text-background hover:text-primary"
+              }`}
             >
               Insights
             </Link>
@@ -121,14 +129,22 @@ const Navbar = () => {
               <Link
                 to="/services"
                 onClick={closeMobileMenu}
-                className="text-background hover:text-primary font-medium transition-colors"
+                className={`font-medium transition-colors ${
+                  location.pathname === "/services" 
+                    ? "text-primary" 
+                    : "text-background hover:text-primary"
+                }`}
               >
                 Services
               </Link>
               <Link
                 to="/insights"
                 onClick={closeMobileMenu}
-                className="text-background hover:text-primary font-medium transition-colors"
+                className={`font-medium transition-colors ${
+                  location.pathname === "/insights" 
+                    ? "text-primary" 
+                    : "text-background hover:text-primary"
+                }`}
               >
                 Insights
               </Link>

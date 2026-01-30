@@ -1,19 +1,19 @@
 import { useEffect, useRef } from "react";
 
-// Placeholder company names - replace with actual logos when available
+// Company logos - styled as professional text marks
 const companies = [
-  "Medtronic",
-  "Abbott",
-  "Boston Scientific", 
-  "Stryker",
-  "Johnson & Johnson",
-  "Philips",
-  "GE Healthcare",
-  "Siemens Healthineers",
-  "Dexcom",
-  "Intuitive Surgical",
-  "Edwards Lifesciences",
-  "Zimmer Biomet",
+  { name: "Medtronic", style: "font-bold tracking-tight" },
+  { name: "Abbott", style: "font-bold tracking-wide" },
+  { name: "Boston Scientific", style: "font-semibold tracking-normal" },
+  { name: "Stryker", style: "font-bold uppercase tracking-widest text-sm" },
+  { name: "Johnson & Johnson", style: "font-medium italic" },
+  { name: "Philips", style: "font-bold tracking-wide" },
+  { name: "GE HealthCare", style: "font-bold tracking-tight" },
+  { name: "Siemens Healthineers", style: "font-medium tracking-normal" },
+  { name: "Dexcom", style: "font-bold uppercase tracking-wider text-sm" },
+  { name: "Intuitive", style: "font-semibold tracking-wide" },
+  { name: "Edwards", style: "font-bold italic tracking-normal" },
+  { name: "Zimmer Biomet", style: "font-semibold tracking-wide" },
 ];
 
 const LogoCarousel = () => {
@@ -63,7 +63,7 @@ const LogoCarousel = () => {
 
   return (
     <section className="py-12 bg-background overflow-hidden">
-      <div className="container mx-auto px-4 md:px-6 mb-6">
+      <div className="container mx-auto px-4 md:px-6 mb-8">
         <p className="text-center text-sm uppercase tracking-[2px] text-muted-foreground font-medium">
           Experience Trusted Across the MedTech Ecosystem
         </p>
@@ -71,17 +71,16 @@ const LogoCarousel = () => {
       
       <div 
         ref={scrollRef}
-        className="flex gap-12 overflow-hidden whitespace-nowrap"
+        className="flex gap-16 overflow-hidden whitespace-nowrap"
         style={{ scrollBehavior: "auto" }}
       >
         {allLogos.map((company, index) => (
           <div
             key={index}
-            className="flex-shrink-0 flex items-center justify-center h-12 px-8 hover:opacity-100 transition-all duration-300"
+            className="flex-shrink-0 flex items-center justify-center h-12 px-4 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
           >
-            {/* Styled text placeholders - replace with actual logo images when available */}
-            <span className="text-sm md:text-base font-semibold text-border whitespace-nowrap tracking-wide">
-              {company}
+            <span className={`text-base md:text-lg whitespace-nowrap text-foreground ${company.style}`}>
+              {company.name}
             </span>
           </div>
         ))}
