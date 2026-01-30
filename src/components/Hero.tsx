@@ -1,6 +1,7 @@
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-medtech.jpg";
+import blytheHeadshot from "@/assets/blythe-headshot.png";
 
 const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
 
@@ -13,43 +14,39 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex pt-16">
-      {/* Split layout container */}
-      <div className="flex flex-col lg:flex-row w-full">
-        {/* Left side - Image */}
-        <div className="lg:w-1/2 h-[50vh] lg:h-auto relative order-1 lg:order-1">
-          <img
-            src={heroImage}
-            alt="The Karow Advisory Group - MedTech Strategy"
-            className="w-full h-full object-cover object-top"
-          />
-          {/* Subtle overlay gradient */}
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-background/10 hidden lg:block" />
-        </div>
+    <section className="relative min-h-screen flex pt-16 overflow-hidden">
+      {/* Background image with overlay */}
+      <div className="absolute inset-0">
+        <img
+          src={heroImage}
+          alt="MedTech Innovation"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/95 to-foreground/70" />
+      </div>
 
-        {/* Right side - Content */}
-        <div className="lg:w-1/2 flex items-center bg-background order-2 lg:order-2">
-          <div className="px-6 py-12 lg:px-12 xl:px-20 w-full animate-fade-in-up">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight mb-6">
+      {/* Content container */}
+      <div className="relative z-10 container mx-auto px-6 flex items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center w-full py-12">
+          {/* Left side - Content */}
+          <div className="animate-fade-in-up">
+            {/* Accent line */}
+            <div className="w-16 h-1 bg-primary mb-8" />
+            
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-background leading-tight mb-6">
               Where Strategy Meets{" "}
               <span className="text-primary">Execution</span> in MedTech.
             </h1>
             
-            {/* Horizontal line accent */}
-            <div className="w-full h-px bg-border mb-6" />
-            
-            <p className="text-lg md:text-xl text-muted-foreground mb-2">
+            <p className="text-lg md:text-xl text-background/70 mb-2">
               From concept to commercialization, diligence to acquisition.
             </p>
-            <p className="text-lg md:text-xl text-foreground font-medium mb-6">
+            <p className="text-lg md:text-xl text-background font-medium mb-8">
               Strategic advisory for the teams shaping what's next in MedTech.
             </p>
             
-            {/* Horizontal line accent */}
-            <div className="w-full h-px bg-border mb-8" />
-            
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <Button
                 asChild
                 size="lg"
@@ -65,11 +62,51 @@ const Hero = () => {
                 variant="outline"
                 size="lg"
                 onClick={scrollToServices}
-                className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-base font-semibold px-8 py-6"
+                className="border-2 border-background/30 text-background hover:bg-background/10 hover:border-background/50 transition-all duration-200 text-base font-semibold px-8 py-6"
               >
                 How We Work
                 <ChevronDown className="ml-2 h-5 w-5" />
               </Button>
+            </div>
+
+            {/* Founder highlight */}
+            <div className="flex items-center gap-4 pt-6 border-t border-background/20">
+              <img
+                src={blytheHeadshot}
+                alt="Blythe Karow"
+                className="w-14 h-14 rounded-full object-cover object-top ring-2 ring-primary/50"
+              />
+              <div>
+                <p className="text-background font-semibold">Blythe Karow</p>
+                <p className="text-background/60 text-sm">Founder & Principal Advisor</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right side - Decorative element with accent box */}
+          <div className="hidden lg:flex justify-center items-center relative">
+            {/* Offset decorative box */}
+            <div className="absolute -bottom-6 -right-6 w-72 h-72 border-2 border-primary/30 rounded-lg" />
+            <div className="absolute -top-6 -left-6 w-48 h-48 bg-primary/10 rounded-lg" />
+            
+            {/* Stats card */}
+            <div className="relative bg-background/10 backdrop-blur-sm border border-background/20 rounded-xl p-8 max-w-sm">
+              <div className="space-y-6">
+                <div className="text-center">
+                  <p className="text-4xl font-bold text-primary mb-1">20+</p>
+                  <p className="text-background/70 text-sm uppercase tracking-wider">Years Experience</p>
+                </div>
+                <div className="w-full h-px bg-background/20" />
+                <div className="text-center">
+                  <p className="text-4xl font-bold text-primary mb-1">50+</p>
+                  <p className="text-background/70 text-sm uppercase tracking-wider">Products Launched</p>
+                </div>
+                <div className="w-full h-px bg-background/20" />
+                <div className="text-center">
+                  <p className="text-4xl font-bold text-primary mb-1">$2B+</p>
+                  <p className="text-background/70 text-sm uppercase tracking-wider">Deal Value</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -77,7 +114,7 @@ const Hero = () => {
       
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce hidden lg:block">
-        <ChevronDown className="h-8 w-8 text-muted-foreground" />
+        <ChevronDown className="h-8 w-8 text-background/50" />
       </div>
     </section>
   );
