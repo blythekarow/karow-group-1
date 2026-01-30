@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.png";
+import logoIcon from "@/assets/logo-icon.webp";
 
 const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
 
@@ -35,15 +35,22 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <a href="/" className="flex items-center">
+          {/* Logo + Company Name */}
+          <a href="/" className="flex items-center gap-3">
             <img
-              src={logo}
+              src={logoIcon}
               alt="The Karow Advisory Group"
-              className={`transition-all duration-300 brightness-0 invert ${
-                isScrolled ? "h-8" : "h-10"
+              className={`transition-all duration-300 ${
+                isScrolled ? "h-8 w-8" : "h-10 w-10"
               }`}
             />
+            <span
+              className={`font-semibold tracking-wide text-background uppercase transition-all duration-300 hidden sm:block ${
+                isScrolled ? "text-sm" : "text-base"
+              }`}
+            >
+              The Karow Advisory Group
+            </span>
           </a>
 
           {/* Desktop Navigation */}
