@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { ArrowRight } from "lucide-react";
-import scientistImage from "@/assets/scientist-lab.jpg";
+import womanMedtechImage from "@/assets/woman-medtech-strategy.jpg";
 
 const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
 
@@ -68,21 +68,17 @@ const ProblemSection = () => {
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
             }`}
           >
-            {/* Offset decorative box */}
-            <div className="absolute -bottom-6 -right-6 w-full h-full bg-cream rounded-lg" />
+            {/* Subtle offset decorative box - top-left, 30% size */}
+            <div className="absolute -top-4 -left-4 w-[30%] h-[30%] bg-primary rounded-lg" />
             
             {/* Main image */}
             <div className="relative z-10">
               <img
-                src={scientistImage}
-                alt="Scientist examining cell culture"
+                src={womanMedtechImage}
+                alt="Professional woman reviewing medical device strategy"
                 className="w-full rounded-lg shadow-2xl object-cover h-96"
               />
             </div>
-            
-            {/* Accent elements */}
-            <div className="absolute -top-4 -left-4 w-24 h-24 border-4 border-primary rounded-lg" />
-            <div className="absolute top-1/2 -right-8 w-16 h-1 bg-secondary" />
           </div>
         </div>
       </div>
