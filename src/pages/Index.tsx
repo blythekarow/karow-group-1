@@ -36,12 +36,12 @@ const Index = () => {
       <ServicesSection />
       {/* 9. Free Assessment CTA (D.E.V.I.C.E.) */}
       <AssessmentSection />
-      {/* 10. Meet Blythe Karow */}
-      <FounderSection />
-      {/* 11. Team Section */}
-      <TeamSection />
-      {/* 12. When Leaders Reach Out */}
+      {/* 10. When Leaders Reach Out */}
       <WhenLeadersSection />
+      {/* 11. Meet Blythe Karow */}
+      <FounderSection />
+      {/* 12. Team Section */}
+      <TeamSection />
       {/* 13. Final Dual CTA */}
       <FinalCTASection />
       {/* 14. Footer */}
