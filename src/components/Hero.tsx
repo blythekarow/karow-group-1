@@ -34,15 +34,12 @@ const Hero = () => {
             <div className="w-16 h-1 bg-primary mb-8" />
             
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-background leading-tight mb-6">
-              Where Strategy Meets{" "}
-              <span className="text-primary">Execution</span> in MedTech.
+              Strategic Leadership that Accelerates{" "}
+              <span className="text-primary">Execution</span> in MedTech, Wearables, and DTx.
             </h1>
             
-            <p className="text-lg md:text-xl text-background/70 mb-2">
-              From concept to commercialization, diligence to acquisition.
-            </p>
-            <p className="text-lg md:text-xl text-background font-medium mb-8">
-              Strategic advisory for the teams shaping what's next in MedTech.
+            <p className="text-lg md:text-xl text-background/80 mb-8 max-w-xl">
+              From concept to commercialization, we provide integrated strategy and expertise for companies navigating regulated pathways.
             </p>
             
             {/* CTAs */}
@@ -53,7 +50,7 @@ const Hero = () => {
                 className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-base font-semibold px-8 py-6"
               >
                 <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-                  Let's Talk
+                  Schedule a Discovery Call
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>
@@ -64,7 +61,7 @@ const Hero = () => {
                 onClick={scrollToServices}
                 className="border-2 border-background bg-background/10 text-background hover:bg-background/20 transition-all duration-200 text-base font-semibold px-8 py-6"
               >
-                How We Work
+                See How We Work
                 <ChevronDown className="ml-2 h-5 w-5" />
               </Button>
             </div>
@@ -83,31 +80,13 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right side - Decorative element with accent box */}
+          {/* Right side - Decorative elements */}
           <div className="hidden lg:flex justify-center items-center relative">
-            {/* Offset decorative box */}
+            {/* Offset decorative boxes */}
             <div className="absolute -bottom-6 -right-6 w-72 h-72 border-2 border-primary/30 rounded-lg" />
             <div className="absolute -top-6 -left-6 w-48 h-48 bg-primary/10 rounded-lg" />
-            
-            {/* Stats card */}
-            <div className="relative bg-background/10 backdrop-blur-sm border border-background/20 rounded-xl p-8 max-w-sm">
-              <div className="space-y-6">
-                <div className="text-center">
-                  <p className="text-4xl font-bold text-primary mb-1">20+</p>
-                  <p className="text-background/70 text-sm uppercase tracking-wider">Years Experience</p>
-                </div>
-                <div className="w-full h-px bg-background/20" />
-                <div className="text-center">
-                  <p className="text-4xl font-bold text-primary mb-1">50+</p>
-                  <p className="text-background/70 text-sm uppercase tracking-wider">Products Launched</p>
-                </div>
-                <div className="w-full h-px bg-background/20" />
-                <div className="text-center">
-                  <p className="text-4xl font-bold text-primary mb-1">$2B+</p>
-                  <p className="text-background/70 text-sm uppercase tracking-wider">Deal Value</p>
-                </div>
-              </div>
-            </div>
+            <div className="absolute top-1/2 right-0 w-20 h-1 bg-primary/50" />
+            <div className="absolute bottom-1/4 -left-8 w-16 h-16 border-2 border-background/20 rounded-full" />
           </div>
         </div>
       </div>
