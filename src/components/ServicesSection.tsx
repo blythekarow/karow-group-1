@@ -21,28 +21,28 @@ interface ServiceCard {
 const services: ServiceCard[] = [
   {
     icon: Zap,
-    label: "ESTABLISHED COMPANIES",
+    label: "FOR ESTABLISHED COMPANIES",
     title: "Executive Strategy Intensive",
     description:
-      "Tackle a strategic decision point with speed and clarity. We get your team aligned, define the path forward, and deliver an actionable plan built for execution.",
+      "Define the path. Get aligned. Move forward with confidence. A focused, senior-level engagement designed to help you tackle a strategic decision point with speed, clarity, and a plan built for execution.",
     outcomes: ["Strategic alignment", "Clear roadmap", "Faster decisions"],
     image: medicalTeamImage,
   },
   {
     icon: TrendingUp,
-    label: "GROWTH STAGE",
+    label: "FOR GROWTH STAGE",
     title: "Strategic Consulting",
     description:
-      "Hands-on support when you need expert leadership for the short term. We drive initiatives forward, align teams, and translate plans into measurable progress.",
+      "When you have a strategic or execution gap that needs expert leadership for the short term. Hands-on support to drive initiatives forward, align teams, and translate plans into progress.",
     outcomes: ["Embedded expertise", "Team alignment", "Execution support"],
     image: scientistImage,
   },
   {
     icon: BarChart3,
-    label: "INVESTORS & M&A",
-    title: "Investment & Acquisition Support",
+    label: "FOR INVESTORS",
+    title: "Investor / M&A Support",
     description:
-      "Trusted insight for critical investment decisions. Due diligence, market validation, and exit prep—we help you evaluate and act with clarity.",
+      "Trusted insight for critical investment and acquisition decisions. From due diligence to market validation to exit prep, this engagement helps investors and operators evaluate, refine, and act with clarity.",
     outcomes: ["Due diligence", "Market validation", "Exit readiness"],
     image: dnaImage,
   },
@@ -65,8 +65,8 @@ const ServicesSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             How We Work Together
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Three engagement models tailored to your stage, team, and goals.
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Three ways to work together tailored to your stage, team, and goals. From strategy definition to execution leadership to investor support, each engagement is designed to cut through complexity and move your business forward.
           </p>
         </div>
 
