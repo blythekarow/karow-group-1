@@ -1,27 +1,13 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { Target, Zap, Users, TrendingUp } from "lucide-react";
+import { Check } from "lucide-react";
+import strategyMeetingImage from "@/assets/medtech-strategy-meeting.jpg";
 
-const reasons = [
-  {
-    icon: Target,
-    title: "Strategic Clarity",
-    description: "Cut through complexity with frameworks that align your team and accelerate decisions.",
-  },
-  {
-    icon: Zap,
-    title: "Execution Speed",
-    description: "Move from strategy to action faster with hands-on leadership that drives results.",
-  },
-  {
-    icon: Users,
-    title: "Deep Expertise",
-    description: "20+ years navigating MedTech, wearables, and DTx—from startup to Fortune 50.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Proven Outcomes",
-    description: "Track record of successful launches, raises, and exits across the industry.",
-  },
+const benefits = [
+  "Avoid over 50% of unnecessary costs",
+  "Accelerate time-to-market by aligning key milestones with regulatory and market expectations",
+  "Win investor confidence with a credible, data-driven commercialization plan",
+  "Eliminate guesswork from FDA 510(k), De Novo, and PMA submissions",
+  "Drive revenue with market adoption strategies, not just regulatory approvals",
 ];
 
 const WhyWorkWithUsSection = () => {
@@ -30,84 +16,63 @@ const WhyWorkWithUsSection = () => {
   return (
     <section ref={ref} className="py-24 bg-background overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
-        {/* Section Header */}
-        <div
-          className={`text-center mb-16 transition-all duration-700 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
-          <p className="text-sm uppercase tracking-[2px] text-primary font-semibold mb-4">
-            The Difference
-          </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Why Companies Work With Us
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Big consulting delivers slide decks. We deliver traction.
-          </p>
-        </div>
-
-        {/* Reasons Grid - Asymmetric Layout */}
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-            {reasons.map((reason, index) => {
-              const Icon = reason.icon;
-              const isLarge = index === 0 || index === 3;
-              
-              return (
-                <div
-                  key={index}
-                  className={`group relative bg-cream rounded-xl p-8 transition-all duration-500 hover:shadow-lg hover:-translate-y-1 ${
-                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                  } ${isLarge ? "md:row-span-1" : ""}`}
-                  style={{ transitionDelay: `${index * 100 + 200}ms` }}
-                >
-                  {/* Accent line */}
-                  <div className="absolute top-0 left-8 right-8 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  
-                  <div className="flex items-start gap-5">
-                    <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
-                      <Icon className="w-7 h-7 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                        {reason.title}
-                      </h3>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {reason.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* Big Picture & Critical Details - Placeholder for content */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left Content */}
           <div
-            className={`mt-12 grid md:grid-cols-2 gap-6 transition-all duration-700 delay-500 ${
+            className={`transition-all duration-700 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <div className="bg-accent text-accent-foreground rounded-xl p-8">
-              <h3 className="text-2xl font-bold mb-4 flex items-center gap-3">
-                <span className="w-2 h-8 bg-primary rounded-full" />
-                Big Picture
-              </h3>
-              <p className="text-accent-foreground/80 leading-relaxed">
-                We identify blind spots before they're expensive, coordinate the right specialists at the right time, and help you invest strategically for each milestone.
-              </p>
-            </div>
+            {/* Accent Bar */}
+            <div className="w-16 h-1.5 bg-primary rounded-full mb-8" />
+
+            {/* Heading */}
+            <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-foreground leading-tight mb-6">
+              The Right Strategy Saves You Time, Money, and Momentum
+            </h2>
+
+            {/* Subheading */}
+            <p className="text-lg text-muted-foreground mb-8">
+              With Karow Advisory, you can:
+            </p>
+
+            {/* Benefits Checklist */}
+            <ul className="space-y-5">
+              {benefits.map((benefit, index) => (
+                <li
+                  key={index}
+                  className={`flex items-start gap-4 transition-all duration-500 ${
+                    isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
+                  }`}
+                  style={{ transitionDelay: `${index * 100 + 200}ms` }}
+                >
+                  <div className="w-6 h-6 rounded border-2 border-primary flex items-center justify-center shrink-0 mt-0.5">
+                    <Check className="w-4 h-4 text-primary" strokeWidth={3} />
+                  </div>
+                  <span className="text-foreground leading-relaxed">
+                    {benefit}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Right Image with Offset Background */}
+          <div
+            className={`relative transition-all duration-700 delay-300 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+          >
+            {/* Offset decorative background */}
+            <div className="absolute top-8 -right-4 lg:-right-8 w-full h-full bg-tan rounded-lg -z-10" />
             
-            <div className="bg-secondary text-secondary-foreground rounded-xl p-8">
-              <h3 className="text-2xl font-bold mb-4 flex items-center gap-3">
-                <span className="w-2 h-8 bg-primary rounded-full" />
-                Critical Details
-              </h3>
-              <p className="text-secondary-foreground/90 leading-relaxed">
-                {/* Content to be added */}
-                The devil is in the details. We dig into the specifics—clinical evidence requirements, reimbursement nuances, go-to-market timing—that make or break your success.
-              </p>
+            {/* Main image */}
+            <div className="relative">
+              <img
+                src={strategyMeetingImage}
+                alt="Strategic planning session with MedTech professionals"
+                className="w-full h-auto rounded-lg shadow-lg object-cover aspect-[4/3]"
+              />
             </div>
           </div>
         </div>
