@@ -32,8 +32,8 @@
     --secondary: 58 42% 28%; /* #66642A */
     --secondary-foreground: 0 0% 97%;
 
-    /* Deep Teal - Headers, footer, accent sections */
-    --accent: 186 100% 16%; /* #004B54 */
+    /* Deep Teal - Headers, footer, accent sections (darker, almost black-green) */
+    --accent: 180 60% 8%; /* Very dark teal, almost black-green */
     --accent-foreground: 0 0% 97%;
 
     --muted: 40 33% 94%;
