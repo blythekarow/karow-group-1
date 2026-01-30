@@ -95,8 +95,7 @@ const WhyWorkWithUsSection = () => {
                 Big Picture
               </h3>
               <p className="text-accent-foreground/80 leading-relaxed">
-                {/* Content to be added */}
-                We see the full landscape—market dynamics, competitive positioning, regulatory pathways, and commercial realities—to help you make decisions that compound over time.
+                We identify blind spots before they're expensive, coordinate the right specialists at the right time, and help you invest strategically for each milestone.
               </p>
             </div>
             
