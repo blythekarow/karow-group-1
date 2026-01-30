@@ -53,6 +53,21 @@ const DeviceFilesPodcast = () => {
               medical devices and digital health.
             </p>
 
+            {/* Spotify Embed */}
+            <div className="bg-muted rounded-lg p-4 mb-6">
+              <iframe
+                style={{ borderRadius: "12px" }}
+                src="https://open.spotify.com/embed/show/4rOoJ6Egrf8K2IrywzwOMk?utm_source=generator&theme=0"
+                width="100%"
+                height="152"
+                frameBorder="0"
+                allowFullScreen
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+                title="The Device Files Spotify Player"
+              />
+            </div>
+
             <div className="flex flex-wrap gap-4 mb-8">
               <Button
                 asChild
@@ -66,21 +81,6 @@ const DeviceFilesPodcast = () => {
                 >
                   Listen Now
                   <ExternalLink className="ml-2 h-4 w-4" />
-                </a>
-              </Button>
-
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground"
-              >
-                <a
-                  href={PODCAST_LINKS.spotify}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Spotify
                 </a>
               </Button>
 
