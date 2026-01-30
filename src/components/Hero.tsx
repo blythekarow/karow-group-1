@@ -1,6 +1,6 @@
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-medtech.jpg";
+import heroImage from "@/assets/hero-building.jpg";
 
 const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
 
