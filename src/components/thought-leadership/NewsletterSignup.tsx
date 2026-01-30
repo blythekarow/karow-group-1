@@ -1,8 +1,5 @@
-import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { Mail, ArrowRight } from "lucide-react";
-
-const SUBSTACK_URL = "https://blythekarow.substack.com/";
+import { Mail } from "lucide-react";
 
 const NewsletterSignup = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
@@ -29,17 +26,18 @@ const NewsletterSignup = () => {
             regulatory navigation, and commercialization.
           </p>
           
-          {/* CTA - Links to Substack for signup */}
-          <Button
-            asChild
-            size="lg"
-            className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-200 text-lg font-semibold px-10 py-6 rounded-md shadow-lg hover:shadow-xl"
-          >
-            <a href={SUBSTACK_URL} target="_blank" rel="noopener noreferrer">
-              Subscribe to The Device Files
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
-          </Button>
+          {/* Substack embed */}
+          <div className="max-w-md mx-auto">
+            <iframe
+              src="https://blythekarow.substack.com/embed"
+              width="100%"
+              height="320"
+              style={{ border: "1px solid rgba(255,255,255,0.2)", background: "white", borderRadius: "12px" }}
+              frameBorder="0"
+              scrolling="no"
+              title="The Device Files Newsletter Subscription"
+            />
+          </div>
           
           <p className="text-sm text-accent-foreground/60 mt-4">
             Free. Unsubscribe anytime.
