@@ -90,8 +90,8 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a
-                  href="https://linkedin.com/in/blythekarow"
+              <a
+                  href="https://www.linkedin.com/in/blythe-karow/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-accent-foreground/80 hover:text-primary transition-colors"
@@ -119,7 +119,7 @@ const Footer = () => {
         <div className="border-t border-accent-foreground/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-accent-foreground/60">
-              © {new Date().getFullYear()} The Karow Advisory Group. All rights reserved.
+              © 2026 The Karow Advisory Group. All rights reserved.
             </p>
             <div className="flex gap-6">
               <a
