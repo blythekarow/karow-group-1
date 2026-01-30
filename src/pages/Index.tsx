@@ -11,6 +11,7 @@ import ServicesSection from "@/components/ServicesSection";
 import LeadMagnet from "@/components/LeadMagnet";
 import FounderSection from "@/components/FounderSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import AssessmentSection from "@/components/AssessmentSection";
 import FinalCTASection from "@/components/FinalCTASection";
 import Footer from "@/components/Footer";
 
@@ -30,6 +31,7 @@ const Index = () => {
       <LeadMagnet />
       <FounderSection />
       <TestimonialsSection />
+      <AssessmentSection />
       <FinalCTASection />
       <Footer />
     </div>
