@@ -61,19 +61,7 @@ const FounderSection = () => {
             
             <div className="space-y-4 text-muted-foreground leading-relaxed mb-8">
               <p>
-                Blythe founded The Karow Advisory Group after seeing the same pattern repeat: 
-                brilliant MedTech teams burning through runway and losing momentum—not because 
-                their science failed, but because their strategy did.
-              </p>
-              <p>
-                With 20+ years leading product strategy at Fortune 50 companies and as a 
-                startup CEO herself, Blythe knows what it takes to get a regulated product from 
-                whiteboard to market. She also recognized that most startups can't afford the 
-                enterprise consulting firms that hoard this expertise.
-              </p>
-              <p className="text-foreground font-medium">
-                That's why she built a firm that brings senior expertise and a network of specialists 
-                to companies at every stage—without the enterprise price tag.
+                <span className="font-semibold text-foreground">The Karow Advisory Group</span> is led by Blythe Karow, a strategic advisor with 20+ years of MedTech and wearables experience. From startup CEO to Fortune 50 product leader, Blythe brings hands-on expertise in product strategy, commercialization, regulatory navigation, and go-to-market execution.
               </p>
             </div>
             
