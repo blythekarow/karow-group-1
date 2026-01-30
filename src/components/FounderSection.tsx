@@ -30,12 +30,12 @@ const FounderSection = () => {
                 />
               </div>
               
-              {/* Professional photo (navy turtleneck, white bg) - front/right */}
-              <div className="absolute top-24 md:top-32 left-48 md:left-60 z-20">
+              {/* Professional photo (navy turtleneck, white bg) - front/right, cropped */}
+              <div className="absolute top-24 md:top-32 left-48 md:left-60 z-20 w-44 md:w-56 h-56 md:h-72 rounded-lg shadow-2xl overflow-hidden">
                 <img
                   src={blytheProfessional}
                   alt="Blythe Karow - professional portrait"
-                  className="w-52 md:w-72 h-auto rounded-lg shadow-2xl object-cover"
+                  className="w-full h-full object-cover object-top scale-125"
                 />
               </div>
               
