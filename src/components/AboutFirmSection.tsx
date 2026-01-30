@@ -1,6 +1,6 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import medicalTeamImage from "@/assets/medical-team.jpg";
-import microscopeImage from "@/assets/microscope.jpg";
+import strategyMeetingImage from "@/assets/medtech-strategy-meeting.jpg";
+import wearableDeviceImage from "@/assets/wearable-device-testing.jpg";
 
 const AboutFirmSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
@@ -21,8 +21,8 @@ const AboutFirmSection = () => {
             {/* Main image */}
             <div className="relative z-10 ml-8">
               <img
-                src={medicalTeamImage}
-                alt="Medical team collaboration"
+                src={strategyMeetingImage}
+                alt="MedTech strategy meeting"
                 className="w-full max-w-md rounded-lg shadow-2xl object-cover h-80"
               />
             </div>
@@ -31,8 +31,8 @@ const AboutFirmSection = () => {
             <div className="absolute -bottom-8 -right-4 z-20 w-48 h-48">
               <div className="absolute inset-0 translate-x-2 translate-y-2 bg-tan rounded-lg" />
               <img
-                src={microscopeImage}
-                alt="Laboratory microscope"
+                src={wearableDeviceImage}
+                alt="Wearable device testing"
                 className="relative w-full h-full rounded-lg shadow-xl object-cover"
               />
             </div>
