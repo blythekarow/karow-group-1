@@ -1,19 +1,26 @@
 import { useEffect, useRef } from "react";
 
-// Company logos - styled as professional text marks
-const companies = [
-  { name: "Medtronic", style: "font-bold tracking-tight" },
-  { name: "Abbott", style: "font-bold tracking-wide" },
-  { name: "Boston Scientific", style: "font-semibold tracking-normal" },
-  { name: "Stryker", style: "font-bold uppercase tracking-widest text-sm" },
-  { name: "Johnson & Johnson", style: "font-medium italic" },
-  { name: "Philips", style: "font-bold tracking-wide" },
-  { name: "GE HealthCare", style: "font-bold tracking-tight" },
-  { name: "Siemens Healthineers", style: "font-medium tracking-normal" },
-  { name: "Dexcom", style: "font-bold uppercase tracking-wider text-sm" },
-  { name: "Intuitive", style: "font-semibold tracking-wide" },
-  { name: "Edwards", style: "font-bold italic tracking-normal" },
-  { name: "Zimmer Biomet", style: "font-semibold tracking-wide" },
+// Import logo images
+import johnsonJohnsonLogo from "@/assets/logos/johnson-johnson.webp";
+import neurogenecesLogo from "@/assets/logos/neurogeneces.png";
+import whinLogo from "@/assets/logos/whin.png";
+import hdoHealthLogo from "@/assets/logos/hdo-health.jpg";
+import tivicLogo from "@/assets/logos/tivic.png";
+import surgivanceLogo from "@/assets/logos/surgivance.png";
+import evrenLogo from "@/assets/logos/evren.png";
+import corvivoLogo from "@/assets/logos/corvivo.png";
+import smithNephewLogo from "@/assets/logos/smith-nephew.webp";
+
+const logos = [
+  { name: "Johnson & Johnson", src: johnsonJohnsonLogo },
+  { name: "NeuroGeneces", src: neurogenecesLogo },
+  { name: "WHIN", src: whinLogo },
+  { name: "HDO Health", src: hdoHealthLogo },
+  { name: "Tivic", src: tivicLogo },
+  { name: "SurgiVance", src: surgivanceLogo },
+  { name: "Evren Technologies", src: evrenLogo },
+  { name: "Corvivo", src: corvivoLogo },
+  { name: "Smith & Nephew", src: smithNephewLogo },
 ];
 
 const LogoCarousel = () => {
@@ -59,7 +66,7 @@ const LogoCarousel = () => {
   }, []);
 
   // Duplicate logos for seamless infinite scroll
-  const allLogos = [...companies, ...companies];
+  const allLogos = [...logos, ...logos];
 
   return (
     <section className="py-16 bg-background overflow-hidden">
@@ -71,17 +78,19 @@ const LogoCarousel = () => {
       
       <div 
         ref={scrollRef}
-        className="flex gap-16 overflow-hidden whitespace-nowrap"
+        className="flex gap-16 overflow-hidden whitespace-nowrap items-center"
         style={{ scrollBehavior: "auto" }}
       >
-        {allLogos.map((company, index) => (
+        {allLogos.map((logo, index) => (
           <div
             key={index}
-            className="flex-shrink-0 flex items-center justify-center h-12 px-4 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+            className="flex-shrink-0 flex items-center justify-center h-16 px-6 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
           >
-            <span className={`text-base md:text-lg whitespace-nowrap text-foreground ${company.style}`}>
-              {company.name}
-            </span>
+            <img 
+              src={logo.src} 
+              alt={logo.name}
+              className="h-10 md:h-12 w-auto max-w-[150px] object-contain"
+            />
           </div>
         ))}
       </div>
