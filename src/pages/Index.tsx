@@ -9,6 +9,7 @@ import PodcastSection from "@/components/PodcastSection";
 import LeadMagnet from "@/components/LeadMagnet";
 import FounderSection from "@/components/FounderSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import FinalCTASection from "@/components/FinalCTASection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -25,6 +26,7 @@ const Index = () => {
       <LeadMagnet />
       <FounderSection />
       <TestimonialsSection />
+      <FinalCTASection />
       <Footer />
     </div>
   );

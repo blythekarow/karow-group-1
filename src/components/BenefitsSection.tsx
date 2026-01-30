@@ -127,12 +127,11 @@ const BenefitsSection = () => {
         >
           <Button
             asChild
-            variant="outline"
             size="lg"
-            className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground"
+            className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-base font-semibold px-8 py-4 rounded-md"
           >
             <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-              See If We're a Fit
+              Let's Talk About Your Needs
             </a>
           </Button>
         </div>

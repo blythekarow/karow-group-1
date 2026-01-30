@@ -168,10 +168,10 @@ const ServicesSection = () => {
             <Button
               asChild
               size="lg"
-              className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-base font-semibold px-8 py-6"
+              className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-base font-semibold px-8 py-4 rounded-md"
             >
               <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-                Let's Figure It Out Together
+                Discuss Your Project
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
