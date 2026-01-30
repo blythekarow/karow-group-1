@@ -62,11 +62,11 @@ const LogoCarousel = () => {
   const allLogos = [...companies, ...companies];
 
   return (
-    <section className="py-12 bg-background overflow-hidden">
-      <div className="container mx-auto px-4 md:px-6 mb-8">
-        <p className="text-center text-sm uppercase tracking-[2px] text-muted-foreground font-medium">
+    <section className="py-16 bg-background overflow-hidden">
+      <div className="container mx-auto px-4 md:px-6 mb-10">
+        <h2 className="text-center text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-2">
           Experience Trusted Across the MedTech Ecosystem
-        </p>
+        </h2>
       </div>
       
       <div 
