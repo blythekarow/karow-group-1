@@ -1,97 +1,124 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import medtechStrategyImage from "@/assets/medtech-strategy-meeting.jpg";
 
 const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
 
 interface ProcessStep {
   number: string;
-  subheadline: string;
+  title: string;
+  subtitle: string;
   body: string;
 }
 
 const steps: ProcessStep[] = [
   {
     number: "1",
-    subheadline: "Know Where You Stand",
-    body: "We assess your product commercialization readiness across regulatory pathway, reimbursement landscape, and commercial risks. You get a clear picture of what's working, what's at risk, and what decisions need to happen next.",
+    title: "Clarity",
+    subtitle: "Schedule a Clarity Call",
+    body: "We'll get to know your product, challenges, and goals – then we'll uncover the questions that matter the most to you.",
   },
   {
     number: "2",
-    subheadline: "Build Your Integrated Roadmap",
-    body: "We develop an integrated product commercialization plan tailored to your specific goals. Everything from regulatory and reimbursement to evidence plans—we integrate the missing pieces so everything strategically aligns.",
+    title: "Strategy",
+    subtitle: "Get Your Strategic RoadMap",
+    body: "We'll align your goals with the right regulatory, clinical, and market pathways—creating a tailored commercialization plan and go-to-market model.",
   },
   {
     number: "3",
-    subheadline: "Move Forward with Confidence",
-    body: "We execute alongside you. Whether leading submissions, coordinating specialists, or providing fractional leadership, we keep your commercialization on track.",
+    title: "Execution",
+    subtitle: "Move Forward With Confidence",
+    body: "With Karow Advisory driving execution, you'll accelerate your journey, pitch with clarity, and stop second-guessing what the FDA or investors expect.",
   },
 ];
-
-const stepLabels = ["CLARITY", "STRATEGY", "EXECUTION"];
 
 const ProcessSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <section ref={ref} className="py-24 bg-cream relative overflow-hidden">
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
-        {/* Header */}
-        <div
-          className={`text-center mb-12 transition-all duration-700 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            How We Work Together: A Clear Path Forward
+    <section ref={ref} className="relative overflow-hidden">
+      {/* Hero Image Section */}
+      <div className="relative h-[400px] md:h-[450px]">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${medtechStrategyImage})` }}
+        />
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/50" />
+        
+        {/* Content */}
+        <div className="relative z-10 h-full flex flex-col items-center justify-center px-4">
+          {/* Accent Bar */}
+          <div 
+            className={`w-16 h-1 bg-primary rounded-full mb-6 transition-all duration-700 ${
+              isVisible ? "opacity-100" : "opacity-0"
+            }`}
+          />
+          
+          {/* Heading */}
+          <h2 
+            className={`text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-8 transition-all duration-700 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+          >
+            Work With Us in 3 Simple Steps
           </h2>
           
+          {/* CTA Button */}
           <Button
             asChild
             size="lg"
-            className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-base font-semibold px-8 py-4 rounded-md"
+            className={`bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-700 text-base font-semibold px-8 py-6 rounded-md ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+            style={{ transitionDelay: "200ms" }}
           >
             <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-              Book Your Discovery Call
-              <ArrowRight className="ml-2 h-5 w-5" />
+              Book A Discovery Call
             </a>
           </Button>
         </div>
+      </div>
 
-        {/* Three columns */}
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
-          {steps.map((step, index) => (
-            <Card
-              key={index}
-              className={`bg-card border-none shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition-all duration-700 ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
-              style={{ transitionDelay: `${index * 150 + 200}ms` }}
-            >
-              <CardContent className="p-8 text-center">
-                {/* Step label */}
-                <p className="text-xs font-semibold tracking-[2px] text-muted-foreground mb-4">
-                  {stepLabels[index]}
-                </p>
-                
-                {/* Large number */}
-                <div className="text-7xl font-extrabold text-primary mb-4">
+      {/* Steps Grid */}
+      <div className="bg-cream py-16 md:py-20">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid md:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
+            {steps.map((step, index) => (
+              <div
+                key={index}
+                className={`flex gap-4 transition-all duration-700 ${
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                }`}
+                style={{ transitionDelay: `${index * 150 + 300}ms` }}
+              >
+                {/* Large Number */}
+                <span className="text-6xl md:text-7xl font-serif font-light text-tan leading-none shrink-0">
                   {step.number}
+                </span>
+                
+                {/* Content */}
+                <div className="pt-1">
+                  {/* Title */}
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-1">
+                    {step.title}
+                  </h3>
+                  
+                  {/* Subtitle */}
+                  <p className="text-primary font-semibold mb-3">
+                    {step.subtitle}
+                  </p>
+                  
+                  {/* Body */}
+                  <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+                    {step.body}
+                  </p>
                 </div>
-                
-                {/* Subheadline */}
-                <h3 className="text-xl md:text-2xl font-bold text-secondary mb-4">
-                  {step.subheadline}
-                </h3>
-                
-                {/* Body text */}
-                <p className="text-muted-foreground leading-relaxed">
-                  {step.body}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
