@@ -1,12 +1,12 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import LogoCarousel from "@/components/LogoCarousel";
 import StatsSection from "@/components/StatsSection";
 import AboutFirmSection from "@/components/AboutFirmSection";
 import ProblemSection from "@/components/ProblemSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import ServicesSection from "@/components/ServicesSection";
-import PodcastSection from "@/components/PodcastSection";
-import LeadMagnet from "@/components/LeadMagnet";
+import InsightsSection from "@/components/InsightsSection";
 import FounderSection from "@/components/FounderSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FinalCTASection from "@/components/FinalCTASection";
@@ -17,13 +17,13 @@ const Index = () => {
     <div className="min-h-screen">
       <Navbar />
       <Hero />
+      <LogoCarousel />
       <StatsSection />
       <AboutFirmSection />
       <ProblemSection />
       <BenefitsSection />
       <ServicesSection />
-      <PodcastSection />
-      <LeadMagnet />
+      <InsightsSection />
       <FounderSection />
       <TestimonialsSection />
       <FinalCTASection />
