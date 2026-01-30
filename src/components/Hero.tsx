@@ -21,7 +21,7 @@ const Hero = () => {
           alt="MedTech Innovation"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-foreground/50 via-foreground/35 to-foreground/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-accent via-accent/70 via-50% to-transparent" />
       </div>
 
       {/* Content container */}
