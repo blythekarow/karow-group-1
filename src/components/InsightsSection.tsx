@@ -102,7 +102,7 @@ const InsightsSection = () => {
                 <div className="text-center px-6">
                   <Mail className="w-16 h-16 text-primary-foreground mx-auto mb-4" />
                   <p className="text-primary-foreground font-bold text-2xl">
-                    The Karow Advisory
+                    The Device Files
                   </p>
                   <p className="text-primary-foreground/80 text-lg">
                     Newsletter
@@ -119,7 +119,7 @@ const InsightsSection = () => {
                 </div>
                 
                 <h3 className="text-xl font-bold text-foreground mb-3">
-                  The Karow Advisory Newsletter
+                  The Device Files Newsletter
                 </h3>
                 
                 <p className="text-muted-foreground mb-6 leading-relaxed">
@@ -127,44 +127,18 @@ const InsightsSection = () => {
                   and commercialization delivered to your inbox.
                 </p>
                 
-                {/* Recent post previews */}
-                <div className="space-y-3 mb-6">
-                  <p className="text-sm font-semibold text-foreground uppercase tracking-wide">
-                    Recent Posts
-                  </p>
-                  <div className="space-y-2">
-                    <a
-                      href={SUBSTACK_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block p-3 bg-muted rounded-lg hover:bg-tan/30 transition-colors"
-                    >
-                      <p className="text-sm font-medium text-foreground line-clamp-2">
-                        Why Speed Without Strategy Is the #1 Killer of MedTech Startups
-                      </p>
-                    </a>
-                    <a
-                      href={SUBSTACK_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block p-3 bg-muted rounded-lg hover:bg-tan/30 transition-colors"
-                    >
-                      <p className="text-sm font-medium text-foreground line-clamp-2">
-                        The Regulatory Roadmap Every DTx Founder Needs
-                      </p>
-                    </a>
-                  </div>
+                {/* Substack embed */}
+                <div className="w-full">
+                  <iframe
+                    src="https://blythekarow.substack.com/embed"
+                    width="100%"
+                    height="320"
+                    style={{ border: "1px solid #EEE", background: "white", borderRadius: "8px" }}
+                    frameBorder="0"
+                    scrolling="no"
+                    title="The Device Files Newsletter Subscription"
+                  />
                 </div>
-                
-                <Button
-                  asChild
-                  className="w-full bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200"
-                >
-                  <a href={SUBSTACK_URL} target="_blank" rel="noopener noreferrer">
-                    Subscribe Free
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </a>
-                </Button>
               </div>
             </CardContent>
           </Card>
