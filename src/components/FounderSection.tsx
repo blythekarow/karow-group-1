@@ -8,7 +8,7 @@ const FounderSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <section id="about" ref={ref} className="py-24 bg-background scroll-mt-20 relative overflow-hidden">
+    <section id="about" ref={ref} className="py-16 bg-background scroll-mt-20 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-6xl mx-auto">
           {/* Left side: Overlapping photos with quote card */}

@@ -25,7 +25,7 @@ const TeamSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section ref={ref} className="py-24 bg-background relative overflow-hidden">
+    <section ref={ref} className="py-12 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div
           className={`text-center mb-12 transition-all duration-700 ${
