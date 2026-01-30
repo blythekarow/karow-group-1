@@ -1,14 +1,55 @@
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Headphones, Mail } from "lucide-react";
+import { ArrowRight, Headphones, Mail, ExternalLink } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { supabase } from "@/integrations/supabase/client";
 import podcastCover from "@/assets/podcast-banner.png";
 
 const SPOTIFY_URL = "https://open.spotify.com/show/the-device-files"; // Update with actual Spotify URL
 const SUBSTACK_URL = "https://blythekarow.substack.com/";
 
+interface SubstackPost {
+  title: string;
+  link: string;
+  pubDate: string;
+  description: string;
+}
+
 const InsightsSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
+  const [posts, setPosts] = useState<SubstackPost[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const { data, error } = await supabase.functions.invoke('substack-feed');
+        if (error) {
+          console.error('Error fetching posts:', error);
+          return;
+        }
+        if (data?.posts) {
+          setPosts(data.posts.slice(0, 3));
+        }
+      } catch (err) {
+        console.error('Failed to fetch Substack posts:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPosts();
+  }, []);
+
+  const formatDate = (dateStr: string) => {
+    try {
+      const date = new Date(dateStr);
+      return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    } catch {
+      return '';
+    }
+  };
 
   return (
     <section ref={ref} className="py-24 bg-cream relative overflow-hidden">
@@ -122,23 +163,60 @@ const InsightsSection = () => {
                   The Device Files Newsletter
                 </h3>
                 
-                <p className="text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-muted-foreground mb-4 leading-relaxed">
                   Actionable insights on product strategy, regulatory navigation, 
                   and commercialization delivered to your inbox.
                 </p>
                 
-                {/* Substack embed */}
-                <div className="w-full">
-                  <iframe
-                    src="https://blythekarow.substack.com/embed"
-                    width="100%"
-                    height="320"
-                    style={{ border: "1px solid #EEE", background: "white", borderRadius: "8px" }}
-                    frameBorder="0"
-                    scrolling="no"
-                    title="The Device Files Newsletter Subscription"
-                  />
-                </div>
+                {/* Recent posts from RSS */}
+                {posts.length > 0 && (
+                  <div className="mb-4">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">
+                      Recent Posts
+                    </p>
+                    <div className="space-y-2">
+                      {posts.map((post, index) => (
+                        <a
+                          key={index}
+                          href={post.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block p-2 bg-muted/50 rounded hover:bg-muted transition-colors group"
+                        >
+                          <div className="flex items-start justify-between gap-2">
+                            <p className="text-sm font-medium text-foreground line-clamp-1 group-hover:text-primary transition-colors">
+                              {post.title}
+                            </p>
+                            <ExternalLink className="w-3 h-3 text-muted-foreground shrink-0 mt-1" />
+                          </div>
+                          {post.pubDate && (
+                            <p className="text-xs text-muted-foreground mt-0.5">
+                              {formatDate(post.pubDate)}
+                            </p>
+                          )}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {loading && (
+                  <div className="mb-4 space-y-2">
+                    <div className="h-10 bg-muted animate-pulse rounded" />
+                    <div className="h-10 bg-muted animate-pulse rounded" />
+                  </div>
+                )}
+                
+                {/* Substack subscribe embed */}
+                <iframe
+                  src="https://blythekarow.substack.com/embed"
+                  width="100%"
+                  height="150"
+                  style={{ border: "1px solid #EEE", background: "white", borderRadius: "8px" }}
+                  frameBorder="0"
+                  scrolling="no"
+                  title="The Device Files Newsletter Subscription"
+                />
               </div>
             </CardContent>
           </Card>
