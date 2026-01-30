@@ -1,4 +1,3 @@
-import { Check } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import consultingWorkshopImage from "@/assets/consulting-workshop.jpg";
 
@@ -35,14 +34,17 @@ const BenefitsSection = () => {
   return (
     <section ref={ref} className="py-24 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start max-w-6xl mx-auto">
           {/* Left side - Content */}
           <div
             className={`transition-all duration-700 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+            {/* Accent line above headline */}
+            <div className="w-12 h-1 bg-primary mb-6" />
+            
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
               Finding the Right Strategic Partner Saves You Time, Momentum, and Money
             </h2>
             
@@ -50,21 +52,32 @@ const BenefitsSection = () => {
               With The Karow Advisory Group, you can:
             </p>
             
-            {/* Checkmark list */}
-            <div className="space-y-4">
+            {/* Checkmark list - outlined square checkmarks like RLS */}
+            <div className="space-y-5">
               {benefits.map((benefit, index) => (
                 <div
                   key={index}
-                  className={`flex items-start gap-3 transition-all duration-500 ${
+                  className={`flex items-start gap-4 transition-all duration-500 ${
                     isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
                   }`}
                   style={{ transitionDelay: `${index * 100 + 200}ms` }}
                 >
-                  <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center shrink-0 mt-0.5">
-                    <Check className="h-4 w-4 text-primary-foreground" />
+                  {/* Outlined square checkmark */}
+                  <div className="w-6 h-6 border-2 border-primary rounded flex items-center justify-center shrink-0 mt-0.5">
+                    <svg 
+                      className="w-4 h-4 text-primary" 
+                      viewBox="0 0 24 24" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      strokeWidth="3" 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
                   </div>
-                  <div>
-                    <span className="font-semibold text-foreground">{benefit.title}</span>
+                  <div className="text-base md:text-lg">
+                    <span className="font-bold text-foreground">{benefit.title}</span>
                     <span className="text-muted-foreground"> — {benefit.description}</span>
                   </div>
                 </div>
@@ -72,23 +85,35 @@ const BenefitsSection = () => {
             </div>
           </div>
 
-          {/* Right side - Image with offset rectangle */}
+          {/* Right side - Image with L-shaped offset rectangle */}
           <div
             className={`relative hidden lg:block transition-all duration-700 delay-300 ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
             }`}
           >
-            {/* Offset decorative box */}
-            <div className="absolute -top-3 -right-3 w-[20%] h-[20%] bg-primary rounded-lg" />
+            {/* L-shaped offset rectangle - vertical portion on right */}
+            <div className="absolute -top-4 right-0 w-20 h-[calc(100%+48px)] bg-tan/60 rounded-sm" />
+            {/* L-shaped offset rectangle - horizontal portion at top */}
+            <div className="absolute -top-4 right-0 left-[40%] h-12 bg-tan/60 rounded-sm" />
             
             {/* Main image */}
-            <div className="relative z-10">
+            <div className="relative z-10 mr-6">
               <img
                 src={consultingWorkshopImage}
                 alt="Professional team collaboration"
-                className="w-full rounded-lg shadow-2xl object-cover h-[450px]"
+                className="w-full rounded-sm shadow-xl object-cover h-[500px]"
               />
             </div>
+          </div>
+
+          {/* Mobile image */}
+          <div className="lg:hidden relative">
+            <div className="absolute -top-3 -right-3 w-[20%] h-[20%] bg-tan/60 rounded-sm" />
+            <img
+              src={consultingWorkshopImage}
+              alt="Professional team collaboration"
+              className="w-full rounded-sm shadow-xl object-cover aspect-[4/3] relative z-10"
+            />
           </div>
         </div>
       </div>
