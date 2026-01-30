@@ -49,7 +49,12 @@ const BenefitsSection = () => {
       {/* Decorative top border */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-accent" />
       
-      <div className="container mx-auto px-4 md:px-6">
+      {/* Offset decorative boxes for visual depth */}
+      <div className="absolute bottom-16 left-8 w-28 h-28 border-2 border-secondary/20 rounded-lg hidden lg:block" />
+      <div className="absolute top-32 right-12 w-20 h-20 bg-primary/10 rounded-lg hidden lg:block" />
+      <div className="absolute bottom-1/3 right-8 w-16 h-1 bg-secondary/30 hidden lg:block" />
+      
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         {/* Header with offset image */}
         <div className="grid lg:grid-cols-12 gap-8 mb-16">
           <div

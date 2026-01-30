@@ -17,6 +17,10 @@ const ProblemSection = () => {
 
   return (
     <section ref={ref} className="py-20 bg-background relative overflow-hidden">
+      {/* Offset decorative elements for visual depth */}
+      <div className="absolute top-16 left-8 w-24 h-24 border-2 border-cream rounded-lg hidden lg:block" />
+      <div className="absolute bottom-20 left-1/4 w-16 h-1 bg-primary/30 hidden lg:block" />
+      
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left side - Content */}
