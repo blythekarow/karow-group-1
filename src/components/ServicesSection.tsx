@@ -79,7 +79,7 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <Card
               key={index}
-              className={`group bg-card border-none shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-1 overflow-hidden ${
+              className={`group bg-card border-none shadow-md hover:shadow-xl transition-all duration-200 ease-out hover:-translate-y-1 overflow-hidden border-t-4 border-t-primary ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: `${index * 150 + 200}ms` }}
@@ -94,8 +94,7 @@ const ServicesSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 to-transparent" />
                 <div className="absolute bottom-3 left-4">
                   <Badge
-                    variant="secondary"
-                    className="text-xs font-semibold tracking-wider bg-primary text-primary-foreground"
+                    className="text-[10px] font-semibold tracking-widest uppercase bg-accent text-accent-foreground border-none"
                   >
                     {service.label}
                   </Badge>
@@ -123,7 +122,7 @@ const ServicesSection = () => {
                   {service.outcomes.map((outcome, i) => (
                     <span
                       key={i}
-                      className="text-xs bg-cream text-secondary px-3 py-1 rounded-full font-medium"
+                      className="text-xs bg-cream text-secondary px-3 py-1.5 rounded-full font-medium border border-tan"
                     >
                       {outcome}
                     </span>
