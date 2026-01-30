@@ -1,13 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const SUBSTACK_URL = "https://blythekarow.substack.com/";
 
 const LeadMagnet = () => {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
+
   return (
-    <section className="py-20 bg-accent">
+    <section ref={ref} className="py-20 bg-accent">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="max-w-3xl mx-auto text-center">
+        <div
+          className={`max-w-3xl mx-auto text-center transition-all duration-700 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
           <Mail className="h-12 w-12 text-primary mx-auto mb-6" />
           
           <h2 className="text-3xl md:text-4xl font-bold text-accent-foreground mb-4">

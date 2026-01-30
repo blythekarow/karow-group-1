@@ -1,4 +1,8 @@
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+
 const ClientLogosSection = () => {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
+
   // Placeholder logos - replace with actual client logos when available
   const clients = [
     { name: "Client 1", placeholder: true },
@@ -9,12 +13,20 @@ const ClientLogosSection = () => {
   ];
 
   return (
-    <section className="py-12 bg-background">
+    <section ref={ref} className="py-12 bg-background">
       <div className="container mx-auto px-4 md:px-6">
-        <p className="text-center text-sm uppercase tracking-widest text-muted-foreground mb-8">
+        <p
+          className={`text-center text-sm uppercase tracking-widest text-muted-foreground mb-8 transition-all duration-700 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`}
+        >
           Trusted by MedTech Leaders
         </p>
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+        <div
+          className={`flex flex-wrap justify-center items-center gap-8 md:gap-12 transition-all duration-700 delay-200 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`}
+        >
           {clients.map((client, index) => (
             <div
               key={index}
@@ -27,7 +39,11 @@ const ClientLogosSection = () => {
             </div>
           ))}
         </div>
-        <p className="text-center text-xs text-muted-foreground mt-6 italic">
+        <p
+          className={`text-center text-xs text-muted-foreground mt-6 italic transition-all duration-700 delay-300 ${
+            isVisible ? "opacity-100" : "opacity-0"
+          }`}
+        >
           Client logos available upon request
         </p>
       </div>
