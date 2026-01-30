@@ -48,15 +48,19 @@ const ServicesSection = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         {/* Header Row */}
         <div
-          className={`flex flex-col md:flex-row md:justify-between md:items-end gap-4 mb-12 max-w-6xl mx-auto transition-all duration-700 ${
+          className={`grid md:grid-cols-2 gap-8 mb-16 max-w-6xl mx-auto transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-            Our Services
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-xl md:text-right">
-            Comprehensive commercialization support tailored to your stage and needs, from assessment to strategy development to hands-on execution.
+          <div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              Our Services
+            </h2>
+            {/* Accent line */}
+            <div className="w-16 h-1 bg-primary" />
+          </div>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            Your innovation deserves more than a one-size-fits-all approach. With The Karow Advisory Group, you choose the next step that fits your journey—whether that's hands-on execution, deeper insights, or a voice that sparks investor confidence.
           </p>
         </div>
 
@@ -65,7 +69,7 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`group relative h-[500px] rounded-lg overflow-hidden shadow-xl transition-all duration-700 ${
+              className={`group relative h-[550px] overflow-hidden shadow-lg transition-all duration-700 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: `${index * 150 + 200}ms` }}
@@ -74,27 +78,26 @@ const ServicesSection = () => {
               <img
                 src={service.image}
                 alt={service.title}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               
               {/* Dark gradient overlay at bottom */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20" />
               
               {/* Content overlay */}
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
+                <h3 className="text-2xl md:text-[1.75rem] font-bold text-white mb-4 leading-tight">
                   {service.title}
                 </h3>
-                <p className="text-white/80 leading-relaxed mb-6 text-sm md:text-base">
+                <p className="text-white/85 leading-relaxed mb-6 text-sm md:text-[0.95rem]">
                   {service.description}
                 </p>
                 <Button
                   asChild
-                  className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-200 text-sm font-semibold px-6 py-3 rounded-md"
+                  className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-sm font-semibold px-6 py-3"
                 >
                   <a href={service.link}>
                     {service.cta}
-                    <ArrowRight className="ml-2 h-4 w-4" />
                   </a>
                 </Button>
               </div>
