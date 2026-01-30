@@ -1,0 +1,4 @@
+project_id = "nsxfhgjpfnqetvfjtdwh"
+
+[functions.substack-feed]
+verify_jwt = false
