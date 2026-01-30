@@ -36,18 +36,19 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           {/* Logo + Company Name */}
-          <a href="/" className="flex items-center gap-3">
+          <a href="/" className="flex items-center gap-4">
             <img
               src={logoIcon}
               alt="The Karow Advisory Group"
               className={`transition-all duration-300 ${
-                isScrolled ? "h-8 w-8" : "h-10 w-10"
+                isScrolled ? "h-10 w-10" : "h-12 w-12"
               }`}
             />
             <span
-              className={`font-semibold tracking-wide text-background uppercase transition-all duration-300 hidden sm:block ${
-                isScrolled ? "text-sm" : "text-base"
+              className={`font-bold tracking-widest text-background uppercase transition-all duration-300 hidden sm:block ${
+                isScrolled ? "text-xs" : "text-sm"
               }`}
+              style={{ letterSpacing: "0.15em" }}
             >
               The Karow Advisory Group
             </span>
