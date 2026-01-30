@@ -1,7 +1,9 @@
-import { Target, Search, Puzzle, Shield, Users } from "lucide-react";
+import { Target, Search, Puzzle, Users } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import dnaImage from "@/assets/dna-research.jpg";
+import researcherImage from "@/assets/researcher-pill.jpg";
 
 const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
 
@@ -38,26 +40,50 @@ const BenefitsSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <section ref={ref} className="py-20 bg-cream relative">
+    <section ref={ref} className="py-20 bg-cream relative overflow-hidden">
       {/* Decorative top border */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-accent" />
       
       <div className="container mx-auto px-4 md:px-6">
-        <h2
-          className={`text-3xl md:text-4xl font-bold text-foreground text-center mb-4 transition-all duration-700 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
-          Why Teams Choose Us
-        </h2>
-        
-        <p
-          className={`text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto transition-all duration-700 delay-100 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
-          We bring Fortune 50 experience and startup agility to every engagement.
-        </p>
+        {/* Header with offset image */}
+        <div className="grid lg:grid-cols-12 gap-8 mb-16">
+          <div
+            className={`lg:col-span-7 transition-all duration-700 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Why Teams Choose Us
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-xl">
+              We bring Fortune 50 experience and startup agility to every engagement.
+            </p>
+          </div>
+          
+          {/* Decorative image cluster */}
+          <div
+            className={`lg:col-span-5 relative hidden lg:block h-40 transition-all duration-700 delay-200 ${
+              isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
+            }`}
+          >
+            <div className="absolute top-0 right-0 w-40 h-32 rounded-lg overflow-hidden shadow-lg">
+              <img
+                src={dnaImage}
+                alt="DNA research"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="absolute -bottom-4 right-32 w-32 h-28 rounded-lg overflow-hidden shadow-xl border-4 border-background">
+              <img
+                src={researcherImage}
+                alt="Researcher"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            {/* Decorative box */}
+            <div className="absolute top-4 right-44 w-16 h-16 bg-primary/20 rounded-lg -z-10" />
+          </div>
+        </div>
         
         <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto mb-12">
           {benefits.map((benefit, index) => (
