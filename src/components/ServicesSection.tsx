@@ -3,9 +3,9 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { ArrowRight, Zap, TrendingUp, BarChart3 } from "lucide-react";
-import medicalTeamImage from "@/assets/medical-team.jpg";
-import scientistImage from "@/assets/scientist-lab.jpg";
-import dnaImage from "@/assets/dna-research.jpg";
+import executiveBoardroomImage from "@/assets/executive-boardroom.jpg";
+import consultingWorkshopImage from "@/assets/consulting-workshop.jpg";
+import dueDiligenceImage from "@/assets/due-diligence-meeting.jpg";
 
 const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
 
@@ -26,7 +26,7 @@ const services: ServiceCard[] = [
     description:
       "Define the path. Get aligned. Move forward with confidence. A focused, senior-level engagement designed to help you tackle a strategic decision point with speed, clarity, and a plan built for execution.",
     outcomes: ["Strategic alignment", "Clear roadmap", "Faster decisions"],
-    image: medicalTeamImage,
+    image: executiveBoardroomImage,
   },
   {
     icon: TrendingUp,
@@ -35,7 +35,7 @@ const services: ServiceCard[] = [
     description:
       "When you have a strategic or execution gap that needs expert leadership for the short term. Hands-on support to drive initiatives forward, align teams, and translate plans into progress.",
     outcomes: ["Embedded expertise", "Team alignment", "Execution support"],
-    image: scientistImage,
+    image: consultingWorkshopImage,
   },
   {
     icon: BarChart3,
@@ -44,7 +44,7 @@ const services: ServiceCard[] = [
     description:
       "Trusted insight for critical investment and acquisition decisions. From due diligence to market validation to exit prep, this engagement helps investors and operators evaluate, refine, and act with clarity.",
     outcomes: ["Due diligence", "Market validation", "Exit readiness"],
-    image: dnaImage,
+    image: dueDiligenceImage,
   },
 ];
 
