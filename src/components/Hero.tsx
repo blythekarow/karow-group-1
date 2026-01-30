@@ -1,6 +1,6 @@
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/blythe-headshot.png";
+import heroImage from "@/assets/blythe-hero.png";
 
 const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
 
@@ -13,18 +13,30 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 pb-16 overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-cream opacity-50" />
-      
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left content - Text */}
-          <div className="text-left animate-fade-in-up">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
+    <section className="relative min-h-screen flex pt-16">
+      {/* Split layout container */}
+      <div className="flex flex-col lg:flex-row w-full">
+        {/* Left side - Image (like her current site) */}
+        <div className="lg:w-1/2 h-[50vh] lg:h-auto relative order-1 lg:order-1">
+          <img
+            src={heroImage}
+            alt="Blythe Karow - MedTech Strategy Consultant"
+            className="w-full h-full object-cover object-top"
+          />
+          {/* Subtle overlay gradient */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-background/10 hidden lg:block" />
+        </div>
+
+        {/* Right side - Content */}
+        <div className="lg:w-1/2 flex items-center bg-background order-2 lg:order-2">
+          <div className="px-6 py-12 lg:px-12 xl:px-20 w-full animate-fade-in-up">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight mb-6">
               MedTech Strategy That{" "}
               <span className="text-primary">Actually Ships.</span>
             </h1>
+            
+            {/* Horizontal line accent like her current site */}
+            <div className="w-full h-px bg-border mb-6" />
             
             <p className="text-lg md:text-xl text-muted-foreground mb-4 max-w-xl">
               20+ years helping device and digital health companies navigate from 
@@ -35,6 +47,9 @@ const Hero = () => {
             <p className="text-lg text-secondary font-medium italic border-l-4 border-primary pl-4 mb-8">
               Big consulting delivers slide decks. I deliver traction.
             </p>
+            
+            {/* Horizontal line accent */}
+            <div className="w-full h-px bg-border mb-8" />
             
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
@@ -60,29 +75,11 @@ const Hero = () => {
               </Button>
             </div>
           </div>
-
-          {/* Right content - Image with layered effect */}
-          <div className="relative lg:order-last order-first">
-            {/* Offset background box */}
-            <div className="absolute -top-6 -right-6 w-full h-full bg-tan rounded-lg opacity-60" />
-            
-            {/* Main image container - portrait focused */}
-            <div className="relative z-10 max-w-md mx-auto lg:mx-0 lg:ml-auto">
-              <img
-                src={heroImage}
-                alt="Blythe Karow - MedTech Strategy Consultant"
-                className="w-full h-auto rounded-lg shadow-2xl object-cover object-top"
-              />
-            </div>
-            
-            {/* Decorative accent */}
-            <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-primary rounded-full opacity-20" />
-          </div>
         </div>
       </div>
       
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce hidden lg:block">
         <ChevronDown className="h-8 w-8 text-muted-foreground" />
       </div>
     </section>

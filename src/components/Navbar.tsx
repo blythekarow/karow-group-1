@@ -29,8 +29,8 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/95 backdrop-blur-sm shadow-sm py-3"
-          : "bg-transparent py-5"
+          ? "bg-foreground shadow-lg py-3"
+          : "bg-foreground py-4"
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
@@ -40,8 +40,8 @@ const Navbar = () => {
             <img
               src={logo}
               alt="The Karow Advisory Group"
-              className={`transition-all duration-300 ${
-                isScrolled ? "h-10" : "h-12"
+              className={`transition-all duration-300 brightness-0 invert ${
+                isScrolled ? "h-8" : "h-10"
               }`}
             />
           </a>
@@ -50,13 +50,13 @@ const Navbar = () => {
           <div className="hidden md:flex items-center gap-8">
             <button
               onClick={() => scrollToSection("about")}
-              className="text-foreground hover:text-primary font-medium transition-colors"
+              className="text-background hover:text-primary font-medium transition-colors"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection("services")}
-              className="text-foreground hover:text-primary font-medium transition-colors"
+              className="text-background hover:text-primary font-medium transition-colors"
             >
               Services
             </button>
@@ -64,7 +64,7 @@ const Navbar = () => {
               href="https://blythekarow.substack.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground hover:text-primary font-medium transition-colors"
+              className="text-background hover:text-primary font-medium transition-colors"
             >
               Insights
             </a>
@@ -80,7 +80,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 text-background"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -94,17 +94,17 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-border pt-4 animate-fade-in">
+          <div className="md:hidden mt-4 pb-4 border-t border-background/20 pt-4 animate-fade-in">
             <div className="flex flex-col gap-4">
               <button
                 onClick={() => scrollToSection("about")}
-                className="text-foreground hover:text-primary font-medium transition-colors text-left"
+                className="text-background hover:text-primary font-medium transition-colors text-left"
               >
                 About
               </button>
               <button
                 onClick={() => scrollToSection("services")}
-                className="text-foreground hover:text-primary font-medium transition-colors text-left"
+                className="text-background hover:text-primary font-medium transition-colors text-left"
               >
                 Services
               </button>
@@ -112,7 +112,7 @@ const Navbar = () => {
                 href="https://blythekarow.substack.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-foreground hover:text-primary font-medium transition-colors"
+                className="text-background hover:text-primary font-medium transition-colors"
               >
                 Insights
               </a>
