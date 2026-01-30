@@ -1,36 +1,31 @@
-import { Target, Link, Star, Clock } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Check } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import consultingWorkshopImage from "@/assets/consulting-workshop.jpg";
 
-const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
-
-interface BenefitCard {
-  icon: React.ElementType;
-  title: string;
-  body: string;
-}
-
-const benefits: BenefitCard[] = [
+const benefits = [
   {
-    icon: Target,
-    title: "Strategic Clarity to Move Forward with Confidence",
-    body: "See the full picture from concept to commercialization. Make confident decisions that protect your timeline and budget.",
+    title: "Save money",
+    description: "Avoid unnecessary and costly missteps",
   },
   {
-    icon: Link,
-    title: "Integrated Expertise, Not Siloed Advice",
-    body: "Regulatory, clinical, reimbursement, and commercial—coordinated under one strategic umbrella, not conflicting silos.",
+    title: "Gain strategic confidence",
+    description: "Winning plans are built with cross-functional alignment that makes your strategy bulletproof",
   },
   {
-    icon: Star,
-    title: "Battle-Tested Guidance from Operators",
-    body: "Senior expertise from startup CEOs and Fortune 50 leaders—not junior consultants learning on your dime.",
+    title: "Accelerate time-to-market",
+    description: "Move faster with clear milestones and coordinated execution",
   },
   {
-    icon: Clock,
-    title: "Right Expertise at the Right Time",
-    body: "Specialists when you need them, at the level you need. Spend lean and hit milestones without gaps.",
+    title: "Win investor confidence",
+    description: "Prove you understand the path, the risks, and how to execute",
+  },
+  {
+    title: "Know what to build and when",
+    description: "Identify blind spots before they become expensive problems",
+  },
+  {
+    title: "Drive real adoption",
+    description: "Ensure your market plans deliver revenue, not just regulatory approval",
   },
 ];
 
@@ -38,62 +33,63 @@ const BenefitsSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <section ref={ref} className="py-24 bg-[#FDFCFA] relative overflow-hidden">
+    <section ref={ref} className="py-24 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        {/* Clean header */}
-        <div
-          className={`text-center mb-12 transition-all duration-700 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Why Companies Work With Us
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            We bring Fortune 50 experience and startup agility to every engagement.
-          </p>
-        </div>
-        
-        {/* 2x2 Grid */}
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto mb-12">
-          {benefits.map((benefit, index) => (
-            <Card
-              key={index}
-              className={`group bg-card border-none shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.12)] transition-all duration-200 ease-out hover:-translate-y-1 border-l-[3px] border-l-primary ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
-              style={{ transitionDelay: `${index * 100 + 200}ms` }}
-            >
-              <CardContent className="p-6 lg:p-8">
-                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
-                  <benefit.icon className="h-7 w-7 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">
-                  {benefit.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {benefit.body}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-        
-        {/* CTA */}
-        <div
-          className={`text-center transition-all duration-700 delay-500 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
-          <Button
-            asChild
-            size="lg"
-            className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-base font-semibold px-8 py-4 rounded-md"
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
+          {/* Left side - Content */}
+          <div
+            className={`transition-all duration-700 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
           >
-            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-              Let's Talk About Your Needs
-            </a>
-          </Button>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              Finding the Right Strategic Partner Saves You Time, Momentum, and Money
+            </h2>
+            
+            <p className="text-lg text-muted-foreground mb-8">
+              With The Karow Advisory Group, you can:
+            </p>
+            
+            {/* Checkmark list */}
+            <div className="space-y-4">
+              {benefits.map((benefit, index) => (
+                <div
+                  key={index}
+                  className={`flex items-start gap-3 transition-all duration-500 ${
+                    isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
+                  }`}
+                  style={{ transitionDelay: `${index * 100 + 200}ms` }}
+                >
+                  <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                    <Check className="h-4 w-4 text-primary-foreground" />
+                  </div>
+                  <div>
+                    <span className="font-semibold text-foreground">{benefit.title}</span>
+                    <span className="text-muted-foreground"> — {benefit.description}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right side - Image with offset rectangle */}
+          <div
+            className={`relative hidden lg:block transition-all duration-700 delay-300 ${
+              isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
+            }`}
+          >
+            {/* Offset decorative box */}
+            <div className="absolute -top-3 -right-3 w-[20%] h-[20%] bg-primary rounded-lg" />
+            
+            {/* Main image */}
+            <div className="relative z-10">
+              <img
+                src={consultingWorkshopImage}
+                alt="Professional team collaboration"
+                className="w-full rounded-lg shadow-2xl object-cover h-[450px]"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>

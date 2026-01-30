@@ -1,30 +1,32 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import newsletterMockupImage from "@/assets/newsletter-mockup.jpg";
+import scientistLabImage from "@/assets/scientist-lab.jpg";
 
-const AssessmentSection = () => {
+const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
+
+const SolutionSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
 
   return (
     <section ref={ref} className="py-24 bg-cream relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
-          {/* Left side - Image with offset rectangle */}
+          {/* Left side - Image with subtle offset box */}
           <div
             className={`relative hidden lg:block transition-all duration-700 ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
             }`}
           >
-            {/* Offset decorative box */}
+            {/* Subtle offset decorative box - top-left, smaller */}
             <div className="absolute -top-3 -left-3 w-[20%] h-[20%] bg-primary rounded-lg" />
             
-            {/* Main image (laptop mockup) */}
+            {/* Main image */}
             <div className="relative z-10">
               <img
-                src={newsletterMockupImage}
-                alt="D.E.V.I.C.E. Assessment on laptop"
-                className="w-full rounded-lg shadow-2xl object-cover h-[400px]"
+                src={scientistLabImage}
+                alt="Strategic advisor in professional setting"
+                className="w-full rounded-lg shadow-2xl object-cover h-[450px]"
               />
             </div>
           </div>
@@ -35,26 +37,29 @@ const AssessmentSection = () => {
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
             }`}
           >
-            {/* Eyebrow */}
-            <p className="text-sm uppercase tracking-[2px] text-muted-foreground font-semibold mb-4">
-              Not sure where to start with your product strategy?
-            </p>
-            
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              D.E.V.I.C.E. Strategic Assessment
+              Strategic Leadership Grounded in Real-World Experience
             </h2>
             
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Take our 5-minute assessment to pinpoint what's working, what's missing, and where to focus next.
-            </p>
+            <div className="space-y-4 text-muted-foreground leading-relaxed mb-8">
+              <p>
+                <span className="font-semibold text-foreground">The Karow Advisory Group</span> is led by Blythe Karow, a strategic advisor with 20+ years navigating the MedTech and wearables landscape—from startup CEO to Fortune 50 product leader.
+              </p>
+              <p>
+                We don't just advise—we've done it. From launching products to scaling portfolios to guiding exits, we bring hands-on expertise in product strategy, regulatory pathways, commercialization planning, and go-to-market execution.
+              </p>
+              <p>
+                Our approach is simple: Get aligned on what matters, cut through complexity, and make the right things happen—fast.
+              </p>
+            </div>
             
             <Button
               asChild
               size="lg"
               className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-base font-semibold px-8 py-4 rounded-md"
             >
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                Start Your Assessment
+              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+                Work With Blythe
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
@@ -65,4 +70,4 @@ const AssessmentSection = () => {
   );
 };
 
-export default AssessmentSection;
+export default SolutionSection;

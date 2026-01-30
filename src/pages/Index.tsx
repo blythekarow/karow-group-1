@@ -1,17 +1,16 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import LogoCarousel from "@/components/LogoCarousel";
-import WhyWorkWithUsSection from "@/components/WhyWorkWithUsSection";
-import AboutFirmSection from "@/components/AboutFirmSection";
 import ProblemSection from "@/components/ProblemSection";
+import SolutionSection from "@/components/SolutionSection";
 import ProcessSection from "@/components/ProcessSection";
 import BenefitsSection from "@/components/BenefitsSection";
-import OutcomesSection from "@/components/OutcomesSection";
-import ServicesSection from "@/components/ServicesSection";
-import FounderSection from "@/components/FounderSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import ServicesSection from "@/components/ServicesSection";
 import AssessmentSection from "@/components/AssessmentSection";
-import MapPathCTASection from "@/components/MapPathCTASection";
+import FounderSection from "@/components/FounderSection";
+import TeamSection from "@/components/TeamSection";
+import WhenLeadersSection from "@/components/WhenLeadersSection";
 import FinalCTASection from "@/components/FinalCTASection";
 import Footer from "@/components/Footer";
 
@@ -19,20 +18,33 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
+      {/* 1. Hero */}
       <Hero />
+      {/* 2. Trusted By / Logo Carousel */}
       <LogoCarousel />
-      <WhyWorkWithUsSection />
-      <AboutFirmSection />
+      {/* 3. The Problem */}
       <ProblemSection />
+      {/* 4. The Solution / Founder Intro */}
+      <SolutionSection />
+      {/* 5. 3-Step Process */}
       <ProcessSection />
+      {/* 6. Value Proposition / Benefits */}
       <BenefitsSection />
-      <OutcomesSection />
-      <ServicesSection />
-      <FounderSection />
+      {/* 7. Testimonials */}
       <TestimonialsSection />
+      {/* 8. Services Overview */}
+      <ServicesSection />
+      {/* 9. Free Assessment CTA (D.E.V.I.C.E.) */}
       <AssessmentSection />
-      <MapPathCTASection />
+      {/* 10. Meet Blythe Karow */}
+      <FounderSection />
+      {/* 11. Team Section */}
+      <TeamSection />
+      {/* 12. When Leaders Reach Out */}
+      <WhenLeadersSection />
+      {/* 13. Final Dual CTA */}
       <FinalCTASection />
+      {/* 14. Footer */}
       <Footer />
     </div>
   );

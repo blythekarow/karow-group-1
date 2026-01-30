@@ -5,13 +5,6 @@ import executiveStrategyImage from "@/assets/executive-strategy-whiteboard.jpg";
 
 const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
 
-const painPoints = [
-  "You're burning runway making decisions instead of building.",
-  "Product, regulatory, and commercial plans aren't aligned.",
-  "You need senior leadership but can't afford a full-time hire.",
-  "The launch is coming and no one is actually managing it.",
-];
-
 const ProblemSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
 
@@ -25,26 +18,18 @@ const ProblemSection = () => {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-10">
-              Sound Familiar?
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              Every Decision Matters in MedTech—Don't Let Uncertainty Burn Money and Slow You Down
             </h2>
             
-            <div className="space-y-4 mb-10">
-              {painPoints.map((point, index) => (
-                <p
-                  key={index}
-                  className="text-lg md:text-xl text-muted-foreground flex items-start gap-3"
-                  style={{ transitionDelay: `${index * 100}ms` }}
-                >
-                  <span className="text-primary mt-1 shrink-0 text-2xl">•</span>
-                  <span>{point}</span>
-                </p>
-              ))}
+            <div className="space-y-4 text-muted-foreground leading-relaxed mb-8">
+              <p>
+                Without a clear commercialization roadmap, you risk choosing the wrong regulatory pathway, running studies that don't support reimbursement, and missing critical investor or market access milestones.
+              </p>
+              <p>
+                In MedTech, moving fast without integrated strategy doesn't accelerate success. It leads to stalled clearances, wasted capital, and lost competitive opportunities.
+              </p>
             </div>
-            
-            <p className="text-xl md:text-2xl text-secondary font-medium italic mb-10">
-              You don't need more advisors. You need a team that makes things happen.
-            </p>
             
             <Button
               asChild

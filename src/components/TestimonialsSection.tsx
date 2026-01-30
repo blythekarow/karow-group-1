@@ -1,11 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { ArrowRight } from "lucide-react";
 import medicalTeamImage from "@/assets/medical-team.jpg";
-
-const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
 
 interface Testimonial {
   quote: string;
@@ -17,21 +13,21 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     quote:
-      "Blythe seamlessly directed a rebrand to align our messaging with our brand, prepared us for a national conference, and led our product launch. Her powerhouse knowledge and ability to lead with excitement led to increased product sales. Simply, Blythe is a natural leader.",
+      "Seamlessly directed and began a rebrand to align our messaging with our brand, prepared us for a national conference appearance, product launch, and many, many other focus areas. Blythe's powerhouse marketing knowledge and her ability to lead with excitement led to increased product sales and left a lasting impact on me personally. Simply, Blythe is a natural leader.",
     name: "Nikki Mabry",
     title: "",
     company: "Metric Medical",
   },
   {
     quote:
-      "Blythe has an exceptional ability to see the big picture and translate it into a clear, actionable path forward. She shaped how we connect with both providers and patients. She has the rare ability to balance clinical nuance, regulatory context, and commercial strategy.",
+      "Exceptional ability to see the big picture and then translate it into a clear, actionable path forward. From building our clinician advisory board to leading go-to-market planning and early business development, she shaped how NeuroGeneces connects with both providers and patients. She has the rare ability to balance clinical nuance, regulatory context, and commercial strategy and make it all feel simple.",
     name: "Karen Crow",
     title: "CEO",
     company: "NeuroGeneces",
   },
   {
     quote:
-      "Blythe brought structure, clarity, and momentum at a critical time in our growth. She built a pro forma that reflected our commercialization path and ensured we were presenting strategically to partners and funders. We secured funding and her work was key to making that happen.",
+      "Brought structure, clarity, and momentum at a critical time in our company's growth. She built a pro forma that actually reflected our commercialization path and ensured we were presenting ourselves strategically to both partners and funders. We secured funding and her work was a key part of making that happen. As a founder with limited internal resources, having someone who could plug in and deliver was a game-changer.",
     name: "Dr. Daniel Gareau",
     title: "CEO",
     company: "SurgiVance",
@@ -74,6 +70,11 @@ const TestimonialsSection = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
+          {/* Headline */}
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">
+            What Clients Say
+          </h2>
+          
           {/* Large quote icon */}
           <Quote className="h-16 w-16 text-primary mx-auto mb-8 fill-primary" />
           
@@ -96,7 +97,7 @@ const TestimonialsSection = () => {
           </div>
           
           {/* Navigation */}
-          <div className="flex justify-center items-center gap-6 mb-12">
+          <div className="flex justify-center items-center gap-6">
             <button
               onClick={prevTestimonial}
               className="p-3 rounded-full bg-background/10 hover:bg-background/20 transition-colors border border-background/20"
@@ -127,21 +128,6 @@ const TestimonialsSection = () => {
             >
               <ChevronRight className="h-6 w-6 text-background" />
             </button>
-          </div>
-
-          {/* CTA */}
-          <div>
-            <p className="text-background/70 mb-4">Ready to join them?</p>
-            <Button
-              asChild
-              size="lg"
-              className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-base font-semibold px-8 py-4 rounded-md"
-            >
-              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-                Join Our Clients
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </Button>
           </div>
         </div>
       </div>
