@@ -52,22 +52,14 @@ const ServicesSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <section id="services" ref={ref} className="py-20 bg-background scroll-mt-20 relative overflow-hidden">
-      {/* Decorative background element */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-cream/30 -skew-x-12 transform origin-top-right hidden xl:block" />
-      
-      {/* Offset decorative boxes */}
-      <div className="absolute bottom-20 left-8 w-24 h-24 border-2 border-cream rounded-lg hidden lg:block" />
-      <div className="absolute top-24 left-12 w-16 h-16 bg-primary/10 rounded-lg hidden lg:block" />
-      <div className="absolute top-1/2 left-4 w-12 h-1 bg-primary/40 hidden lg:block" />
-      
+    <section id="services" ref={ref} className="py-24 bg-cream scroll-mt-20 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div
           className={`text-center mb-12 transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-[42px] font-bold text-foreground mb-4">
             How We Work Together
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -79,7 +71,7 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <Card
               key={index}
-              className={`group bg-card border-none shadow-md hover:shadow-xl transition-all duration-200 ease-out hover:-translate-y-1 overflow-hidden border-t-4 border-t-primary ${
+              className={`group bg-card border-none shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.12)] transition-all duration-200 ease-out hover:-translate-y-1 overflow-hidden border-t-4 border-t-primary ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: `${index * 150 + 200}ms` }}
@@ -103,8 +95,8 @@ const ServicesSection = () => {
               
               <CardHeader className="pb-2 pt-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
-                    <service.icon className="h-5 w-5 text-accent" />
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <service.icon className="h-5 w-5 text-primary" />
                   </div>
                 </div>
               </CardHeader>
@@ -144,23 +136,13 @@ const ServicesSection = () => {
           ))}
         </div>
 
-        {/* Bottom CTA with image accent */}
+        {/* Bottom CTA */}
         <div
           className={`relative bg-accent rounded-xl p-8 md:p-12 max-w-5xl mx-auto transition-all duration-700 delay-500 overflow-hidden ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          {/* Decorative image on the right */}
-          <div className="absolute right-0 top-0 bottom-0 w-1/3 hidden lg:block">
-            <div className="absolute inset-0 bg-gradient-to-r from-accent to-transparent z-10" />
-            <img
-              src={medicalTeamImage}
-              alt=""
-              className="w-full h-full object-cover opacity-40"
-            />
-          </div>
-          
-          <div className="relative z-20 text-center lg:text-left lg:max-w-xl">
+          <div className="relative z-20 text-center">
             <p className="text-xl md:text-2xl text-accent-foreground font-medium mb-6">
               Not sure which engagement model is right for you?
             </p>

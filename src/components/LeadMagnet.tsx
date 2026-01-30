@@ -15,11 +15,7 @@ const LeadMagnet = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section ref={ref} className="py-20 bg-background relative overflow-hidden">
-      {/* Subtle decorative elements */}
-      <div className="absolute top-16 right-8 w-20 h-20 border-2 border-cream rounded-lg hidden lg:block" />
-      <div className="absolute bottom-16 left-1/4 w-12 h-1 bg-primary/30 hidden lg:block" />
-      
+    <section ref={ref} className="py-24 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
           {/* Left side - Newsletter Mockup with offset box */}
@@ -28,8 +24,8 @@ const LeadMagnet = () => {
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
             }`}
           >
-            {/* Offset decorative box - top-left, 30% size */}
-            <div className="absolute -top-4 -left-4 w-[30%] h-[35%] bg-primary rounded-lg" />
+            {/* Offset decorative box - top-left, 25% size */}
+            <div className="absolute -top-4 -left-4 w-[25%] h-[25%] bg-primary rounded-lg" />
             
             {/* Main mockup image */}
             <div className="relative z-10">
@@ -47,15 +43,15 @@ const LeadMagnet = () => {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <span className="text-xs font-semibold tracking-widest uppercase text-primary mb-4 block">
-              STAY AHEAD OF THE CURVE
+            <span className="text-sm font-semibold tracking-[2px] uppercase text-primary mb-4 block">
+              Stay Ahead of the Curve
             </span>
             
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               MedTech Strategy Insights
             </h2>
             
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               Join executives getting actionable insights on product strategy, 
               regulatory navigation, and commercialization for MedTech, wearables, 
               and digital therapeutics.
@@ -76,6 +72,10 @@ const LeadMagnet = () => {
                 </div>
               ))}
             </div>
+            
+            <p className="text-sm text-muted-foreground mb-6">
+              Also catch Blythe on <span className="font-medium text-foreground">The Device Files</span> podcast.
+            </p>
             
             <Button
               asChild

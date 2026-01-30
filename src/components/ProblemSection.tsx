@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { ArrowRight } from "lucide-react";
-import womanMedtechImage from "@/assets/woman-medtech-strategy.jpg";
+import executiveStrategyImage from "@/assets/executive-strategy-whiteboard.jpg";
 
 const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
 
@@ -16,11 +16,7 @@ const ProblemSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section ref={ref} className="py-20 bg-background relative overflow-hidden">
-      {/* Offset decorative elements for visual depth */}
-      <div className="absolute top-16 left-8 w-24 h-24 border-2 border-cream rounded-lg hidden lg:block" />
-      <div className="absolute bottom-20 left-1/4 w-16 h-1 bg-primary/30 hidden lg:block" />
-      
+    <section ref={ref} className="py-24 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left side - Content */}
@@ -62,20 +58,20 @@ const ProblemSection = () => {
             </Button>
           </div>
 
-          {/* Right side - Layered Image */}
+          {/* Right side - Image with subtle offset box */}
           <div
             className={`relative hidden lg:block transition-all duration-700 delay-300 ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
             }`}
           >
-            {/* Subtle offset decorative box - top-left, 30% size */}
-            <div className="absolute -top-4 -left-4 w-[30%] h-[30%] bg-primary rounded-lg" />
+            {/* Subtle offset decorative box - top-left, smaller */}
+            <div className="absolute -top-3 -left-3 w-[20%] h-[20%] bg-primary rounded-lg" />
             
             {/* Main image */}
             <div className="relative z-10">
               <img
-                src={womanMedtechImage}
-                alt="Professional woman reviewing medical device strategy"
+                src={executiveStrategyImage}
+                alt="Executive leading strategy session at whiteboard"
                 className="w-full rounded-lg shadow-2xl object-cover h-96"
               />
             </div>

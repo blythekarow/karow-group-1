@@ -38,16 +38,9 @@ const BenefitsSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <section ref={ref} className="py-20 bg-cream relative overflow-hidden">
-      {/* Decorative top border */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-accent" />
-      
-      {/* Subtle offset decorative boxes */}
-      <div className="absolute bottom-16 left-8 w-28 h-28 border-2 border-secondary/20 rounded-lg hidden lg:block" />
-      <div className="absolute top-32 right-12 w-20 h-20 bg-primary/10 rounded-lg hidden lg:block" />
-      
+    <section ref={ref} className="py-24 bg-[#FDFCFA] relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        {/* Clean header - no images */}
+        {/* Clean header */}
         <div
           className={`text-center mb-12 transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -66,7 +59,7 @@ const BenefitsSection = () => {
           {benefits.map((benefit, index) => (
             <Card
               key={index}
-              className={`group bg-card border-none shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-1 ${
+              className={`group bg-card border-none shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.12)] transition-all duration-200 ease-out hover:-translate-y-1 border-l-[3px] border-l-primary ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: `${index * 100 + 200}ms` }}
