@@ -17,10 +17,7 @@ const FounderSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <section id="about" ref={ref} className="py-20 bg-background scroll-mt-20 relative overflow-hidden">
-      {/* Decorative element */}
-      <div className="absolute bottom-0 left-0 w-1/4 h-1/2 bg-cream/50 skew-x-12 transform origin-bottom-left hidden lg:block" />
-      
+    <section id="about" ref={ref} className="py-24 bg-background scroll-mt-20 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
           {/* Image with layered effect */}
@@ -40,9 +37,6 @@ const FounderSection = () => {
                 className="w-full h-auto rounded-lg shadow-2xl object-cover max-w-md mx-auto"
               />
             </div>
-            
-            {/* Decorative accent */}
-            <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-primary rounded-full opacity-20" />
           </div>
 
           {/* Text content */}
@@ -51,19 +45,24 @@ const FounderSection = () => {
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
             }`}
           >
-            <p className="text-sm uppercase tracking-widest text-primary font-semibold mb-4">
+            <p className="text-sm uppercase tracking-[2px] text-primary font-semibold mb-4">
               Leadership
             </p>
             
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+            <h2 className="text-4xl md:text-[42px] font-bold text-foreground mb-6">
               Meet Blythe Karow
             </h2>
             
-            <div className="space-y-4 text-muted-foreground leading-relaxed mb-8">
+            <div className="space-y-4 text-muted-foreground leading-relaxed mb-6">
               <p>
                 <span className="font-semibold text-foreground">The Karow Advisory Group</span> is led by Blythe Karow, a strategic advisor with 20+ years of MedTech and wearables experience. From startup CEO to Fortune 50 product leader, Blythe brings hands-on expertise in product strategy, commercialization, regulatory navigation, and go-to-market execution.
               </p>
             </div>
+            
+            {/* Personal quote */}
+            <p className="text-lg italic text-secondary border-l-4 border-primary pl-4 mb-8">
+              "I'm not here to advise from the sidelines. I'm here to make things happen."
+            </p>
             
             {/* Credentials */}
             <div className="flex flex-wrap gap-2 mb-8">
@@ -71,7 +70,7 @@ const FounderSection = () => {
                 <Badge
                   key={index}
                   variant="secondary"
-                  className="bg-cream text-secondary font-medium"
+                  className="bg-cream text-secondary font-medium border border-tan"
                 >
                   {credential}
                 </Badge>

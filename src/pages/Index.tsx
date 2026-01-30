@@ -7,7 +7,7 @@ import ProblemSection from "@/components/ProblemSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import ServicesSection from "@/components/ServicesSection";
 import LeadMagnet from "@/components/LeadMagnet";
-import InsightsSection from "@/components/InsightsSection";
+
 import FounderSection from "@/components/FounderSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FinalCTASection from "@/components/FinalCTASection";
@@ -25,7 +25,7 @@ const Index = () => {
       <BenefitsSection />
       <ServicesSection />
       <LeadMagnet />
-      <InsightsSection />
+      
       <FounderSection />
       <TestimonialsSection />
       <FinalCTASection />

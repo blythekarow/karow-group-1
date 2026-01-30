@@ -1,44 +1,30 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import strategyMeetingImage from "@/assets/medtech-strategy-meeting.jpg";
-import wearableDeviceImage from "@/assets/wearable-device-testing.jpg";
 
 const AboutFirmSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section ref={ref} className="py-20 bg-accent text-accent-foreground overflow-hidden">
+    <section ref={ref} className="py-24 bg-accent text-accent-foreground overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left side - Layered Image Composition */}
+          {/* Left side - Single Image with subtle offset box */}
           <div
             className={`relative hidden lg:block transition-all duration-700 ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
             }`}
           >
-            {/* Background decorative box */}
-            <div className="absolute -top-6 -left-6 w-64 h-64 bg-primary/20 rounded-lg" />
+            {/* Subtle offset decorative box - top-left, 25% size */}
+            <div className="absolute -top-4 -left-4 w-[25%] h-[25%] bg-primary rounded-lg" />
             
             {/* Main image */}
-            <div className="relative z-10 ml-8">
+            <div className="relative z-10">
               <img
                 src={strategyMeetingImage}
                 alt="MedTech strategy meeting"
-                className="w-full max-w-md rounded-lg shadow-2xl object-cover h-80"
+                className="w-full max-w-lg rounded-lg shadow-2xl object-cover h-96"
               />
             </div>
-            
-            {/* Overlapping secondary image */}
-            <div className="absolute -bottom-8 -right-4 z-20 w-48 h-48">
-              <div className="absolute inset-0 translate-x-2 translate-y-2 bg-tan rounded-lg" />
-              <img
-                src={wearableDeviceImage}
-                alt="Wearable device testing"
-                className="relative w-full h-full rounded-lg shadow-xl object-cover"
-              />
-            </div>
-            
-            {/* Accent line */}
-            <div className="absolute top-1/2 -left-8 w-16 h-1 bg-primary" />
           </div>
 
           {/* Right side - Content */}
