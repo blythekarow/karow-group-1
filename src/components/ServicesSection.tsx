@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
 
@@ -32,10 +33,16 @@ const services: ServiceCard[] = [
 ];
 
 const ServicesSection = () => {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
+
   return (
-    <section id="services" className="py-20 bg-background scroll-mt-20">
+    <section id="services" ref={ref} className="py-20 bg-background scroll-mt-20">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-12">
+        <div
+          className={`text-center mb-12 transition-all duration-700 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             How We Work Together
           </h2>
@@ -48,7 +55,10 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <Card
               key={index}
-              className="group bg-card border-none shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+              className={`group bg-card border-none shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-1 overflow-hidden ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}
+              style={{ transitionDelay: `${index * 150 + 200}ms` }}
             >
               {/* Colored top border */}
               <div className="h-1 bg-primary" />
@@ -84,7 +94,11 @@ const ServicesSection = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center">
+        <div
+          className={`text-center transition-all duration-700 delay-500 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
           <p className="text-lg text-muted-foreground mb-4">
             Not sure which is right for you?
           </p>

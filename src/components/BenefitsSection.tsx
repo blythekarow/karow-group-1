@@ -1,5 +1,6 @@
 import { Target, Search, Puzzle, Shield } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 interface BenefitCard {
   icon: React.ElementType;
@@ -31,10 +32,16 @@ const benefits: BenefitCard[] = [
 ];
 
 const BenefitsSection = () => {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
+
   return (
-    <section className="py-20 bg-cream">
+    <section ref={ref} className="py-20 bg-cream">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-12">
+        <h2
+          className={`text-3xl md:text-4xl font-bold text-foreground text-center mb-12 transition-all duration-700 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
           Why Companies Choose Karow Advisory
         </h2>
         
@@ -42,7 +49,10 @@ const BenefitsSection = () => {
           {benefits.map((benefit, index) => (
             <Card
               key={index}
-              className="group bg-card border-none shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className={`group bg-card border-none shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-1 ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}
+              style={{ transitionDelay: `${index * 100 + 200}ms` }}
             >
               <CardContent className="p-6 lg:p-8">
                 <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">

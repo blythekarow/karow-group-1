@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
 
@@ -10,10 +11,16 @@ const painPoints = [
 ];
 
 const ProblemSection = () => {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
+
   return (
-    <section className="py-20 bg-background">
+    <section ref={ref} className="py-20 bg-background">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="max-w-3xl mx-auto text-center">
+        <div
+          className={`max-w-3xl mx-auto text-center transition-all duration-700 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-10">
             Sound Familiar?
           </h2>
@@ -23,6 +30,7 @@ const ProblemSection = () => {
               <p
                 key={index}
                 className="text-lg md:text-xl text-muted-foreground flex items-start gap-3 text-left"
+                style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <span className="text-primary mt-1 shrink-0">•</span>
                 <span>{point}</span>

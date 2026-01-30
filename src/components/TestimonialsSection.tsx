@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
 
@@ -38,6 +39,7 @@ const testimonials: Testimonial[] = [
 
 const TestimonialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
   const nextTestimonial = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
@@ -48,9 +50,13 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section className="py-20 bg-cream">
+    <section ref={ref} className="py-20 bg-cream">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-12">
+        <h2
+          className={`text-3xl md:text-4xl font-bold text-foreground text-center mb-12 transition-all duration-700 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
           What Clients Say
         </h2>
 
@@ -59,7 +65,10 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <Card
               key={index}
-              className="bg-card border-none shadow-md hover:shadow-xl transition-all duration-300"
+              className={`bg-card border-none shadow-md hover:shadow-xl transition-all duration-500 ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}
+              style={{ transitionDelay: `${index * 150 + 200}ms` }}
             >
               <CardContent className="p-8">
                 <Quote className="h-10 w-10 text-primary mb-6" />
@@ -79,7 +88,11 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Mobile: Carousel */}
-        <div className="lg:hidden max-w-lg mx-auto mb-12">
+        <div
+          className={`lg:hidden max-w-lg mx-auto mb-12 transition-all duration-700 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
           <Card className="bg-card border-none shadow-md">
             <CardContent className="p-8">
               <Quote className="h-10 w-10 text-primary mb-6" />
@@ -131,7 +144,11 @@ const TestimonialsSection = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center">
+        <div
+          className={`text-center transition-all duration-700 delay-500 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
           <p className="text-lg text-muted-foreground mb-4">Ready to join them?</p>
           <Button
             asChild

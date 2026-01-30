@@ -1,6 +1,6 @@
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/blythe-hero.png";
+import heroImage from "@/assets/blythe-headshot.png";
 
 const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
 
@@ -20,7 +20,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left content - Text */}
-          <div className="text-left">
+          <div className="text-left animate-fade-in-up">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
               MedTech Strategy That{" "}
               <span className="text-primary">Actually Ships.</span>
@@ -66,12 +66,12 @@ const Hero = () => {
             {/* Offset background box */}
             <div className="absolute -top-6 -right-6 w-full h-full bg-tan rounded-lg opacity-60" />
             
-            {/* Main image */}
-            <div className="relative z-10">
+            {/* Main image container - portrait focused */}
+            <div className="relative z-10 max-w-md mx-auto lg:mx-0 lg:ml-auto">
               <img
                 src={heroImage}
                 alt="Blythe Karow - MedTech Strategy Consultant"
-                className="w-full h-auto rounded-lg shadow-2xl object-cover aspect-square"
+                className="w-full h-auto rounded-lg shadow-2xl object-cover object-top"
               />
             </div>
             

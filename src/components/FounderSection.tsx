@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import founderImage from "@/assets/blythe-headshot.png";
 
 const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
@@ -12,12 +13,18 @@ const credentials = [
 ];
 
 const FounderSection = () => {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
+
   return (
-    <section id="about" className="py-20 bg-background scroll-mt-20">
+    <section id="about" ref={ref} className="py-20 bg-background scroll-mt-20">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
           {/* Image with layered effect */}
-          <div className="relative order-2 lg:order-1">
+          <div
+            className={`relative order-2 lg:order-1 transition-all duration-700 ${
+              isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
+            }`}
+          >
             {/* Offset background box */}
             <div className="absolute -top-6 -left-6 w-full h-full bg-tan rounded-lg opacity-60" />
             
@@ -35,7 +42,11 @@ const FounderSection = () => {
           </div>
 
           {/* Text content */}
-          <div className="order-1 lg:order-2">
+          <div
+            className={`order-1 lg:order-2 transition-all duration-700 delay-200 ${
+              isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
+            }`}
+          >
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Meet Blythe Karow
             </h2>
