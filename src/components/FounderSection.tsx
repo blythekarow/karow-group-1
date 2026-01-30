@@ -1,17 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { ArrowRight } from "lucide-react";
-import founderImage from "@/assets/blythe-headshot.png";
+import blytheCasual from "@/assets/blythe-casual.png";
+import blytheProfessional from "@/assets/blythe-professional.png";
 
 const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
-
-const credentials = [
-  "20+ Years MedTech Experience",
-  "Former Startup CEO",
-  "Fortune 50 Product Leadership",
-  "Wearables & Digital Therapeutics Expert",
-];
 
 const FounderSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
@@ -19,27 +12,46 @@ const FounderSection = () => {
   return (
     <section id="about" ref={ref} className="py-24 bg-background scroll-mt-20 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
-          {/* Image with layered effect */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-6xl mx-auto">
+          {/* Left side: Overlapping photos with quote card */}
           <div
             className={`relative order-2 lg:order-1 transition-all duration-700 ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
             }`}
           >
-            {/* Offset background box */}
-            <div className="absolute -top-6 -left-6 w-full h-full bg-tan rounded-lg opacity-60" />
-            
-            {/* Main image */}
-            <div className="relative z-10">
-              <img
-                src={founderImage}
-                alt="Blythe Karow - Founder & Principal"
-                className="w-full h-auto rounded-lg shadow-2xl object-cover object-top max-w-md mx-auto"
-              />
+            <div className="relative h-[500px] md:h-[600px]">
+              {/* Chartreuse offset rectangle behind casual photo */}
+              <div className="absolute top-8 left-0 w-56 md:w-72 h-72 md:h-80 bg-primary rounded-lg opacity-70" />
+              
+              {/* Casual photo (black turtleneck, green glass) - back/left */}
+              <div className="absolute top-0 left-4 md:left-8 z-10">
+                <img
+                  src={blytheCasual}
+                  alt="Blythe Karow - casual portrait"
+                  className="w-48 md:w-64 h-auto rounded-lg shadow-xl object-cover"
+                />
+              </div>
+              
+              {/* Professional photo (navy turtleneck, white bg) - front/right */}
+              <div className="absolute top-24 md:top-32 left-32 md:left-44 z-20">
+                <img
+                  src={blytheProfessional}
+                  alt="Blythe Karow - professional portrait"
+                  className="w-52 md:w-72 h-auto rounded-lg shadow-2xl object-cover"
+                />
+              </div>
+              
+              {/* Floating quote card */}
+              <div className="absolute bottom-4 md:bottom-8 left-4 right-4 md:left-0 md:right-auto md:w-80 z-30 bg-secondary text-secondary-foreground p-6 rounded-lg shadow-xl">
+                <p className="text-lg italic font-medium leading-relaxed">
+                  "Speed means nothing if you don't know where you're headed."
+                </p>
+                <p className="text-sm mt-3 opacity-80">— Blythe Karow</p>
+              </div>
             </div>
           </div>
 
-          {/* Text content */}
+          {/* Right side: Text content */}
           <div
             className={`order-1 lg:order-2 transition-all duration-700 delay-200 ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
@@ -53,28 +65,13 @@ const FounderSection = () => {
               Meet Blythe Karow
             </h2>
             
-            <div className="space-y-4 text-muted-foreground leading-relaxed mb-6">
+            <div className="space-y-4 text-muted-foreground leading-relaxed mb-8">
               <p>
                 <span className="font-semibold text-foreground">The Karow Advisory Group</span> is led by Blythe Karow, a strategic advisor with 20+ years of MedTech and wearables experience. From startup CEO to Fortune 50 product leader, Blythe brings hands-on expertise in product strategy, commercialization, regulatory navigation, and go-to-market execution.
               </p>
-            </div>
-            
-            {/* Personal quote */}
-            <p className="text-lg italic text-secondary border-l-4 border-primary pl-4 mb-8">
-              "I'm not here to advise from the sidelines. I'm here to make things happen."
-            </p>
-            
-            {/* Credentials */}
-            <div className="flex flex-wrap gap-2 mb-8">
-              {credentials.map((credential, index) => (
-                <Badge
-                  key={index}
-                  variant="secondary"
-                  className="bg-cream text-secondary font-medium border border-tan"
-                >
-                  {credential}
-                </Badge>
-              ))}
+              <p>
+                She partners with MedTech founders, investors, and executives who need more than advice—they need someone who can step in, cut through complexity, and drive results.
+              </p>
             </div>
             
             <Button
@@ -83,7 +80,7 @@ const FounderSection = () => {
               className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-base font-semibold px-8 py-4 rounded-md"
             >
               <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-                Work With Blythe
+                About Blythe
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
