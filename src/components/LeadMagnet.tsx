@@ -8,8 +8,14 @@ const LeadMagnet = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section ref={ref} className="py-20 bg-accent">
-      <div className="container mx-auto px-4 md:px-6">
+    <section ref={ref} className="py-20 bg-accent relative overflow-hidden">
+      {/* Offset decorative boxes for layered effect */}
+      <div className="absolute top-8 left-8 w-32 h-32 border-2 border-accent-foreground/10 rounded-lg hidden lg:block" />
+      <div className="absolute bottom-8 right-8 w-40 h-40 bg-primary/10 rounded-lg hidden lg:block" />
+      <div className="absolute top-1/2 right-16 w-20 h-1 bg-primary/30 hidden lg:block" />
+      <div className="absolute bottom-1/3 left-16 w-16 h-16 border-2 border-accent-foreground/10 rounded-full hidden lg:block" />
+      
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div
           className={`max-w-3xl mx-auto text-center transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"

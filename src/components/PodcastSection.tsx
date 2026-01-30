@@ -13,21 +13,31 @@ const PodcastSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section ref={ref} className="py-20 bg-cream">
-      <div className="container mx-auto px-4 md:px-6">
+    <section ref={ref} className="py-20 bg-cream relative overflow-hidden">
+      {/* Offset decorative elements */}
+      <div className="absolute bottom-12 right-12 w-40 h-40 border-2 border-secondary/20 rounded-lg hidden lg:block" />
+      <div className="absolute top-16 left-16 w-20 h-20 bg-primary/10 rounded-lg hidden lg:block" />
+      <div className="absolute top-1/2 left-8 w-12 h-1 bg-primary/40 hidden lg:block" />
+      
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div
           className={`grid lg:grid-cols-2 gap-12 items-center transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          {/* Podcast Image */}
+          {/* Podcast Image with layered effect */}
           <div className="relative">
-            <div className="absolute -top-4 -left-4 w-full h-full bg-primary/20 rounded-xl" />
+            {/* Background offset box */}
+            <div className="absolute -top-6 -left-6 w-full h-full bg-tan rounded-xl opacity-60" />
+            {/* Secondary offset box */}
+            <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-primary/30 rounded-xl" />
             <img
               src={podcastBanner}
               alt="The Device Files Podcast"
               className="relative z-10 w-full max-w-md mx-auto rounded-xl shadow-xl"
             />
+            {/* Accent element */}
+            <div className="absolute top-1/2 -right-8 w-16 h-1 bg-secondary hidden lg:block" />
           </div>
 
           {/* Content */}

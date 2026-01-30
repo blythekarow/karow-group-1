@@ -51,11 +51,16 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section ref={ref} className="py-20 bg-cream relative">
+    <section ref={ref} className="py-20 bg-cream relative overflow-hidden">
       {/* Decorative top accent */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-1 bg-primary" />
       
-      <div className="container mx-auto px-4 md:px-6">
+      {/* Offset decorative boxes */}
+      <div className="absolute top-20 left-8 w-32 h-32 bg-primary/10 rounded-lg hidden lg:block" />
+      <div className="absolute bottom-20 right-8 w-24 h-24 border-2 border-secondary/20 rounded-lg hidden lg:block" />
+      <div className="absolute top-1/3 right-16 w-16 h-1 bg-secondary/30 hidden lg:block" />
+      
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <p
           className={`text-sm uppercase tracking-widest text-primary font-semibold mb-4 text-center transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"

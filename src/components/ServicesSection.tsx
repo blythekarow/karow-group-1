@@ -56,6 +56,11 @@ const ServicesSection = () => {
       {/* Decorative background element */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-cream/30 -skew-x-12 transform origin-top-right hidden xl:block" />
       
+      {/* Offset decorative boxes */}
+      <div className="absolute bottom-20 left-8 w-24 h-24 border-2 border-cream rounded-lg hidden lg:block" />
+      <div className="absolute top-24 left-12 w-16 h-16 bg-primary/10 rounded-lg hidden lg:block" />
+      <div className="absolute top-1/2 left-4 w-12 h-1 bg-primary/40 hidden lg:block" />
+      
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div
           className={`text-center mb-12 transition-all duration-700 ${
