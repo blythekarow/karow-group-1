@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { ArrowRight } from "lucide-react";
 
 const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
 
@@ -14,10 +15,13 @@ const ProblemSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section ref={ref} className="py-20 bg-background">
-      <div className="container mx-auto px-4 md:px-6">
+    <section ref={ref} className="py-20 bg-background relative overflow-hidden">
+      {/* Decorative element */}
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-cream/50 -skew-x-12 transform origin-top-right hidden lg:block" />
+      
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div
-          className={`max-w-3xl mx-auto text-center transition-all duration-700 ${
+          className={`max-w-3xl transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
@@ -29,17 +33,17 @@ const ProblemSection = () => {
             {painPoints.map((point, index) => (
               <p
                 key={index}
-                className="text-lg md:text-xl text-muted-foreground flex items-start gap-3 text-left"
+                className="text-lg md:text-xl text-muted-foreground flex items-start gap-3"
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <span className="text-primary mt-1 shrink-0">•</span>
+                <span className="text-primary mt-1 shrink-0 text-2xl">•</span>
                 <span>{point}</span>
               </p>
             ))}
           </div>
           
           <p className="text-xl md:text-2xl text-secondary font-medium italic mb-10">
-            You don't need more advisors. You need someone who makes things happen.
+            You don't need more advisors. You need a team that makes things happen.
           </p>
           
           <Button
@@ -49,6 +53,7 @@ const ProblemSection = () => {
           >
             <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
               Get Strategic Clarity
+              <ArrowRight className="ml-2 h-5 w-5" />
             </a>
           </Button>
         </div>

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { ArrowRight } from "lucide-react";
 import founderImage from "@/assets/blythe-headshot.png";
 
 const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
@@ -16,8 +17,11 @@ const FounderSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <section id="about" ref={ref} className="py-20 bg-background scroll-mt-20">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="about" ref={ref} className="py-20 bg-background scroll-mt-20 relative overflow-hidden">
+      {/* Decorative element */}
+      <div className="absolute bottom-0 left-0 w-1/4 h-1/2 bg-cream/50 skew-x-12 transform origin-bottom-left hidden lg:block" />
+      
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
           {/* Image with layered effect */}
           <div
@@ -47,24 +51,29 @@ const FounderSection = () => {
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
             }`}
           >
+            <p className="text-sm uppercase tracking-widest text-primary font-semibold mb-4">
+              Leadership
+            </p>
+            
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Meet Blythe Karow
             </h2>
             
             <div className="space-y-4 text-muted-foreground leading-relaxed mb-8">
               <p>
-                I started The Karow Advisory Group because I kept seeing the same pattern: 
+                Blythe founded The Karow Advisory Group after seeing the same pattern repeat: 
                 brilliant MedTech teams burning through runway and losing momentum—not because 
                 their science failed, but because their strategy did.
               </p>
               <p>
-                After 20+ years leading product strategy at Fortune 50 companies and as a 
-                startup CEO myself, I know what it takes to get a regulated product from 
-                whiteboard to market. I also know that most startups can't afford the 
+                With 20+ years leading product strategy at Fortune 50 companies and as a 
+                startup CEO herself, Blythe knows what it takes to get a regulated product from 
+                whiteboard to market. She also recognized that most startups can't afford the 
                 enterprise consulting firms that hoard this expertise.
               </p>
               <p className="text-foreground font-medium">
-                Your mission deserves more than slide decks. It deserves traction.
+                That's why she built a firm that brings senior expertise and a network of specialists 
+                to companies at every stage—without the enterprise price tag.
               </p>
             </div>
             
@@ -81,17 +90,14 @@ const FounderSection = () => {
               ))}
             </div>
             
-            <p className="text-lg text-secondary italic mb-8">
-              — Blythe Karow, Founder & Principal
-            </p>
-            
             <Button
               asChild
               size="lg"
               className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-base font-semibold px-8 py-6"
             >
               <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-                Work With Blythe
+                Work With Our Team
+                <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
           </div>

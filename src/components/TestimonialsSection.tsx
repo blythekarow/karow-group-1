@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { ArrowRight } from "lucide-react";
 
 const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
 
@@ -50,14 +51,25 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section ref={ref} className="py-20 bg-cream">
+    <section ref={ref} className="py-20 bg-cream relative">
+      {/* Decorative top accent */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-1 bg-primary" />
+      
       <div className="container mx-auto px-4 md:px-6">
+        <p
+          className={`text-sm uppercase tracking-widest text-primary font-semibold mb-4 text-center transition-all duration-700 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
+          Client Success Stories
+        </p>
+        
         <h2
           className={`text-3xl md:text-4xl font-bold text-foreground text-center mb-12 transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          What Clients Say
+          What Our Clients Say
         </h2>
 
         {/* Desktop: Show all testimonials */}
@@ -75,7 +87,7 @@ const TestimonialsSection = () => {
                 <p className="text-muted-foreground leading-relaxed mb-6 italic">
                   "{testimonial.quote}"
                 </p>
-                <div>
+                <div className="border-t border-border pt-4">
                   <p className="font-bold text-foreground">{testimonial.name}</p>
                   <p className="text-sm text-secondary">
                     {testimonial.title && `${testimonial.title}, `}
@@ -99,7 +111,7 @@ const TestimonialsSection = () => {
               <p className="text-muted-foreground leading-relaxed mb-6 italic">
                 "{testimonials[currentIndex].quote}"
               </p>
-              <div>
+              <div className="border-t border-border pt-4">
                 <p className="font-bold text-foreground">
                   {testimonials[currentIndex].name}
                 </p>
@@ -157,6 +169,7 @@ const TestimonialsSection = () => {
           >
             <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
               Start Your Project
+              <ArrowRight className="ml-2 h-5 w-5" />
             </a>
           </Button>
         </div>

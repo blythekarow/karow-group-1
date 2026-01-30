@@ -16,11 +16,11 @@ const Hero = () => {
     <section className="relative min-h-screen flex pt-16">
       {/* Split layout container */}
       <div className="flex flex-col lg:flex-row w-full">
-        {/* Left side - Image (like her current site) */}
+        {/* Left side - Image */}
         <div className="lg:w-1/2 h-[50vh] lg:h-auto relative order-1 lg:order-1">
           <img
             src={heroImage}
-            alt="Blythe Karow - MedTech Strategy Consultant"
+            alt="The Karow Advisory Group - MedTech Strategy"
             className="w-full h-full object-cover object-top"
           />
           {/* Subtle overlay gradient */}
@@ -31,21 +31,18 @@ const Hero = () => {
         <div className="lg:w-1/2 flex items-center bg-background order-2 lg:order-2">
           <div className="px-6 py-12 lg:px-12 xl:px-20 w-full animate-fade-in-up">
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight mb-6">
-              MedTech Strategy That{" "}
-              <span className="text-primary">Actually Ships.</span>
+              Where Strategy Meets{" "}
+              <span className="text-primary">Execution</span> in MedTech.
             </h1>
             
-            {/* Horizontal line accent like her current site */}
+            {/* Horizontal line accent */}
             <div className="w-full h-px bg-border mb-6" />
             
-            <p className="text-lg md:text-xl text-muted-foreground mb-4 max-w-xl">
-              20+ years helping device and digital health companies navigate from 
-              concept to commercialization—without the enterprise consulting price tag.
+            <p className="text-lg md:text-xl text-muted-foreground mb-2">
+              From concept to commercialization, diligence to acquisition.
             </p>
-            
-            {/* Differentiator line */}
-            <p className="text-lg text-secondary font-medium italic border-l-4 border-primary pl-4 mb-8">
-              Big consulting delivers slide decks. I deliver traction.
+            <p className="text-lg md:text-xl text-foreground font-medium mb-6">
+              Strategic advisory for the teams shaping what's next in MedTech.
             </p>
             
             {/* Horizontal line accent */}
@@ -59,7 +56,7 @@ const Hero = () => {
                 className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-base font-semibold px-8 py-6"
               >
                 <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-                  Schedule a Discovery Call
+                  Let's Talk
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>
@@ -70,7 +67,7 @@ const Hero = () => {
                 onClick={scrollToServices}
                 className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-base font-semibold px-8 py-6"
               >
-                See How We Work
+                How We Work
                 <ChevronDown className="ml-2 h-5 w-5" />
               </Button>
             </div>
