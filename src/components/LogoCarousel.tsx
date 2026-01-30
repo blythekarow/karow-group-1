@@ -62,10 +62,10 @@ const LogoCarousel = () => {
   const allLogos = [...companies, ...companies];
 
   return (
-    <section className="py-8 bg-background border-b border-border overflow-hidden">
-      <div className="container mx-auto px-4 md:px-6 mb-4">
-        <p className="text-center text-xs uppercase tracking-widest text-muted-foreground">
-          Trusted by Teams From
+    <section className="py-12 bg-background overflow-hidden">
+      <div className="container mx-auto px-4 md:px-6 mb-6">
+        <p className="text-center text-sm uppercase tracking-[2px] text-muted-foreground font-medium">
+          Experience Trusted Across the MedTech Ecosystem
         </p>
       </div>
       
@@ -77,10 +77,10 @@ const LogoCarousel = () => {
         {allLogos.map((company, index) => (
           <div
             key={index}
-            className="flex-shrink-0 flex items-center justify-center h-12 px-6 grayscale hover:grayscale-0 opacity-50 hover:opacity-100 transition-all duration-300"
+            className="flex-shrink-0 flex items-center justify-center h-12 px-8 hover:opacity-100 transition-all duration-300"
           >
-            {/* Placeholder - replace with actual logo images */}
-            <span className="text-sm md:text-base font-semibold text-muted-foreground whitespace-nowrap">
+            {/* Styled text placeholders - replace with actual logo images when available */}
+            <span className="text-sm md:text-base font-semibold text-border whitespace-nowrap tracking-wide">
               {company}
             </span>
           </div>
