@@ -34,8 +34,8 @@ const Hero = () => {
             
             <div>
               <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-background leading-tight mb-6">
-                Strategic Leadership to{" "}
-                <span className="text-primary">Accelerate Execution</span> in MedTech, Wearables, and DTx.
+                Strategic Leadership{" "}
+                <span className="text-primary">Accelerating Execution</span> in MedTech, Wearables, and DTx.
               </h1>
               
               <p className="text-lg md:text-xl text-background/80 mb-8 max-w-xl">
