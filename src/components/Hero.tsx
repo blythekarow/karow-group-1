@@ -62,7 +62,7 @@ const Hero = () => {
                 variant="outline"
                 size="lg"
                 onClick={scrollToServices}
-                className="border-2 border-background/30 text-background hover:bg-background/10 hover:border-background/50 transition-all duration-200 text-base font-semibold px-8 py-6"
+                className="border-2 border-background bg-background/10 text-background hover:bg-background/20 transition-all duration-200 text-base font-semibold px-8 py-6"
               >
                 How We Work
                 <ChevronDown className="ml-2 h-5 w-5" />
