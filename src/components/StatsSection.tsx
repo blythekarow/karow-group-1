@@ -35,10 +35,10 @@ const StatsSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-16 bg-cream border-y border-border"
+      className="py-20 bg-cream border-y border-border"
     >
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 lg:gap-20">
           {stats.map((stat, index) => (
             <div
               key={index}
@@ -49,10 +49,13 @@ const StatsSection = () => {
               }`}
               style={{ transitionDelay: `${index * 150}ms` }}
             >
-              <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-2">
+              <div 
+                className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary mb-3"
+                style={{ lineHeight: 1.1 }}
+              >
                 {stat.value}
               </div>
-              <div className="text-sm md:text-base text-secondary font-medium uppercase tracking-wide">
+              <div className="text-sm md:text-base text-foreground font-medium uppercase tracking-widest">
                 {stat.label}
               </div>
             </div>
