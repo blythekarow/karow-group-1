@@ -56,7 +56,7 @@ const OutcomesSection = () => {
           </p>
         </div>
 
-        {/* 3+2 layout */}
+        {/* 3+2 layout with centered bottom row */}
         <div className="max-w-5xl mx-auto">
           {/* Top row - 3 cards */}
           <div className="grid md:grid-cols-3 gap-6 mb-6">
@@ -83,12 +83,12 @@ const OutcomesSection = () => {
             ))}
           </div>
           
-          {/* Bottom row - 2 cards centered */}
-          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          {/* Bottom row - 2 cards properly centered under top row */}
+          <div className="flex justify-center gap-6">
             {outcomes.slice(3).map((outcome, index) => (
               <Card
                 key={index + 3}
-                className={`bg-card border-none shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.12)] transition-all duration-200 ease-out hover:-translate-y-1 ${
+                className={`bg-card border-none shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.12)] transition-all duration-200 ease-out hover:-translate-y-1 w-full md:w-[calc(33.333%-0.5rem)] ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
                 style={{ transitionDelay: `${(index + 3) * 100 + 200}ms` }}

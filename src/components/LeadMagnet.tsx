@@ -18,23 +18,18 @@ const LeadMagnet = () => {
     <section ref={ref} className="py-24 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
-          {/* Left side - Newsletter Mockup with offset box */}
+          {/* Left side - Newsletter Mockup */}
           <div
             className={`relative hidden lg:block transition-all duration-700 ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
             }`}
           >
-            {/* Offset decorative box - top-left, 25% size */}
-            <div className="absolute -top-4 -left-4 w-[25%] h-[25%] bg-primary rounded-lg" />
-            
-            {/* Main mockup image */}
-            <div className="relative z-10">
-              <img
-                src={newsletterMockup}
-                alt="MedTech Strategy newsletter preview"
-                className="w-full max-w-md rounded-lg shadow-2xl object-cover"
-              />
-            </div>
+            {/* Main mockup image - clean, no offset box */}
+            <img
+              src={newsletterMockup}
+              alt="MedTech Strategy newsletter preview"
+              className="w-full max-w-md rounded-lg shadow-xl object-cover"
+            />
           </div>
 
           {/* Right side - Content */}

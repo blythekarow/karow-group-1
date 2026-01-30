@@ -6,7 +6,7 @@ const AssessmentSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section ref={ref} className="py-24 bg-tan relative overflow-hidden">
+    <section ref={ref} className="py-24 bg-primary relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div
           className={`max-w-3xl mx-auto text-center transition-all duration-700 ${
@@ -14,7 +14,7 @@ const AssessmentSection = () => {
           }`}
         >
           {/* Icon */}
-          <div className="w-20 h-20 bg-foreground/10 rounded-2xl flex items-center justify-center mx-auto mb-8">
+          <div className="w-20 h-20 bg-foreground/20 rounded-2xl flex items-center justify-center mx-auto mb-8">
             <ClipboardCheck className="h-10 w-10 text-foreground" />
           </div>
           

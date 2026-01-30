@@ -34,7 +34,7 @@ const FounderSection = () => {
               <img
                 src={founderImage}
                 alt="Blythe Karow - Founder & Principal"
-                className="w-full h-auto rounded-lg shadow-2xl object-cover max-w-md mx-auto"
+                className="w-full h-auto rounded-lg shadow-2xl object-cover object-top max-w-md mx-auto"
               />
             </div>
           </div>
