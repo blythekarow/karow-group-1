@@ -1,9 +1,7 @@
-import { Target, Search, Link, Star, Clock } from "lucide-react";
+import { Target, Link, Star, Clock } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import dnaImage from "@/assets/dna-research.jpg";
-import researcherImage from "@/assets/researcher-pill.jpg";
 
 const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
 
@@ -17,27 +15,22 @@ const benefits: BenefitCard[] = [
   {
     icon: Target,
     title: "Strategic Clarity to Move Forward with Confidence",
-    body: "We see the big picture from concept to commercialization and ensure you cover all the critical details along the way, so you can make decisions that protect your timeline and budget.",
-  },
-  {
-    icon: Search,
-    title: "Big Picture AND Critical Details",
-    body: "We identify blind spots before they're expensive, coordinate the right specialists at the right time, and help you invest strategically for each milestone.",
+    body: "See the full picture from concept to commercialization. Make confident decisions that protect your timeline and budget.",
   },
   {
     icon: Link,
     title: "Integrated Expertise, Not Siloed Advice",
-    body: "We coordinate regulatory, reimbursement, clinical, and commercial experts together under one strategic umbrella, so their work reinforces a strong, unified strategy instead of conflicting recommendations that create more confusion.",
+    body: "Regulatory, clinical, reimbursement, and commercial—coordinated under one strategic umbrella, not conflicting silos.",
   },
   {
     icon: Star,
     title: "Battle-Tested Guidance from Operators",
-    body: "Senior-level expertise from people who've launched products as startup CEOs and Fortune 50 product leaders, not junior consultants learning on your dime.",
+    body: "Senior expertise from startup CEOs and Fortune 50 leaders—not junior consultants learning on your dime.",
   },
   {
     icon: Clock,
     title: "Right Expertise at the Right Time",
-    body: "We bring in senior-level specialists when you need them, at the level you need, helping you spend lean and reach each milestone without over-investing or missing critical gaps.",
+    body: "Specialists when you need them, at the level you need. Spend lean and hit milestones without gaps.",
   },
 ];
 
@@ -49,53 +42,27 @@ const BenefitsSection = () => {
       {/* Decorative top border */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-accent" />
       
-      {/* Offset decorative boxes for visual depth */}
+      {/* Subtle offset decorative boxes */}
       <div className="absolute bottom-16 left-8 w-28 h-28 border-2 border-secondary/20 rounded-lg hidden lg:block" />
       <div className="absolute top-32 right-12 w-20 h-20 bg-primary/10 rounded-lg hidden lg:block" />
-      <div className="absolute bottom-1/3 right-8 w-16 h-1 bg-secondary/30 hidden lg:block" />
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        {/* Header with offset image */}
-        <div className="grid lg:grid-cols-12 gap-8 mb-16">
-          <div
-            className={`lg:col-span-7 transition-all duration-700 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Why Companies Work With Us
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-xl">
-              We bring Fortune 50 experience and startup agility to every engagement.
-            </p>
-          </div>
-          
-          {/* Decorative image cluster */}
-          <div
-            className={`lg:col-span-5 relative hidden lg:block h-40 transition-all duration-700 delay-200 ${
-              isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
-            }`}
-          >
-            <div className="absolute top-0 right-0 w-40 h-32 rounded-lg overflow-hidden shadow-lg">
-              <img
-                src={dnaImage}
-                alt="DNA research"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="absolute -bottom-4 right-32 w-32 h-28 rounded-lg overflow-hidden shadow-xl border-4 border-background">
-              <img
-                src={researcherImage}
-                alt="Researcher"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            {/* Decorative box */}
-            <div className="absolute top-4 right-44 w-16 h-16 bg-primary/20 rounded-lg -z-10" />
-          </div>
+        {/* Clean header - no images */}
+        <div
+          className={`text-center mb-12 transition-all duration-700 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Why Companies Work With Us
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            We bring Fortune 50 experience and startup agility to every engagement.
+          </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto mb-12">
+        {/* 2x2 Grid */}
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto mb-12">
           {benefits.map((benefit, index) => (
             <Card
               key={index}
@@ -119,7 +86,7 @@ const BenefitsSection = () => {
           ))}
         </div>
         
-        {/* Inline CTA */}
+        {/* CTA */}
         <div
           className={`text-center transition-all duration-700 delay-500 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
