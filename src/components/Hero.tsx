@@ -14,14 +14,14 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex pt-16 overflow-hidden">
-      {/* Background image with overlay */}
+      {/* Background image with overlay - left 50% dark for text, right 20% to show Blythe */}
       <div className="absolute inset-0">
         <img
           src={heroImage}
           alt="MedTech Innovation"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/60 to-foreground/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground/50 via-foreground/35 to-foreground/20" />
       </div>
 
       {/* Content container */}

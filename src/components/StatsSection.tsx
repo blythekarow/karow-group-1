@@ -35,7 +35,7 @@ const StatsSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-24 bg-cream"
+      className="py-20 bg-cream"
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 lg:gap-24">
@@ -50,12 +50,12 @@ const StatsSection = () => {
               style={{ transitionDelay: `${index * 150}ms` }}
             >
               <div 
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary mb-3"
+                className="text-6xl md:text-7xl font-extrabold text-primary mb-4"
                 style={{ lineHeight: 1.1 }}
               >
                 {stat.value}
               </div>
-              <div className="text-sm md:text-base text-foreground font-medium uppercase tracking-[2px]">
+              <div className="text-sm md:text-base text-foreground font-semibold uppercase tracking-[2px]">
                 {stat.label}
               </div>
             </div>
