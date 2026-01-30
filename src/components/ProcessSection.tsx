@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import medtechStrategyImage from "@/assets/medtech-strategy-meeting.jpg";
 
@@ -37,9 +36,9 @@ const ProcessSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <section ref={ref} className="relative overflow-hidden">
+    <section ref={ref} className="relative overflow-visible">
       {/* Hero Image Section */}
-      <div className="relative h-[400px] md:h-[450px]">
+      <div className="relative h-[450px] md:h-[500px]">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
@@ -48,8 +47,8 @@ const ProcessSection = () => {
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/50" />
         
-        {/* Content */}
-        <div className="relative z-10 h-full flex flex-col items-center justify-center px-4">
+        {/* Content - positioned higher to make room for overhang */}
+        <div className="relative z-10 h-full flex flex-col items-center justify-center px-4 pb-24">
           {/* Accent Bar */}
           <div 
             className={`w-16 h-1 bg-primary rounded-full mb-6 transition-all duration-700 ${
@@ -82,39 +81,42 @@ const ProcessSection = () => {
         </div>
       </div>
 
-      {/* Steps Grid */}
-      <div className="bg-cream py-16 md:py-20">
+      {/* Steps Grid - Overhanging Cards */}
+      <div className="bg-cream pt-0 pb-16 md:pb-20">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid md:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
+          {/* Cards container - negative margin to overhang the hero */}
+          <div className="grid md:grid-cols-3 gap-0 max-w-6xl mx-auto -mt-20 md:-mt-24 relative z-20">
             {steps.map((step, index) => (
               <div
                 key={index}
-                className={`flex gap-4 transition-all duration-700 ${
+                className={`bg-white p-6 md:p-8 lg:p-10 border-r border-border last:border-r-0 first:rounded-l-lg last:rounded-r-lg shadow-lg transition-all duration-700 ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
                 style={{ transitionDelay: `${index * 150 + 300}ms` }}
               >
-                {/* Large Number */}
-                <span className="text-6xl md:text-7xl font-serif font-light text-tan leading-none shrink-0">
-                  {step.number}
-                </span>
-                
-                {/* Content */}
-                <div className="pt-1">
-                  {/* Title */}
-                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-1">
-                    {step.title}
-                  </h3>
+                <div className="flex gap-4">
+                  {/* Large Number */}
+                  <span className="text-5xl md:text-6xl lg:text-7xl font-serif font-light text-tan leading-none shrink-0">
+                    {step.number}
+                  </span>
                   
-                  {/* Subtitle */}
-                  <p className="text-primary font-semibold mb-3">
-                    {step.subtitle}
-                  </p>
-                  
-                  {/* Body */}
-                  <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
-                    {step.body}
-                  </p>
+                  {/* Content */}
+                  <div className="pt-1">
+                    {/* Title */}
+                    <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-foreground mb-1">
+                      {step.title}
+                    </h3>
+                    
+                    {/* Subtitle */}
+                    <p className="text-primary font-semibold mb-3 text-sm md:text-base">
+                      {step.subtitle}
+                    </p>
+                    
+                    {/* Body */}
+                    <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+                      {step.body}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}
