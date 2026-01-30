@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import logoIcon from "@/assets/logo-icon.webp";
 
@@ -8,6 +9,7 @@ const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,10 +20,19 @@ const Navbar = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
+    // If not on homepage, navigate there first
+    if (location.pathname !== "/") {
+      window.location.href = `/#${id}`;
+      return;
+    }
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+    setIsMobileMenuOpen(false);
+  };
+
+  const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
   };
 
@@ -36,7 +47,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           {/* Logo + Company Name */}
-          <a href="/" className="flex items-center gap-4">
+          <Link to="/" className="flex items-center gap-4">
             <img
               src={logoIcon}
               alt="The Karow Advisory Group"
@@ -51,7 +62,7 @@ const Navbar = () => {
             >
               The Karow Advisory Group
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
@@ -61,20 +72,18 @@ const Navbar = () => {
             >
               About
             </button>
-            <button
-              onClick={() => scrollToSection("services")}
+            <Link
+              to="/services"
               className="text-background hover:text-primary font-medium transition-colors"
             >
               Services
-            </button>
-            <a
-              href="https://blythekarow.substack.com/"
-              target="_blank"
-              rel="noopener noreferrer"
+            </Link>
+            <Link
+              to="/insights"
               className="text-background hover:text-primary font-medium transition-colors"
             >
               Insights
-            </a>
+            </Link>
             <Button
               asChild
               className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-colors"
@@ -109,20 +118,20 @@ const Navbar = () => {
               >
                 About
               </button>
-              <button
-                onClick={() => scrollToSection("services")}
-                className="text-background hover:text-primary font-medium transition-colors text-left"
+              <Link
+                to="/services"
+                onClick={closeMobileMenu}
+                className="text-background hover:text-primary font-medium transition-colors"
               >
                 Services
-              </button>
-              <a
-                href="https://blythekarow.substack.com/"
-                target="_blank"
-                rel="noopener noreferrer"
+              </Link>
+              <Link
+                to="/insights"
+                onClick={closeMobileMenu}
                 className="text-background hover:text-primary font-medium transition-colors"
               >
                 Insights
-              </a>
+              </Link>
               <Button
                 asChild
                 className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-colors w-full"
