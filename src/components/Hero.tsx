@@ -13,13 +13,13 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex pt-16 overflow-hidden">
-      {/* Background image with overlay - left 50% dark for text, right 20% to show Blythe */}
+    <section className="relative min-h-[80vh] flex pt-16 overflow-hidden">
+      {/* Background image with overlay - left 50% dark for text */}
       <div className="absolute inset-0">
         <img
           src={heroImage}
           alt="MedTech Innovation"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-top"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-accent via-accent/70 via-50% to-transparent" />
       </div>
@@ -34,8 +34,8 @@ const Hero = () => {
             
             <div>
               <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-background leading-tight mb-6">
-                Strategic Leadership that Accelerates{" "}
-                <span className="text-primary">Execution</span> in MedTech, Wearables, and DTx.
+                Strategic Leadership to{" "}
+                <span className="text-primary">Accelerate Execution</span> in MedTech, Wearables, and DTx.
               </h1>
               
               <p className="text-lg md:text-xl text-background/80 mb-8 max-w-xl">
