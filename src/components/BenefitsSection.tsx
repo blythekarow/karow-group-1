@@ -1,4 +1,4 @@
-import { Target, Search, Puzzle, Users } from "lucide-react";
+import { Target, Search, Link, Star, Clock } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
@@ -16,23 +16,28 @@ interface BenefitCard {
 const benefits: BenefitCard[] = [
   {
     icon: Target,
-    title: "Strategic Clarity",
-    body: "We help you see the full picture from concept to commercialization—so you can make confident decisions that protect your timeline and budget.",
+    title: "Strategic Clarity to Move Forward with Confidence",
+    body: "We see the big picture from concept to commercialization and ensure you cover all the critical details along the way, so you can make decisions that protect your timeline and budget.",
   },
   {
     icon: Search,
-    title: "Blind Spots Identified Early",
-    body: "Our team catches expensive mistakes before they happen. We bring in the right specialists at the right time—not after it's too late.",
+    title: "Big Picture AND Critical Details",
+    body: "We identify blind spots before they're expensive, coordinate the right specialists at the right time, and help you invest strategically for each milestone.",
   },
   {
-    icon: Puzzle,
-    title: "Integrated Strategy",
-    body: "Regulatory, clinical, reimbursement, and commercial—coordinated under one strategic umbrella instead of conflicting silos.",
+    icon: Link,
+    title: "Integrated Expertise, Not Siloed Advice",
+    body: "We coordinate regulatory, reimbursement, clinical, and commercial experts together under one strategic umbrella, so their work reinforces a strong, unified strategy instead of conflicting recommendations that create more confusion.",
   },
   {
-    icon: Users,
-    title: "The Right Experts, When You Need Them",
-    body: "Access senior leadership and specialized expertise without the overhead. We scale our team to match your challenge.",
+    icon: Star,
+    title: "Battle-Tested Guidance from Operators",
+    body: "Senior-level expertise from people who've launched products as startup CEOs and Fortune 50 product leaders, not junior consultants learning on your dime.",
+  },
+  {
+    icon: Clock,
+    title: "Right Expertise at the Right Time",
+    body: "We bring in senior-level specialists when you need them, at the level you need, helping you spend lean and reach each milestone without over-investing or missing critical gaps.",
   },
 ];
 
@@ -53,7 +58,7 @@ const BenefitsSection = () => {
             }`}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Why Teams Choose Us
+              Why Companies Work With Us
             </h2>
             <p className="text-lg text-muted-foreground max-w-xl">
               We bring Fortune 50 experience and startup agility to every engagement.
@@ -85,7 +90,7 @@ const BenefitsSection = () => {
           </div>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto mb-12">
           {benefits.map((benefit, index) => (
             <Card
               key={index}
