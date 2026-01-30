@@ -7,10 +7,11 @@ import ProcessSection from "@/components/ProcessSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import OutcomesSection from "@/components/OutcomesSection";
 import ServicesSection from "@/components/ServicesSection";
-import LeadMagnet from "@/components/LeadMagnet";
+import InsightsSection from "@/components/InsightsSection";
 import FounderSection from "@/components/FounderSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import AssessmentSection from "@/components/AssessmentSection";
+import MapPathCTASection from "@/components/MapPathCTASection";
 import FinalCTASection from "@/components/FinalCTASection";
 import Footer from "@/components/Footer";
 
@@ -26,10 +27,11 @@ const Index = () => {
       <BenefitsSection />
       <OutcomesSection />
       <ServicesSection />
-      <LeadMagnet />
+      <InsightsSection />
       <FounderSection />
       <TestimonialsSection />
       <AssessmentSection />
+      <MapPathCTASection />
       <FinalCTASection />
       <Footer />
     </div>
@@ -37,4 +39,3 @@ const Index = () => {
 };
 
 export default Index;
-
