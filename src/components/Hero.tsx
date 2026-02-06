@@ -19,7 +19,7 @@ const Hero = () => {
         <img
           src={heroImage}
           alt="MedTech Innovation"
-          className="w-full h-full object-cover object-top"
+          className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-accent via-accent/70 via-50% to-transparent" />
       </div>
