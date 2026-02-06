@@ -30,7 +30,7 @@ const Hero = () => {
           {/* Left side - Content with vertical accent line */}
           <div className="animate-fade-in-up flex">
             {/* Vertical accent line */}
-            <div className="w-1 h-16 bg-primary mr-6 mt-2 flex-shrink-0" />
+            <div className="w-1 bg-primary mr-6 flex-shrink-0 self-stretch" />
             
             <div>
               <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-background leading-tight mb-6">
