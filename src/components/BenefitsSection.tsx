@@ -3,28 +3,19 @@ import consultingWorkshopImage from "@/assets/consulting-workshop.jpg";
 
 const benefits = [
   {
-    title: "Save money",
-    description: "Avoid unnecessary and costly missteps",
+    description: "Accelerate time-to-market by aligning regulatory, reimbursement, and commercial strategy from day one",
   },
   {
-    title: "Gain strategic confidence",
-    description: "Winning plans are built with cross-functional alignment that makes your strategy bulletproof",
+    description: "Avoid costly rework and missed milestones by identifying blind spots before they derail your timeline or budget",
   },
   {
-    title: "Accelerate time-to-market",
-    description: "Move faster with clear milestones and coordinated execution",
+    description: "Make confident strategic decisions with battle-tested guidance on regulatory pathways, reimbursement requirements, and evidence planning",
   },
   {
-    title: "Win investor confidence",
-    description: "Prove you understand the path, the risks, and how to execute",
+    description: "Present investor-ready plans that demonstrate you understand the full commercialization picture, not just the technology",
   },
   {
-    title: "Know what to build and when",
-    description: "Identify blind spots before they become expensive problems",
-  },
-  {
-    title: "Drive real adoption",
-    description: "Ensure your market plans deliver revenue, not just regulatory approval",
+    description: "Integrate product design, claims, evidence, and quality systems seamlessly so nothing falls through the cracks",
   },
 ];
 
@@ -45,14 +36,14 @@ const BenefitsSection = () => {
             <div className="w-12 h-1 bg-primary mb-6" />
             
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
-              Finding the Right Strategic Partner Saves You Time, Momentum, and Money
+              The Right Strategy Saves You Time, Money, and Momentum
             </h2>
             
             <p className="text-lg text-muted-foreground mb-8">
               With The Karow Advisory Group, you can:
             </p>
             
-            {/* Checkmark list - outlined square checkmarks like RLS */}
+            {/* Checkmark list */}
             <div className="space-y-5">
               {benefits.map((benefit, index) => (
                 <div
@@ -76,10 +67,9 @@ const BenefitsSection = () => {
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
                   </div>
-                  <div className="text-base md:text-lg">
-                    <span className="font-bold text-foreground">{benefit.title}</span>
-                    <span className="text-muted-foreground"> — {benefit.description}</span>
-                  </div>
+                  <p className="text-base md:text-lg text-muted-foreground">
+                    {benefit.description}
+                  </p>
                 </div>
               ))}
             </div>

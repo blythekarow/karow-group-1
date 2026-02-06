@@ -28,41 +28,28 @@ const FinalCTASection = () => {
         >
           {/* Eyebrow */}
           <p className="text-sm uppercase tracking-[2px] text-primary font-semibold mb-4">
-            Let's talk strategy
+            High-Commitment Path
           </p>
           
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Move Forward with Clarity?
+            Ready to Build Your Commercialization Strategy?
           </h2>
           
           <p className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Let's build the strategy your innovation deserves—smarter, faster, and without setbacks.
+            Let's assess where you are, identify what's at risk, and build an integrated plan that gets you from FDA clearance to market adoption without expensive rework or lost time.
           </p>
           
-          {/* Dual CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              asChild
-              size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-200 text-lg font-semibold px-10 py-6 rounded-md shadow-lg hover:shadow-xl"
-            >
-              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-                Schedule Your Free Discovery Call
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </Button>
-            
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="border-2 border-white bg-white/10 text-white hover:bg-white/20 transition-all duration-200 text-lg font-semibold px-10 py-6"
-            >
-              <a href="/services">
-                Learn About Our Services
-              </a>
-            </Button>
-          </div>
+          {/* Single CTA */}
+          <Button
+            asChild
+            size="lg"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-200 text-lg font-semibold px-10 py-6 rounded-md shadow-lg hover:shadow-xl"
+          >
+            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+              Discuss Engagement Options
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </a>
+          </Button>
         </div>
       </div>
     </section>

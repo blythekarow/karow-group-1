@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import LogoCarousel from "@/components/LogoCarousel";
+import WhyWorkWithUsSection from "@/components/WhyWorkWithUsSection";
 import ProblemSection from "@/components/ProblemSection";
 import SolutionSection from "@/components/SolutionSection";
 import ProcessSection from "@/components/ProcessSection";
@@ -9,7 +10,6 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import ServicesSection from "@/components/ServicesSection";
 import AssessmentSection from "@/components/AssessmentSection";
 import FounderSection from "@/components/FounderSection";
-import TeamSection from "@/components/TeamSection";
 import WhenLeadersSection from "@/components/WhenLeadersSection";
 import FinalCTASection from "@/components/FinalCTASection";
 import Footer from "@/components/Footer";
@@ -22,13 +22,15 @@ const Index = () => {
       <Hero />
       {/* 2. Trusted By / Logo Carousel */}
       <LogoCarousel />
+      {/* 2B. Why Companies Work With Us */}
+      <WhyWorkWithUsSection />
       {/* 3. The Problem */}
       <ProblemSection />
-      {/* 4. The Solution / Founder Intro */}
+      {/* 4. The Solution */}
       <SolutionSection />
       {/* 5. 3-Step Process */}
       <ProcessSection />
-      {/* 6. Value Proposition / Benefits */}
+      {/* 6. Outcomes / Benefits */}
       <BenefitsSection />
       {/* 7. Testimonials */}
       <TestimonialsSection />
@@ -36,15 +38,13 @@ const Index = () => {
       <ServicesSection />
       {/* 9. Free Assessment CTA (D.E.V.I.C.E.) */}
       <AssessmentSection />
-      {/* 10. When Leaders Reach Out */}
-      <WhenLeadersSection />
-      {/* 11. Meet Blythe Karow */}
+      {/* 10. Founder Story */}
       <FounderSection />
-      {/* 12. Team Section */}
-      <TeamSection />
-      {/* 13. Final Dual CTA */}
+      {/* 11. When Leaders Reach Out */}
+      <WhenLeadersSection />
+      {/* 12. Final CTA */}
       <FinalCTASection />
-      {/* 14. Footer */}
+      {/* 13. Footer */}
       <Footer />
     </div>
   );

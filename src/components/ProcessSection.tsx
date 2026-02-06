@@ -14,21 +14,21 @@ interface ProcessStep {
 const steps: ProcessStep[] = [
   {
     number: "1",
-    title: "Discovery",
-    subtitle: "Schedule a Discovery Call",
-    body: "We start by understanding where you are, where you're going, and what's in the way. A focused conversation that identifies your biggest risks and highest-leverage opportunities.",
+    title: "Clarity",
+    subtitle: "Know Where You Stand",
+    body: "We assess your product commercialization readiness across regulatory pathway, reimbursement landscape, and commercial risks. You get a clear picture of what's working, what's at risk, and what decisions need to happen next.",
   },
   {
     number: "2",
     title: "Strategy",
-    subtitle: "Get Your Strategic Roadmap",
-    body: "We build a clear plan aligned across regulatory, clinical, commercial, and financial milestones. No guessing—just a roadmap built for execution.",
+    subtitle: "Build Your Integrated Roadmap",
+    body: "We develop an integrated product commercialization plan tailored to your specific goals and needs. Everything from regulatory and reimbursement to evidence plans and quality controls—we seamlessly integrate the missing pieces into your overall approach so everything strategically aligns and refines your path forward.",
   },
   {
     number: "3",
     title: "Execution",
-    subtitle: "Drive Forward with Leadership",
-    body: "Whether you need fractional leadership, strategic advisory, or hands-on project management, we stay engaged to ensure plans become progress.",
+    subtitle: "Move Forward with Confidence",
+    body: "We execute alongside you so you can move forward with confidence. Whether leading submissions, coordinating specialists, or providing fractional leadership, we keep your commercialization on track and help you stop second-guessing what regulators, payers, and investors expect.",
   },
 ];
 
@@ -62,7 +62,7 @@ const ProcessSection = () => {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            How We Work Together in 3 Steps
+            How We Work Together: A Clear Path Forward
           </h2>
           
           {/* CTA Button */}
