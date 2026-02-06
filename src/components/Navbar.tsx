@@ -66,12 +66,16 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <button
-              onClick={() => scrollToSection("about")}
-              className="text-background hover:text-primary font-medium transition-colors"
+            <Link
+              to="/about"
+              className={`font-medium transition-colors ${
+                location.pathname === "/about" 
+                  ? "text-primary" 
+                  : "text-background hover:text-primary"
+              }`}
             >
               About
-            </button>
+            </Link>
             <Link
               to="/services"
               className={`font-medium transition-colors ${
@@ -120,12 +124,17 @@ const Navbar = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-background/20 pt-4 animate-fade-in">
             <div className="flex flex-col gap-4">
-              <button
-                onClick={() => scrollToSection("about")}
-                className="text-background hover:text-primary font-medium transition-colors text-left"
+              <Link
+                to="/about"
+                onClick={closeMobileMenu}
+                className={`font-medium transition-colors text-left ${
+                  location.pathname === "/about" 
+                    ? "text-primary" 
+                    : "text-background hover:text-primary"
+                }`}
               >
                 About
-              </button>
+              </Link>
               <Link
                 to="/services"
                 onClick={closeMobileMenu}
