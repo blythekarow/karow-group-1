@@ -32,7 +32,7 @@ const serviceAreas: ServiceArea[] = [
   },
   {
     title: "Commercialization Planning & Execution",
-    description: "Go-to-market planning, channel strategy, reimbursement planning, health economics, evidence strategy, market access, and clinical workflow integration.",
+    description: "Go-to-market planning, channel strategy, reimbursement planning, health economics and reimbursement, evidence strategy, market access, and clinical workflow integration.",
     items: [
       "Go-to-market strategy and launch planning",
       "Channel strategy and partnership development",
@@ -40,6 +40,8 @@ const serviceAreas: ServiceArea[] = [
       "Health economics and outcomes research",
       "Clinical evidence planning",
       "Market access strategy",
+      "Clinical workflow and adoption planning",
+      "Regulatory submission coordination",
     ],
     image: consultingWorkshopImage,
     imageAlt: "Team workshop for commercialization planning",
@@ -51,6 +53,8 @@ const serviceAreas: ServiceArea[] = [
       "Fractional CPO/CCO/COO leadership",
       "Strategic planning and decision support",
       "Cross-functional team coordination",
+      "Ongoing strategic advisory",
+      "Executive guidance through commercialization",
       "Investor and board readiness support",
       "Strategic partnership facilitation",
     ],
@@ -91,7 +95,7 @@ const ServiceAreaSection = ({ service, imageLeft, bgClass }: ServiceAreaSectionP
   return (
     <section ref={ref} className={`py-24 ${bgClass} overflow-hidden`}>
       <div className="container mx-auto px-4 md:px-6">
-        <div className={`grid lg:grid-cols-2 gap-12 lg:gap-16 items-center ${imageLeft ? "" : ""}`}>
+        <div className={`grid lg:grid-cols-2 gap-12 lg:gap-16 items-center`}>
           {/* Image */}
           <div
             className={`relative ${imageLeft ? "lg:order-1" : "lg:order-2"} transition-all duration-700 ${
@@ -140,7 +144,7 @@ const ServiceAreaSection = ({ service, imageLeft, bgClass }: ServiceAreaSectionP
               className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-base font-semibold px-8 py-4 rounded-md"
             >
               <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-                Book a Call to Discuss
+                Explore a Strategic Engagement
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
