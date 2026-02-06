@@ -35,17 +35,16 @@ const AssessmentSection = () => {
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
             }`}
           >
-            {/* Eyebrow */}
-            <p className="text-sm uppercase tracking-[2px] text-muted-foreground font-semibold mb-4">
-              Not sure where to start with your product strategy?
-            </p>
-            
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              D.E.V.I.C.E. Strategic Assessment
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              How Ready Is Your Product for Commercialization?
             </h2>
             
+            <p className="text-xl text-primary font-semibold mb-6">
+              Take the D.E.V.I.C.E. Readiness Check
+            </p>
+            
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Take our 5-minute assessment to pinpoint what's working, what's missing, and where to focus next.
+              Based on the D.E.V.I.C.E. Framework published in Device Files, this quick assessment helps you identify potential gaps across Development, Engagement & Economics, Verification & Validation, Intelligence & Information Governance, Claims & Category Boundaries, and Evidence. Get your readiness score and discover what to prioritize next.
             </p>
             
             <Button
@@ -54,7 +53,7 @@ const AssessmentSection = () => {
               className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-base font-semibold px-8 py-4 rounded-md"
             >
               <a href="#" target="_blank" rel="noopener noreferrer">
-                Start Your Assessment
+                Take the Free Assessment
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>

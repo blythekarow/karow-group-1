@@ -17,7 +17,7 @@ const services: ServiceCard[] = [
   {
     title: "Product & Business Case Definition",
     description:
-      "Demonstrate you understand whose pain point you're addressing and how. Product definition, market positioning, value proposition development, regulatory pathway optimization.",
+      "Product definition, market positioning, value proposition development, regulatory pathway optimization, and understanding whose pain point you're addressing and how.",
     cta: "Explore Product Strategy",
     image: executiveBoardroomImage,
     link: "/services",
@@ -25,8 +25,8 @@ const services: ServiceCard[] = [
   {
     title: "Commercialization Planning & Execution",
     description:
-      "Go-to-market planning, health economics and reimbursement, evidence strategy, market access, and clinical workflow integration.",
-    cta: "Explore Commercialization Planning",
+      "Go-to-market planning, channel strategy, reimbursement planning, health economics and reimbursement, evidence strategy, market access, and clinical workflow integration.",
+    cta: "Explore Commercialization Services",
     image: consultingWorkshopImage,
     link: "/services",
   },
@@ -60,7 +60,7 @@ const ServicesSection = () => {
             <div className="w-16 h-1 bg-primary" />
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Your innovation deserves more than a one-size-fits-all approach. With The Karow Advisory Group, you choose the next step that fits your journey—whether that's hands-on execution, deeper insights, or a voice that sparks investor confidence.
+            Comprehensive commercialization support tailored to your stage and needs, from assessment to strategy development to hands-on execution.
           </p>
         </div>
 

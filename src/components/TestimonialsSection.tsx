@@ -64,15 +64,22 @@ const TestimonialsSection = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          {/* Header row with headline and quote marks */}
-          <div className="flex items-start justify-between mb-12 max-w-4xl">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-              What our clients say
-            </h2>
-            
-            {/* Large quotation marks - decorative pair */}
-            <div className="text-primary text-[80px] leading-none font-serif hidden md:block select-none" style={{ marginTop: '-10px' }}>
-              ""
+          {/* Header */}
+          <div className="mb-12 max-w-4xl">
+            <div className="flex items-start justify-between">
+              <div>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+                  What Clients Say About Working with Us
+                </h2>
+                <p className="text-lg text-white/80 leading-relaxed">
+                  From founders navigating FDA complexity to established companies launching new products, our clients choose us because we reduce risk, clarify decisions, and deliver results—not just reports.
+                </p>
+              </div>
+              
+              {/* Large quotation marks - decorative pair */}
+              <div className="text-primary text-[80px] leading-none font-serif hidden md:block select-none shrink-0 ml-8" style={{ marginTop: '-10px' }}>
+                ""
+              </div>
             </div>
           </div>
           
