@@ -28,7 +28,7 @@ const FinalCTASection = () => {
         >
           {/* Eyebrow */}
           <p className="text-sm uppercase tracking-[2px] text-primary font-semibold mb-4">
-            Ready to move forward with clarity?
+            Let's talk strategy
           </p>
           
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
