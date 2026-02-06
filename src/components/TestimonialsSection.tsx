@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import medicalTeamImage from "@/assets/medical-team.jpg";
@@ -38,19 +38,13 @@ const TestimonialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
-  const nextTestimonial = useCallback(() => {
+  const nextTestimonial = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  }, []);
+  };
 
   const prevTestimonial = () => {
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
-
-  // Auto-advance carousel
-  useEffect(() => {
-    const interval = setInterval(nextTestimonial, 6000);
-    return () => clearInterval(interval);
-  }, [nextTestimonial]);
 
   return (
     <section ref={ref} className="relative min-h-[600px] py-24 overflow-hidden">
@@ -76,9 +70,9 @@ const TestimonialsSection = () => {
               What our clients say
             </h2>
             
-            {/* Large quotation marks */}
-            <div className="text-primary text-[120px] leading-none font-serif hidden md:block" style={{ marginTop: '-20px' }}>
-              "
+            {/* Large quotation marks - decorative pair */}
+            <div className="text-primary text-[80px] leading-none font-serif hidden md:block select-none" style={{ marginTop: '-10px' }}>
+              ""
             </div>
           </div>
           
