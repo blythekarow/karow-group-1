@@ -10,7 +10,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import ServicesSection from "@/components/ServicesSection";
 import AssessmentSection from "@/components/AssessmentSection";
 import FounderSection from "@/components/FounderSection";
-import WhenLeadersSection from "@/components/WhenLeadersSection";
+
 import FinalCTASection from "@/components/FinalCTASection";
 import Footer from "@/components/Footer";
 
@@ -40,8 +40,6 @@ const Index = () => {
       <AssessmentSection />
       {/* 10. Founder Story */}
       <FounderSection />
-      {/* 11. When Leaders Reach Out */}
-      <WhenLeadersSection />
       {/* 12. Final CTA */}
       <FinalCTASection />
       {/* 13. Footer */}
