@@ -22,7 +22,11 @@ const capabilities: CapabilityColumn[] = [
       },
       {
         label: "Special Programs",
-        items: ["Breakthrough Device Designation", "TAP", "TEMPO"],
+        items: [
+          "Breakthrough Device Designation",
+          "Total Product Life Cycle Advisory Program (TAP)",
+          "TEMPO Pilot Program",
+        ],
       },
     ],
   },
@@ -31,11 +35,12 @@ const capabilities: CapabilityColumn[] = [
     title: "Market Access Services",
     categories: [
       {
-        label: "",
+        label: "Strategic Planning",
         items: [
           "Reimbursement Landscape Analysis",
-          "Payer Strategy",
-          "Health Economics & Outcomes Research",
+          "Full Market Access Strategic Plan",
+          "Payer Strategy Development",
+          "Health Economics & Outcomes",
         ],
       },
     ],
@@ -45,11 +50,12 @@ const capabilities: CapabilityColumn[] = [
     title: "Clinical Services",
     categories: [
       {
-        label: "",
+        label: "Evidence & Workflow Strategy",
         items: [
-          "Evidence Plan Review",
+          "Evidence Plan Review & Strategy",
           "Clinical Workflow Analysis",
           "Patient Journey Mapping",
+          "Clinical Adoption Planning",
         ],
       },
     ],
@@ -69,10 +75,10 @@ const SpecialtyCapabilities = () => {
           }`}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Specialty Capabilities
+            Specialty Deliverables Within Our Integrated Approach
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Deep expertise across regulatory, market access, and clinical domains.
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            We coordinate expert capabilities across regulatory, market access, and clinical strategy—ensuring each specialty reinforces your overall commercialization plan.
           </p>
         </div>
 

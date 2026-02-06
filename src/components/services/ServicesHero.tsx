@@ -29,7 +29,10 @@ const ServicesHero = () => {
             We provide product & commercialization guidance from concept to market launch. 
             That means understanding how product design, marketing claims, regulatory strategy, 
             reimbursement requirements, clinical evidence, quality systems, and commercial 
-            execution need to align—and coordinating the right specialists to make it happen.
+            execution need to align—and coordinating the right specialists to make it happen. 
+            We help you identify what needs attention now versus later, invest strategically 
+            to reach each milestone, and avoid the blind spots that create expensive problems 
+            down the road.
           </p>
           
           {/* CTA */}
@@ -39,7 +42,7 @@ const ServicesHero = () => {
             className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-base font-semibold px-8 py-4 rounded-md"
           >
             <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-              Book a Discovery Call
+              Discuss Your Strategic Needs
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
           </Button>
