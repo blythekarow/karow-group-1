@@ -37,8 +37,13 @@ const AboutHero = () => {
           </h1>
 
           {/* Body Text */}
-          <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl mx-auto mb-6">
             From concept to commercialization, strategic advisory for the teams shaping what's next in MedTech.
+          </p>
+
+          {/* Additional Intro */}
+          <p className="text-base md:text-lg text-white/70 leading-relaxed max-w-3xl mx-auto">
+            Medical device commercialization requires more than specialists working in silos. That's why The Karow Advisory Group exists—to bring integrated product and commercialization strategy to MedTech and wearables companies navigating the path from concept to market. Led by Blythe Karow, we're where 25 years of operator experience meets boutique-firm attention and strategic coordination.
           </p>
         </div>
       </div>
