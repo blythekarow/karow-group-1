@@ -14,9 +14,9 @@ const FounderStory = () => {
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
             }`}
           >
-            <div className="relative pb-16">
+            <div className="relative pb-8">
               {/* Dark gold offset rectangle */}
-              <div className="absolute top-6 left-6 w-[calc(100%-12px)] h-[calc(100%-60px)] bg-secondary rounded-lg" />
+              <div className="absolute top-5 left-5 w-full h-full bg-secondary rounded-lg" />
 
               {/* Headshot */}
               <img
@@ -25,8 +25,8 @@ const FounderStory = () => {
                 className="relative z-10 w-full max-w-md rounded-lg shadow-xl object-cover"
               />
 
-              {/* Pull Quote Card - dark green */}
-              <div className="absolute -bottom-4 left-6 right-0 md:left-12 md:right-auto md:max-w-[360px] z-20 bg-accent text-accent-foreground p-6 rounded-lg shadow-xl">
+              {/* Quote card below headshot */}
+              <div className="relative z-10 mt-6 max-w-md bg-[hsl(186,100%,16%)] text-white p-6 rounded-lg shadow-xl">
                 <p className="text-base md:text-lg italic font-medium leading-relaxed">
                   "Regulatory, clinical, and commercial can't be separated. Your claims are woven through everything - from your first product specification to your FDA submission to your customer conversation at market. Get one thread wrong early, and the whole fabric unravels."
                 </p>
