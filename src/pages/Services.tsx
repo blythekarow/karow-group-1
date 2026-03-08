@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import ServicesHero from "@/components/services/ServicesHero";
 import ServiceAreas from "@/components/services/ServiceAreas";
-import UrgencyCallout from "@/components/services/UrgencyCallout";
 import SpecialtyCapabilities from "@/components/services/SpecialtyCapabilities";
 import SimpleCTAPanel from "@/components/services/SimpleCTAPanel";
 import ProcessSection from "@/components/ProcessSection";
@@ -17,10 +16,9 @@ const Services = () => {
       <ServicesHero />
       <ServiceAreas />
       <SimpleCTAPanel />
-      <UrgencyCallout variant="primary" />
+      <BenefitsSection />
       <SpecialtyCapabilities />
       <ProcessSection />
-      <BenefitsSection />
       <ServicesFAQ />
       <ServicesFinalCTA />
       <Footer />
