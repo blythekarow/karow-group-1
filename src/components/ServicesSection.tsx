@@ -89,7 +89,7 @@ const ServicesSection = () => {
                 <h3 className="text-2xl md:text-[1.75rem] font-bold text-white mb-4 leading-tight min-h-[4rem]">
                   {service.title}
                 </h3>
-                <p className="text-white/85 leading-relaxed mb-6 text-sm md:text-[0.95rem] min-h-[5rem]">
+                <p className="text-white/85 leading-relaxed mb-6 text-sm md:text-[0.95rem] min-h-[7rem]">
                   {service.description}
                 </p>
                 <Button
