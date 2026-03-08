@@ -1,5 +1,5 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import teamBrainstormImage from "@/assets/team-brainstorm.jpg";
+import benefitsImage from "@/assets/business-meeting-team.jpg";
 
 const benefits = [
   {
@@ -40,7 +40,7 @@ const BenefitsSection = () => {
             {/* Main image */}
             <div className="relative z-10 ml-6">
               <img
-                src={teamBrainstormImage}
+                src={benefitsImage}
                 alt="Professional team collaboration"
                 className="w-full rounded-sm shadow-xl object-cover h-[500px]"
               />
@@ -99,7 +99,7 @@ const BenefitsSection = () => {
           <div className="lg:hidden relative">
             <div className="absolute -top-3 -left-3 w-[20%] h-[20%] bg-tan/60 rounded-sm" />
             <img
-              src={teamBrainstormImage}
+              src={benefitsImage}
               alt="Professional team collaboration"
               className="w-full rounded-sm shadow-xl object-cover aspect-[4/3] relative z-10"
             />
