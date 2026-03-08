@@ -207,7 +207,7 @@ const Assessment = () => {
                 <BarChart3 className="w-10 h-10 text-primary" />
               </div>
               <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Your D.E.V.I.C.E. Readiness Score
+                Your D.E.V.I.C.E.™ Readiness Score
               </h1>
               <div className="text-6xl md:text-7xl font-bold text-primary mb-2">
                 {percentageScore}%
