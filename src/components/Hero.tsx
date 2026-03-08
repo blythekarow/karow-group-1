@@ -26,21 +26,21 @@ const Hero = () => {
 
       {/* Content container */}
       <div className="relative z-10 container mx-auto px-6 flex items-center">
-        <div className="max-w-[680px] py-12">
+        <div className="max-w-3xl py-12">
           {/* Left side - Content with vertical accent line */}
           <div className="animate-fade-in-up flex">
             {/* Vertical accent line */}
             <div className="w-1 bg-primary mr-6 flex-shrink-0 self-stretch" />
             
             <div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-background leading-tight mb-6">
+              <h1 className="text-3xl md:text-4xl lg:text-[2.75rem] xl:text-[3.25rem] font-bold text-background leading-tight mb-6">
                 Strategic Leadership that{" "}
-                <span className="text-primary">Accelerates Execution</span>{" "}
-                in MedTech, Wearables, & DTx
+                <span className="text-primary whitespace-nowrap">Accelerates Execution</span>{" "}
+                in MedTech, Wearables, and DTx
               </h1>
               
-              <p className="text-xl md:text-2xl text-background/80 mb-8">
-                From concept to commercialization, we provide integrated strategy and expertise for companies navigating regulated pathways.
+              <p className="text-xl md:text-2xl text-background/80 mb-8 max-w-2xl">
+                From concept to commercialization, we provide integrated strategy, expertise, and execution for companies navigating regulated pathways.
               </p>
               
               {/* CTAs */}
