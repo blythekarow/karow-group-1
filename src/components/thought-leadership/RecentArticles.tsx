@@ -50,7 +50,7 @@ const RecentArticles = () => {
   };
 
   return (
-    <section id="recent-articles" ref={ref} className="py-24 bg-cream overflow-hidden scroll-mt-20">
+    <section id="recent-articles" ref={ref} className="pt-24 pb-16 bg-cream overflow-hidden scroll-mt-20">
       <div className="container mx-auto px-4 md:px-6">
         {/* Header */}
         <div
