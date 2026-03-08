@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import medtechStrategyImage from "@/assets/medtech-strategy-meeting.jpg";
+import teamProgressImage from "@/assets/team-progress-meeting.jpg";
 
 const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
 
