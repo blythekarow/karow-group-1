@@ -39,8 +39,8 @@ const ThoughtLeadershipHero = () => {
 
               {/* Headline */}
               <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-background leading-tight mb-6">
-                The Device Files: Trusted Insights for{" "}
-                <span className="text-primary">MedTech & Wearables Leaders</span>
+                The Device Files: <span className="text-primary">Trusted Insights</span> for{" "}
+                MedTech & Wearables Leaders
               </h1>
 
               {/* Subheadline */}
