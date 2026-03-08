@@ -1,12 +1,12 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Linkedin } from "lucide-react";
-import blytheProfessional from "@/assets/blythe-professional.png";
+import blytheHeadshot from "@/assets/blythe-headshot-new.png";
 
 const teamMembers = [
   {
     name: "Blythe Karow",
     title: "Product & Commercialization Strategy",
-    image: blytheProfessional,
+    image: blytheHeadshot,
     linkedin: "https://www.linkedin.com/in/blythekarow/",
   },
   {
