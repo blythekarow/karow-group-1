@@ -10,7 +10,7 @@ const FounderSection = () => {
   return (
     <section id="founder" ref={ref} className="py-16 bg-background scroll-mt-20 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start max-w-7xl mx-auto">
           {/* Left side: Headshot with quote card */}
           <div
             className={`relative order-2 lg:order-1 transition-all duration-700 ${
