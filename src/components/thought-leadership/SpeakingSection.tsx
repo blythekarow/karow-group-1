@@ -43,7 +43,7 @@ const SpeakingSection = () => {
       <div
         className="absolute inset-0"
         style={{
-          background: "linear-gradient(to right, hsl(var(--background)) 0%, hsl(var(--background)) 40%, hsl(var(--accent) / 0.85) 100%)",
+          background: "linear-gradient(to right, hsl(var(--background)) 0%, hsl(var(--background) / 0) 100%)",
         }}
       />
 
