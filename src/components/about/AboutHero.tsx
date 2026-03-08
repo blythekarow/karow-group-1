@@ -40,17 +40,12 @@ const AboutHero = () => {
               {/* Main Headline */}
               <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-background leading-tight mb-6">
                 Where Strategy Meets Execution in{" "}
-                <span className="text-primary">MedTech, Wearables, & DTx.</span>
+                <span className="text-primary">MedTech, Wearables & DTx.</span>
               </h1>
 
               {/* Body Text */}
-              <p className="text-lg md:text-xl text-background/80 mb-6 max-w-xl">
-                From concept to commercialization, strategic advisory for the teams shaping what's next in MedTech.
-              </p>
-
-              {/* Additional Intro */}
-              <p className="text-base md:text-lg text-background/70 leading-relaxed max-w-xl">
-                Medical device commercialization requires more than specialists working in silos. That's why The Karow Advisory Group exists — to bring integrated product and commercialization strategy to MedTech and wearables companies navigating the path from concept to market.
+              <p className="text-lg md:text-xl text-background/80 max-w-xl">
+                The Karow Advisory Group provides integrated product and commercialization strategy for medical device and wearables companies — from concept to market.
               </p>
             </div>
           </div>
