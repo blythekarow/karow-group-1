@@ -227,10 +227,10 @@ const Assessment = () => {
                   <>
                     <Mail className="w-10 h-10 text-primary mx-auto" />
                     <h3 className="text-xl font-semibold text-foreground">
-                      Want the full breakdown of how your score was calculated?
+                      Want to know where to focus first?
                     </h3>
                     <p className="text-muted-foreground">
-                      Enter your email and we'll send you a detailed report showing your score for each dimension and every question — so you know exactly where to focus.
+                      Enter your email and we'll send you a detailed breakdown of your scores by dimension — with guidance on what each gap means and where to start.
                     </p>
                     <div className="flex flex-col gap-3 max-w-md mx-auto mt-auto w-full">
                       <Input
