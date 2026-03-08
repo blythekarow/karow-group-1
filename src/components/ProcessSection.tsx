@@ -38,7 +38,7 @@ const ProcessSection = () => {
   return (
     <section id="process" ref={ref} className="relative overflow-visible scroll-mt-20">
       {/* Hero Image Section */}
-      <div className="relative h-[450px] md:h-[500px]">
+      <div className="relative h-[350px] md:h-[400px]">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
@@ -48,7 +48,7 @@ const ProcessSection = () => {
         <div className="absolute inset-0 bg-black/50" />
         
         {/* Content - positioned higher to make room for overhang */}
-        <div className="relative z-10 h-full flex flex-col items-center justify-center px-4 pb-24">
+        <div className="relative z-10 h-full flex flex-col items-center justify-center px-4 pb-16">
           {/* Accent Bar */}
           <div 
             className={`w-16 h-1 bg-primary rounded-full mb-6 transition-all duration-700 ${
