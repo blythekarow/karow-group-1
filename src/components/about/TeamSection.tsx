@@ -107,7 +107,9 @@ const TeamSection = () => {
                   <img
                     src={member.image}
                     alt={member.name}
-                    loading="lazy"
+                    width={288}
+                    height={288}
+                    decoding="async"
                     className="w-full h-full object-cover object-center"
                   />
                 ) : (
