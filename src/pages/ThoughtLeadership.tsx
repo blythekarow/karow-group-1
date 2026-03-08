@@ -1,6 +1,5 @@
 import Navbar from "@/components/Navbar";
 import ThoughtLeadershipHero from "@/components/thought-leadership/ThoughtLeadershipHero";
-import WhyItResonates from "@/components/thought-leadership/WhyItResonates";
 import RecentArticles from "@/components/thought-leadership/RecentArticles";
 import NewsletterSignup from "@/components/thought-leadership/NewsletterSignup";
 import DeviceFilesPodcast from "@/components/thought-leadership/DeviceFilesPodcast";
@@ -13,7 +12,6 @@ const ThoughtLeadership = () => {
     <div className="min-h-screen">
       <Navbar />
       <ThoughtLeadershipHero />
-      <WhyItResonates />
       <RecentArticles />
       <NewsletterSignup />
       <DeviceFilesPodcast />
