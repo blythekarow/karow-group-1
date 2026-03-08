@@ -1,6 +1,10 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Linkedin } from "lucide-react";
 import blytheHeadshot from "@/assets/blythe-headshot-new.png";
+import thomasMoore from "@/assets/thomas-moore.png";
+import natalieFreels from "@/assets/natalie-freels.png";
+import adamSteadman from "@/assets/adam-steadman.png";
+import donnaDiGangi from "@/assets/donna-digangi.png";
 
 const teamMembers = [
   {
@@ -12,7 +16,7 @@ const teamMembers = [
   {
     name: "Donna DiGangi",
     title: "Regulatory Strategy & Submissions",
-    image: null,
+    image: donnaDiGangi,
     linkedin: "https://www.linkedin.com/in/donna-digangi/",
   },
   {
@@ -24,19 +28,19 @@ const teamMembers = [
   {
     name: "Natalie Freels, PA-C",
     title: "Clinical Operations Strategy",
-    image: null,
+    image: natalieFreels,
     linkedin: "https://www.linkedin.com/in/natalie-freels/",
   },
   {
     name: "Adam Steadman",
     title: "General Operations & Manufacturing",
-    image: null,
+    image: adamSteadman,
     linkedin: "https://www.linkedin.com/in/adam-steadman/",
   },
   {
     name: "Thomas Moore, PhD",
     title: "Product Development & Manufacturing",
-    image: null,
+    image: thomasMoore,
     linkedin: "https://www.linkedin.com/in/thomas-moore-phd/",
   },
   {
