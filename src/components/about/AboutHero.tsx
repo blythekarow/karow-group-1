@@ -40,7 +40,7 @@ const AboutHero = () => {
 
               {/* Body Text */}
               <p className="text-lg md:text-xl text-background/80 max-w-2xl">
-                Medical device commercialization requires more than specialists working in silos. The Karow Advisory Group brings integrated product and commercialization strategy to MedTech and wearables companies navigating the path from concept to market — led by senior operators who have actually been there, with the boutique attention and strategic coordination that large firms can't offer.
+                Medical device commercialization requires more than specialists working in silos. The Karow Advisory Group brings integrated product and commercialization strategy to MedTech and wearables companies navigating the path from concept to market - led by senior operators who have actually been there, with the boutique attention and strategic coordination that large firms can't offer.
               </p>
             </div>
           </div>
