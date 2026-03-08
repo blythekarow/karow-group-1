@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import LogoCarousel from "@/components/LogoCarousel";
-import WhyWorkWithUsSection from "@/components/WhyWorkWithUsSection";
+
 import ProblemSection from "@/components/ProblemSection";
 import SolutionSection from "@/components/SolutionSection";
 import ProcessSection from "@/components/ProcessSection";
