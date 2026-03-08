@@ -44,12 +44,12 @@ const WhyWorkWithUsSection = () => {
               What You Get Working With Us
             </h2>
             <p className="text-base text-muted-foreground leading-relaxed max-w-4xl">
-              From concept to market, startups to enterprise - whether you're a single-product startup or a Fortune 50 managing a portfolio, we provide the strategic clarity and operational insights to move forward with confidence.
+              From concept to market, startups to Fortune 50, we provide the strategic clarity and operational insights to move forward with confidence.
             </p>
           </div>
 
-          {/* Benefits grid - 2 columns on desktop */}
-          <div className="grid md:grid-cols-2 gap-x-8 gap-y-4 mb-8">
+          {/* Benefits list - single column */}
+          <div className="grid grid-cols-1 gap-y-4 mb-8">
             {benefits.map((benefit, index) => (
               <div
                 key={index}
