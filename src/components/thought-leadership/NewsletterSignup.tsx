@@ -5,7 +5,7 @@ const NewsletterSignup = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section ref={ref} className="py-20 bg-accent relative overflow-hidden">
+    <section ref={ref} className="py-12 bg-accent relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div
           className={`max-w-3xl mx-auto text-center transition-all duration-700 ${
