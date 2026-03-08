@@ -22,7 +22,7 @@ const NewsletterSignup = () => {
           </h2>
           
           <p className="text-lg text-accent-foreground/80 mb-8 max-w-xl mx-auto">
-            Join 1,500+ MedTech leaders getting weekly insights on product strategy, 
+            Join 10,000+ MedTech leaders getting monthly insights on product strategy, 
             regulatory navigation, and commercialization.
           </p>
           
