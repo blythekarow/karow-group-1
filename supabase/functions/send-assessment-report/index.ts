@@ -168,7 +168,7 @@ function buildReportHtml(data: ReportData, isAdmin = false): string {
             <div style="text-align:center;margin-top:32px;padding:24px;background:#f9f9f9;border-radius:8px;">
               <h3 style="color:#333;margin:0 0 8px;">Ready to close the gaps?</h3>
               <p style="color:#666;font-size:14px;margin:0 0 16px;">If this assessment surfaced gaps you weren't sure how to address, that's exactly where The Karow Advisory Group can help.</p>
-              <a href="mailto:connect@thekarowgroup.com?subject=Discovery%20Call%20Request%20-%20D.E.V.I.C.E.%20Assessment" style="display:inline-block;background:#004D51;color:#C8E842;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;">Schedule a Discovery Call</a>
+              <a href="https://calendly.com/blythe-karow/new-client-introductory-meeting" style="display:inline-block;background:#004D51;color:#C8E842;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;">Schedule a Discovery Call</a>
             </div>
           </div>
 
