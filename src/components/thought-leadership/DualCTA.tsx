@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Calendar, ClipboardCheck, ArrowRight } from "lucide-react";
-import medtechBg from "@/assets/medtech-abstract-bg.jpg";
+
 
 const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
 
@@ -24,10 +24,10 @@ const ctaCards: CTACard[] = [
   },
   {
     icon: ClipboardCheck,
-    title: "Take the D.E.V.I.C.E. Assessment",
+    title: "Take the D.E.V.I.C.E.™ Assessment",
     description: "Assess your commercialization readiness and identify strategic gaps.",
     buttonText: "Start Assessment",
-    buttonLink: "#",
+    buttonLink: "/assessment",
   },
 ];
 
@@ -35,13 +35,7 @@ const DualCTA = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section ref={ref} className="py-16 overflow-hidden relative">
-      {/* Parallax background */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: `url(${medtechBg})` }}
-      />
-      <div className="absolute inset-0 bg-accent/85" />
+    <section ref={ref} className="py-16 bg-cream overflow-hidden">
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div
@@ -49,7 +43,7 @@ const DualCTA = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-accent-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             If You Like What You've Learned in The Device Files, Let's Talk
           </h2>
         </div>
