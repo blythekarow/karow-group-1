@@ -75,7 +75,7 @@ const SolutionSection = () => {
           </div>
 
           {/* Mobile image */}
-          <div className="lg:hidden relative">
+          <div className="lg:hidden relative overflow-hidden rounded-lg">
             <div className="absolute -top-3 -right-3 w-[20%] h-[20%] bg-primary rounded-lg" />
             <img
               src={blytheWhiteBlazer}
