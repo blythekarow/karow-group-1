@@ -10,7 +10,7 @@ const SolutionSection = () => {
   return (
     <section ref={ref} className="py-24 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-12 items-start max-w-7xl mx-auto">
           {/* Left side - Content */}
           <div
             className={`transition-all duration-700 ${
@@ -25,7 +25,7 @@ const SolutionSection = () => {
               Meet The Karow Advisory Group
             </p>
             
-            <div className="space-y-6 text-muted-foreground leading-relaxed mb-8">
+            <div className="space-y-4 text-muted-foreground leading-relaxed mb-8">
               <p>
                 We help medical device and wearables companies navigate commercialization with integrated strategy from day one - so regulatory, reimbursement, and commercial plans don't just coexist, they reinforce each other.
               </p>
