@@ -19,7 +19,7 @@ const FounderSection = () => {
           >
             <div className="relative pb-16">
               {/* Dark gold L-shaped offset rectangle */}
-              <div className="absolute top-6 left-6 w-[calc(100%-12px)] h-[calc(100%-60px)] bg-primary/40 rounded-lg" />
+              <div className="absolute top-6 left-6 w-[calc(100%-12px)] h-[calc(100%-60px)] bg-secondary rounded-lg" />
 
               {/* Headshot */}
               <img
