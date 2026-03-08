@@ -43,7 +43,7 @@ const WhyWorkWithUsSection = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
               What You Get Working With Us
             </h2>
-            <p className="text-base text-muted-foreground leading-relaxed max-w-3xl">
+            <p className="text-base text-muted-foreground leading-relaxed max-w-4xl">
               From concept to market, startups to enterprise - whether you're a single-product startup or a Fortune 50 managing a portfolio, we provide the strategic clarity and operational insights to move forward with confidence.
             </p>
           </div>
