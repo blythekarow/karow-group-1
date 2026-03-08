@@ -65,7 +65,7 @@ const TestimonialsSection = () => {
           }`}
         >
           {/* Header */}
-          <div className="mb-4 max-w-4xl">
+          <div className="mb-10 max-w-4xl">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
               What Our Clients Say
             </h2>
@@ -85,7 +85,7 @@ const TestimonialsSection = () => {
               
               {/* Quote text and attribution */}
               <div className="flex-1">
-                <div className="min-h-[180px] mb-3">
+                <div className="mb-2">
                   <p className="text-base md:text-lg text-white/90 leading-relaxed text-center italic">
                     "{testimonials[currentIndex].quote}"
                   </p>
@@ -114,7 +114,7 @@ const TestimonialsSection = () => {
             </div>
             
             {/* Dot navigation */}
-            <div className="flex justify-center gap-3 mt-12">
+            <div className="flex justify-center gap-3 mt-6">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
