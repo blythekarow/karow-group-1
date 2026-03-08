@@ -10,10 +10,10 @@ const FounderSection = () => {
   return (
     <section id="founder" ref={ref} className="py-16 bg-background scroll-mt-20 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-12 items-start max-w-6xl mx-auto">
           {/* Left side: Headshot with quote card */}
           <div
-            className={`relative order-2 lg:order-1 transition-all duration-700 ${
+            className={`relative order-2 lg:order-1 flex justify-center transition-all duration-700 ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
             }`}
           >
