@@ -27,7 +27,7 @@ const serviceAreas: ServiceArea[] = [
       "Target market identification and pain point validation",
       "Claims strategy foundation",
     ],
-    image: executiveBoardroomImage,
+    image: businessOfficeTeamImage,
     imageAlt: "Executive strategy session for product definition",
   },
   {
