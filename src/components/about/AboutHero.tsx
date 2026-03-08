@@ -33,14 +33,19 @@ const AboutHero = () => {
 
             <div>
               {/* Eyebrow */}
+              <p className="text-sm uppercase tracking-[2px] text-primary font-semibold mb-4">
+                About The Karow Advisory Group
+              </p>
+
               {/* Main Headline */}
               <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-background leading-tight mb-6">
-                About The Karow Advisory Group
+                We're Not a Large Firm.<br />
+                We're the Right Firm.
               </h1>
 
               {/* Body Text */}
-              <p className="text-lg md:text-xl text-background/80 max-w-2xl">
-                Medical device commercialization requires more than specialists working in silos. The Karow Advisory Group brings integrated product and commercialization strategy to MedTech and wearables companies navigating the path from concept to market - led by senior operators with real-world experience, with the boutique attention and strategic coordination that large firms can't offer.
+              <p className="text-base md:text-lg text-background/80 max-w-2xl leading-relaxed">
+                Medical device commercialization requires more than specialists working in silos. The Karow Advisory Group brings integrated product and commercialization strategy to MedTech and wearables companies navigating the path from concept to market — led by senior operators with real-world experience, with the boutique attention and strategic coordination that large firms can't offer.
               </p>
             </div>
           </div>
