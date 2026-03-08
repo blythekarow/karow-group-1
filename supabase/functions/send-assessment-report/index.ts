@@ -204,7 +204,7 @@ serve(async (req) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "The Karow Advisory Group <assessments@thekarowgroup.com>",
+        from: "The Karow Advisory Group <info@thekarowgroup.com>",
         to: [data.email],
         subject: `Your D.E.V.I.C.E. Readiness Score: ${data.percentageScore}% — ${data.readinessLevel}`,
         html: buildReportHtml(data, false),
