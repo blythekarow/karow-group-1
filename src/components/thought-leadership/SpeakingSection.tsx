@@ -77,7 +77,7 @@ const SpeakingSection = () => {
                 {topics.map((topic, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <span className="text-primary mt-1.5 shrink-0 text-lg">•</span>
-                    <span className="text-foreground/90">{topic.title}</span>
+                    <span className="text-background/90">{topic.title}</span>
                   </li>
                 ))}
               </ul>
