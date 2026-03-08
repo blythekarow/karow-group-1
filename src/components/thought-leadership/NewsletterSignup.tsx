@@ -1,5 +1,5 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { Mail } from "lucide-react";
+
 
 const NewsletterSignup = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
