@@ -44,19 +44,18 @@ const BenefitsSection = () => {
             </p>
             
             {/* Checkmark list */}
-            <div className="space-y-5">
+            <div className="space-y-3">
               {benefits.map((benefit, index) => (
                 <div
                   key={index}
-                  className={`flex items-start gap-4 transition-all duration-500 ${
+                  className={`flex items-start gap-3 transition-all duration-500 ${
                     isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
                   }`}
                   style={{ transitionDelay: `${index * 100 + 200}ms` }}
                 >
-                  {/* Outlined square checkmark */}
-                  <div className="w-6 h-6 border-2 border-primary rounded flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="w-5 h-5 border-2 border-primary rounded flex items-center justify-center shrink-0 mt-0.5">
                     <svg 
-                      className="w-4 h-4 text-primary" 
+                      className="w-3 h-3 text-primary" 
                       viewBox="0 0 24 24" 
                       fill="none" 
                       stroke="currentColor" 
@@ -67,7 +66,7 @@ const BenefitsSection = () => {
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
                   </div>
-                  <p className="text-base md:text-lg text-muted-foreground">
+                  <p className="text-sm md:text-base text-muted-foreground">
                     {benefit.description}
                   </p>
                 </div>
