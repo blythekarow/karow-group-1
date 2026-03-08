@@ -29,7 +29,7 @@ const FounderSection = () => {
               />
 
               {/* Floating quote card - dark green */}
-              <div className="absolute -bottom-4 left-6 right-0 md:left-12 md:right-auto md:max-w-[360px] z-20 bg-dark-teal text-white p-6 rounded-lg shadow-xl">
+              <div className="absolute -bottom-4 left-6 right-0 md:left-12 md:right-auto md:max-w-[360px] z-20 bg-accent text-accent-foreground p-6 rounded-lg shadow-xl">
                 <p className="text-base md:text-lg italic font-medium leading-relaxed">
                   "Regulatory, clinical, and commercial can't be separated. Your claims are woven through everything - from your first product specification to your FDA submission to your customer conversation at market. Get one thread wrong early, and the whole fabric unravels."
                 </p>
