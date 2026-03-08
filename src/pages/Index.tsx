@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import LogoCarousel from "@/components/LogoCarousel";
-import WhyWorkWithUsSection from "@/components/WhyWorkWithUsSection";
+
 import ProblemSection from "@/components/ProblemSection";
 import SolutionSection from "@/components/SolutionSection";
 import ProcessSection from "@/components/ProcessSection";
@@ -22,8 +22,6 @@ const Index = () => {
       <Hero />
       {/* 2. Trusted By / Logo Carousel */}
       <LogoCarousel />
-      {/* 2B. Why Companies Work With Us */}
-      <WhyWorkWithUsSection />
       {/* 3. The Problem */}
       <ProblemSection />
       {/* 4. The Solution */}
