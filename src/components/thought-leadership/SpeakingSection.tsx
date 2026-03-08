@@ -96,7 +96,7 @@ const SpeakingSection = () => {
                 {formats.map((format, index) => (
                   <Card
                     key={index}
-                    className="bg-background/10 backdrop-blur-sm border-accent-foreground/20"
+                    className="bg-card border-none shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
                   >
                     <CardContent className="p-4 flex items-center gap-3">
                       <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center shrink-0">
