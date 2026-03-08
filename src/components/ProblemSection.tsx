@@ -19,7 +19,7 @@ const ProblemSection = () => {
             }`}
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
-              Every Decision Matters in MedTech—Don't Let Uncertainty Burn Money and Slow You Down
+              Every Decision Matters in MedTech - Don't Let Uncertainty Burn Money and Slow You Down
             </h2>
             
             <div className="space-y-4 text-muted-foreground leading-relaxed mb-8 text-lg">

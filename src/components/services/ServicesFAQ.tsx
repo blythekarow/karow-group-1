@@ -30,7 +30,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: "What makes you different from large consulting firms or specialized regulatory consultants?",
-    answer: "We provide integrated product and commercialization strategy—not siloed regulatory or reimbursement advice. We're a boutique firm led by senior-level experts who've actually brought products to market, not junior consultants learning on your dime. You get big-firm expertise with personalized attention and strategic integration across all workstreams.",
+    answer: "We provide integrated product and commercialization strategy - not siloed regulatory or reimbursement advice. We're a boutique firm led by senior-level experts who've actually brought products to market, not junior consultants learning on your dime. You get big-firm expertise with personalized attention and strategic integration across all workstreams.",
   },
   {
     question: "Do you provide regulatory submission services?",

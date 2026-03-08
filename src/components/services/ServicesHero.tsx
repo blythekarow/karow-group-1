@@ -29,7 +29,7 @@ const ServicesHero = () => {
             We provide product & commercialization guidance from concept to market launch. 
             That means understanding how product design, marketing claims, regulatory strategy, 
             reimbursement requirements, clinical evidence, quality systems, and commercial 
-            execution need to align—and coordinating the right specialists to make it happen. 
+            execution need to align - and coordinating the right specialists to make it happen. 
             We help you identify what needs attention now versus later, invest strategically 
             to reach each milestone, and avoid the blind spots that create expensive problems 
             down the road.

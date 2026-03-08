@@ -22,7 +22,7 @@ const UrgencyCallout = ({ variant = "primary" }: UrgencyCalloutProps) => {
   } : {
     headline: "Don't Let Strategic Uncertainty Burn Capital and Momentum",
     body: [
-      "Medical device companies don't fail from lack of innovation—they stall from lack of clear direction. Without integrated commercialization strategy, you risk choosing wrong pathways, misaligning evidence with reimbursement, and missing investor milestones. There's a better way."
+      "Medical device companies don't fail from lack of innovation - they stall from lack of clear direction. Without integrated commercialization strategy, you risk choosing wrong pathways, misaligning evidence with reimbursement, and missing investor milestones. There's a better way."
     ],
     cta: "Explore a Strategic Engagement"
   };

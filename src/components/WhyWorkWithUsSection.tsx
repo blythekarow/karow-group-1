@@ -77,7 +77,7 @@ const WhyWorkWithUsSection = () => {
                 </div>
                 <div className="text-base md:text-lg">
                   <span className="font-bold text-foreground">{benefit.title}</span>
-                  <span className="text-muted-foreground"> — {benefit.description}</span>
+                  <span className="text-muted-foreground"> - {benefit.description}</span>
                 </div>
               </div>
             ))}

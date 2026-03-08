@@ -72,7 +72,7 @@ const TestimonialsSection = () => {
                   What Clients Say About Working with Us
                 </h2>
                 <p className="text-lg text-white/80 leading-relaxed">
-                  From founders navigating FDA complexity to established companies launching new products, our clients choose us because we reduce risk, clarify decisions, and deliver results—not just reports.
+                  From founders navigating FDA complexity to established companies launching new products, our clients choose us because we reduce risk, clarify decisions, and deliver results - not just reports.
                 </p>
               </div>
               
