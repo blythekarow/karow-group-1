@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import medicalTeamImage from "@/assets/medical-team.jpg";
+import teamMeetingImage from "@/assets/team-collaboration-meeting.jpg";
 
 interface Testimonial {
   quote: string;
@@ -47,15 +47,15 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section ref={ref} className="relative min-h-[600px] py-24 overflow-hidden">
-      {/* Background image with dark overlay */}
+    <section ref={ref} className="relative py-16 overflow-hidden">
+      {/* Background image with gradient overlay matching hero style */}
       <div className="absolute inset-0">
         <img
-          src={medicalTeamImage}
+          src={teamMeetingImage}
           alt=""
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-foreground/75" />
+        <div className="absolute inset-0 bg-gradient-to-r from-accent via-accent/70 via-50% to-transparent" />
       </div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -65,22 +65,10 @@ const TestimonialsSection = () => {
           }`}
         >
           {/* Header */}
-          <div className="mb-12 max-w-4xl">
-            <div className="flex items-start justify-between">
-              <div>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-                  What Clients Say About Working with Us
-                </h2>
-                <p className="text-lg text-white/80 leading-relaxed">
-                  From founders navigating FDA complexity to established companies launching new products, our clients choose us because we reduce risk, clarify decisions, and deliver results - not just reports.
-                </p>
-              </div>
-              
-              {/* Large quotation marks - decorative pair */}
-              <div className="text-primary text-[80px] leading-none font-serif hidden md:block select-none shrink-0 ml-8" style={{ marginTop: '-10px' }}>
-                ""
-              </div>
-            </div>
+          <div className="mb-10 max-w-4xl">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+              What Our Clients Say
+            </h2>
           </div>
           
           {/* Quote content with navigation */}
