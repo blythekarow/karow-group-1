@@ -102,7 +102,7 @@ const SpeakingSection = () => {
                       <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center shrink-0">
                         <format.icon className="h-5 w-5 text-primary" />
                       </div>
-                      <span className="text-sm font-medium text-accent-foreground">
+                      <span className="text-sm font-medium text-foreground">
                         {format.title}
                       </span>
                     </CardContent>
