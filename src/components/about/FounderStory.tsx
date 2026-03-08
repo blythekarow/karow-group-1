@@ -40,7 +40,7 @@ const FounderStory = () => {
               {/* Pull Quote Card */}
               <div className="absolute bottom-4 md:bottom-8 left-4 right-4 md:left-0 md:right-auto md:w-[340px] z-30 bg-accent text-white p-6 rounded-lg shadow-xl">
                 <p className="text-base md:text-lg italic font-medium leading-relaxed">
-                  "Regulatory, clinical, and commercial can't be separated. If your claims aren't validated and your evidence isn't real, you're building a brand you'll later have to rebuild."
+                  "Regulatory, clinical, and commercial can't be separated. Your claims are woven through everything — from your first product specification to your FDA submission to your customer conversation at market. Get one thread wrong early, and the whole fabric unravels."
                 </p>
               </div>
             </div>
