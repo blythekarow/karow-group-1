@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Calendar, ClipboardCheck, ArrowRight } from "lucide-react";
-import medtechBg from "@/assets/medtech-abstract-bg.jpg";
+
 
 const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
 
