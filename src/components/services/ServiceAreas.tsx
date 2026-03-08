@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import executiveBoardroomImage from "@/assets/executive-boardroom.jpg";
-import consultingWorkshopImage from "@/assets/consulting-workshop.jpg";
+import businessHandshakeImage from "@/assets/business-handshake.jpg";
 import dueDiligenceImage from "@/assets/due-diligence-meeting.jpg";
 
 const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
@@ -43,7 +43,7 @@ const serviceAreas: ServiceArea[] = [
       "Clinical workflow and adoption planning",
       "Regulatory submission coordination",
     ],
-    image: consultingWorkshopImage,
+    image: businessHandshakeImage,
     imageAlt: "Team workshop for commercialization planning",
   },
   {
