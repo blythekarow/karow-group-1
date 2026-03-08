@@ -34,7 +34,7 @@ const AboutHero = () => {
             <div>
               {/* Eyebrow */}
               {/* Main Headline */}
-              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-background leading-tight mb-6">
+              <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-background leading-tight mb-6">
                 About The Karow Advisory Group
               </h1>
 
