@@ -109,7 +109,7 @@ const ServiceAreaSection = ({ service, imageLeft, bgClass }: ServiceAreaSectionP
               <img
                 src={service.image}
                 alt={service.imageAlt}
-                className="w-full rounded-lg shadow-2xl object-cover h-64 lg:h-72"
+                className="w-3/4 mx-auto rounded-lg shadow-2xl object-cover h-64 lg:h-72"
               />
             </div>
           </div>
