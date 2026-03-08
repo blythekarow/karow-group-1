@@ -50,7 +50,7 @@ const RecentArticles = () => {
   };
 
   return (
-    <section id="recent-articles" ref={ref} className="py-24 bg-cream overflow-hidden scroll-mt-20">
+    <section id="recent-articles" ref={ref} className="pt-24 pb-16 bg-cream overflow-hidden scroll-mt-20">
       <div className="container mx-auto px-4 md:px-6">
         {/* Header */}
         <div
@@ -59,10 +59,10 @@ const RecentArticles = () => {
           }`}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Recent Articles & Analysis
+            Join the ten thousand plus leaders reading The Device Files monthly.
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Strategic insights on what it really takes to bring medical devices to market.
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Recent articles and analysis: strategic insights on what it really takes to bring medical devices to market.
           </p>
         </div>
 
