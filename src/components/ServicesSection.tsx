@@ -85,16 +85,16 @@ const ServicesSection = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20" />
               
               {/* Content overlay */}
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h3 className="text-2xl md:text-[1.75rem] font-bold text-white mb-4 leading-tight">
+              <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
+                <h3 className="text-2xl md:text-[1.75rem] font-bold text-white mb-4 leading-tight min-h-[4rem]">
                   {service.title}
                 </h3>
-                <p className="text-white/85 leading-relaxed mb-6 text-sm md:text-[0.95rem]">
+                <p className="text-white/85 leading-relaxed mb-6 text-sm md:text-[0.95rem] min-h-[5rem]">
                   {service.description}
                 </p>
                 <Button
                   asChild
-                  className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-sm font-semibold px-6 py-3"
+                  className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-sm font-semibold px-6 py-3 self-start"
                 >
                   <a href={service.link}>
                     {service.cta}
