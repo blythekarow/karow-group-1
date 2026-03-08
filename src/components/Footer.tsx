@@ -6,7 +6,7 @@ const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-
 
 const Footer = () => {
   return (
-    <footer className="bg-accent text-accent-foreground py-16">
+    <footer className="bg-accent text-accent-foreground py-8">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 mb-12">
           {/* Brand */}
