@@ -220,72 +220,76 @@ const Assessment = () => {
               </p>
             </div>
 
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              {/* Email capture for full report */}
+              <div className="bg-accent/10 rounded-xl p-8 text-center space-y-4 flex flex-col">
+                {!emailSent ? (
+                  <>
+                    <Mail className="w-10 h-10 text-primary mx-auto" />
+                    <h3 className="text-xl font-semibold text-foreground">
+                      Want the full breakdown of how your score was calculated?
+                    </h3>
+                    <p className="text-muted-foreground">
+                      Enter your email and we'll send you a detailed report showing your score for each dimension and every question — so you know exactly where to focus.
+                    </p>
+                    <div className="flex flex-col gap-3 max-w-md mx-auto mt-auto w-full">
+                      <Input
+                        type="email"
+                        placeholder="your@email.com"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className="flex-1"
+                      />
+                      <Button
+                        onClick={handleSendReport}
+                        disabled={sendingEmail || !email}
+                        className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground"
+                      >
+                        {sendingEmail ? (
+                          <>
+                            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                            Sending...
+                          </>
+                        ) : (
+                          <>
+                            Send My Report
+                            <ArrowRight className="ml-2 h-4 w-4" />
+                          </>
+                        )}
+                      </Button>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <CheckCircle2 className="w-10 h-10 text-green-600 mx-auto" />
+                    <h3 className="text-xl font-semibold text-foreground">Report Sent!</h3>
+                    <p className="text-muted-foreground">
+                      Check your inbox at <strong>{email}</strong> for your detailed D.E.V.I.C.E. Readiness Report.
+                    </p>
+                  </>
+                )}
+              </div>
 
-            {/* Email capture for full report */}
-            <div className="bg-accent/10 rounded-xl p-8 text-center space-y-4 mb-8">
-              {!emailSent ? (
-                <>
-                  <Mail className="w-10 h-10 text-primary mx-auto" />
-                  <h3 className="text-xl font-semibold text-foreground">
-                    Want the full breakdown of how your score was calculated?
-                  </h3>
-                  <p className="text-muted-foreground max-w-lg mx-auto">
-                    Enter your email and we'll send you a detailed report showing your score for each dimension and every question — so you know exactly where to focus.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-                    <Input
-                      type="email"
-                      placeholder="your@email.com"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      className="flex-1"
-                    />
-                    <Button
-                      onClick={handleSendReport}
-                      disabled={sendingEmail || !email}
-                      className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground"
-                    >
-                      {sendingEmail ? (
-                        <>
-                          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                          Sending...
-                        </>
-                      ) : (
-                        <>
-                          Send My Report
-                          <ArrowRight className="ml-2 h-4 w-4" />
-                        </>
-                      )}
-                    </Button>
-                  </div>
-                </>
-              ) : (
-                <>
-                  <CheckCircle2 className="w-10 h-10 text-green-600 mx-auto" />
-                  <h3 className="text-xl font-semibold text-foreground">Report Sent!</h3>
-                  <p className="text-muted-foreground max-w-lg mx-auto">
-                    Check your inbox at <strong>{email}</strong> for your detailed D.E.V.I.C.E. Readiness Report.
-                  </p>
-                </>
-              )}
-            </div>
-
-            {/* Discovery call CTA */}
-            <div className="bg-cream rounded-xl p-8 text-center space-y-4 mb-8">
-              <h3 className="text-xl font-semibold text-foreground">Ready to close the gaps?</h3>
-              <p className="text-muted-foreground max-w-lg mx-auto">
-                If this assessment surfaced gaps you weren't sure how to address, that's exactly where The Karow Advisory Group can help.
-              </p>
-              <Button
-                asChild
-                size="lg"
-                className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all"
-              >
-                <a href="mailto:connect@thekarowgroup.com?subject=Discovery%20Call%20Request%20-%20D.E.V.I.C.E.%20Assessment">
-                  <Calendar className="mr-2 h-5 w-5" />
-                  Schedule a Discovery Call
-                </a>
-              </Button>
+              {/* Discovery call CTA */}
+              <div className="bg-cream rounded-xl p-8 text-center space-y-4 flex flex-col">
+                <Calendar className="w-10 h-10 text-primary mx-auto" />
+                <h3 className="text-xl font-semibold text-foreground">Ready to close the gaps?</h3>
+                <p className="text-muted-foreground">
+                  If this assessment surfaced gaps you weren't sure how to address, that's exactly where The Karow Advisory Group can help.
+                </p>
+                <div className="mt-auto">
+                  <Button
+                    asChild
+                    size="lg"
+                    className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all"
+                  >
+                    <a href="https://calendly.com/blythe-karow/new-client-introductory-meeting">
+                      <Calendar className="mr-2 h-5 w-5" />
+                      Schedule a Discovery Call
+                    </a>
+                  </Button>
+                </div>
+              </div>
             </div>
 
             <div className="text-center">
