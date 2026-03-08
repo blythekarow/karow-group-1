@@ -1,6 +1,5 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import blytheCasual from "@/assets/blythe-casual.png";
-import blytheProfessional from "@/assets/blythe-professional.png";
+import blytheHeadshot from "@/assets/blythe-headshot-new.png";
 
 const FounderStory = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
@@ -9,36 +8,25 @@ const FounderStory = () => {
     <section ref={ref} className="py-24 bg-background overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start max-w-6xl mx-auto">
-          {/* Left side: Photos with quote */}
+          {/* Left side: Headshot with quote */}
           <div
             className={`relative order-2 lg:order-1 transition-all duration-700 ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
             }`}
           >
-            <div className="relative h-[550px] md:h-[650px]">
-              {/* Chartreuse offset rectangle */}
-              <div className="absolute top-8 left-0 w-56 md:w-72 h-72 md:h-80 bg-primary rounded-lg opacity-70" />
+            <div className="relative">
+              {/* Chartreuse accent rectangle */}
+              <div className="absolute -top-4 -left-4 w-full h-full bg-primary rounded-lg opacity-20" />
 
-              {/* Casual photo - back/left */}
-              <div className="absolute top-0 left-4 md:left-8 z-10">
-                <img
-                  src={blytheCasual}
-                  alt="Blythe Karow - casual portrait"
-                  className="w-48 md:w-64 h-auto rounded-lg shadow-xl object-cover"
-                />
-              </div>
-
-              {/* Professional photo - front/right */}
-              <div className="absolute top-24 md:top-32 left-48 md:left-60 z-20 w-44 md:w-56 h-56 md:h-72 rounded-lg shadow-2xl overflow-hidden">
-                <img
-                  src={blytheProfessional}
-                  alt="Blythe Karow - professional portrait"
-                  className="w-full h-full object-cover object-top scale-125"
-                />
-              </div>
+              {/* Headshot */}
+              <img
+                src={blytheHeadshot}
+                alt="Blythe Karow, Founder & CEO of The Karow Advisory Group"
+                className="relative z-10 w-full max-w-md rounded-lg shadow-xl object-cover"
+              />
 
               {/* Pull Quote Card */}
-              <div className="absolute bottom-4 md:bottom-8 left-4 right-4 md:left-0 md:right-auto md:w-[340px] z-30 bg-accent text-white p-6 rounded-lg shadow-xl">
+              <div className="relative z-20 -mt-12 ml-4 mr-4 md:ml-8 md:mr-0 md:max-w-[380px] bg-accent text-white p-6 rounded-lg shadow-xl">
                 <p className="text-base md:text-lg italic font-medium leading-relaxed">
                   "Regulatory, clinical, and commercial can't be separated. Your claims are woven through everything — from your first product specification to your FDA submission to your customer conversation at market. Get one thread wrong early, and the whole fabric unravels."
                 </p>
