@@ -13,25 +13,25 @@ const FounderSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-12 items-start max-w-6xl mx-auto">
           {/* Left side: Headshot with quote card */}
           <div
-            className={`relative order-2 lg:order-1 flex justify-center transition-all duration-700 ${
+            className={`relative order-2 lg:order-1 transition-all duration-700 ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
             }`}
           >
             <div className="relative">
-              {/* Dark gold offset rectangle - same size as headshot */}
-              <div className="absolute top-7 left-7 w-full max-w-md bg-secondary rounded-lg">
+              {/* Dark gold offset rectangle - aligned to top of "A Note from Our Founder" */}
+              <div className="absolute top-0 left-0 w-full bg-secondary rounded-lg">
                 <img src={blytheHeadshot} className="invisible w-full rounded-lg" alt="" aria-hidden="true" />
               </div>
 
-              {/* Headshot */}
+              {/* Headshot - dropped down to align with "Why I Founded..." heading */}
               <img
                 src={blytheHeadshot}
                 alt="Blythe Karow, Founder & CEO of The Karow Advisory Group"
-                className="relative z-10 w-full max-w-md rounded-lg shadow-xl object-cover"
+                className="relative z-10 w-full rounded-lg shadow-xl object-cover mt-10 ml-7"
               />
 
-              {/* Quote card - overlapping bottom-right */}
-              <div className="relative z-20 -mt-16 ml-8 max-w-md md:max-w-[380px] bg-[hsl(186,100%,16%)] text-white p-6 rounded-lg shadow-xl">
+              {/* Quote card - overlapping bottom */}
+              <div className="relative z-20 -mt-16 ml-8 max-w-[380px] bg-[hsl(186,100%,16%)] text-white p-6 rounded-lg shadow-xl">
                 <p className="text-base md:text-lg italic font-medium leading-relaxed">
                   "Regulatory, clinical, and commercial can't be separated. Your claims are woven through everything – from your first product spec to your FDA submission to your customer conversations. Get one thread wrong early, and the whole fabric can unravel."
                 </p>
