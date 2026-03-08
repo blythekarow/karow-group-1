@@ -2,8 +2,11 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ArrowLeft, CheckCircle2, BarChart3, Calendar } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { ArrowRight, ArrowLeft, CheckCircle2, BarChart3, Calendar, Mail, Loader2 } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 type Answer = "yes" | "partially" | "no" | null;
 
@@ -96,7 +99,9 @@ const Assessment = () => {
     dimensions.map((d) => d.questions.map(() => null))
   );
   const [showResults, setShowResults] = useState(false);
-  const [showReport, setShowReport] = useState(false);
+  const [email, setEmail] = useState("");
+  const [sendingEmail, setSendingEmail] = useState(false);
+  const [emailSent, setEmailSent] = useState(false);
 
   const totalQuestions = dimensions.reduce((sum, d) => sum + d.questions.length, 0);
   const answeredCount = answers.flat().filter((a) => a !== null).length;
@@ -112,7 +117,7 @@ const Assessment = () => {
 
   const getScore = (answer: Answer) => {
     if (answer === "yes") return 2;
-    if (answer === "partially") return 1;
+    if (answer === "partially") return 0.5;
     return 0;
   };
 
@@ -144,9 +149,51 @@ const Assessment = () => {
     }
   };
 
-  const getDimensionReadiness = (dimIndex: number) => {
-    const pct = Math.round((dimensionScores[dimIndex] / 8) * 100);
-    return getReadinessLevel(pct);
+  const handleSendReport = async () => {
+    if (!email || !email.includes("@")) {
+      toast.error("Please enter a valid email address.");
+      return;
+    }
+
+    setSendingEmail(true);
+    try {
+      const reportData = {
+        email,
+        percentageScore,
+        readinessLevel: readiness.level,
+        readinessDescription: readiness.description,
+        dimensions: dimensions.map((dim, i) => ({
+          letter: dim.letter,
+          title: dim.title,
+          subtitle: dim.subtitle,
+          score: dimensionScores[i],
+          maxScore: 8,
+          percentage: Math.round((dimensionScores[i] / 8) * 100),
+          readinessLevel: getReadinessLevel(Math.round((dimensionScores[i] / 8) * 100)).level,
+          questions: dim.questions.map((q, qi) => ({
+            question: q,
+            answer: answers[i][qi],
+            score: getScore(answers[i][qi]),
+          })),
+        })),
+        totalScore,
+        maxTotalScore: maxScore,
+      };
+
+      const { error } = await supabase.functions.invoke("send-assessment-report", {
+        body: reportData,
+      });
+
+      if (error) throw error;
+
+      setEmailSent(true);
+      toast.success("Your detailed report has been sent! Check your inbox.");
+    } catch (err) {
+      console.error("Error sending report:", err);
+      toast.error("There was an issue sending the report. Please try again.");
+    } finally {
+      setSendingEmail(false);
+    }
   };
 
   if (showResults) {
@@ -173,113 +220,117 @@ const Assessment = () => {
               </p>
             </div>
 
-            {/* Dimension breakdown toggle */}
-            {!showReport ? (
-              <div className="text-center space-y-6">
-                <div className="bg-cream rounded-xl p-8 space-y-4">
-                  <h3 className="text-xl font-semibold text-foreground mb-6">What would you like to do next?</h3>
-                  <Button
-                    onClick={() => setShowReport(true)}
-                    variant="outline"
-                    size="lg"
-                    className="w-full max-w-md border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all"
-                  >
-                    <BarChart3 className="mr-2 h-5 w-5" />
-                    View Detailed Score Breakdown
-                  </Button>
-                  <Button
-                    asChild
-                    size="lg"
-                    className="w-full max-w-md bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all"
-                  >
-                    <a href="mailto:connect@thekarowgroup.com?subject=Discovery%20Call%20Request%20-%20D.E.V.I.C.E.%20Assessment">
-                      <Calendar className="mr-2 h-5 w-5" />
-                      Schedule a Discovery Call
-                    </a>
-                  </Button>
-                </div>
-              </div>
-            ) : (
-              <div className="space-y-6">
-                <div className="bg-cream rounded-xl p-6 md:p-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-6">Score Breakdown by Dimension</h3>
-                  <div className="space-y-5">
-                    {dimensions.map((dim, i) => {
-                      const dimPct = Math.round((dimensionScores[i] / 8) * 100);
-                      const dimReadiness = getDimensionReadiness(i);
-                      return (
-                        <div key={i} className="bg-background rounded-lg p-5">
-                          <div className="flex items-center justify-between mb-2">
-                            <div className="flex items-center gap-3">
-                              <span className="w-8 h-8 rounded-md bg-accent flex items-center justify-center text-accent-foreground font-bold text-sm">
-                                {dim.letter}
-                              </span>
-                              <div>
-                                <p className="font-semibold text-foreground">{dim.subtitle}</p>
-                              </div>
-                            </div>
-                            <div className="text-right">
-                              <span className="text-lg font-bold text-foreground">{dimensionScores[i]}/8</span>
-                              <span className={`block text-sm font-medium ${getLevelColor(dimReadiness.level)}`}>
-                                {dimReadiness.level}
-                              </span>
-                            </div>
-                          </div>
-                          <Progress value={dimPct} className="h-2" />
-                          <div className="mt-3 space-y-1">
-                            {dim.questions.map((q, qi) => (
-                              <div key={qi} className="flex items-start gap-2 text-sm">
-                                <span className={`mt-0.5 font-medium ${
-                                  answers[i][qi] === "yes" ? "text-green-600" : 
-                                  answers[i][qi] === "partially" ? "text-primary" : "text-red-500"
-                                }`}>
-                                  {answers[i][qi] === "yes" ? "✓" : answers[i][qi] === "partially" ? "◐" : "✗"}
-                                </span>
-                                <span className="text-muted-foreground">{q}</span>
-                                <span className="ml-auto font-medium text-foreground whitespace-nowrap">
-                                  {getScore(answers[i][qi]!)}/2
-                                </span>
-                              </div>
-                            ))}
-                          </div>
+            {/* Dimension summary - icons only, no scores */}
+            <div className="bg-cream rounded-xl p-6 md:p-8 mb-8">
+              <h3 className="text-xl font-semibold text-foreground mb-6">Your Responses at a Glance</h3>
+              <div className="space-y-5">
+                {dimensions.map((dim, i) => (
+                  <div key={i} className="bg-background rounded-lg p-5">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="w-8 h-8 rounded-md bg-accent flex items-center justify-center text-accent-foreground font-bold text-sm">
+                        {dim.letter}
+                      </span>
+                      <p className="font-semibold text-foreground">{dim.subtitle}</p>
+                    </div>
+                    <div className="space-y-1">
+                      {dim.questions.map((q, qi) => (
+                        <div key={qi} className="flex items-start gap-2 text-sm">
+                          <span className={`mt-0.5 font-medium ${
+                            answers[i][qi] === "yes" ? "text-green-600" :
+                            answers[i][qi] === "partially" ? "text-primary" : "text-red-500"
+                          }`}>
+                            {answers[i][qi] === "yes" ? "✓" : answers[i][qi] === "partially" ? "◐" : "✗"}
+                          </span>
+                          <span className="text-muted-foreground">{q}</span>
                         </div>
-                      );
-                    })}
+                      ))}
+                    </div>
                   </div>
-                </div>
-
-                <div className="bg-accent/10 rounded-xl p-8 text-center space-y-4">
-                  <h3 className="text-xl font-semibold text-foreground">Ready to close the gaps?</h3>
-                  <p className="text-muted-foreground max-w-lg mx-auto">
-                    If this assessment surfaced gaps you weren't sure how to address, that's exactly what The Karow Advisory Group is built for.
-                  </p>
-                  <Button
-                    asChild
-                    size="lg"
-                    className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all"
-                  >
-                    <a href="mailto:connect@thekarowgroup.com?subject=Discovery%20Call%20Request%20-%20D.E.V.I.C.E.%20Assessment">
-                      <Calendar className="mr-2 h-5 w-5" />
-                      Schedule a Discovery Call
-                    </a>
-                  </Button>
-                </div>
-
-                <div className="text-center">
-                  <Button
-                    variant="ghost"
-                    onClick={() => {
-                      setShowResults(false);
-                      setShowReport(false);
-                      setCurrentDimension(0);
-                      setAnswers(dimensions.map((d) => d.questions.map(() => null)));
-                    }}
-                  >
-                    Retake Assessment
-                  </Button>
-                </div>
+                ))}
               </div>
-            )}
+            </div>
+
+            {/* Email capture for full report */}
+            <div className="bg-accent/10 rounded-xl p-8 text-center space-y-4 mb-8">
+              {!emailSent ? (
+                <>
+                  <Mail className="w-10 h-10 text-primary mx-auto" />
+                  <h3 className="text-xl font-semibold text-foreground">
+                    Want the full breakdown of how your score was calculated?
+                  </h3>
+                  <p className="text-muted-foreground max-w-lg mx-auto">
+                    Enter your email and we'll send you a detailed report showing your score for each dimension and every question — so you know exactly where to focus.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                    <Input
+                      type="email"
+                      placeholder="your@email.com"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="flex-1"
+                    />
+                    <Button
+                      onClick={handleSendReport}
+                      disabled={sendingEmail || !email}
+                      className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground"
+                    >
+                      {sendingEmail ? (
+                        <>
+                          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          Send My Report
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </>
+                      )}
+                    </Button>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <CheckCircle2 className="w-10 h-10 text-green-600 mx-auto" />
+                  <h3 className="text-xl font-semibold text-foreground">Report Sent!</h3>
+                  <p className="text-muted-foreground max-w-lg mx-auto">
+                    Check your inbox at <strong>{email}</strong> for your detailed D.E.V.I.C.E. Readiness Report.
+                  </p>
+                </>
+              )}
+            </div>
+
+            {/* Discovery call CTA */}
+            <div className="bg-cream rounded-xl p-8 text-center space-y-4 mb-8">
+              <h3 className="text-xl font-semibold text-foreground">Ready to close the gaps?</h3>
+              <p className="text-muted-foreground max-w-lg mx-auto">
+                If this assessment surfaced gaps you weren't sure how to address, that's exactly what The Karow Advisory Group is built for.
+              </p>
+              <Button
+                asChild
+                size="lg"
+                className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all"
+              >
+                <a href="mailto:connect@thekarowgroup.com?subject=Discovery%20Call%20Request%20-%20D.E.V.I.C.E.%20Assessment">
+                  <Calendar className="mr-2 h-5 w-5" />
+                  Schedule a Discovery Call
+                </a>
+              </Button>
+            </div>
+
+            <div className="text-center">
+              <Button
+                variant="ghost"
+                onClick={() => {
+                  setShowResults(false);
+                  setEmailSent(false);
+                  setEmail("");
+                  setCurrentDimension(0);
+                  setAnswers(dimensions.map((d) => d.questions.map(() => null)));
+                }}
+              >
+                Retake Assessment
+              </Button>
+            </div>
           </div>
         </section>
         <Footer />
