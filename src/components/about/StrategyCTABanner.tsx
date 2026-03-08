@@ -22,11 +22,12 @@ const StrategyCTABanner = () => {
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div
-          className={`max-w-2xl mx-auto md:ml-[calc(50%-theme(spacing.96))] transition-all duration-700 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
+        <div className="max-w-5xl mx-auto">
+          <div
+            className={`max-w-2xl transition-all duration-700 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+          >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
             You've Built the Product. Let's Build the Strategy That Gets It to Market.
           </h2>
@@ -55,6 +56,7 @@ const StrategyCTABanner = () => {
               </a>
             </Button>
           </div>
+        </div>
         </div>
       </div>
     </section>

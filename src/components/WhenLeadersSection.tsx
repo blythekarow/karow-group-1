@@ -30,12 +30,12 @@ const WhenLeadersSection = () => {
           {painPoints.map((point, index) => (
             <div
               key={index}
-              className={`bg-primary/10 rounded-md p-6 border border-primary/20 transition-all duration-700 ${
+              className={`bg-primary/80 rounded-md p-6 transition-all duration-700 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: `${index * 80 + 200}ms` }}
             >
-              <p className="text-foreground/80 leading-relaxed">{point}</p>
+              <p className="text-accent font-medium leading-relaxed">{point}</p>
             </div>
           ))}
         </div>
