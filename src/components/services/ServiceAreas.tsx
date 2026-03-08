@@ -129,10 +129,10 @@ const ServiceAreaSection = ({ service, imageLeft, bgClass }: ServiceAreaSectionP
             </p>
             
             {/* Bullet list */}
-            <ul className="space-y-3 mb-8">
+            <ul className="space-y-1.5 mb-8">
               {service.items.map((item, idx) => (
-                <li key={idx} className="flex items-start gap-3 text-foreground">
-                  <span className="text-primary mt-1.5 shrink-0 text-lg">•</span>
+                <li key={idx} className="flex items-start gap-2 text-foreground">
+                  <span className="text-primary mt-0.5 shrink-0">•</span>
                   <span>{item}</span>
                 </li>
               ))}
