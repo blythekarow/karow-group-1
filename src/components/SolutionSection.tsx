@@ -65,11 +65,11 @@ const SolutionSection = () => {
             <div className="absolute -top-3 -right-3 w-[20%] h-[20%] bg-primary rounded-lg" />
             
             {/* Main image */}
-            <div className="relative z-10 overflow-hidden rounded-lg">
+            <div className="relative z-10 overflow-hidden rounded-lg mx-12">
               <img
                 src={blytheWhiteBlazer}
                 alt="Blythe Karow - Strategic Advisor"
-                className="w-full rounded-lg shadow-2xl object-cover h-[550px] object-top scale-125"
+                className="w-full rounded-lg shadow-2xl object-cover h-[550px] object-top"
               />
             </div>
           </div>
