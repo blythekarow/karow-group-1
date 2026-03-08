@@ -264,7 +264,7 @@ const Assessment = () => {
                     <CheckCircle2 className="w-10 h-10 text-green-600 mx-auto" />
                     <h3 className="text-xl font-semibold text-foreground">Report Sent!</h3>
                     <p className="text-muted-foreground">
-                      Check your inbox at <strong>{email}</strong> for your detailed D.E.V.I.C.E. Readiness Report.
+                      Check your inbox at <strong>{email}</strong> for your detailed D.E.V.I.C.E.™ Readiness Report.
                     </p>
                   </>
                 )}
