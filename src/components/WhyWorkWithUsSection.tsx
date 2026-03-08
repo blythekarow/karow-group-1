@@ -5,10 +5,6 @@ import { Link } from "react-router-dom";
 
 const benefits = [
   {
-    title: "Strategic Clarity to Move Forward with Confidence",
-    description: "We see the big picture from concept to commercialization and ensure you cover all the critical details along the way, so you can make decisions that protect your timeline and budget.",
-  },
-  {
     title: "Big Picture AND Critical Details",
     description: "We identify blind spots before they're expensive, coordinate the right specialists at the right time, and help you invest strategically for each milestone.",
   },
