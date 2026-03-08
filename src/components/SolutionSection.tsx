@@ -30,7 +30,7 @@ const SolutionSection = () => {
                 We help medical device and wearables companies navigate commercialization with integrated strategy from day one - so regulatory, reimbursement, and commercial plans don't just coexist, they reinforce each other.
               </p>
               <p>
-                Led by Blythe Karow - startup CEO, Fortune 50 product leader, and former strategic consultant - we guide companies from concept to market launch, helping you identify what needs attention now versus later, invest strategically at each milestone, and avoid the blind spots that create expensive problems down the road.
+                Led by Blythe Karow - startup CEO, Fortune 50 product leader, and strategic consultant - we guide companies from concept to market launch, helping you identify what needs attention now versus later, invest strategically at each milestone, and avoid the blind spots that create expensive problems down the road.
               </p>
               <p>
                 Whether you're a Fortune 50 managing a portfolio or a single-product startup, we bring clarity that comes from having been there before.
