@@ -18,25 +18,22 @@ const SolutionSection = () => {
             }`}
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3">
-              The right strategic partner can help you move forward with confidence.
+              Finding the Right Partner Makes All the Difference
             </h2>
             
             <p className="text-xl md:text-2xl font-semibold text-primary mb-6">
-              Meet the Karow Advisory Group.
+              Meet The Karow Advisory Group
             </p>
             
             <div className="space-y-4 text-muted-foreground leading-relaxed mb-8">
               <p>
-                The Karow Advisory Group helps medical device and wearables companies navigate commercialization with integrated strategy from day one, so regulatory, reimbursement, and commercial plans don't just coexist; they reinforce each other.
+                The Karow Advisory Group helps medical device and wearables companies navigate commercialization with integrated strategy from day one — so regulatory, reimbursement, and commercial plans don't just coexist, they reinforce each other.
               </p>
               <p>
-                Led by Blythe Karow - startup CEO, Fortune 50 product leader, and former management consultant - we provide guidance from concept to market launch across marketing claims, regulatory strategy, reimbursement, clinical evidence, quality systems, and commercial execution. We help you identify what needs attention now versus later, invest strategically at each milestone, and avoid the blind spots that create expensive problems down the road.
+                Led by Blythe Karow — startup CEO, Fortune 50 product leader, and former management consultant — we guide companies from concept to market launch, helping you identify what needs attention now versus later, invest strategically at each milestone, and avoid the blind spots that create expensive problems down the road.
               </p>
               <p>
-                Whether you're a Fortune 50 managing a portfolio or a single-product startup, we bring the strategic clarity that comes from having been there before.
-              </p>
-              <p>
-                We're not a large firm that pitches senior partners then hands you off to junior analysts. Every engagement is led by senior experts who've been in the trenches.
+                Whether you're a Fortune 50 managing a portfolio or a single-product startup, we bring clarity that comes from having been there before.
               </p>
               <p className="font-medium text-foreground">
                 Boutique scale, big-firm expertise, without the overhead.
