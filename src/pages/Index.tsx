@@ -5,7 +5,6 @@ import LogoCarousel from "@/components/LogoCarousel";
 import ProblemSection from "@/components/ProblemSection";
 import SolutionSection from "@/components/SolutionSection";
 import ProcessSection from "@/components/ProcessSection";
-import BenefitsSection from "@/components/BenefitsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ServicesSection from "@/components/ServicesSection";
 import AssessmentSection from "@/components/AssessmentSection";
@@ -28,13 +27,11 @@ const Index = () => {
       <SolutionSection />
       {/* 5. 3-Step Process */}
       <ProcessSection />
-      {/* 6. Outcomes / Benefits */}
-      <BenefitsSection />
-      {/* 7. Testimonials */}
+      {/* 6. Testimonials */}
       <TestimonialsSection />
-      {/* 8. Services Overview */}
+      {/* 7. Services Overview */}
       <ServicesSection />
-      {/* 9. Free Assessment CTA (D.E.V.I.C.E.) */}
+      {/* 8. Free Assessment CTA (D.E.V.I.C.E.) */}
       <AssessmentSection />
       {/* 10. Founder Story */}
       <FounderSection />
