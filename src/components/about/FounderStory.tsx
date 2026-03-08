@@ -81,7 +81,7 @@ const FounderStory = () => {
 
             {/* Signature */}
             <p className="mt-8 text-foreground font-semibold">
-              — Blythe Karow, Founder & CEO
+              - Blythe Karow, Founder & CEO
             </p>
           </div>
         </div>
