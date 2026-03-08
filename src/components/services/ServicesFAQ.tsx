@@ -18,7 +18,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: "What stage companies do you work with?",
-    answer: "We work with medical device and wearables companies from concept through FDA authorization - from pre-revenue startups to Fortune 50 companies launching new products. Our approach is tailored to your stage, budget, and specific needs.",
+    answer: "We work with medical device and wearables companies from concept through to market launch - from pre-revenue startups to Fortune 50 companies launching new products. Our approach is tailored to your stage, budget, and specific needs.",
   },
   {
     question: "Do you only work with U.S.-based companies?",
