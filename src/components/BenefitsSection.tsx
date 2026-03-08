@@ -1,5 +1,5 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import consultingWorkshopImage from "@/assets/consulting-workshop.jpg";
+import teamBrainstormImage from "@/assets/team-brainstorm.jpg";
 
 const benefits = [
   {
