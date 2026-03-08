@@ -323,7 +323,7 @@ const Assessment = () => {
           {/* Header */}
           <div className="text-center mb-10">
             <p className="text-sm uppercase tracking-[2px] text-primary font-semibold mb-3">
-              D.E.V.I.C.E. Readiness Assessment
+              D.E.V.I.C.E.™ Readiness Assessment
             </p>
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               How Ready Is Your Product for Commercialization?

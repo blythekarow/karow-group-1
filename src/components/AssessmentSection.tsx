@@ -45,7 +45,7 @@ const AssessmentSection = () => {
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Based on the D.E.V.I.C.E. Framework published in Device Files, this quick assessment helps you identify potential gaps across Development, Engagement & Economics, Verification & Validation, Intelligence & Information Governance, Claims & Category Boundaries, and Evidence. Get your readiness score and discover what to prioritize next.
+              Based on the D.E.V.I.C.E.™ Framework published in Device Files, this quick assessment helps you identify potential gaps across Development, Engagement & Economics, Verification & Validation, Intelligence & Information Governance, Claims & Category Boundaries, and Evidence. Get your readiness score and discover what to prioritize next.
             </p>
             
             <Button

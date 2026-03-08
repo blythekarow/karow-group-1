@@ -208,8 +208,8 @@ serve(async (req) => {
       dimensions: data.dimensions,
       userReportHtml,
       adminReportHtml,
-      userEmailSubject: `Your D.E.V.I.C.E. Readiness Score: ${data.percentageScore}% — ${data.readinessLevel}`,
-      adminEmailSubject: `New D.E.V.I.C.E. Assessment: ${data.email} — ${data.percentageScore}% (${data.readinessLevel})`,
+      userEmailSubject: `Your D.E.V.I.C.E.™ Readiness Score: ${data.percentageScore}% — ${data.readinessLevel}`,
+      adminEmailSubject: `New D.E.V.I.C.E.™ Assessment: ${data.email} — ${data.percentageScore}% (${data.readinessLevel})`,
       timestamp: new Date().toISOString(),
     };
 
