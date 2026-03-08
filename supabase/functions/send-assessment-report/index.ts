@@ -54,8 +54,20 @@ function getLevelEmoji(level: string): string {
   }
 }
 
+function getDimensionGuidance(letter: string, index: number): string {
+  const guidance: Record<string, string> = {
+    "D-0": "Gaps here typically mean your product development process isn't yet built to withstand regulatory scrutiny. Without a Design History File and documented risk management, you're likely to face costly rework when you engage the FDA. This is foundational work that needs to happen early — retrofitting it later is one of the most expensive mistakes in MedTech.",
+    "E-1": "If you're uncertain about your regulatory pathway or haven't explored special FDA programs, you may be leaving time and money on the table — or heading down the wrong road entirely. Reimbursement strategy and clinical workflow impact need to be part of your commercial model from day one, not figured out after clearance.",
+    "V-2": "Gaps in V&amp;V often don't surface until a submission is rejected or a study fails. Defining pass/fail criteria and validating your real-world system early protects your timeline and your budget at the most critical stage of commercialization.",
+    "I-3": "Data governance gaps create regulatory, legal, and cybersecurity exposure that can derail a submission or a partnership. As AI becomes more central to MedTech products, regulators are paying closer attention to exactly this dimension.",
+    "C-4": "Claims gaps are among the most expensive to fix late in the process because they touch everything — your regulatory strategy, your evidence plan, your marketing, and your sales team. A claims library isn't just a compliance document; it's the strategic spine of your entire commercialization effort.",
+    "E-5": "Without an aligned evidence strategy, you risk running studies that don't support your regulatory pathway, don't satisfy payer requirements, or don't hold up under clinical scrutiny. Evidence planning is most valuable — and least expensive — when it happens before the studies are designed.",
+  };
+  return guidance[`${letter}-${index}`] || "";
+}
+
 function buildReportHtml(data: ReportData, isAdmin = false): string {
-  const dimensionRows = data.dimensions.map((dim) => {
+  const dimensionRows = data.dimensions.map((dim, idx) => {
     const questionRows = dim.questions.map((q) => `
       <tr>
         <td style="padding:8px 12px;border-bottom:1px solid #e5e5e5;font-size:14px;color:#555;">
@@ -67,6 +79,13 @@ function buildReportHtml(data: ReportData, isAdmin = false): string {
       </tr>
     `).join("");
 
+    const guidance = dim.readinessLevel !== "Strong" ? getDimensionGuidance(dim.letter, idx) : "";
+    const guidanceBlock = guidance ? `
+      <div style="background:#FFF8E1;border-left:4px solid #F59E0B;padding:12px 16px;margin-top:0;border-radius:0 0 8px 8px;font-size:14px;color:#555;line-height:1.6;">
+        <strong style="color:#333;">Where to focus:</strong> ${guidance}
+      </div>
+    ` : "";
+
     return `
       <div style="margin-bottom:24px;">
         <div style="background:#004D51;color:white;padding:12px 16px;border-radius:8px 8px 0 0;font-weight:700;font-size:16px;">
@@ -76,6 +95,7 @@ function buildReportHtml(data: ReportData, isAdmin = false): string {
         <table style="width:100%;border-collapse:collapse;border:1px solid #e5e5e5;border-top:none;">
           ${questionRows}
         </table>
+        ${guidanceBlock}
       </div>
     `;
   }).join("");
@@ -147,7 +167,7 @@ function buildReportHtml(data: ReportData, isAdmin = false): string {
             <!-- CTA -->
             <div style="text-align:center;margin-top:32px;padding:24px;background:#f9f9f9;border-radius:8px;">
               <h3 style="color:#333;margin:0 0 8px;">Ready to close the gaps?</h3>
-              <p style="color:#666;font-size:14px;margin:0 0 16px;">If this assessment surfaced gaps you weren't sure how to address, that's exactly what The Karow Advisory Group is built for.</p>
+              <p style="color:#666;font-size:14px;margin:0 0 16px;">If this assessment surfaced gaps you weren't sure how to address, that's exactly where The Karow Advisory Group can help.</p>
               <a href="mailto:connect@thekarowgroup.com?subject=Discovery%20Call%20Request%20-%20D.E.V.I.C.E.%20Assessment" style="display:inline-block;background:#004D51;color:#C8E842;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;">Schedule a Discovery Call</a>
             </div>
           </div>
