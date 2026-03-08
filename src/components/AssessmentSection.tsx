@@ -41,7 +41,7 @@ const AssessmentSection = () => {
             </h2>
             
             <p className="text-xl text-primary font-semibold mb-6">
-              Take the D.E.V.I.C.E. Readiness Check
+              Take the D.E.V.I.C.E.™ Readiness Check
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
