@@ -26,9 +26,30 @@ const BenefitsSection = () => {
     <section ref={ref} className="py-24 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start max-w-6xl mx-auto">
-          {/* Left side - Content */}
+          {/* Left side - Image with L-shaped offset rectangle */}
           <div
-            className={`transition-all duration-700 ${
+            className={`relative hidden lg:block transition-all duration-700 ${
+              isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
+            }`}
+          >
+            {/* L-shaped offset rectangle - vertical portion on left */}
+            <div className="absolute -top-4 left-0 w-20 h-[calc(100%+48px)] bg-tan/60 rounded-sm" />
+            {/* L-shaped offset rectangle - horizontal portion at top */}
+            <div className="absolute -top-4 left-0 right-[40%] h-12 bg-tan/60 rounded-sm" />
+            
+            {/* Main image */}
+            <div className="relative z-10 ml-6">
+              <img
+                src={consultingWorkshopImage}
+                alt="Professional team collaboration"
+                className="w-full rounded-sm shadow-xl object-cover h-[500px]"
+              />
+            </div>
+          </div>
+
+          {/* Right side - Content */}
+          <div
+            className={`transition-all duration-700 delay-200 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
@@ -49,7 +70,7 @@ const BenefitsSection = () => {
                 <div
                   key={index}
                   className={`flex items-start gap-3 transition-all duration-500 ${
-                    isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
+                    isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4"
                   }`}
                   style={{ transitionDelay: `${index * 100 + 200}ms` }}
                 >
@@ -74,30 +95,9 @@ const BenefitsSection = () => {
             </div>
           </div>
 
-          {/* Right side - Image with L-shaped offset rectangle */}
-          <div
-            className={`relative hidden lg:block transition-all duration-700 delay-300 ${
-              isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
-            }`}
-          >
-            {/* L-shaped offset rectangle - vertical portion on right */}
-            <div className="absolute -top-4 right-0 w-20 h-[calc(100%+48px)] bg-tan/60 rounded-sm" />
-            {/* L-shaped offset rectangle - horizontal portion at top */}
-            <div className="absolute -top-4 right-0 left-[40%] h-12 bg-tan/60 rounded-sm" />
-            
-            {/* Main image */}
-            <div className="relative z-10 mr-6">
-              <img
-                src={consultingWorkshopImage}
-                alt="Professional team collaboration"
-                className="w-full rounded-sm shadow-xl object-cover h-[500px]"
-              />
-            </div>
-          </div>
-
           {/* Mobile image */}
           <div className="lg:hidden relative">
-            <div className="absolute -top-3 -right-3 w-[20%] h-[20%] bg-tan/60 rounded-sm" />
+            <div className="absolute -top-3 -left-3 w-[20%] h-[20%] bg-tan/60 rounded-sm" />
             <img
               src={consultingWorkshopImage}
               alt="Professional team collaboration"
