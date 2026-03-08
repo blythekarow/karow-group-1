@@ -21,7 +21,7 @@ const StrategyCTABanner = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-accent via-accent/95 via-55% to-accent/40" />
       </div>
 
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
+      <div className="container mx-auto px-4 md:px-6 relative z-10 flex justify-center">
         <div
           className={`max-w-2xl transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -37,7 +37,7 @@ const StrategyCTABanner = () => {
             <Button
               asChild
               size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 text-base font-semibold px-8 py-4 rounded-md"
+              className="bg-primary text-primary-foreground hover:bg-white hover:text-accent transition-all duration-200 text-base font-semibold px-8 py-4 rounded-md"
             >
               <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
                 Book a Discovery Call
@@ -47,10 +47,11 @@ const StrategyCTABanner = () => {
             <Button
               asChild
               size="lg"
-              className="bg-white/15 backdrop-blur-sm text-white border border-white/40 hover:bg-white hover:text-accent text-base font-semibold px-8 py-4 rounded-md"
+              className="bg-white/15 backdrop-blur-sm text-white border border-white/40 hover:bg-white hover:text-accent transition-all duration-200 text-base font-semibold px-8 py-4 rounded-md"
             >
               <a href="/services">
                 Explore Our Services
+                <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
           </div>
