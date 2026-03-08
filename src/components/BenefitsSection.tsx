@@ -60,7 +60,7 @@ const BenefitsSection = () => {
               The Right Strategy Saves You Time, Money, and Momentum
             </h2>
             
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-lg text-muted-foreground mb-3">
               With The Karow Advisory Group, you can:
             </p>
             
