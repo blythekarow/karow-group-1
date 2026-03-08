@@ -8,7 +8,7 @@ const SimpleCTAPanel = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section ref={ref} className="py-20 bg-cream overflow-hidden">
+    <section ref={ref} className="py-14 bg-cream overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <div
           className={`max-w-3xl mx-auto text-center transition-all duration-700 ${

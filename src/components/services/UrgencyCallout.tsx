@@ -28,7 +28,7 @@ const UrgencyCallout = ({ variant = "primary" }: UrgencyCalloutProps) => {
   };
 
   return (
-    <section ref={ref} className="relative py-24 overflow-hidden">
+    <section ref={ref} className="relative py-16 overflow-hidden">
       {/* Background image with overlay */}
       <div className="absolute inset-0">
         <img

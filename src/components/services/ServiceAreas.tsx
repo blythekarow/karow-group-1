@@ -93,7 +93,7 @@ const ServiceAreaSection = ({ service, imageLeft, bgClass }: ServiceAreaSectionP
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <section ref={ref} className={`py-24 ${bgClass} overflow-hidden`}>
+    <section ref={ref} className={`py-16 ${bgClass} overflow-hidden`}>
       <div className="container mx-auto px-4 md:px-6">
         <div className={`grid lg:grid-cols-2 gap-12 lg:gap-16 items-center`}>
           {/* Image */}
