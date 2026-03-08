@@ -48,7 +48,7 @@ const ServicesSection = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         {/* Header Row */}
         <div
-          className={`grid md:grid-cols-2 gap-8 mb-16 max-w-6xl mx-auto transition-all duration-700 ${
+          className={`grid md:grid-cols-[1fr_2fr] gap-8 mb-16 max-w-6xl mx-auto transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
