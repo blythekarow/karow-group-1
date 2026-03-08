@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import medicalTeamImage from "@/assets/medical-team.jpg";
+import teamMeetingImage from "@/assets/team-collaboration-meeting.jpg";
 
 interface Testimonial {
   quote: string;
