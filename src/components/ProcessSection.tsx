@@ -89,7 +89,7 @@ const ProcessSection = () => {
             {steps.map((step, index) => (
               <div
                 key={index}
-                className={`bg-white p-6 md:p-8 lg:p-10 border-r border-border last:border-r-0 first:rounded-l-lg last:rounded-r-lg shadow-lg transition-all duration-700 ${
+                className={`bg-white p-6 md:p-8 lg:p-10 first:rounded-l-lg last:rounded-r-lg shadow-lg transition-all duration-700 ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
                 style={{ transitionDelay: `${index * 150 + 300}ms` }}
