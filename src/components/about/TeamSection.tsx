@@ -102,12 +102,13 @@ const TeamSection = () => {
               style={{ transitionDelay: `${index * 50 + 200}ms` }}
             >
               {/* Photo */}
-              <div className="w-28 h-28 md:w-36 md:h-36 mx-auto mb-3 rounded-full overflow-hidden bg-muted relative group">
+              <div className="w-28 h-28 md:w-32 md:h-32 mx-auto mb-3 rounded-full overflow-hidden bg-muted relative">
                 {member.image ? (
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    className="w-full h-full object-cover [image-rendering:-webkit-optimize-contrast]"
                   />
                 ) : (
                   <div className="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
