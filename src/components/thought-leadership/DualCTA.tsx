@@ -35,13 +35,7 @@ const DualCTA = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section ref={ref} className="py-16 overflow-hidden relative">
-      {/* Parallax background */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: `url(${medtechBg})` }}
-      />
-      <div className="absolute inset-0 bg-accent/85" />
+    <section ref={ref} className="py-16 bg-cream overflow-hidden">
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div
