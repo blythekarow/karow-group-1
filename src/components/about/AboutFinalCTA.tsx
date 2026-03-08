@@ -9,7 +9,7 @@ const AboutFinalCTA = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section ref={ref} className="relative py-24 overflow-hidden">
+    <section ref={ref} className="relative py-16 overflow-hidden">
       {/* Background image with dark overlay */}
       <div className="absolute inset-0">
         <img
@@ -26,12 +26,7 @@ const AboutFinalCTA = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          {/* Eyebrow */}
-          <p className="text-sm uppercase tracking-[2px] text-primary font-semibold mb-4">
-            High-Commitment Path
-          </p>
-
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             Ready to Build Your Commercialization Strategy?
           </h2>
 
