@@ -74,7 +74,7 @@ const TeamSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <section ref={ref} className="py-24 bg-background">
+    <section ref={ref} className="py-16 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         {/* Section Header */}
         <div
@@ -102,7 +102,7 @@ const TeamSection = () => {
               style={{ transitionDelay: `${index * 50 + 200}ms` }}
             >
               {/* Photo */}
-              <div className="w-24 h-24 md:w-28 md:h-28 mx-auto mb-3 rounded-full overflow-hidden bg-muted relative group">
+              <div className="w-28 h-28 md:w-36 md:h-36 mx-auto mb-3 rounded-full overflow-hidden bg-muted relative group">
                 {member.image ? (
                   <img
                     src={member.image}
