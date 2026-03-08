@@ -21,17 +21,17 @@ const StrategyCTABanner = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-accent via-accent/95 via-55% to-accent/40" />
       </div>
 
-      <div className="container mx-auto px-4 md:px-6 relative z-10 flex justify-center">
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div
-          className={`max-w-2xl transition-all duration-700 ${
+          className={`max-w-2xl mx-auto md:ml-[calc(50%-theme(spacing.96))] transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-            Let's Build the Strategy Your Innovation Deserves
+            You've Built the Product. Let's Build the Strategy That Gets It to Market.
           </h2>
           <p className="text-lg md:text-xl text-white/85 mb-10 leading-relaxed max-w-xl">
-            You've built something powerful. Now let's build a strategy that brings it to market — smarter, faster, and without setbacks.
+            Integrated commercialization strategy for MedTech companies who can't afford to get it wrong.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
