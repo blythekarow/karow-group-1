@@ -1,9 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import executiveBoardroomImage from "@/assets/executive-boardroom.jpg";
-
-const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
 
 const painPoints = [
   "When long-term strategy needs sharper definition and operational alignment",
@@ -21,58 +16,37 @@ const WhenLeadersSection = () => {
     <section ref={ref} className="py-24 bg-muted">
       <div className="container mx-auto px-4 md:px-6">
         <div
-          className={`max-w-3xl mx-auto transition-all duration-700 ${
+          className={`text-center mb-12 transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
           <div className="w-12 h-1 bg-primary mx-auto mb-6" />
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-center mb-12">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             When Leaders Reach Out to Us
           </h2>
-
-          {/* Bullet list */}
-          <div className="space-y-4 mb-10">
-            {painPoints.map((point, index) => (
-              <p
-                key={index}
-                className={`text-lg text-muted-foreground flex items-start gap-3 transition-all duration-500 ${
-                  isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
-                }`}
-                style={{ transitionDelay: `${index * 100 + 200}ms` }}
-              >
-                <span className="text-primary mt-0.5 shrink-0">•</span>
-                <span>{point}</span>
-              </p>
-            ))}
-          </div>
-
-          {/* Closing */}
-          <p
-            className={`text-xl md:text-2xl text-foreground font-medium italic text-center mb-10 transition-all duration-700 delay-500 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
-          >
-            If that sounds like your team, let's talk.
-          </p>
-
-          {/* CTA */}
-          <div
-            className={`text-center transition-all duration-700 delay-700 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
-          >
-            <Button
-              asChild
-              size="lg"
-              className="bg-accent text-white hover:bg-accent/90 transition-all duration-200 text-base font-semibold px-8 py-4 rounded-md"
-            >
-              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-                Schedule Your Strategic Discussion
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </Button>
-          </div>
         </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-5xl mx-auto mb-10">
+          {painPoints.map((point, index) => (
+            <div
+              key={index}
+              className={`bg-background rounded-md p-6 border border-border/50 shadow-sm transition-all duration-500 ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}
+              style={{ transitionDelay: `${index * 80 + 200}ms` }}
+            >
+              <p className="text-muted-foreground leading-relaxed">{point}</p>
+            </div>
+          ))}
+        </div>
+
+        <p
+          className={`text-xl md:text-2xl text-foreground font-medium italic text-center transition-all duration-700 delay-500 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
+          If that sounds like your team, let's talk.
+        </p>
       </div>
     </section>
   );
