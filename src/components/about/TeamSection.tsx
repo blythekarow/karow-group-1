@@ -6,7 +6,7 @@ const teamMembers = [
   {
     name: "Blythe Karow",
     title: "Product & Commercialization Strategy",
-    image: blytheProfessional,
+    image: blytheHeadshot,
     linkedin: "https://www.linkedin.com/in/blythekarow/",
   },
   {
