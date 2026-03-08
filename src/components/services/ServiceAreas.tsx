@@ -102,14 +102,13 @@ const ServiceAreaSection = ({ service, imageLeft, bgClass }: ServiceAreaSectionP
               isVisible ? "opacity-100 translate-x-0" : imageLeft ? "opacity-0 -translate-x-8" : "opacity-0 translate-x-8"
             }`}
           >
-            {/* Offset decorative box */}
-            <div className="absolute -top-4 -left-4 w-[25%] h-[25%] bg-primary rounded-lg hidden lg:block" />
-            
-            <div className="relative z-10">
+            <div className="relative z-10 w-3/4 mx-auto">
+              {/* Offset decorative box */}
+              <div className="absolute -top-3 -left-3 w-[25%] h-[25%] bg-primary rounded-lg hidden lg:block" />
               <img
                 src={service.image}
                 alt={service.imageAlt}
-                className="w-3/4 mx-auto rounded-lg shadow-2xl object-cover h-64 lg:h-72"
+                className="relative z-10 w-full rounded-lg shadow-2xl object-cover h-64 lg:h-72"
               />
             </div>
           </div>
