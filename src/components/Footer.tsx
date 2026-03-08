@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-accent text-accent-foreground py-8">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 mb-12">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 mb-6">
           {/* Brand */}
           <div className="flex items-center gap-4">
             <img
@@ -52,7 +52,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-accent-foreground/20 pt-8">
+        <div className="border-t border-accent-foreground/20 pt-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-accent-foreground/60">
               © 2026 The Karow Advisory Group. All Rights Reserved.
