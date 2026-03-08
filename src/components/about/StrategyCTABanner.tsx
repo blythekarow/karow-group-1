@@ -57,6 +57,7 @@ const StrategyCTABanner = () => {
             </Button>
           </div>
         </div>
+        </div>
       </div>
     </section>
   );
