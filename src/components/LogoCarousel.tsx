@@ -69,7 +69,7 @@ const LogoCarousel = () => {
   const allLogos = [...logos, ...logos];
 
   return (
-    <section className="pt-16 pb-8 bg-background overflow-hidden">
+    <section className="pt-16 pb-8 bg-white overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 mb-10">
         <h2 className="text-center text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-2">
           Experience Trusted Across the MedTech Ecosystem
