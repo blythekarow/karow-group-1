@@ -67,9 +67,9 @@ const SolutionSection = () => {
             {/* Main image */}
             <div className="relative z-10">
               <img
-                src={blytheProfessional}
+                src={blytheWhiteBlazer}
                 alt="Blythe Karow - Strategic Advisor"
-                className="w-full rounded-lg shadow-2xl object-cover h-[550px] object-top"
+                className="w-full rounded-lg shadow-2xl object-cover h-[550px] object-top scale-125"
               />
             </div>
           </div>
