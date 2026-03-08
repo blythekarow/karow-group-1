@@ -30,7 +30,7 @@ const FounderStory = () => {
               {/* Quote card - overlapping bottom-right */}
               <div className="relative z-20 -mt-16 ml-8 max-w-md md:max-w-[380px] bg-[hsl(186,100%,16%)] text-white p-6 rounded-lg shadow-xl">
                 <p className="text-base md:text-lg italic font-medium leading-relaxed">
-                  "Regulatory, clinical, and commercial can't be separated. Your claims are woven through everything - from your first product specification to your FDA submission to your customer conversation at market. Get one thread wrong early, and the whole fabric unravels."
+                  "Regulatory, clinical, and commercial can't be separated. Your claims are woven through everything – from your first product spec to your FDA submission to your customer conversations. Get one thread wrong early, and the whole fabric can unravel."
                 </p>
               </div>
             </div>
