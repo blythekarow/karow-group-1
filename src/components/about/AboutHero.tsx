@@ -43,7 +43,7 @@ const AboutHero = () => {
 
           {/* Additional Intro */}
           <p className="text-base md:text-lg text-white/70 leading-relaxed max-w-3xl mx-auto">
-            Medical device commercialization requires more than specialists working in silos. That's why The Karow Advisory Group exists—to bring integrated product and commercialization strategy to MedTech and wearables companies navigating the path from concept to market. Led by Blythe Karow, we're where 25 years of operator experience meets boutique-firm attention and strategic coordination.
+            Medical device commercialization requires more than specialists working in silos. That's why The Karow Advisory Group exists - to bring integrated product and commercialization strategy to MedTech and wearables companies navigating the path from concept to market. Led by Blythe Karow, we're where 25 years of operator experience meets boutique-firm attention and strategic coordination.
           </p>
         </div>
       </div>

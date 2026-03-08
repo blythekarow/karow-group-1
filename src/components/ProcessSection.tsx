@@ -22,7 +22,7 @@ const steps: ProcessStep[] = [
     number: "2",
     title: "Strategy",
     subtitle: "Build Your Integrated Roadmap",
-    body: "We develop an integrated product commercialization plan tailored to your specific goals and needs. Everything from regulatory and reimbursement to evidence plans and quality controls—we seamlessly integrate the missing pieces into your overall approach so everything strategically aligns and refines your path forward.",
+    body: "We develop an integrated product commercialization plan tailored to your specific goals and needs. Everything from regulatory and reimbursement to evidence plans and quality controls - we seamlessly integrate the missing pieces into your overall approach so everything strategically aligns and refines your path forward.",
   },
   {
     number: "3",

@@ -36,7 +36,7 @@ const TeamSection = () => {
             Our Team
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Senior-level experts who've been in the trenches—not junior consultants learning on your dime.
+            Senior-level experts who've been in the trenches - not junior consultants learning on your dime.
           </p>
         </div>
 

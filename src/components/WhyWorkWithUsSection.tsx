@@ -47,7 +47,7 @@ const WhyWorkWithUsSection = () => {
             </h2>
             
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-4xl">
-              From concept to market, startups to enterprise—whether you're a single-product startup or a Fortune 50 managing a portfolio, we provide the strategic clarity and operational insights to move forward with confidence.
+              From concept to market, startups to enterprise - whether you're a single-product startup or a Fortune 50 managing a portfolio, we provide the strategic clarity and operational insights to move forward with confidence.
             </p>
           </div>
 
@@ -77,7 +77,7 @@ const WhyWorkWithUsSection = () => {
                 </div>
                 <div className="text-base md:text-lg">
                   <span className="font-bold text-foreground">{benefit.title}</span>
-                  <span className="text-muted-foreground"> — {benefit.description}</span>
+                  <span className="text-muted-foreground"> - {benefit.description}</span>
                 </div>
               </div>
             ))}

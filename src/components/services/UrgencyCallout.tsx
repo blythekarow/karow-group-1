@@ -13,7 +13,7 @@ const UrgencyCallout = ({ variant = "primary" }: UrgencyCalloutProps) => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
 
   const content = variant === "primary" ? {
-    headline: "Every Decision Matters in MedTech — don't let uncertainty burn money and slow you down",
+    headline: "Every Decision Matters in MedTech - don't let uncertainty burn money and slow you down",
     body: [
       "Without a clear commercialization roadmap, you risk choosing the wrong regulatory pathway, running studies that don't support reimbursement, and missing critical investor or market access milestones.",
       "In MedTech, moving fast without integrated strategy doesn't accelerate success. It leads to stalled clearances, wasted capital, and lost competitive opportunities."
@@ -22,7 +22,7 @@ const UrgencyCallout = ({ variant = "primary" }: UrgencyCalloutProps) => {
   } : {
     headline: "Don't Let Strategic Uncertainty Burn Capital and Momentum",
     body: [
-      "Medical device companies don't fail from lack of innovation—they stall from lack of clear direction. Without integrated commercialization strategy, you risk choosing wrong pathways, misaligning evidence with reimbursement, and missing investor milestones. There's a better way."
+      "Medical device companies don't fail from lack of innovation - they stall from lack of clear direction. Without integrated commercialization strategy, you risk choosing wrong pathways, misaligning evidence with reimbursement, and missing investor milestones. There's a better way."
     ],
     cta: "Explore a Strategic Engagement"
   };

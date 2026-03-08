@@ -78,7 +78,7 @@ const SpecialtyCapabilities = () => {
             Specialty Deliverables Within Our Integrated Approach
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            We coordinate expert capabilities across regulatory, market access, and clinical strategy—ensuring each specialty reinforces your overall commercialization plan.
+            We coordinate expert capabilities across regulatory, market access, and clinical strategy - ensuring each specialty reinforces your overall commercialization plan.
           </p>
         </div>
 

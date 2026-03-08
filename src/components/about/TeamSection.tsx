@@ -82,7 +82,7 @@ const TeamSection = () => {
             Meet Our Team
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Led by Blythe Karow, The Karow Advisory Group brings together a curated network of senior-level experts across regulatory affairs, reimbursement strategy, clinical operations, and quality systems. Every team member has deep experience bringing medical devices to market—not as consultants working from textbooks, but as operators who've done it.
+            Led by Blythe Karow, The Karow Advisory Group brings together a curated network of senior-level experts across regulatory affairs, reimbursement strategy, clinical operations, and quality systems. Every team member has deep experience bringing medical devices to market - not as consultants working from textbooks, but as operators who've done it.
           </p>
         </div>
 

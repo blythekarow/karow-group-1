@@ -18,7 +18,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: "What stage companies do you work with?",
-    answer: "We work with medical device and wearables companies from concept through FDA authorization—from pre-revenue startups to Fortune 50 companies launching new products. Our approach is tailored to your stage, budget, and specific needs.",
+    answer: "We work with medical device and wearables companies from concept through FDA authorization - from pre-revenue startups to Fortune 50 companies launching new products. Our approach is tailored to your stage, budget, and specific needs.",
   },
   {
     question: "Do you only work with U.S.-based companies?",
@@ -30,7 +30,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: "What makes you different from large consulting firms or specialized regulatory consultants?",
-    answer: "We provide integrated product and commercialization strategy—not siloed regulatory or reimbursement advice. We're a boutique firm led by senior-level experts who've actually brought products to market, not junior consultants learning on your dime. You get big-firm expertise with personalized attention and strategic integration across all workstreams.",
+    answer: "We provide integrated product and commercialization strategy - not siloed regulatory or reimbursement advice. We're a boutique firm led by senior-level experts who've actually brought products to market, not junior consultants learning on your dime. You get big-firm expertise with personalized attention and strategic integration across all workstreams.",
   },
   {
     question: "Do you provide regulatory submission services?",
