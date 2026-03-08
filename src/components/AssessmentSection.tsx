@@ -53,10 +53,10 @@ const AssessmentSection = () => {
               size="lg"
               className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-base font-semibold px-8 py-4 rounded-md"
             >
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <Link to="/assessment">
                 Take the Free Assessment
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
+              </Link>
             </Button>
           </div>
         </div>
