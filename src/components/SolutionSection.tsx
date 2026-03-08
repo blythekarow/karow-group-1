@@ -25,7 +25,7 @@ const SolutionSection = () => {
               Meet The Karow Advisory Group
             </p>
             
-            <div className="space-y-6 text-muted-foreground leading-relaxed mb-8">
+            <div className="space-y-4 text-muted-foreground leading-relaxed mb-8">
               <p>
                 We help medical device and wearables companies navigate commercialization with integrated strategy from day one - so regulatory, reimbursement, and commercial plans don't just coexist, they reinforce each other.
               </p>
