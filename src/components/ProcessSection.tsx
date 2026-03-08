@@ -38,7 +38,7 @@ const ProcessSection = () => {
   return (
     <section id="process" ref={ref} className="relative overflow-visible scroll-mt-20">
       {/* Hero Image Section */}
-      <div className="relative h-[450px] md:h-[500px]">
+      <div className="relative h-[350px] md:h-[400px]">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
