@@ -207,7 +207,7 @@ const Assessment = () => {
                 <BarChart3 className="w-10 h-10 text-primary" />
               </div>
               <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Your D.E.V.I.C.E. Readiness Score
+                Your D.E.V.I.C.E.™ Readiness Score
               </h1>
               <div className="text-6xl md:text-7xl font-bold text-primary mb-2">
                 {percentageScore}%
@@ -264,7 +264,7 @@ const Assessment = () => {
                     <CheckCircle2 className="w-10 h-10 text-green-600 mx-auto" />
                     <h3 className="text-xl font-semibold text-foreground">Report Sent!</h3>
                     <p className="text-muted-foreground">
-                      Check your inbox at <strong>{email}</strong> for your detailed D.E.V.I.C.E. Readiness Report.
+                      Check your inbox at <strong>{email}</strong> for your detailed D.E.V.I.C.E.™ Readiness Report.
                     </p>
                   </>
                 )}
@@ -323,7 +323,7 @@ const Assessment = () => {
           {/* Header */}
           <div className="text-center mb-10">
             <p className="text-sm uppercase tracking-[2px] text-primary font-semibold mb-3">
-              D.E.V.I.C.E. Readiness Assessment
+              D.E.V.I.C.E.™ Readiness Assessment
             </p>
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               How Ready Is Your Product for Commercialization?
