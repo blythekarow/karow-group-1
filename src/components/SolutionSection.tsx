@@ -75,12 +75,12 @@ const SolutionSection = () => {
           </div>
 
           {/* Mobile image */}
-          <div className="lg:hidden relative overflow-hidden rounded-lg">
+          <div className="lg:hidden relative overflow-hidden rounded-lg mx-8">
             <div className="absolute -top-3 -right-3 w-[20%] h-[20%] bg-primary rounded-lg" />
             <img
               src={blytheWhiteBlazer}
               alt="Blythe Karow - Strategic Advisor"
-              className="w-full rounded-lg shadow-xl object-cover aspect-[3/4] object-top scale-125 relative z-10"
+              className="w-full rounded-lg shadow-xl object-cover aspect-[3/4] object-top relative z-10"
             />
           </div>
         </div>
