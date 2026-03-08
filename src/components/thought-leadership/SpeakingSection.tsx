@@ -70,7 +70,7 @@ const SpeakingSection = () => {
                 isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
               }`}
             >
-              <h3 className="text-xl font-bold text-accent-foreground mb-6">
+              <h3 className="text-xl font-bold text-foreground mb-6">
                 Featured Topics
               </h3>
               <ul className="space-y-4">
