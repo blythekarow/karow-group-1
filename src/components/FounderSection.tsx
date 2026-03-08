@@ -56,25 +56,25 @@ const FounderSection = () => {
             
             <div className="space-y-5 text-muted-foreground leading-relaxed mb-8">
               <p>
-                I started The Karow Advisory Group because I kept watching great products fail for entirely preventable reasons. I started my career as a nerdy biomedical engineer at Johns Hopkins, and quickly realized I wasn't made for the research world, but I also realized that I had the street smarts that some of my cohort lacked. I understand people, can translate their needs into clear product solutions and claims, and know how to get all of the pieces of medical device commercialization to fit together.
+                I started my career as a nerdy biomedical engineer at Johns Hopkins, and quickly realized I wasn't made for the research world. But I also realized I had something many in my cohort lacked – I understand people, can translate their needs into clear product solutions and claims, and know how to get all the pieces of medical device commercialization to fit together.
               </p>
               <p>
-                Over 25 years, I've led corporate and product strategies and launched or relaunched 35+ products across startups, growth-stage companies, and Fortune 50 MedTech. I know what it takes to get a device to market that delights customers while navigating technical limitations, regulatory compliance, reimbursement requirements, and quality systems. It's a complex puzzle, and I'm good at solving it.
+                Over 25 years, I've led corporate and product strategies and launched or relaunched 35+ products across startups, growth-stage companies, and Fortune 50 MedTech. I know what it takes to get a device to market that delights the customer while navigating technical limitations, regulatory compliance, reimbursement requirements, and quality systems. It's a complex puzzle, and I'm good at solving it.
               </p>
               <p>
-                I started The Karow Advisory Group because I saw what happens when startups don't have that integrated expertise. They hire specialists in different directions, cobble together advice from 500 sources, and don't know when to spend money, on what, with whom, or at what stage.
+                I kept watching great products fail for entirely preventable reasons. Startups hiring and firing a variety of specialists – all with differing opinions – and cobbling together advice from 500 sources, not knowing when to spend money, on what, with whom, or at what stage.
               </p>
               <p>
-                Getting a medical device to market is not something that can be solved solo, and your regulatory advisor cannot figure out your entire Go-to-Market strategy. What you need is someone who can help you captain the ship, who can navigate the full journey and knows how to coordinate a specialized crew to work in unison.
+                Getting a medical device to market is not something that can be solved solo, and your reimbursement or regulatory advisor cannot figure out your entire Go-to-Market strategy. What you need is a leader and a team who can help you captain the ship and navigate the full journey.
               </p>
               <p className="font-medium text-foreground">
-                The Karow Advisory Group provides that leadership.
+                The Karow Advisory Group provides that leadership & expertise.
               </p>
             </div>
             
             {/* Signature */}
             <p className="text-foreground font-semibold">
-              - Blythe Karow, Founder & CEO
+              — Blythe Karow, Founder & CEO
             </p>
           </div>
         </div>
