@@ -7,7 +7,7 @@ const FounderStory = () => {
   return (
     <section ref={ref} className="py-24 bg-background overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start max-w-7xl mx-auto">
           {/* Left side: Headshot with quote */}
           <div
             className={`relative order-2 lg:order-1 transition-all duration-700 ${
@@ -28,7 +28,7 @@ const FounderStory = () => {
               {/* Pull Quote Card */}
               <div className="relative z-20 -mt-12 ml-4 mr-4 md:ml-8 md:mr-0 md:max-w-[380px] bg-accent text-white p-6 rounded-lg shadow-xl">
                 <p className="text-base md:text-lg italic font-medium leading-relaxed">
-                  "Regulatory, clinical, and commercial can't be separated. Your claims are woven through everything — from your first product specification to your FDA submission to your customer conversation at market. Get one thread wrong early, and the whole fabric unravels."
+                  "Regulatory, clinical, and commercial can't be separated. Your claims are woven through everything - from your first product specification to your FDA submission to your customer conversation at market. Get one thread wrong early, and the whole fabric unravels."
                 </p>
               </div>
             </div>
@@ -51,7 +51,7 @@ const FounderStory = () => {
 
             <div className="space-y-5 text-muted-foreground leading-relaxed">
               <p>
-                I started my career as a nerdy biomedical engineer at Johns Hopkins, and quickly realized I wasn't made for the research world, but I also realized that I had the street smarts that some of my cohort lacked. I understand people, can translate their needs into clear product solutions and claims, and know how to get all of the pieces of medical device commercialization to fit together.
+                I started The Karow Advisory Group because I kept watching great products fail for entirely preventable reasons. I started my career as a nerdy biomedical engineer at Johns Hopkins, and quickly realized I wasn't made for the research world, but I also realized that I had the street smarts that some of my cohort lacked. I understand people, can translate their needs into clear product solutions and claims, and know how to get all of the pieces of medical device commercialization to fit together.
               </p>
               <p>
                 Over 25 years, I've led corporate and product strategies and launched or relaunched 35+ products across startups, growth-stage companies, and Fortune 50 MedTech. I know what it takes to get a device to market that delights customers while navigating technical limitations, regulatory compliance, reimbursement requirements, and quality systems. It's a complex puzzle, and I'm good at solving it.
