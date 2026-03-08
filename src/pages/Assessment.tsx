@@ -277,7 +277,7 @@ const Assessment = () => {
                 <p className="text-muted-foreground">
                   If this assessment surfaced gaps you weren't sure how to address, that's exactly where The Karow Advisory Group can help.
                 </p>
-                <div className="mt-auto">
+                <div className="mt-auto pt-4">
                   <Button
                     asChild
                     size="lg"
