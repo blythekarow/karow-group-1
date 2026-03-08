@@ -274,7 +274,7 @@ const Assessment = () => {
             <div className="bg-cream rounded-xl p-8 text-center space-y-4 mb-8">
               <h3 className="text-xl font-semibold text-foreground">Ready to close the gaps?</h3>
               <p className="text-muted-foreground max-w-lg mx-auto">
-                If this assessment surfaced gaps you weren't sure how to address, that's exactly what The Karow Advisory Group is built for.
+                If this assessment surfaced gaps you weren't sure how to address, that's exactly where The Karow Advisory Group can help.
               </p>
               <Button
                 asChild
