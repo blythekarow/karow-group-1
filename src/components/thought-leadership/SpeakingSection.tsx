@@ -58,7 +58,7 @@ const SpeakingSection = () => {
             <p className="text-sm uppercase tracking-[2px] text-primary font-semibold mb-4">
               Speaking
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-background mb-4">
               Available for Speaking Engagements & Industry Events
             </h2>
           </div>
@@ -70,14 +70,14 @@ const SpeakingSection = () => {
                 isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
               }`}
             >
-              <h3 className="text-xl font-bold text-foreground mb-6">
+              <h3 className="text-xl font-bold text-background mb-6">
                 Featured Topics
               </h3>
               <ul className="space-y-4">
                 {topics.map((topic, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <span className="text-primary mt-1.5 shrink-0 text-lg">•</span>
-                    <span className="text-foreground/90">{topic.title}</span>
+                    <span className="text-background/90">{topic.title}</span>
                   </li>
                 ))}
               </ul>
@@ -89,7 +89,7 @@ const SpeakingSection = () => {
                 isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
               }`}
             >
-              <h3 className="text-xl font-bold text-foreground mb-6">
+              <h3 className="text-xl font-bold text-background mb-6">
                 Available Formats
               </h3>
               <div className="grid grid-cols-2 gap-4">
