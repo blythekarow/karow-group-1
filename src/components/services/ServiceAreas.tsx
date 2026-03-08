@@ -58,7 +58,7 @@ const serviceAreas: ServiceArea[] = [
       "Investor and board readiness support",
       "Strategic partnership facilitation",
     ],
-    image: dueDiligenceImage,
+    image: strategicAdvisoryImage,
     imageAlt: "Strategic leadership meeting",
   },
 ];
