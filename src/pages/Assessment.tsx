@@ -220,34 +220,29 @@ const Assessment = () => {
               </p>
             </div>
 
-            {/* Dimension summary - icons only, no scores */}
+            {/* Dimension overview - just names and readiness level, no question details */}
             <div className="bg-cream rounded-xl p-6 md:p-8 mb-8">
-              <h3 className="text-xl font-semibold text-foreground mb-6">Your Responses at a Glance</h3>
-              <div className="space-y-5">
-                {dimensions.map((dim, i) => (
-                  <div key={i} className="bg-background rounded-lg p-5">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span className="w-8 h-8 rounded-md bg-accent flex items-center justify-center text-accent-foreground font-bold text-sm">
-                        {dim.letter}
-                      </span>
-                      <p className="font-semibold text-foreground">{dim.subtitle}</p>
+              <h3 className="text-xl font-semibold text-foreground mb-6">Dimension Overview</h3>
+              <div className="space-y-3">
+                {dimensions.map((dim, i) => {
+                  const dimPercent = Math.round((dimensionScores[i] / 8) * 100);
+                  const dimLevel = getReadinessLevel(dimPercent).level;
+                  return (
+                    <div key={i} className="flex items-center justify-between bg-background rounded-lg px-5 py-4">
+                      <div className="flex items-center gap-3">
+                        <span className="w-8 h-8 rounded-md bg-accent flex items-center justify-center text-accent-foreground font-bold text-sm">
+                          {dim.letter}
+                        </span>
+                        <p className="font-semibold text-foreground text-sm">{dim.subtitle}</p>
+                      </div>
+                      <span className={`text-sm font-semibold ${getLevelColor(dimLevel)}`}>{dimLevel}</span>
                     </div>
-                    <div className="space-y-1">
-                      {dim.questions.map((q, qi) => (
-                        <div key={qi} className="flex items-start gap-2 text-sm">
-                          <span className={`mt-0.5 font-medium ${
-                            answers[i][qi] === "yes" ? "text-green-600" :
-                            answers[i][qi] === "partially" ? "text-primary" : "text-red-500"
-                          }`}>
-                            {answers[i][qi] === "yes" ? "✓" : answers[i][qi] === "partially" ? "◐" : "✗"}
-                          </span>
-                          <span className="text-muted-foreground">{q}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
+              <p className="text-sm text-muted-foreground mt-4 text-center">
+                Get the full question-by-question breakdown sent to your inbox below.
+              </p>
             </div>
 
             {/* Email capture for full report */}
