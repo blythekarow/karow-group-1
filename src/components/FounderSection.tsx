@@ -19,7 +19,7 @@ const FounderSection = () => {
           >
             <div className="relative">
               {/* Dark gold offset rectangle - aligned to top of "A Note from Our Founder" */}
-              <div className="absolute top-0 left-0 w-full bg-secondary rounded-lg">
+              <div className="absolute top-0 left-0 max-w-md w-full bg-secondary rounded-lg">
                 <img src={blytheHeadshot} className="invisible w-full rounded-lg" alt="" aria-hidden="true" />
               </div>
 
@@ -27,7 +27,7 @@ const FounderSection = () => {
               <img
                 src={blytheHeadshot}
                 alt="Blythe Karow, Founder & CEO of The Karow Advisory Group"
-                className="relative z-10 w-full rounded-lg shadow-xl object-cover mt-10 ml-7"
+                className="relative z-10 max-w-md w-full rounded-lg shadow-xl object-cover mt-10 ml-7"
               />
 
               {/* Quote card - overlapping bottom */}
