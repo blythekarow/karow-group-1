@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Link } from "react-router-dom";
-import blytheProfessional from "@/assets/blythe-professional.png";
+import blytheWhiteBlazer from "@/assets/blythe-white-blazer.png";
 
 const SolutionSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
@@ -65,22 +65,22 @@ const SolutionSection = () => {
             <div className="absolute -top-3 -right-3 w-[20%] h-[20%] bg-primary rounded-lg" />
             
             {/* Main image */}
-            <div className="relative z-10">
+            <div className="relative z-10 overflow-hidden rounded-lg">
               <img
-                src={blytheProfessional}
+                src={blytheWhiteBlazer}
                 alt="Blythe Karow - Strategic Advisor"
-                className="w-full rounded-lg shadow-2xl object-cover h-[550px] object-top"
+                className="w-full rounded-lg shadow-2xl object-cover h-[550px] object-top scale-125"
               />
             </div>
           </div>
 
           {/* Mobile image */}
-          <div className="lg:hidden relative">
+          <div className="lg:hidden relative overflow-hidden rounded-lg">
             <div className="absolute -top-3 -right-3 w-[20%] h-[20%] bg-primary rounded-lg" />
             <img
-              src={blytheProfessional}
+              src={blytheWhiteBlazer}
               alt="Blythe Karow - Strategic Advisor"
-              className="w-full rounded-lg shadow-xl object-cover aspect-[3/4] object-top relative z-10"
+              className="w-full rounded-lg shadow-xl object-cover aspect-[3/4] object-top scale-125 relative z-10"
             />
           </div>
         </div>
