@@ -220,30 +220,6 @@ const Assessment = () => {
               </p>
             </div>
 
-            {/* Dimension overview - just names and readiness level, no question details */}
-            <div className="bg-cream rounded-xl p-6 md:p-8 mb-8">
-              <h3 className="text-xl font-semibold text-foreground mb-6">Dimension Overview</h3>
-              <div className="space-y-3">
-                {dimensions.map((dim, i) => {
-                  const dimPercent = Math.round((dimensionScores[i] / 8) * 100);
-                  const dimLevel = getReadinessLevel(dimPercent).level;
-                  return (
-                    <div key={i} className="flex items-center justify-between bg-background rounded-lg px-5 py-4">
-                      <div className="flex items-center gap-3">
-                        <span className="w-8 h-8 rounded-md bg-accent flex items-center justify-center text-accent-foreground font-bold text-sm">
-                          {dim.letter}
-                        </span>
-                        <p className="font-semibold text-foreground text-sm">{dim.subtitle}</p>
-                      </div>
-                      <span className={`text-sm font-semibold ${getLevelColor(dimLevel)}`}>{dimLevel}</span>
-                    </div>
-                  );
-                })}
-              </div>
-              <p className="text-sm text-muted-foreground mt-4 text-center">
-                Get the full question-by-question breakdown sent to your inbox below.
-              </p>
-            </div>
 
             {/* Email capture for full report */}
             <div className="bg-accent/10 rounded-xl p-8 text-center space-y-4 mb-8">
