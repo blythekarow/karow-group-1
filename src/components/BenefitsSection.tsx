@@ -40,7 +40,7 @@ const BenefitsSection = () => {
             {/* Main image */}
             <div className="relative z-10 ml-6">
               <img
-                src={teamBrainstormImage}
+                src={benefitsImage}
                 alt="Professional team collaboration"
                 className="w-full rounded-sm shadow-xl object-cover h-[500px]"
               />
