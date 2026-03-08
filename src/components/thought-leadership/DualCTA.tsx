@@ -35,7 +35,7 @@ const DualCTA = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section ref={ref} className="py-24 overflow-hidden relative">
+    <section ref={ref} className="py-16 overflow-hidden relative">
       {/* Parallax background */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-fixed"
