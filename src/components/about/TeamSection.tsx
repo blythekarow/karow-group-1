@@ -74,7 +74,7 @@ const TeamSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <section ref={ref} className="py-24 bg-background">
+    <section ref={ref} className="py-16 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         {/* Section Header */}
         <div
