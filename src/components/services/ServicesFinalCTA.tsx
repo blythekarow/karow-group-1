@@ -26,10 +26,6 @@ const ServicesFinalCTA = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          {/* Eyebrow */}
-          <p className="text-sm uppercase tracking-[2px] text-primary font-semibold mb-4">
-            High-Commitment Path
-          </p>
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Ready to Build Your Commercialization Strategy?
