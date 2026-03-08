@@ -24,10 +24,10 @@ const ctaCards: CTACard[] = [
   },
   {
     icon: ClipboardCheck,
-    title: "Take the D.E.V.I.C.E. Assessment",
+    title: "Take the D.E.V.I.C.E.™ Assessment",
     description: "Assess your commercialization readiness and identify strategic gaps.",
     buttonText: "Start Assessment",
-    buttonLink: "#",
+    buttonLink: "/assessment",
   },
 ];
 
