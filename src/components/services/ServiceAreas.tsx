@@ -43,7 +43,7 @@ const serviceAreas: ServiceArea[] = [
       "Clinical workflow and adoption planning",
       "Regulatory submission coordination",
     ],
-    image: businessHandshakeImage,
+    image: commercializationPlanningImage,
     imageAlt: "Team workshop for commercialization planning",
   },
   {
