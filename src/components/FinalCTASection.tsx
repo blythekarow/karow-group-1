@@ -32,7 +32,7 @@ const FinalCTASection = () => {
           </h2>
           
           <p className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Let's assess where you are, identify what's at risk, and build an integrated plan that gets you from FDA clearance to market adoption without expensive rework or lost time.
+            Let's assess where you are, identify what's at risk, and build an integrated plan that turns your vision into a solid strategy that gets you through FDA clearance to market adoption without expensive rework or lost time.
           </p>
           
           {/* Single CTA */}
