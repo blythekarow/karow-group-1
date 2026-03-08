@@ -2,3 +2,6 @@ project_id = "nsxfhgjpfnqetvfjtdwh"
 
 [functions.substack-feed]
 verify_jwt = false
+
+[functions.send-assessment-report]
+verify_jwt = false
