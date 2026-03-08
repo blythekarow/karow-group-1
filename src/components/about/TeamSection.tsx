@@ -5,6 +5,7 @@ import thomasMoore from "@/assets/thomas-moore.png";
 import natalieFreels from "@/assets/natalie-freels.png";
 import adamSteadman from "@/assets/adam-steadman.png";
 import donnaDiGangi from "@/assets/donna-digangi.png";
+import rachelOffenburg from "@/assets/rachel-offenburg.png";
 
 const teamMembers = [
   {
@@ -64,7 +65,7 @@ const teamMembers = [
   {
     name: "Rachel Offenburg",
     title: "Marketing, Pricing, & PR Strategy",
-    image: null,
+    image: rachelOffenburg,
     linkedin: "https://www.linkedin.com/in/roff/",
   },
 ];
