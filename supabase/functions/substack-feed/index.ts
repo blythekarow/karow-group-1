@@ -56,6 +56,17 @@ Deno.serve(async (req) => {
         .replace(/&lt;/g, '<')
         .replace(/&gt;/g, '>')
         .replace(/&quot;/g, '"')
+        .replace(/&#8217;/g, "'")
+        .replace(/&#8216;/g, "'")
+        .replace(/&#8220;/g, '"')
+        .replace(/&#8221;/g, '"')
+        .replace(/&#8211;/g, '–')
+        .replace(/&#8212;/g, '—')
+        .replace(/&#8230;/g, '…')
+        .replace(/&#\d+;/g, (match) => {
+          const code = parseInt(match.replace(/&#|;/g, ''));
+          return String.fromCharCode(code);
+        })
         .substring(0, 200);
       
       if (title && link) {
