@@ -183,59 +183,49 @@ function buildReportHtml(data: ReportData, isAdmin = false): string {
   `;
 }
 
+const ZAPIER_WEBHOOK_URL = "https://hooks.zapier.com/hooks/catch/26739173/uxtp5t4/";
+
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
-    const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
-    if (!RESEND_API_KEY) {
-      throw new Error("RESEND_API_KEY is not configured");
-    }
-
     const data: ReportData = await req.json();
 
-    // Send report to user
-    const userEmailRes = await fetch("https://api.resend.com/emails", {
+    // Build HTML reports
+    const userReportHtml = buildReportHtml(data, false);
+    const adminReportHtml = buildReportHtml(data, true);
+
+    // POST everything to Zapier webhook
+    const zapierPayload = {
+      email: data.email,
+      percentageScore: data.percentageScore,
+      readinessLevel: data.readinessLevel,
+      readinessDescription: data.readinessDescription,
+      totalScore: data.totalScore,
+      maxTotalScore: data.maxTotalScore,
+      dimensions: data.dimensions,
+      userReportHtml,
+      adminReportHtml,
+      userEmailSubject: `Your D.E.V.I.C.E. Readiness Score: ${data.percentageScore}% — ${data.readinessLevel}`,
+      adminEmailSubject: `New D.E.V.I.C.E. Assessment: ${data.email} — ${data.percentageScore}% (${data.readinessLevel})`,
+      timestamp: new Date().toISOString(),
+    };
+
+    const zapierRes = await fetch(ZAPIER_WEBHOOK_URL, {
       method: "POST",
-      headers: {
-        Authorization: `Bearer ${RESEND_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from: "The Karow Advisory Group <info@thekarowgroup.com>",
-        to: [data.email],
-        subject: `Your D.E.V.I.C.E. Readiness Score: ${data.percentageScore}% — ${data.readinessLevel}`,
-        html: buildReportHtml(data, false),
-      }),
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(zapierPayload),
     });
 
-    if (!userEmailRes.ok) {
-      const errBody = await userEmailRes.text();
-      throw new Error(`Failed to send user email [${userEmailRes.status}]: ${errBody}`);
+    if (!zapierRes.ok) {
+      const errBody = await zapierRes.text();
+      throw new Error(`Zapier webhook failed [${zapierRes.status}]: ${errBody}`);
     }
 
-    // Send admin notification
-    const adminEmailRes = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${RESEND_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from: "The Karow Advisory Group <info@thekarowgroup.com>",
-        to: ["admin@thekarowgroup.com"],
-        subject: `New D.E.V.I.C.E. Assessment: ${data.email} — ${data.percentageScore}% (${data.readinessLevel})`,
-        html: buildReportHtml(data, true),
-      }),
-    });
-
-    if (!adminEmailRes.ok) {
-      const errBody = await adminEmailRes.text();
-      console.error(`Admin email failed [${adminEmailRes.status}]: ${errBody}`);
-      // Don't throw - user email was already sent successfully
-    }
+    // Consume the response body
+    await zapierRes.text();
 
     return new Response(JSON.stringify({ success: true }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
