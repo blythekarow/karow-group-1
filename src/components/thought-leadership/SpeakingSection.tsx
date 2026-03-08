@@ -33,14 +33,19 @@ const SpeakingSection = () => {
   return (
     <section
       ref={ref}
-      className="py-16 overflow-hidden relative"
+      className="py-16 overflow-hidden relative bg-background"
     >
-      {/* Background image with dark green overlay */}
+      {/* Background image with gradient fade from right */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${conferenceAudience})` }}
       />
-      <div className="absolute inset-0 bg-accent/90" />
+      <div
+        className="absolute inset-0"
+        style={{
+          background: "linear-gradient(to right, hsl(var(--background)) 0%, hsl(var(--background)) 40%, hsl(var(--accent) / 0.85) 100%)",
+        }}
+      />
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-5xl mx-auto">
@@ -53,7 +58,7 @@ const SpeakingSection = () => {
             <p className="text-sm uppercase tracking-[2px] text-primary font-semibold mb-4">
               Speaking
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-accent-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Available for Speaking Engagements & Industry Events
             </h2>
           </div>
@@ -65,14 +70,14 @@ const SpeakingSection = () => {
                 isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
               }`}
             >
-              <h3 className="text-xl font-bold text-accent-foreground mb-6">
+              <h3 className="text-xl font-bold text-foreground mb-6">
                 Featured Topics
               </h3>
               <ul className="space-y-4">
                 {topics.map((topic, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <span className="text-primary mt-1.5 shrink-0 text-lg">•</span>
-                    <span className="text-accent-foreground/90">{topic.title}</span>
+                    <span className="text-foreground/90">{topic.title}</span>
                   </li>
                 ))}
               </ul>
@@ -84,20 +89,20 @@ const SpeakingSection = () => {
                 isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
               }`}
             >
-              <h3 className="text-xl font-bold text-accent-foreground mb-6">
+              <h3 className="text-xl font-bold text-foreground mb-6">
                 Available Formats
               </h3>
               <div className="grid grid-cols-2 gap-4">
                 {formats.map((format, index) => (
                   <Card
                     key={index}
-                    className="bg-background/10 backdrop-blur-sm border-accent-foreground/20"
+                    className="bg-card border-none shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
                   >
                     <CardContent className="p-4 flex items-center gap-3">
                       <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center shrink-0">
                         <format.icon className="h-5 w-5 text-primary" />
                       </div>
-                      <span className="text-sm font-medium text-accent-foreground">
+                      <span className="text-sm font-medium text-foreground">
                         {format.title}
                       </span>
                     </CardContent>
