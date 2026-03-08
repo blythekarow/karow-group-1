@@ -58,6 +58,7 @@ const RecentArticles = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
+          <p className="text-sm uppercase tracking-[2px] text-primary font-semibold mb-4">Insights</p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Join the 1,500+ Leaders Reading The Device Files Weekly
           </h2>
