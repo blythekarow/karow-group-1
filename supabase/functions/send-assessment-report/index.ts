@@ -113,7 +113,7 @@ function buildReportHtml(data: ReportData, isAdmin = false): string {
         <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
           <!-- Header -->
           <div style="background:#004D51;padding:32px 24px;text-align:center;">
-            <h1 style="color:#C8E842;margin:0;font-size:24px;">D.E.V.I.C.E. Readiness Report</h1>
+            <h1 style="color:#C8E842;margin:0;font-size:24px;">D.E.V.I.C.E.™ Readiness Report</h1>
             <p style="color:rgba(255,255,255,0.8);margin:8px 0 0;font-size:14px;">The Karow Advisory Group</p>
           </div>
 
