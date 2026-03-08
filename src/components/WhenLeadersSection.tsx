@@ -30,15 +30,15 @@ const WhenLeadersSection = () => {
           {painPoints.map((point, index) => (
             <div
               key={index}
-              className={`group relative bg-background rounded-md p-6 border-l-4 border-l-primary border border-border/30 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-500 ${
+              className={`group relative bg-background rounded-md p-6 border-l-4 border-l-primary border border-border/30 shadow-sm hover:shadow-md transition-shadow duration-200 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: `${index * 80 + 200}ms` }}
             >
-              <span className="text-3xl font-bold text-primary/15 absolute top-3 right-4">
+              <span className="text-3xl font-bold text-primary/20 absolute top-3 right-4">
                 {String(index + 1).padStart(2, "0")}
               </span>
-              <p className="text-muted-foreground leading-relaxed pr-6">{point}</p>
+              <p className="text-foreground/80 leading-relaxed pr-6">{point}</p>
             </div>
           ))}
         </div>
