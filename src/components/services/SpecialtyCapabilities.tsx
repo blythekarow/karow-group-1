@@ -66,7 +66,7 @@ const SpecialtyCapabilities = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <section ref={ref} className="py-24 bg-background overflow-hidden">
+    <section ref={ref} className="py-16 bg-background overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         {/* Header */}
         <div
