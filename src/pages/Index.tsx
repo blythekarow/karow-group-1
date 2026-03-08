@@ -22,8 +22,6 @@ const Index = () => {
       <Hero />
       {/* 2. Trusted By / Logo Carousel */}
       <LogoCarousel />
-      {/* 2B. Why Companies Work With Us */}
-      <WhyWorkWithUsSection />
       {/* 3. The Problem */}
       <ProblemSection />
       {/* 4. The Solution */}
