@@ -24,7 +24,9 @@ const Index = () => {
       <LogoCarousel />
       {/* 3. The Problem */}
       <ProblemSection />
-      {/* 4. The Solution */}
+      {/* 4. Benefits - The Right Strategy */}
+      <BenefitsSection />
+      {/* 5. The Solution */}
       <SolutionSection />
       {/* 5. 3-Step Process */}
       <ProcessSection />
