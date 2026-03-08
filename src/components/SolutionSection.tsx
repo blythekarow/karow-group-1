@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Link } from "react-router-dom";
-import blytheProfessional from "@/assets/blythe-professional.png";
+import blytheWhiteBlazer from "@/assets/blythe-white-blazer.png";
 
 const SolutionSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
