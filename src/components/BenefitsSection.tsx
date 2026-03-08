@@ -99,7 +99,7 @@ const BenefitsSection = () => {
           <div className="lg:hidden relative">
             <div className="absolute -top-3 -left-3 w-[20%] h-[20%] bg-tan/60 rounded-sm" />
             <img
-              src={consultingWorkshopImage}
+              src={teamBrainstormImage}
               alt="Professional team collaboration"
               className="w-full rounded-sm shadow-xl object-cover aspect-[4/3] relative z-10"
             />
