@@ -58,7 +58,7 @@ const SpeakingSection = () => {
             <p className="text-sm uppercase tracking-[2px] text-primary font-semibold mb-4">
               Speaking
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-accent-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Available for Speaking Engagements & Industry Events
             </h2>
           </div>
