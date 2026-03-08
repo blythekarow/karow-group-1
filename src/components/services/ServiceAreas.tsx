@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import executiveBoardroomImage from "@/assets/executive-boardroom.jpg";
+import businessOfficeTeamImage from "@/assets/business-office-team.jpg";
 import businessHandshakeImage from "@/assets/business-handshake.jpg";
 import dueDiligenceImage from "@/assets/due-diligence-meeting.jpg";
 
@@ -27,7 +27,7 @@ const serviceAreas: ServiceArea[] = [
       "Target market identification and pain point validation",
       "Claims strategy foundation",
     ],
-    image: executiveBoardroomImage,
+    image: businessOfficeTeamImage,
     imageAlt: "Executive strategy session for product definition",
   },
   {
