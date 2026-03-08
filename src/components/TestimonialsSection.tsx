@@ -65,7 +65,7 @@ const TestimonialsSection = () => {
           }`}
         >
           {/* Header */}
-          <div className="mb-4 max-w-4xl">
+          <div className="mb-10 max-w-4xl">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
               What Our Clients Say
             </h2>
