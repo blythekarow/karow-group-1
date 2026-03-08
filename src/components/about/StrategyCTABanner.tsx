@@ -29,7 +29,8 @@ const StrategyCTABanner = () => {
             }`}
           >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-            You've Built the Product. Let's Build the Strategy That Gets It to Market.
+            You've Built the Product.<br />
+            Let's Build the Strategy That Gets It to Market.
           </h2>
           <p className="text-lg md:text-xl text-white/85 mb-10 leading-relaxed max-w-xl">
             Integrated commercialization strategy for MedTech companies who can't afford to get it wrong.
