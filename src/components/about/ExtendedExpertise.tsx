@@ -1,4 +1,5 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import medtechStrategyImage from "@/assets/medtech-strategy-meeting.jpg";
 
 const ExtendedExpertise = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
@@ -7,22 +8,33 @@ const ExtendedExpertise = () => {
     <section ref={ref} className="py-20 bg-cream">
       <div className="container mx-auto px-4 md:px-6">
         <div
-          className={`max-w-4xl mx-auto transition-all duration-700 ${
+          className={`max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <div className="w-12 h-1 bg-primary mb-6" />
-          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-8">
-            Extended Expertise
-          </h3>
+          <div>
+            <div className="w-12 h-1 bg-primary mb-6" />
+            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-8">
+              Beyond Our Core Team
+            </h3>
 
-          <div className="space-y-6">
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              We work with a curated network of specialists in health economics, quality management systems, human factors, pricing strategy, and strategic advisory to provide comprehensive support tailored to your specific needs.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              For larger-scale implementations or comprehensive sales readiness planning, we collaborate with trusted partners to provide enterprise-grade capabilities while maintaining strategic integration.
-            </p>
+            <div className="space-y-6">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Some engagements require capabilities beyond strategic advisory — large-scale clinical operations, eQMS, cybersecurity support, or third-party logistics. We don't execute those ourselves, but we know who does.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                We help you identify the right partners, ask the right questions, and integrate them into your overall strategy so nothing falls through the cracks.
+              </p>
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="absolute -top-4 -left-4 w-24 h-24 bg-primary/15 rounded-sm" />
+            <img
+              src={medtechStrategyImage}
+              alt="Team strategy meeting"
+              className="relative rounded-sm w-full h-auto object-cover shadow-lg"
+            />
           </div>
         </div>
       </div>
