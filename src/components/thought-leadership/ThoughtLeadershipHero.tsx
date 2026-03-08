@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ArrowDown, ChevronDown } from "lucide-react";
-import heroImage from "@/assets/hero-building.jpg";
+import heroImage from "@/assets/insights-hero.jpg";
 
 const SUBSTACK_URL = "https://blythekarow.substack.com/";
 
