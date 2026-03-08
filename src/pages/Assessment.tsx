@@ -201,7 +201,7 @@ const Assessment = () => {
       <div className="min-h-screen">
         <Navbar />
         <section className="pt-32 pb-24 bg-background">
-          <div className="container mx-auto px-4 md:px-6 max-w-3xl">
+          <div className="container mx-auto px-4 md:px-6 max-w-5xl">
             <div className="text-center mb-12">
               <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 mb-6">
                 <BarChart3 className="w-10 h-10 text-primary" />
