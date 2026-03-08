@@ -86,7 +86,7 @@ const TestimonialsSection = () => {
               {/* Quote text and attribution */}
               <div className="flex-1">
                 <div className="min-h-[180px] mb-8">
-                  <p className="text-lg md:text-xl text-white/90 leading-relaxed text-center">
+                  <p className="text-base md:text-lg text-white/90 leading-relaxed text-center italic">
                     "{testimonials[currentIndex].quote}"
                   </p>
                 </div>
