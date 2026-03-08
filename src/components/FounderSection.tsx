@@ -84,7 +84,7 @@ const FounderSection = () => {
             
             {/* Signature */}
             <p className="text-foreground font-semibold">
-              — Blythe Karow, Founder & CEO
+              - Blythe Karow, Founder & CEO
             </p>
           </div>
         </div>
