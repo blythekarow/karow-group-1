@@ -16,7 +16,7 @@ const FounderStory = () => {
           >
             <div className="relative">
               {/* Dark gold offset rectangle - same size as headshot */}
-              <div className="absolute top-5 left-5 w-full max-w-md bg-secondary rounded-lg">
+              <div className="absolute top-7 left-7 w-full max-w-md bg-secondary rounded-lg">
                 <img src={blytheHeadshot} className="invisible w-full rounded-lg" alt="" aria-hidden="true" />
               </div>
 
