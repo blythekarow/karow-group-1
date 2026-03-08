@@ -24,7 +24,7 @@ const Footer = () => {
           {/* Connect */}
           <div className="flex flex-wrap items-center gap-6">
             <a
-              href="mailto:connect@thekarowgroup.com"
+              href="mailto:info@thekarowgroup.com"
               className="flex items-center gap-2 text-accent-foreground/80 hover:text-primary transition-colors text-sm"
             >
               <Mail className="h-4 w-4" />
