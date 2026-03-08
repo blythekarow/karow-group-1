@@ -65,7 +65,7 @@ const SolutionSection = () => {
             <div className="absolute -top-3 -right-3 w-[20%] h-[20%] bg-primary rounded-lg" />
             
             {/* Main image */}
-            <div className="relative z-10">
+            <div className="relative z-10 overflow-hidden rounded-lg">
               <img
                 src={blytheWhiteBlazer}
                 alt="Blythe Karow - Strategic Advisor"
