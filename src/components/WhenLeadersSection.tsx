@@ -18,24 +18,15 @@ const WhenLeadersSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section ref={ref} className="relative py-24 overflow-hidden">
-      {/* Background image with dark overlay */}
-      <div className="absolute inset-0">
-        <img
-          src={executiveBoardroomImage}
-          alt=""
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-accent/90" />
-      </div>
-
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
+    <section ref={ref} className="py-24 bg-muted">
+      <div className="container mx-auto px-4 md:px-6">
         <div
           className={`max-w-3xl mx-auto transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-12">
+          <div className="w-12 h-1 bg-primary mx-auto mb-6" />
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-center mb-12">
             When Leaders Reach Out to Us
           </h2>
 
@@ -44,7 +35,7 @@ const WhenLeadersSection = () => {
             {painPoints.map((point, index) => (
               <p
                 key={index}
-                className={`text-lg text-white/90 flex items-start gap-3 transition-all duration-500 ${
+                className={`text-lg text-muted-foreground flex items-start gap-3 transition-all duration-500 ${
                   isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
                 }`}
                 style={{ transitionDelay: `${index * 100 + 200}ms` }}
@@ -57,7 +48,7 @@ const WhenLeadersSection = () => {
 
           {/* Closing */}
           <p
-            className={`text-xl md:text-2xl text-white font-medium italic text-center mb-10 transition-all duration-700 delay-500 ${
+            className={`text-xl md:text-2xl text-foreground font-medium italic text-center mb-10 transition-all duration-700 delay-500 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
@@ -73,7 +64,7 @@ const WhenLeadersSection = () => {
             <Button
               asChild
               size="lg"
-              className="bg-primary text-primary-foreground hover:bg-white hover:text-accent transition-all duration-200 text-base font-semibold px-8 py-4 rounded-md"
+              className="bg-accent text-white hover:bg-accent/90 transition-all duration-200 text-base font-semibold px-8 py-4 rounded-md"
             >
               <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
                 Schedule Your Strategic Discussion

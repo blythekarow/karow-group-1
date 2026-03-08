@@ -65,7 +65,7 @@ const teamMembers = [
   {
     name: "Rachel Offenburg",
     title: "Marketing, Pricing, & PR Strategy",
-    image: null,
+    image: rachelOffenburg,
     linkedin: "https://www.linkedin.com/in/roff/",
   },
 ];
