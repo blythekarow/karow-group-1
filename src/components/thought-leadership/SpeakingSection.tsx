@@ -107,7 +107,7 @@ const SpeakingSection = () => {
               size="lg"
               className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-base font-semibold px-8 py-4 rounded-md"
             >
-              <a href="mailto:connect@thekarowgroup.com?subject=Speaking Engagement Inquiry">
+              <a href="mailto:blythe.karow@thekarowgroup.com?subject=Speaking Engagement Inquiry">
                 Inquire About Speaking
               </a>
             </Button>

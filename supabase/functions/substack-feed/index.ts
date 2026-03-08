@@ -35,7 +35,7 @@ Deno.serve(async (req) => {
     const itemRegex = /<item>([\s\S]*?)<\/item>/g;
     let match;
     
-    while ((match = itemRegex.exec(xmlText)) !== null && posts.length < 5) {
+    while ((match = itemRegex.exec(xmlText)) !== null && posts.length < 6) {
       const itemContent = match[1];
       
       const titleMatch = itemContent.match(/<title><!\[CDATA\[(.*?)\]\]><\/title>|<title>(.*?)<\/title>/);

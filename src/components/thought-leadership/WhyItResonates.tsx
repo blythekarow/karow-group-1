@@ -61,7 +61,7 @@ const WhyItResonates = () => {
           }`}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Why 1,500+ Leaders Read The Device Files Weekly
+            Why 10,000+ Leaders Read The Device Files Monthly
           </h2>
         </div>
 

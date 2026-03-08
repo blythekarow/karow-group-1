@@ -4,17 +4,13 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Headphones, ExternalLink, Mic } from "lucide-react";
 import podcastBanner from "@/assets/podcast-banner.png";
 
-const PODCAST_LINKS = {
-  spotify: "https://open.spotify.com/show/the-device-files",
-  apple: "https://podcasts.apple.com/podcast/the-device-files",
-  website: "https://thedevicefiles.com",
-};
+const SPOTIFY_URL = "https://open.spotify.com/show/4rOoJ6Egrf8K2IrywzwOMk";
 
 const DeviceFilesPodcast = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <section ref={ref} className="py-24 bg-cream overflow-hidden">
+    <section ref={ref} className="py-16 bg-cream overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <div
           className={`grid lg:grid-cols-2 gap-12 items-center transition-all duration-700 ${
@@ -23,9 +19,7 @@ const DeviceFilesPodcast = () => {
         >
           {/* Podcast Image */}
           <div className="relative">
-            {/* Offset decorative box */}
             <div className="absolute -top-4 -left-4 w-[25%] h-[25%] bg-primary rounded-lg hidden lg:block" />
-            
             <img
               src={podcastBanner}
               alt="The Device Files Podcast"
@@ -35,7 +29,7 @@ const DeviceFilesPodcast = () => {
 
           {/* Content */}
           <div>
-            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6">
+            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-4">
               <Headphones className="h-4 w-4" />
               <span className="text-sm font-semibold uppercase tracking-wide">
                 Podcast
@@ -75,7 +69,7 @@ const DeviceFilesPodcast = () => {
                 className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200"
               >
                 <a
-                  href={PODCAST_LINKS.website}
+                  href={SPOTIFY_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -83,26 +77,11 @@ const DeviceFilesPodcast = () => {
                   <ExternalLink className="ml-2 h-4 w-4" />
                 </a>
               </Button>
-
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground"
-              >
-                <a
-                  href={PODCAST_LINKS.apple}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Apple Podcasts
-                </a>
-              </Button>
             </div>
 
-            {/* Guest Nomination Card */}
+            {/* Guest Nomination Card - Centered */}
             <Card className="bg-card border-none shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-              <CardContent className="p-6 flex items-center gap-4">
+              <CardContent className="p-6 flex flex-col items-center text-center gap-4">
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
                   <Mic className="h-6 w-6 text-primary" />
                 </div>
@@ -118,9 +97,9 @@ const DeviceFilesPodcast = () => {
                   asChild
                   variant="outline"
                   size="sm"
-                  className="shrink-0 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                 >
-                  <a href="mailto:connect@thekarowgroup.com?subject=Podcast Guest Nomination">
+                  <a href="mailto:thedevicefiles@gmail.com?subject=Podcast Guest Nomination">
                     Nominate
                   </a>
                 </Button>
