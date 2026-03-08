@@ -59,7 +59,7 @@ const RecentArticles = () => {
           }`}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Join the 10,000+ Leaders Reading The Device Files Monthly
+            Join the ten thousand plus leaders reading The Device Files monthly.
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Recent articles and analysis: strategic insights on what it really takes to bring medical devices to market.
