@@ -42,7 +42,7 @@ const ProcessSection = () => {
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${medtechStrategyImage})` }}
+          style={{ backgroundImage: `url(${teamProgressImage})` }}
         />
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/50" />
