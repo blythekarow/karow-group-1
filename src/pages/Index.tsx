@@ -27,13 +27,11 @@ const Index = () => {
       <SolutionSection />
       {/* 5. 3-Step Process */}
       <ProcessSection />
-      {/* 6. Outcomes / Benefits */}
-      <BenefitsSection />
-      {/* 7. Testimonials */}
+      {/* 6. Testimonials */}
       <TestimonialsSection />
-      {/* 8. Services Overview */}
+      {/* 7. Services Overview */}
       <ServicesSection />
-      {/* 9. Free Assessment CTA (D.E.V.I.C.E.) */}
+      {/* 8. Free Assessment CTA (D.E.V.I.C.E.) */}
       <AssessmentSection />
       {/* 10. Founder Story */}
       <FounderSection />
