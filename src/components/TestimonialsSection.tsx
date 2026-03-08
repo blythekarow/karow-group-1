@@ -114,7 +114,7 @@ const TestimonialsSection = () => {
             </div>
             
             {/* Dot navigation */}
-            <div className="flex justify-center gap-3 mt-12">
+            <div className="flex justify-center gap-3 mt-6">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
