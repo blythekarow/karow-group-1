@@ -33,7 +33,7 @@ const ServicesHero = () => {
               {/* Headline */}
               <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-background leading-tight mb-6">
                 Comprehensive Product & Commercialization Support for{" "}
-                <span className="text-primary">Medical Device & Wearables Companies</span>
+                <span className="text-primary">Medical Device & Wearables</span>
               </h1>
 
               {/* Subheadline */}
