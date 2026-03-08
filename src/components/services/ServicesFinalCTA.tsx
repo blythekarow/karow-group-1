@@ -9,7 +9,7 @@ const ServicesFinalCTA = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section ref={ref} className="relative py-24 overflow-hidden">
+    <section ref={ref} className="relative py-16 overflow-hidden">
       {/* Background image with dark overlay */}
       <div className="absolute inset-0">
         <img
