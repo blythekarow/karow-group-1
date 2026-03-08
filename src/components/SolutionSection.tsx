@@ -17,25 +17,29 @@ const SolutionSection = () => {
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
             }`}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              You Need Strategic Clarity to Move Forward with Confidence
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3">
+              The right strategic partner can help you move forward with confidence.
             </h2>
+            
+            <p className="text-xl md:text-2xl font-semibold text-primary mb-6">
+              Meet the Karow Advisory Group.
+            </p>
             
             <div className="space-y-4 text-muted-foreground leading-relaxed mb-8">
               <p>
-                <span className="font-semibold text-foreground">The Karow Advisory Group</span> helps medical device and wearables companies navigate commercialization with integrated strategy from day one, so product commercial, regulatory, and reimbursement plans don't just coexist, they reinforce each other.
+                The Karow Advisory Group helps medical device and wearables companies navigate commercialization with integrated strategy from day one, so regulatory, reimbursement, and commercial plans don't just coexist; they reinforce each other.
               </p>
               <p>
-                <span className="font-semibold text-foreground">Our approach:</span> We provide product & commercialization guidance from concept to market launch. That means understanding how product design, marketing claims, regulatory strategy, reimbursement requirements, clinical evidence, quality systems, and commercial execution need to align and coordinating the right specialists to make it happen. We help you identify what needs attention now versus later, invest strategically to reach each milestone, and avoid the blind spots that create expensive problems down the road.
+                Led by Blythe Karow - startup CEO, Fortune 50 product leader, and former management consultant - we provide guidance from concept to market launch across marketing claims, regulatory strategy, reimbursement, clinical evidence, quality systems, and commercial execution. We help you identify what needs attention now versus later, invest strategically at each milestone, and avoid the blind spots that create expensive problems down the road.
               </p>
               <p>
-                Led by Blythe Karow, who's brought products to market as a startup CEO, management consultant, and Fortune 50 strategist and product leader, our team knows what it takes because we've done it. Not as academics with frameworks, but as operators who've launched products, navigated FDA, and built commercialization strategies that actually work in the real world.
+                Whether you're a Fortune 50 managing a portfolio or a single-product startup, we bring the strategic clarity that comes from having been there before.
               </p>
               <p>
-                We see the big picture and ensure you cover all the details. From concept to product launch, whether you're a Fortune 50 managing a product portfolio or a single-product startup, we provide the strategic clarity and operational insights that come from having been there before.
+                We're not a large firm that pitches senior partners then hands you off to junior analysts. Every engagement is led by senior experts who've been in the trenches.
               </p>
               <p className="font-medium text-foreground">
-                What makes us different: We're not a large firm that pitches you senior partners then hands you off to junior analysts. Every engagement is led by senior-level experts who've been in the trenches. Boutique scale, big-firm expertise, without the overhead.
+                Boutique scale, big-firm expertise, without the overhead.
               </p>
             </div>
             
