@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { ArrowRight } from "lucide-react";
-import teamCollaborationImage from "@/assets/team-collaboration-meeting.jpg";
+import teamCollaborationImage from "@/assets/business-team-meeting.jpg";
 
 const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
 
