@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Link } from "react-router-dom";
-import newsletterMockupImage from "@/assets/newsletter-mockup.jpg";
+import assessmentTeamImage from "@/assets/assessment-team-meeting.jpg";
 
 const AssessmentSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
@@ -23,8 +23,8 @@ const AssessmentSection = () => {
             {/* Main image (laptop mockup) */}
             <div className="relative z-10">
               <img
-                src={newsletterMockupImage}
-                alt="D.E.V.I.C.E. Assessment on laptop"
+                src={assessmentTeamImage}
+                alt="Team collaborating on assessment strategy"
                 className="w-full rounded-lg shadow-2xl object-cover h-[400px]"
               />
             </div>
