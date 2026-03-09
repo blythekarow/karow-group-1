@@ -35,7 +35,8 @@ const Hero = () => {
             <div>
               <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-background leading-relaxed mb-6">
                 Strategic Leadership that{" "}
-                <span className="text-primary whitespace-nowrap">Accelerates Execution</span>{" "}
+                <span className="text-primary whitespace-nowrap">Accelerates Execution</span>
+                <br />
                 in MedTech, Wearables, and DTx
               </h1>
               
