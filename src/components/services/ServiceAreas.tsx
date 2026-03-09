@@ -98,7 +98,7 @@ interface ServiceAreaSectionProps {
   blockColor: string;
 }
 
-const ServiceAreaSection = ({ service, imageLeft, bgClass }: ServiceAreaSectionProps) => {
+const ServiceAreaSection = ({ service, imageLeft, bgClass, blockColor }: ServiceAreaSectionProps) => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
   return (
@@ -113,7 +113,7 @@ const ServiceAreaSection = ({ service, imageLeft, bgClass }: ServiceAreaSectionP
           >
             <div className="relative">
               {/* Bold background block */}
-              <div className={`absolute -top-8 ${imageLeft ? "-left-8" : "-right-8"} w-[55%] h-[50%] bg-primary hidden lg:block`} />
+              <div className={`absolute -top-8 ${imageLeft ? "-left-8" : "-right-8"} w-[55%] h-[50%] ${blockColor} hidden lg:block`} />
               <img
                 src={service.image}
                 alt={service.imageAlt}
