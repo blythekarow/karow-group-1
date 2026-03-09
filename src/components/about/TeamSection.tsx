@@ -1,7 +1,7 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Linkedin } from "lucide-react";
 import blytheHeadshot from "@/assets/blythe-headshot-new.png";
-import thomasMoore from "@/assets/thomas-moore.png";
+import thomasMoore from "@/assets/thomas-moore-20260309.png";
 import natalieFreels from "@/assets/natalie-freels.png";
 import adamSteadman from "@/assets/adam-steadman.jpg";
 import donnaDiGangi from "@/assets/donna-digangi.png";
