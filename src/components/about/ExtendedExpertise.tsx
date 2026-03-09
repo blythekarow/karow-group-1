@@ -8,11 +8,11 @@ const ExtendedExpertise = () => {
     <section ref={ref} className="py-20 bg-cream">
       <div className="container mx-auto px-4 md:px-6">
         <div
-          className={`max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center transition-all duration-700 ${
+          className={`max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <div className="relative order-2 md:order-1 pt-8">
+          <div className="relative order-2 md:order-1 pt-8 pr-8">
             {/* Bold background block — top-left */}
             <div className="absolute top-0 left-0 w-[55%] h-[45%] bg-secondary" />
             <img
