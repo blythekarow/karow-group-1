@@ -13,6 +13,7 @@ interface ServiceArea {
   items: string[];
   image: string;
   imageAlt: string;
+  id: string;
 }
 
 const serviceAreas: ServiceArea[] = [
@@ -29,6 +30,7 @@ const serviceAreas: ServiceArea[] = [
     ],
     image: businessOfficeTeamImage,
     imageAlt: "Executive strategy session for product definition",
+    id: "product-definition",
   },
   {
     title: "Commercialization Planning & Execution",
@@ -45,6 +47,7 @@ const serviceAreas: ServiceArea[] = [
     ],
     image: commercializationPlanningImage,
     imageAlt: "Team workshop for commercialization planning",
+    id: "commercialization",
   },
   {
     title: "Strategic Advisory & Leadership",
@@ -60,6 +63,7 @@ const serviceAreas: ServiceArea[] = [
     ],
     image: strategicAdvisoryImage,
     imageAlt: "Strategic leadership meeting",
+    id: "strategic-advisory",
   },
 ];
 
@@ -93,7 +97,7 @@ const ServiceAreaSection = ({ service, imageLeft, bgClass }: ServiceAreaSectionP
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <section ref={ref} className={`py-16 ${bgClass} overflow-hidden`}>
+    <section id={service.id} ref={ref} className={`py-16 ${bgClass} overflow-hidden scroll-mt-20`}>
       <div className="container mx-auto px-4 md:px-6">
         <div className={`grid lg:grid-cols-2 gap-12 lg:gap-16 items-center`}>
           {/* Image */}
