@@ -75,8 +75,8 @@ const SpeakingSection = () => {
               </h3>
               <ul className="space-y-4">
                 {topics.map((topic, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <span className="text-primary mt-1.5 shrink-0 text-lg">•</span>
+                  <li key={index} className="flex items-center gap-3">
+                    <span className="text-primary shrink-0 text-lg leading-none">•</span>
                     <span className="text-background/90">{topic.title}</span>
                   </li>
                 ))}
