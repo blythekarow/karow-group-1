@@ -107,12 +107,12 @@ const ServiceAreaSection = ({ service, imageLeft, bgClass }: ServiceAreaSectionP
             }`}
           >
             <div className="relative">
-              {/* Offset decorative box */}
-              <div className="absolute -top-4 -left-4 w-[25%] h-[25%] bg-primary rounded-lg hidden lg:block" />
+              {/* Bold background block */}
+              <div className={`absolute -top-8 ${imageLeft ? "-left-8" : "-right-8"} w-[55%] h-[50%] bg-primary hidden lg:block`} />
               <img
                 src={service.image}
                 alt={service.imageAlt}
-                className="relative z-10 w-full rounded-lg shadow-2xl object-cover h-72 lg:h-96"
+                className="relative z-10 w-full shadow-2xl object-cover h-72 lg:h-96"
               />
             </div>
           </div>

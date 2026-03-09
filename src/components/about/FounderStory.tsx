@@ -14,21 +14,19 @@ const FounderStory = () => {
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
             }`}
           >
-            <div className="relative">
-              {/* Dark gold offset rectangle - same size as headshot */}
-              <div className="absolute top-7 left-7 w-full max-w-md bg-secondary rounded-lg">
-                <img src={blytheHeadshot} className="invisible w-full rounded-lg" alt="" aria-hidden="true" />
-              </div>
+            <div className="relative pt-8">
+              {/* Bold background block — top-left behind the image */}
+              <div className="absolute top-0 left-0 w-[55%] h-[45%] bg-secondary" />
 
-              {/* Headshot */}
+              {/* Headshot — offset right and down */}
               <img
                 src={blytheHeadshot}
                 alt="Blythe Karow, Founder & CEO of The Karow Advisory Group"
-                className="relative z-10 w-full max-w-md rounded-lg shadow-xl object-cover"
+                className="relative z-10 w-full max-w-md shadow-xl object-cover ml-8"
               />
 
-              {/* Quote card - overlapping bottom-right */}
-              <div className="relative z-20 -mt-16 ml-8 max-w-md md:max-w-[380px] bg-[hsl(186,100%,16%)] text-white p-6 rounded-lg shadow-xl">
+              {/* Quote card - overlapping bottom */}
+              <div className="relative z-20 -mt-16 ml-8 max-w-md md:max-w-[380px] bg-[hsl(186,100%,16%)] text-white p-6 shadow-xl">
                 <p className="text-base md:text-lg italic font-medium leading-relaxed">
                   "Regulatory, clinical, and commercial can't be separated. Your claims are woven through everything – from your first product spec to your FDA submission to your customer conversations. Get one thread wrong early, and the whole fabric can unravel."
                 </p>
