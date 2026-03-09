@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import teamMeetingImage from "@/assets/team-collaboration-meeting.jpg";
+import clientMeetingImage from "@/assets/client-meeting-team.jpg";
 
 interface Testimonial {
   quote: string;
@@ -51,9 +51,9 @@ const TestimonialsSection = () => {
       {/* Background image with gradient overlay matching hero style */}
       <div className="absolute inset-0">
         <img
-          src={teamMeetingImage}
+          src={clientMeetingImage}
           alt=""
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-top"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-accent via-accent/70 via-50% to-transparent" />
       </div>
