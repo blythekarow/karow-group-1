@@ -1,6 +1,6 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { ChevronDown } from "lucide-react";
-import heroImage from "@/assets/hero-building.jpg";
+import heroImage from "@/assets/about-hero.jpg";
 
 const AboutHero = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
