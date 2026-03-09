@@ -43,30 +43,29 @@ const ProblemSection = () => {
             </Button>
           </div>
 
-          {/* Right side - Image with L-shaped offset rectangle */}
+          {/* Right side - Image with bold offset block */}
           <div
             className={`relative hidden lg:block transition-all duration-700 delay-300 ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
             }`}
           >
-            {/* Offset decorative box */}
-            <div className="absolute -top-4 -right-4 w-[25%] h-[25%] bg-primary rounded-lg" />
-            
-            {/* Main image */}
+            {/* Bold background block — extends above and to the right */}
+            <div className="absolute -top-8 -right-8 w-[70%] h-[60%] bg-primary" />
+            {/* Main image — offset down-left from the block */}
             <img
               src={teamCollaborationImage}
               alt="Professional team collaborating on strategy documents"
-              className="relative z-10 w-full rounded-lg shadow-xl object-cover aspect-[4/3]"
+              className="relative z-10 w-full shadow-xl object-cover aspect-[4/3] mt-8 mr-8"
             />
           </div>
 
           {/* Mobile image */}
           <div className="lg:hidden relative">
-            <div className="absolute -top-4 -right-4 w-[25%] h-[25%] bg-primary rounded-lg" />
+            <div className="absolute -top-4 -right-4 w-[40%] h-[35%] bg-primary" />
             <img
               src={teamCollaborationImage}
               alt="Professional team collaborating on strategy documents"
-              className="w-full rounded-lg shadow-xl object-cover aspect-[4/3] relative z-10"
+              className="w-full shadow-xl object-cover aspect-[4/3] relative z-10"
             />
           </div>
         </div>

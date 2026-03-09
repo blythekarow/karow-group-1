@@ -11,23 +11,20 @@ const AssessmentSection = () => {
     <section ref={ref} className="py-24 bg-cream relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
-          {/* Left side - Image with offset rectangle */}
+          {/* Left side - Image with bold offset block */}
           <div
             className={`relative hidden lg:block transition-all duration-700 ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
             }`}
           >
-            {/* Offset decorative box */}
-            <div className="absolute -top-3 -left-3 w-[20%] h-[20%] bg-primary rounded-lg" />
-            
-            {/* Main image (laptop mockup) */}
-            <div className="relative z-10">
-              <img
-                src={assessmentTeamImage}
-                alt="Team collaborating on assessment strategy"
-                className="w-full rounded-lg shadow-2xl object-cover h-[400px]"
-              />
-            </div>
+            {/* Bold background block — extends above and to the left */}
+            <div className="absolute -top-8 -left-8 w-[60%] h-[50%] bg-primary" />
+            {/* Main image */}
+            <img
+              src={assessmentTeamImage}
+              alt="Team collaborating on assessment strategy"
+              className="relative z-10 w-full shadow-2xl object-cover h-[400px]"
+            />
           </div>
 
           {/* Right side - Content */}
