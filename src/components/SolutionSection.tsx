@@ -52,32 +52,31 @@ const SolutionSection = () => {
             </Button>
           </div>
 
-          {/* Right side - Image with subtle offset box */}
+          {/* Right side - Image with bold offset block */}
           <div
             className={`relative hidden lg:block transition-all duration-700 delay-200 ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
             }`}
           >
-            {/* Offset decorative box */}
-            <div className="absolute -top-4 -right-4 w-[25%] h-[25%] bg-primary rounded-lg" />
-            
+            {/* Bold background block — extends above and to the left */}
+            <div className="absolute -top-8 -left-8 w-[55%] h-[50%] bg-primary" />
             {/* Main image */}
-            <div className="relative z-10 overflow-hidden rounded-lg mx-12">
+            <div className="relative z-10 ml-8">
               <img
                 src={blytheWhiteBlazer}
                 alt="Blythe Karow - Strategic Advisor"
-                className="w-full rounded-lg shadow-2xl object-cover h-[550px] object-top"
+                className="w-full shadow-2xl object-cover h-[550px] object-top"
               />
             </div>
           </div>
 
           {/* Mobile image */}
-          <div className="lg:hidden relative overflow-hidden rounded-lg mx-8">
-            <div className="absolute -top-4 -right-4 w-[25%] h-[25%] bg-primary rounded-lg" />
+          <div className="lg:hidden relative">
+            <div className="absolute -top-4 -left-4 w-[40%] h-[30%] bg-primary" />
             <img
               src={blytheWhiteBlazer}
               alt="Blythe Karow - Strategic Advisor"
-              className="w-full rounded-lg shadow-xl object-cover aspect-[3/4] object-top relative z-10"
+              className="w-full shadow-xl object-cover aspect-[3/4] object-top relative z-10"
             />
           </div>
         </div>

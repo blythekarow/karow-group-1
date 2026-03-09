@@ -17,12 +17,23 @@ const DeviceFilesPodcast = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <div className="relative">
-            <div className="absolute -top-4 -left-4 w-[25%] h-[25%] bg-primary rounded-lg hidden lg:block" />
+          <div className="relative hidden lg:block">
+            {/* Bold background block — top-left */}
+            <div className="absolute -top-8 -left-8 w-[55%] h-[50%] bg-primary" />
             <img
               src={podcastBanner}
               alt="The Device Files Podcast"
-              className="relative z-10 w-full max-w-md mx-auto rounded-lg shadow-xl"
+              className="relative z-10 w-full max-w-md mx-auto shadow-xl"
+            />
+          </div>
+
+          {/* Mobile image */}
+          <div className="lg:hidden relative">
+            <div className="absolute -top-4 -left-4 w-[40%] h-[35%] bg-primary" />
+            <img
+              src={podcastBanner}
+              alt="The Device Files Podcast"
+              className="relative z-10 w-full max-w-md mx-auto shadow-xl"
             />
           </div>
 
