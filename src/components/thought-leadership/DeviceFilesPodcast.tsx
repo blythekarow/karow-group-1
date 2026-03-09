@@ -19,7 +19,7 @@ const DeviceFilesPodcast = () => {
         >
           <div className="relative hidden lg:block">
             {/* Bold background block — top-left */}
-            <div className="absolute -top-8 -left-8 w-[55%] h-[50%] bg-primary" />
+            <div className="absolute -top-8 -left-8 w-[55%] h-[50%] bg-accent" />
             <img
               src={podcastBanner}
               alt="The Device Files Podcast"
