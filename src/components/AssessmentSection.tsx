@@ -23,8 +23,8 @@ const AssessmentSection = () => {
             {/* Main image (laptop mockup) */}
             <div className="relative z-10">
               <img
-                src={newsletterMockupImage}
-                alt="D.E.V.I.C.E. Assessment on laptop"
+                src={assessmentTeamImage}
+                alt="Team collaborating on assessment strategy"
                 className="w-full rounded-lg shadow-2xl object-cover h-[400px]"
               />
             </div>
