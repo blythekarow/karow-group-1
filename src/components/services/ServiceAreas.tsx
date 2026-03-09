@@ -67,12 +67,15 @@ const serviceAreas: ServiceArea[] = [
   },
 ];
 
+const blockColors = ["bg-primary", "bg-accent", "bg-secondary"];
+
 const ServiceAreas = () => {
   return (
     <div>
       {serviceAreas.map((service, index) => {
         const isEven = index % 2 === 0;
         const bgClass = isEven ? "bg-background" : "bg-cream";
+        const blockColor = blockColors[index % blockColors.length];
         
         return (
           <ServiceAreaSection
@@ -80,6 +83,7 @@ const ServiceAreas = () => {
             service={service}
             imageLeft={!isEven}
             bgClass={bgClass}
+            blockColor={blockColor}
           />
         );
       })}
@@ -91,6 +95,7 @@ interface ServiceAreaSectionProps {
   service: ServiceArea;
   imageLeft: boolean;
   bgClass: string;
+  blockColor: string;
 }
 
 const ServiceAreaSection = ({ service, imageLeft, bgClass }: ServiceAreaSectionProps) => {
