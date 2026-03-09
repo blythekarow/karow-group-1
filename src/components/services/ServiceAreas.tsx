@@ -98,7 +98,7 @@ const ServiceAreaSection = ({ service, imageLeft, bgClass }: ServiceAreaSectionP
 
   return (
     <section id={service.id} ref={ref} className={`py-16 ${bgClass} overflow-hidden scroll-mt-20`}>
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-8 md:px-16 lg:px-24">
         <div className={`grid lg:grid-cols-2 gap-12 lg:gap-16 items-center`}>
           {/* Image */}
           <div
