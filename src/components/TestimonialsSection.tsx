@@ -85,10 +85,20 @@ const TestimonialsSection = () => {
               
               {/* Quote text and attribution */}
               <div className="flex-1">
-                <div className="mb-2">
-                  <p className="text-base md:text-lg text-white/90 leading-relaxed text-center italic">
-                    "{testimonials[currentIndex].quote}"
-                  </p>
+                {/* Fixed height container - holds all quotes stacked, only one visible */}
+                <div className="relative min-h-[280px] md:min-h-[200px]">
+                  {testimonials.map((t, i) => (
+                    <div
+                      key={i}
+                      className={`absolute inset-0 transition-opacity duration-500 ${
+                        i === currentIndex ? "opacity-100" : "opacity-0 pointer-events-none"
+                      }`}
+                    >
+                      <p className="text-base md:text-lg text-white/90 leading-relaxed text-center italic">
+                        "{t.quote}"
+                      </p>
+                    </div>
+                  ))}
                 </div>
                 
                 {/* Attribution */}
