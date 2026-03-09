@@ -59,7 +59,7 @@ const SolutionSection = () => {
             }`}
           >
             {/* Bold background block — extends above and to the left */}
-            <div className="absolute -top-8 -left-8 w-[55%] h-[50%] bg-accent" />
+            <div className="absolute -top-8 -left-8 w-[55%] h-[50%] bg-secondary" />
             {/* Main image */}
             <div className="relative z-10 ml-8">
               <img
