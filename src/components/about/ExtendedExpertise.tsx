@@ -1,5 +1,5 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import medtechStrategyImage from "@/assets/medtech-strategy-meeting.jpg";
+import teamImage from "@/assets/beyond-core-team.jpg";
 
 const ExtendedExpertise = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
@@ -15,7 +15,7 @@ const ExtendedExpertise = () => {
           <div className="relative order-2 md:order-1">
             <div className="absolute -top-4 -left-4 w-24 h-24 bg-primary/15 rounded-sm" />
             <img
-              src={medtechStrategyImage}
+              src={teamImage}
               alt="Team strategy meeting"
               className="relative rounded-sm w-full h-auto object-cover shadow-lg"
             />
