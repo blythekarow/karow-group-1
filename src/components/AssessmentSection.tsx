@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Link } from "react-router-dom";
-import assessmentTeamImage from "@/assets/assessment-team-meeting.jpg";
+import assessmentTeamImage from "@/assets/strategy-whiteboard-team.jpg";
 
 const AssessmentSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
