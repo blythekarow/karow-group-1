@@ -49,28 +49,24 @@ const ProblemSection = () => {
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
             }`}
           >
-            {/* L-shaped offset rectangle - top portion */}
-            <div className="absolute -top-6 right-0 w-24 h-[calc(100%+80px)] bg-primary rounded-sm" />
-            {/* L-shaped offset rectangle - right extension at top */}
-            <div className="absolute -top-6 right-0 left-[30%] h-16 bg-primary rounded-sm" />
+            {/* Offset decorative box */}
+            <div className="absolute -top-4 -right-4 w-[25%] h-[25%] bg-primary rounded-lg" />
             
             {/* Main image */}
-            <div className="relative z-10 mr-8">
-              <img
-                src={teamCollaborationImage}
-                alt="Professional team collaborating on strategy documents"
-                className="w-full rounded-sm shadow-xl object-cover aspect-[4/3]"
-              />
-            </div>
+            <img
+              src={teamCollaborationImage}
+              alt="Professional team collaborating on strategy documents"
+              className="relative z-10 w-full rounded-lg shadow-xl object-cover aspect-[4/3]"
+            />
           </div>
 
           {/* Mobile image */}
           <div className="lg:hidden relative">
-            <div className="absolute -top-3 -right-3 w-[20%] h-[20%] bg-primary rounded-sm" />
+            <div className="absolute -top-4 -right-4 w-[25%] h-[25%] bg-primary rounded-lg" />
             <img
               src={teamCollaborationImage}
               alt="Professional team collaborating on strategy documents"
-              className="w-full rounded-sm shadow-xl object-cover aspect-[4/3] relative z-10"
+              className="w-full rounded-lg shadow-xl object-cover aspect-[4/3] relative z-10"
             />
           </div>
         </div>
