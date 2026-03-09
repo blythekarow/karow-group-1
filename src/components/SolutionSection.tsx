@@ -59,7 +59,7 @@ const SolutionSection = () => {
             }`}
           >
             {/* Bold background block — extends above and to the left */}
-            <div className="absolute -top-8 -left-8 w-[55%] h-[50%] bg-primary" />
+            <div className="absolute -top-8 -left-8 w-[55%] h-[50%] bg-accent" />
             {/* Main image */}
             <div className="relative z-10 ml-8">
               <img
@@ -72,7 +72,7 @@ const SolutionSection = () => {
 
           {/* Mobile image */}
           <div className="lg:hidden relative">
-            <div className="absolute -top-4 -left-4 w-[40%] h-[30%] bg-primary" />
+            <div className="absolute -top-4 -left-4 w-[40%] h-[30%] bg-accent" />
             <img
               src={blytheWhiteBlazer}
               alt="Blythe Karow - Strategic Advisor"

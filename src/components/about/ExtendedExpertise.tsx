@@ -12,12 +12,13 @@ const ExtendedExpertise = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <div className="relative order-2 md:order-1">
-            <div className="absolute -top-4 -left-4 w-24 h-24 bg-primary/15 rounded-sm" />
+          <div className="relative order-2 md:order-1 pt-8">
+            {/* Bold background block — top-left */}
+            <div className="absolute top-0 left-0 w-[55%] h-[45%] bg-secondary" />
             <img
               src={teamImage}
               alt="Team strategy meeting"
-              className="relative rounded-sm w-full h-auto object-cover shadow-lg"
+              className="relative z-10 w-full h-auto object-cover shadow-lg ml-8"
             />
           </div>
 

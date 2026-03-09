@@ -19,7 +19,7 @@ const DeviceFilesPodcast = () => {
         >
           <div className="relative hidden lg:block">
             {/* Bold background block — top-left */}
-            <div className="absolute -top-8 -left-8 w-[55%] h-[50%] bg-primary" />
+            <div className="absolute -top-8 -left-8 w-[55%] h-[50%] bg-accent" />
             <img
               src={podcastBanner}
               alt="The Device Files Podcast"
@@ -29,7 +29,7 @@ const DeviceFilesPodcast = () => {
 
           {/* Mobile image */}
           <div className="lg:hidden relative">
-            <div className="absolute -top-4 -left-4 w-[40%] h-[35%] bg-primary" />
+            <div className="absolute -top-4 -left-4 w-[40%] h-[35%] bg-accent" />
             <img
               src={podcastBanner}
               alt="The Device Files Podcast"
