@@ -22,7 +22,7 @@ const DeviceFilesPodcast = () => {
             <img
               src={podcastBanner}
               alt="The Device Files Podcast"
-              className="relative z-10 w-full max-w-md mx-auto rounded-xl shadow-xl"
+              className="relative z-10 w-full max-w-md mx-auto rounded-lg shadow-xl"
             />
           </div>
 

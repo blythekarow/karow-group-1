@@ -58,8 +58,8 @@ const SolutionSection = () => {
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
             }`}
           >
-            {/* Subtle offset decorative box - top-right */}
-            <div className="absolute -top-3 -right-3 w-[20%] h-[20%] bg-primary rounded-lg" />
+            {/* Offset decorative box */}
+            <div className="absolute -top-4 -right-4 w-[25%] h-[25%] bg-primary rounded-lg" />
             
             {/* Main image */}
             <div className="relative z-10 overflow-hidden rounded-lg mx-12">
@@ -73,7 +73,7 @@ const SolutionSection = () => {
 
           {/* Mobile image */}
           <div className="lg:hidden relative overflow-hidden rounded-lg mx-8">
-            <div className="absolute -top-3 -right-3 w-[20%] h-[20%] bg-primary rounded-lg" />
+            <div className="absolute -top-4 -right-4 w-[25%] h-[25%] bg-primary rounded-lg" />
             <img
               src={blytheWhiteBlazer}
               alt="Blythe Karow - Strategic Advisor"
