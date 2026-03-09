@@ -29,6 +29,7 @@ const serviceAreas: ServiceArea[] = [
     ],
     image: businessOfficeTeamImage,
     imageAlt: "Executive strategy session for product definition",
+    id: "product-definition",
   },
   {
     title: "Commercialization Planning & Execution",
@@ -45,6 +46,7 @@ const serviceAreas: ServiceArea[] = [
     ],
     image: commercializationPlanningImage,
     imageAlt: "Team workshop for commercialization planning",
+    id: "commercialization",
   },
   {
     title: "Strategic Advisory & Leadership",
@@ -60,6 +62,7 @@ const serviceAreas: ServiceArea[] = [
     ],
     image: strategicAdvisoryImage,
     imageAlt: "Strategic leadership meeting",
+    id: "strategic-advisory",
   },
 ];
 

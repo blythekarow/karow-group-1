@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { ArrowRight } from "lucide-react";
-import executiveBoardroomImage from "@/assets/executive-boardroom.jpg";
-import consultingWorkshopImage from "@/assets/consulting-workshop.jpg";
-import dueDiligenceImage from "@/assets/due-diligence-meeting.jpg";
+import businessOfficeTeamImage from "@/assets/business-office-team.jpg";
+import commercializationPlanningImage from "@/assets/commercialization-planning.jpg";
+import strategicAdvisoryImage from "@/assets/strategic-advisory-meeting.jpg";
 
 interface ServiceCard {
   title: string;
@@ -19,24 +19,24 @@ const services: ServiceCard[] = [
     description:
       "Product definition, market positioning, value proposition development, regulatory pathway optimization, and understanding whose pain point you're addressing and how.",
     cta: "Explore Product Strategy",
-    image: executiveBoardroomImage,
-    link: "/services",
+    image: businessOfficeTeamImage,
+    link: "/services#product-definition",
   },
   {
     title: "Commercialization Planning & Execution",
     description:
       "Go-to-market planning, channel strategy, reimbursement planning, health economics and reimbursement, evidence strategy, market access, and clinical workflow integration.",
     cta: "Explore Commercialization Services",
-    image: consultingWorkshopImage,
-    link: "/services",
+    image: commercializationPlanningImage,
+    link: "/services#commercialization",
   },
   {
     title: "Strategic Advisory & Leadership",
     description:
       "Fractional leadership and ongoing strategic advisory to guide complex decision-making and enable sustainable growth.",
     cta: "Explore Strategic Leadership",
-    image: dueDiligenceImage,
-    link: "/services",
+    image: strategicAdvisoryImage,
+    link: "/services#strategic-advisory",
   },
 ];
 
