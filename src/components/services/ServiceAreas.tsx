@@ -13,6 +13,7 @@ interface ServiceArea {
   items: string[];
   image: string;
   imageAlt: string;
+  id: string;
 }
 
 const serviceAreas: ServiceArea[] = [
