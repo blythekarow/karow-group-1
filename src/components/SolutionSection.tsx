@@ -72,7 +72,7 @@ const SolutionSection = () => {
 
           {/* Mobile image */}
           <div className="lg:hidden relative">
-            <div className="absolute -top-4 -left-4 w-[40%] h-[30%] bg-accent" />
+            <div className="absolute -top-4 -left-4 w-[40%] h-[30%] bg-secondary" />
             <img
               src={blytheWhiteBlazer}
               alt="Blythe Karow - Strategic Advisor"
