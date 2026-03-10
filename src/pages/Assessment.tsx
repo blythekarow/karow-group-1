@@ -1,4 +1,5 @@
 import { useState } from "react";
+import usePageSEO from "@/hooks/use-page-seo";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";

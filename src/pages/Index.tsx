@@ -1,3 +1,4 @@
+import usePageSEO from "@/hooks/use-page-seo";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import LogoCarousel from "@/components/LogoCarousel";

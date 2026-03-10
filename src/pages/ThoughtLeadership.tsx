@@ -1,3 +1,4 @@
+import usePageSEO from "@/hooks/use-page-seo";
 import Navbar from "@/components/Navbar";
 import ThoughtLeadershipHero from "@/components/thought-leadership/ThoughtLeadershipHero";
 import RecentArticles from "@/components/thought-leadership/RecentArticles";

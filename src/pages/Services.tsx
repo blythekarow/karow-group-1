@@ -1,3 +1,4 @@
+import usePageSEO from "@/hooks/use-page-seo";
 import Navbar from "@/components/Navbar";
 import ServicesHero from "@/components/services/ServicesHero";
 import ServiceAreas from "@/components/services/ServiceAreas";
