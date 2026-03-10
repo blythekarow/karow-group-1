@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import logoIcon from "@/assets/logo-icon.webp";
 
@@ -10,6 +10,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,9 +21,8 @@ const Navbar = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
-    // If not on homepage, navigate there first
     if (location.pathname !== "/") {
-      window.location.href = `/#${id}`;
+      navigate("/", { state: { scrollTo: id } });
       return;
     }
     const element = document.getElementById(id);
