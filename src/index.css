@@ -36,6 +36,9 @@
     --accent: 180 60% 8%; /* Very dark teal, almost black-green */
     --accent-foreground: 0 0% 97%;
 
+    /* Teal Accent - Decorative blocks */
+    --teal-accent: 186 100% 16%;
+
     --muted: 40 33% 94%;
     --muted-foreground: 0 0% 35%;
 
