@@ -1,3 +1,4 @@
+import usePageSEO from "@/hooks/use-page-seo";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import LogoCarousel from "@/components/LogoCarousel";
@@ -15,6 +16,11 @@ import FinalCTASection from "@/components/FinalCTASection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
+  usePageSEO({
+    title: "The Karow Advisory Group | MedTech Strategy & Commercialization",
+    description: "Strategic advisory for medical technology companies. We help MedTech leaders accelerate commercialization, navigate regulatory pathways, and drive sustainable growth.",
+  });
+
   return (
     <div className="min-h-screen">
       <Navbar />
