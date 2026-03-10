@@ -10,13 +10,13 @@ const teamMembers = [
     image: blytheProfessional,
   },
   {
-    name: "Donna DiGangi",
-    title: "Regulatory Strategy",
+    name: "Thomas Moore, PhD",
+    title: "Product Development & Manufacturing",
     image: null,
   },
   {
-    name: "Kai Carter",
-    title: "Reimbursement & Market Access",
+    name: "Donna DiGangi",
+    title: "Regulatory Strategy",
     image: null,
   },
 ];
