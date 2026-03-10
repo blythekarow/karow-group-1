@@ -95,6 +95,11 @@ const scoringGuide = [
 ];
 
 const Assessment = () => {
+  usePageSEO({
+    title: "Commercialization Readiness Assessment | The Karow Advisory Group",
+    description: "Take our free MedTech commercialization readiness assessment. Evaluate your strategy, market access, and go-to-market preparedness in minutes.",
+  });
+
   const [currentDimension, setCurrentDimension] = useState(0);
   const [answers, setAnswers] = useState<Answer[][]>(
     dimensions.map((d) => d.questions.map(() => null))

@@ -9,6 +9,11 @@ import DualCTA from "@/components/thought-leadership/DualCTA";
 import Footer from "@/components/Footer";
 
 const ThoughtLeadership = () => {
+  usePageSEO({
+    title: "Insights & Thought Leadership | The Karow Advisory Group",
+    description: "MedTech insights, articles, and the Device Files podcast. Stay ahead with expert perspectives on medical technology strategy and commercialization.",
+  });
+
   return (
     <div className="min-h-screen">
       <Navbar />
