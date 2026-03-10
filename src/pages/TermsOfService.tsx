@@ -1,7 +1,14 @@
+import usePageSEO from "@/hooks/use-page-seo";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const TermsOfService = () => {
+  usePageSEO({
+    title: "Terms of Service | The Karow Advisory Group",
+    description: "Terms of Service for The Karow Advisory Group website. Review the terms governing your use of thekarowgroup.com.",
+  });
+
+  return (
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />

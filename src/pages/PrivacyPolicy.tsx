@@ -1,7 +1,14 @@
+import usePageSEO from "@/hooks/use-page-seo";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const PrivacyPolicy = () => {
+  usePageSEO({
+    title: "Privacy Policy | The Karow Advisory Group",
+    description: "Privacy Policy for The Karow Advisory Group. Learn how we collect, use, and protect your personal information.",
+  });
+
+  return (
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
