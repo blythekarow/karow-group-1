@@ -18,7 +18,7 @@ const AssessmentSection = () => {
             }`}
           >
             {/* Bold background block — extends above and to the left */}
-            <div className="absolute -top-8 -left-8 w-[60%] h-[50%] bg-[hsl(186,100%,16%)]" />
+            <div className="absolute -top-8 -left-8 w-[60%] h-[50%] bg-teal-accent" />
             {/* Main image */}
             <img
               src={assessmentTeamImage}
