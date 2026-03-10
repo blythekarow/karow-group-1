@@ -58,18 +58,18 @@ const Footer = () => {
               © 2026 The Karow Advisory Group. All Rights Reserved.
             </p>
             <div className="flex gap-6">
-              <a
-                href="#"
+              <Link
+                to="/privacy"
                 className="text-sm text-accent-foreground/60 hover:text-primary transition-colors"
               >
                 Privacy Policy
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="/terms"
                 className="text-sm text-accent-foreground/60 hover:text-primary transition-colors"
               >
                 Terms of Service
-              </a>
+              </Link>
             </div>
           </div>
         </div>
