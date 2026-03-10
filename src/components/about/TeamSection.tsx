@@ -15,16 +15,10 @@ const teamMembers = [
     linkedin: "https://www.linkedin.com/in/blythekarow/",
   },
   {
-    name: "Donna DiGangi",
-    title: "Regulatory Strategy & Submissions",
-    image: donnaDiGangi,
-    linkedin: "https://www.linkedin.com/in/donna-digangi/",
-  },
-  {
-    name: "Kai Carter, MPH",
-    title: "Reimbursement & Market Access",
-    image: null,
-    linkedin: "https://www.linkedin.com/in/kai-carter/",
+    name: "Thomas Moore, PhD",
+    title: "Product Development & Manufacturing",
+    image: thomasMoore,
+    linkedin: "https://www.linkedin.com/in/thomas-moore-phd/",
   },
   {
     name: "Natalie Freels, PA-C",
@@ -39,10 +33,16 @@ const teamMembers = [
     linkedin: "https://www.linkedin.com/in/adam-steadman/",
   },
   {
-    name: "Thomas Moore, PhD",
-    title: "Product Development & Manufacturing",
-    image: thomasMoore,
-    linkedin: "https://www.linkedin.com/in/thomas-moore-phd/",
+    name: "Rachel Offenburg",
+    title: "Marketing, Pricing, & PR Strategy",
+    image: rachelOffenburg,
+    linkedin: "https://www.linkedin.com/in/roff/",
+  },
+  {
+    name: "Donna DiGangi",
+    title: "Regulatory Strategy & Submissions",
+    image: donnaDiGangi,
+    linkedin: "https://www.linkedin.com/in/donna-digangi/",
   },
   {
     name: "Eirik Lima",
@@ -51,22 +51,22 @@ const teamMembers = [
     linkedin: "https://www.linkedin.com/in/eirik-lima/",
   },
   {
+    name: "Dan Stoller",
+    title: "Quality & Regulatory Strategy",
+    image: null,
+    linkedin: "https://www.linkedin.com/in/daniel-stoller/",
+  },
+  {
     name: "Erica Breese",
     title: "Payer & Provider Strategy",
     image: null,
     linkedin: "https://www.linkedin.com/in/erica-breese/",
   },
   {
-    name: "Daniel Stoller",
-    title: "Quality & Regulatory Strategy",
+    name: "Caroline Popper",
+    title: "Strategic Advisory",
     image: null,
-    linkedin: "https://www.linkedin.com/in/daniel-stoller/",
-  },
-  {
-    name: "Rachel Offenburg",
-    title: "Marketing, Pricing, & PR Strategy",
-    image: rachelOffenburg,
-    linkedin: "https://www.linkedin.com/in/roff/",
+    linkedin: null,
   },
 ];
 
