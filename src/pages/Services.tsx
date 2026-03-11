@@ -26,6 +26,7 @@ const Services = () => {
       <BenefitsSection />
       <SpecialtyCapabilities />
       <ProcessSection />
+      <ServicesAssessmentSection />
       <ServicesFAQ />
       <ServicesFinalCTA />
       <Footer />

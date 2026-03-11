@@ -24,6 +24,7 @@ const About = () => {
       <TeamSection />
       <ExtendedExpertise />
       <StrategyCTABanner />
+      <AboutAssessmentSection />
       <WhenLeadersSection />
       <AboutFinalCTA />
       <Footer />
