@@ -90,7 +90,7 @@ const TeamSection = () => {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className={`text-center transition-opacity duration-500 ${
+              className={`text-center w-[calc(50%-12px)] md:w-[calc(33.333%-16px)] lg:w-[calc(20%-26px)] transition-opacity duration-500 ${
                 isVisible ? "opacity-100" : "opacity-0"
               }`}
               style={{ transitionDelay: `${index * 50 + 200}ms` }}
