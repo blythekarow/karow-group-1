@@ -56,7 +56,7 @@ const teamMembers = [
   {
     name: "Caroline Popper",
     title: "Strategic Advisory",
-    image: null,
+    image: carolinePopper,
     linkedin: "https://www.linkedin.com/in/carolinepopper/",
   },
   {
