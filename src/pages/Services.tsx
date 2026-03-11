@@ -5,6 +5,7 @@ import ServiceAreas from "@/components/services/ServiceAreas";
 import SpecialtyCapabilities from "@/components/services/SpecialtyCapabilities";
 import SimpleCTAPanel from "@/components/services/SimpleCTAPanel";
 import ProcessSection from "@/components/ProcessSection";
+import ServicesAssessmentSection from "@/components/services/ServicesAssessmentSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import ServicesFAQ from "@/components/services/ServicesFAQ";
 import ServicesFinalCTA from "@/components/services/ServicesFinalCTA";
