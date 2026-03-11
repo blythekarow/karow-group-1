@@ -38,7 +38,7 @@ const teamMembers = [
   {
     name: "Eirik Lima",
     title: "Legal, Regulatory Compliance & Quality",
-    image: null,
+    image: eirikLima,
     linkedin: "https://www.linkedin.com/in/eiriklima/",
   },
   {
