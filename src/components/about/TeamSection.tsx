@@ -20,7 +20,7 @@ const teamMembers = [
   {
     name: "Erica Breese",
     title: "Payer & Provider Strategy",
-    image: null,
+    image: ericaBreese,
     linkedin: "https://www.linkedin.com/in/erica-breese/",
   },
   {
