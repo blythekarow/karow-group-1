@@ -12,49 +12,7 @@ const teamMembers = [
     name: "Blythe Karow",
     title: "Product & Commercialization Strategy",
     image: blytheHeadshot,
-    linkedin: "https://www.linkedin.com/in/blythekarow/",
-  },
-  {
-    name: "Thomas Moore, PhD",
-    title: "Product Development & Manufacturing",
-    image: thomasMoore,
-    linkedin: "https://www.linkedin.com/in/thomas-moore-phd/",
-  },
-  {
-    name: "Natalie Freels, PA-C",
-    title: "Clinical Operations Strategy",
-    image: natalieFreels,
-    linkedin: "https://www.linkedin.com/in/natalie-freels/",
-  },
-  {
-    name: "Adam Steadman",
-    title: "General Operations & Manufacturing",
-    image: adamSteadman,
-    linkedin: "https://www.linkedin.com/in/adam-steadman/",
-  },
-  {
-    name: "Rachel Offenburg",
-    title: "Marketing, Pricing, & PR Strategy",
-    image: rachelOffenburg,
-    linkedin: "https://www.linkedin.com/in/roff/",
-  },
-  {
-    name: "Donna DiGangi",
-    title: "Regulatory Strategy & Submissions",
-    image: donnaDiGangi,
-    linkedin: "https://www.linkedin.com/in/donna-digangi/",
-  },
-  {
-    name: "Eirik Lima",
-    title: "Legal, Regulatory Compliance & Quality",
-    image: null,
-    linkedin: "https://www.linkedin.com/in/eirik-lima/",
-  },
-  {
-    name: "Dan Stoller",
-    title: "Quality & Regulatory Strategy",
-    image: null,
-    linkedin: "https://www.linkedin.com/in/daniel-stoller/",
+    linkedin: "https://www.linkedin.com/in/blythe-karow/",
   },
   {
     name: "Erica Breese",
@@ -63,10 +21,46 @@ const teamMembers = [
     linkedin: "https://www.linkedin.com/in/erica-breese/",
   },
   {
+    name: "Donna DiGangi",
+    title: "Regulatory Strategy & Submissions",
+    image: donnaDiGangi,
+    linkedin: "https://www.linkedin.com/in/donnadigangi/",
+  },
+  {
+    name: "Natalie Freels, PA-C",
+    title: "Clinical Operations Strategy",
+    image: natalieFreels,
+    linkedin: "https://www.linkedin.com/in/natalie-freels/",
+  },
+  {
+    name: "Eirik Lima",
+    title: "Legal, Regulatory Compliance & Quality",
+    image: null,
+    linkedin: "https://www.linkedin.com/in/eiriklima/",
+  },
+  {
+    name: "Thomas Moore, PhD",
+    title: "Product Development & Manufacturing",
+    image: thomasMoore,
+    linkedin: "https://www.linkedin.com/in/thomas-moore-phd-40016753/",
+  },
+  {
+    name: "Rachel Offenburg",
+    title: "Marketing, Pricing, & PR Strategy",
+    image: rachelOffenburg,
+    linkedin: "https://www.linkedin.com/in/roff/",
+  },
+  {
     name: "Caroline Popper",
     title: "Strategic Advisory",
     image: null,
-    linkedin: null,
+    linkedin: "https://www.linkedin.com/in/carolinepopper/",
+  },
+  {
+    name: "Adam Steadman",
+    title: "General Operations & Manufacturing",
+    image: adamSteadman,
+    linkedin: "https://www.linkedin.com/in/adamsteadman/",
   },
 ];
 
