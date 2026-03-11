@@ -138,6 +138,17 @@ const TeamSection = () => {
             </div>
           ))}
         </div>
+
+        {/* Extended network note */}
+        <div
+          className={`text-center mt-12 transition-all duration-700 delay-500 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
+          <p className="text-muted-foreground text-lg italic">
+            + additional senior experts across clinical, regulatory, reimbursement, and commercialization
+          </p>
+        </div>
       </div>
     </section>
   );
