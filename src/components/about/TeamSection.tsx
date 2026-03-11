@@ -1,11 +1,14 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Linkedin } from "lucide-react";
-import blytheHeadshot from "@/assets/blythe-headshot-new.png";
-import thomasMoore from "@/assets/thomas-moore-20260309.png";
-import natalieFreels from "@/assets/natalie-freels.png";
-import adamSteadman from "@/assets/adam-steadman.jpg";
-import donnaDiGangi from "@/assets/donna-digangi.png";
-import rachelOffenburg from "@/assets/rachel-offenburg.png";
+import blytheHeadshot from "@/assets/blythe-headshot-v2.jpg";
+import thomasMoore from "@/assets/thomas-moore-v2.jpg";
+import natalieFreels from "@/assets/natalie-freels-v2.jpg";
+import adamSteadman from "@/assets/adam-steadman-v2.jpg";
+import donnaDiGangi from "@/assets/donna-digangi-v2.jpg";
+import rachelOffenburg from "@/assets/rachel-offenburg-v2.jpg";
+import ericaBreese from "@/assets/erica-breese-v2.jpg";
+import eirikLima from "@/assets/eirik-lima-v2.jpg";
+import carolinePopper from "@/assets/caroline-popper-v2.jpg";
 
 const teamMembers = [
   {
