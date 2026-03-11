@@ -1,23 +1,25 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import blytheProfessional from "@/assets/blythe-professional.png";
+import blytheHeadshot from "@/assets/blythe-headshot-v2.jpg";
+import thomasMoore from "@/assets/thomas-moore-v2.jpg";
+import donnaDiGangi from "@/assets/donna-digangi-v2.jpg";
 
 const teamMembers = [
   {
     name: "Blythe Karow",
     title: "Founder & CEO",
-    image: blytheProfessional,
+    image: blytheHeadshot,
   },
   {
     name: "Thomas Moore, PhD",
     title: "Product Development & Manufacturing",
-    image: null,
+    image: thomasMoore,
   },
   {
     name: "Donna DiGangi",
     title: "Regulatory Strategy",
-    image: null,
+    image: donnaDiGangi,
   },
 ];
 
