@@ -6,6 +6,7 @@ import WhyWorkWithUsSection from "@/components/WhyWorkWithUsSection";
 import TeamSection from "@/components/about/TeamSection";
 import ExtendedExpertise from "@/components/about/ExtendedExpertise";
 import StrategyCTABanner from "@/components/about/StrategyCTABanner";
+import AboutAssessmentSection from "@/components/about/AboutAssessmentSection";
 import WhenLeadersSection from "@/components/WhenLeadersSection";
 import AboutFinalCTA from "@/components/about/AboutFinalCTA";
 
@@ -23,6 +24,7 @@ const About = () => {
       <TeamSection />
       <ExtendedExpertise />
       <StrategyCTABanner />
+      <AboutAssessmentSection />
       <WhenLeadersSection />
       <AboutFinalCTA />
       <Footer />
