@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import usePageSEO from "@/hooks/use-page-seo";
 import Navbar from "@/components/Navbar";
 import ServicesHero from "@/components/services/ServicesHero";
@@ -12,6 +14,20 @@ import ServicesFinalCTA from "@/components/services/ServicesFinalCTA";
 import Footer from "@/components/Footer";
 
 const Services = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const scrollTo = (location.state as any)?.scrollTo;
+    if (scrollTo) {
+      setTimeout(() => {
+        const element = document.getElementById(scrollTo);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+      window.history.replaceState({}, document.title);
+    }
+  }, [location.state]);
   usePageSEO({
     title: "Services | The Karow Advisory Group",
     description: "Strategic advisory services for MedTech companies including commercialization strategy, market access, regulatory navigation, and growth acceleration.",

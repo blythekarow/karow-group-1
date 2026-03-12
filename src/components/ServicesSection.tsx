@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import businessOfficeTeamImage from "@/assets/business-office-team.jpg";
 import commercializationPlanningImage from "@/assets/commercialization-planning.jpg";
 import strategicAdvisoryImage from "@/assets/strategic-advisory-meeting.jpg";
@@ -42,6 +43,7 @@ const services: ServiceCard[] = [
 
 const ServicesSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
+  const navigate = useNavigate();
 
   return (
     <section id="services" ref={ref} className="py-24 bg-background scroll-mt-20 relative overflow-hidden">
@@ -93,12 +95,13 @@ const ServicesSection = () => {
                   {service.description}
                 </p>
                 <Button
-                  asChild
-                  className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-sm font-semibold px-6 py-3 self-start"
+                  onClick={() => {
+                    const hash = service.link.split('#')[1];
+                    navigate('/services', { state: { scrollTo: hash } });
+                  }}
+                  className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-sm font-semibold px-6 py-3 self-start cursor-pointer"
                 >
-                  <a href={service.link}>
-                    {service.cta}
-                  </a>
+                  {service.cta}
                 </Button>
               </div>
             </div>
