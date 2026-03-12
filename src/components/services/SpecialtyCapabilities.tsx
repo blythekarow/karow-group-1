@@ -5,59 +5,35 @@ import { FileCheck, DollarSign, Users } from "lucide-react";
 interface CapabilityColumn {
   icon: React.ElementType;
   title: string;
-  categories: {
-    label: string;
-    items: string[];
-  }[];
+  items: string[];
 }
 
 const capabilities: CapabilityColumn[] = [
   {
     icon: FileCheck,
-    title: "Regulatory Services",
-    categories: [
-      {
-        label: "Submissions",
-        items: ["Pre-Submissions (Q-Sub)", "510(k)", "De Novo"],
-      },
-      {
-        label: "Special Programs",
-        items: [
-          "Breakthrough Device Designation",
-          "Total Product Life Cycle Advisory Program (TAP)",
-          "TEMPO Pilot Program",
-        ],
-      },
+    title: "Regulatory",
+    items: [
+      "FDA interaction strategy and Pre-Submissions",
+      "510(k), De Novo, and PMA submission support",
+      "Breakthrough Device and early engagement programs",
     ],
   },
   {
     icon: DollarSign,
-    title: "Market Access Services",
-    categories: [
-      {
-        label: "Strategic Planning",
-        items: [
-          "Reimbursement Landscape Analysis",
-          "Full Market Access Strategic Plan",
-          "Payer Strategy Development",
-          "Health Economics & Outcomes",
-        ],
-      },
+    title: "Market Access",
+    items: [
+      "Reimbursement pathway and payer strategy",
+      "Market access planning and value narrative development",
+      "Health economics and outcomes strategy",
     ],
   },
   {
     icon: Users,
-    title: "Clinical Services",
-    categories: [
-      {
-        label: "Evidence & Workflow Strategy",
-        items: [
-          "Evidence Plan Review & Strategy",
-          "Clinical Workflow Analysis",
-          "Patient Journey Mapping",
-          "Clinical Adoption Planning",
-        ],
-      },
+    title: "Clinical & Evidence",
+    items: [
+      "Evidence strategy and study planning",
+      "Clinical workflow and adoption analysis",
+      "Patient journey and use-case validation",
     ],
   },
 ];
@@ -75,10 +51,10 @@ const SpecialtyCapabilities = () => {
           }`}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Specialty Deliverables Within Our Integrated Approach
+            Integrated Specialty Capabilities
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            We coordinate expert capabilities across regulatory, market access, and clinical strategy - ensuring each specialty reinforces your overall commercialization plan.
+            When deeper execution is needed, we coordinate expert support across regulatory, reimbursement, clinical, and market access disciplines so each workstream reinforces the overall commercialization strategy.
           </p>
         </div>
 
@@ -103,26 +79,15 @@ const SpecialtyCapabilities = () => {
                   {capability.title}
                 </h3>
                 
-                {/* Categories */}
-                <div className="space-y-4">
-                  {capability.categories.map((category, catIdx) => (
-                    <div key={catIdx}>
-                      {category.label && (
-                        <p className="text-sm font-semibold text-secondary uppercase tracking-wide mb-2">
-                          {category.label}
-                        </p>
-                      )}
-                      <ul className="space-y-2">
-                        {category.items.map((item, itemIdx) => (
-                          <li key={itemIdx} className="flex items-start gap-2 text-muted-foreground text-sm">
-                            <span className="text-primary mt-0.5 shrink-0">•</span>
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                {/* Items */}
+                <ul className="space-y-2">
+                  {capability.items.map((item, itemIdx) => (
+                    <li key={itemIdx} className="flex items-start gap-2 text-muted-foreground text-sm">
+                      <span className="text-primary mt-0.5 shrink-0">•</span>
+                      <span>{item}</span>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </CardContent>
             </Card>
           ))}
