@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { useLocation } from "react-router-dom";
 import usePageSEO from "@/hooks/use-page-seo";
 import Navbar from "@/components/Navbar";
@@ -28,9 +28,24 @@ const Services = () => {
       window.history.replaceState({}, document.title);
     }
   }, [location.state]);
+
+  const jsonLd = useMemo(() => ({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "provider": {
+      "@type": "Organization",
+      "name": "The Karow Advisory Group",
+      "url": "https://thekarowgroup.com"
+    },
+    "name": "MedTech Strategic Advisory Services",
+    "description": "Strategic advisory services for MedTech companies including commercialization strategy, market access, regulatory navigation, and growth acceleration.",
+    "serviceType": ["Product Definition", "Commercialization Strategy", "Strategic Advisory", "Regulatory Services", "Market Access", "Clinical & Evidence Strategy"]
+  }), []);
+
   usePageSEO({
     title: "Services | The Karow Advisory Group",
     description: "Strategic advisory services for MedTech companies including commercialization strategy, market access, regulatory navigation, and growth acceleration.",
+    jsonLd,
   });
 
   return (

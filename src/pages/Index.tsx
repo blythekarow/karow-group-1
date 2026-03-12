@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { useLocation } from "react-router-dom";
 import usePageSEO from "@/hooks/use-page-seo";
 import Navbar from "@/components/Navbar";
@@ -23,48 +23,52 @@ const Index = () => {
   useEffect(() => {
     const scrollTo = (location.state as any)?.scrollTo;
     if (scrollTo) {
-      // Small delay to ensure DOM is ready
       setTimeout(() => {
         const element = document.getElementById(scrollTo);
         if (element) {
           element.scrollIntoView({ behavior: "smooth" });
         }
       }, 100);
-      // Clear the state so it doesn't re-scroll on re-renders
       window.history.replaceState({}, document.title);
     }
   }, [location.state]);
+
+  const jsonLd = useMemo(() => ({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "The Karow Advisory Group",
+    "url": "https://thekarowgroup.com",
+    "logo": "https://thekarowgroup.com/favicon.png",
+    "description": "Strategic advisory for medical technology companies. We help MedTech leaders accelerate commercialization, navigate regulatory pathways, and drive sustainable growth.",
+    "founder": {
+      "@type": "Person",
+      "name": "Blythe Karow",
+      "jobTitle": "Founder & CEO"
+    },
+    "sameAs": [],
+    "serviceType": ["MedTech Strategy Consulting", "Commercialization Advisory", "Regulatory Strategy", "Market Access Planning"]
+  }), []);
+
   usePageSEO({
     title: "The Karow Advisory Group | MedTech Strategy & Commercialization",
     description: "Strategic advisory for medical technology companies. We help MedTech leaders accelerate commercialization, navigate regulatory pathways, and drive sustainable growth.",
+    jsonLd,
   });
 
   return (
     <div className="min-h-screen">
       <Navbar />
-      {/* 1. Hero */}
       <Hero />
-      {/* 2. Trusted By / Logo Carousel */}
       <LogoCarousel />
-      {/* 3. The Problem */}
       <ProblemSection />
-      {/* 4. Benefits - The Right Strategy */}
       <BenefitsSection />
-      {/* 5. The Solution */}
       <SolutionSection />
-      {/* 5. 3-Step Process */}
       <ProcessSection />
-      {/* 6. Testimonials */}
       <TestimonialsSection />
-      {/* 7. Services Overview */}
       <ServicesSection />
-      {/* 8. Free Assessment CTA (D.E.V.I.C.E.) */}
       <AssessmentSection />
-      {/* 10. Founder Story */}
       <FounderSection />
-      {/* 12. Final CTA */}
       <FinalCTASection />
-      {/* 13. Footer */}
       <Footer />
     </div>
   );
