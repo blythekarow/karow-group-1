@@ -95,12 +95,13 @@ const ServicesSection = () => {
                   {service.description}
                 </p>
                 <Button
-                  asChild
-                  className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-sm font-semibold px-6 py-3 self-start"
+                  onClick={() => {
+                    const hash = service.link.split('#')[1];
+                    navigate('/services', { state: { scrollTo: hash } });
+                  }}
+                  className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-sm font-semibold px-6 py-3 self-start cursor-pointer"
                 >
-                  <a href={service.link}>
-                    {service.cta}
-                  </a>
+                  {service.cta}
                 </Button>
               </div>
             </div>
