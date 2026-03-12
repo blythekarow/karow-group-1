@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import businessOfficeTeamImage from "@/assets/business-office-team.jpg";
 import commercializationPlanningImage from "@/assets/commercialization-planning.jpg";
 import strategicAdvisoryImage from "@/assets/strategic-advisory-meeting.jpg";
