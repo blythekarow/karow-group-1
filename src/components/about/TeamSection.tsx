@@ -55,7 +55,7 @@ const teamMembers = [
   },
   {
     name: "Caroline Popper",
-    title: "Strategic Advisory",
+    title: "Clinical, HEOR, & Business Strategy, Partnering",
     image: carolinePopper,
     linkedin: "https://www.linkedin.com/in/carolinepopper/",
   },
