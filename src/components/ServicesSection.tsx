@@ -43,6 +43,7 @@ const services: ServiceCard[] = [
 
 const ServicesSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
+  const navigate = useNavigate();
 
   return (
     <section id="services" ref={ref} className="py-24 bg-background scroll-mt-20 relative overflow-hidden">
