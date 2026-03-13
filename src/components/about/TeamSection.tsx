@@ -25,7 +25,7 @@ const teamMembers = [
     linkedin: "https://www.linkedin.com/in/erica-breese/",
   },
   {
-    name: "Kimberly Brown, BMA, PMP",
+    name: "Kimberly Brown, PMP",
     title: "Project & Clinical Trial Management",
     image: kimberlyBrown,
     linkedin: "https://www.linkedin.com/in/kimberly-brown-mba-pmp-entreprenuer/",
