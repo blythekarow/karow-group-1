@@ -9,6 +9,7 @@ import rachelOffenburg from "@/assets/rachel-offenburg-v2.jpg";
 import ericaBreese from "@/assets/erica-breese-v2.jpg";
 import eirikLima from "@/assets/eirik-lima-v2.jpg";
 import carolinePopper from "@/assets/caroline-popper-v2.jpg";
+import kimberlyBrown from "@/assets/kimberly-brown.png";
 
 const teamMembers = [
   {
@@ -16,6 +17,12 @@ const teamMembers = [
     title: "Product & Commercialization Strategy",
     image: blytheHeadshot,
     linkedin: "https://www.linkedin.com/in/blythe-karow/",
+  },
+  {
+    name: "Kimberly Brown, BMA, PMP",
+    title: "Project & Clinical Trial Management",
+    image: kimberlyBrown,
+    linkedin: "https://www.linkedin.com/in/kimberly-brown-mba-pmp-entreprenuer/",
   },
   {
     name: "Erica Breese",
