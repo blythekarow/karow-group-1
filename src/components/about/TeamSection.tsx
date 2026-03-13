@@ -14,7 +14,7 @@ import kimberlyBrown from "@/assets/kimberly-brown.png";
 const teamMembers = [
   {
     name: "Blythe Karow",
-    title: "Product & Commercialization Strategy",
+    title: "Founder & Principal - Product & Commercialization Strategy",
     image: blytheHeadshot,
     linkedin: "https://www.linkedin.com/in/blythe-karow/",
   },
