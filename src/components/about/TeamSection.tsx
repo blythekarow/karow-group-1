@@ -61,7 +61,7 @@ const teamMembers = [
     linkedin: "https://www.linkedin.com/in/roff/",
   },
   {
-    name: "Caroline Popper",
+    name: "Caroline Popper, MD, JD, MPH",
     title: "Clinical, HEOR, & Business Strategy, Partnering",
     image: carolinePopper,
     linkedin: "https://www.linkedin.com/in/carolinepopper/",
