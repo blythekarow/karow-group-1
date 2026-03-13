@@ -13,9 +13,10 @@ const capabilities: CapabilityColumn[] = [
     icon: FileCheck,
     title: "Regulatory",
     items: [
-      "FDA interaction strategy and Pre-Submissions",
+      "FDA strategy & pre-submissions",
       "510(k), De Novo, and PMA submission support",
       "Breakthrough Device and early engagement programs",
+      "Quality Systems & Documentation",
     ],
   },
   {
