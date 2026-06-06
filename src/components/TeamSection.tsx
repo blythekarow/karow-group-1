@@ -3,7 +3,6 @@ import { ArrowRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import blytheHeadshot from "@/assets/blythe-headshot-v2.jpg";
 import thomasMoore from "@/assets/thomas-moore-v2.jpg";
-import donnaDiGangi from "@/assets/donna-digangi-v2.jpg";
 
 const teamMembers = [
   {
@@ -13,13 +12,8 @@ const teamMembers = [
   },
   {
     name: "Thomas Moore, PhD",
-    title: "Product Development & Manufacturing",
+    title: "Product Development & Quality Systems",
     image: thomasMoore,
-  },
-  {
-    name: "Donna DiGangi",
-    title: "Regulatory Strategy",
-    image: donnaDiGangi,
   },
 ];
 
