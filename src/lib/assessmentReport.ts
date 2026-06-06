@@ -84,9 +84,12 @@ export function buildReportHtml(data: ReportData, isAdmin = false): string {
 
     return `
       <div style="margin-bottom:24px;">
-        <div style="background:#004D51;color:white;padding:12px 16px;border-radius:8px 8px 0 0;font-weight:700;font-size:16px;">
-          ${dim.letter} — ${dim.subtitle}
-          <span style="float:right;font-size:14px;">${dim.score}/8 (${dim.percentage}%) — ${getLevelEmoji(dim.readinessLevel)} ${dim.readinessLevel}</span>
+        <div style="background:#004D51;color:white;padding:12px 16px;border-radius:8px 8px 0 0;">
+          <div style="font-weight:700;font-size:16px;">
+            ${dim.letter} — ${dim.title}
+            <span style="float:right;font-size:14px;">${dim.score}/8 (${dim.percentage}%) — ${getLevelEmoji(dim.readinessLevel)} ${dim.readinessLevel}</span>
+          </div>
+          ${dim.subtitle && dim.subtitle !== dim.title ? `<div style="font-size:12px;font-weight:400;color:rgba(255,255,255,0.82);margin-top:3px;">${dim.subtitle}</div>` : ""}
         </div>
         <table style="width:100%;border-collapse:collapse;border:1px solid #e5e5e5;border-top:none;">
           ${questionRows}
@@ -139,7 +142,7 @@ export function buildReportHtml(data: ReportData, isAdmin = false): string {
                 <tbody>
                   ${data.dimensions.map((dim) => `
                     <tr>
-                      <td style="padding:10px 12px;border-top:1px solid #e5e5e5;font-size:14px;color:#555;"><strong>${dim.letter}</strong> ${dim.subtitle}</td>
+                      <td style="padding:10px 12px;border-top:1px solid #e5e5e5;font-size:14px;color:#555;"><strong>${dim.letter}</strong> ${dim.title}</td>
                       <td style="padding:10px 12px;border-top:1px solid #e5e5e5;text-align:center;font-size:14px;font-weight:600;color:#333;">${dim.score}/8</td>
                       <td style="padding:10px 12px;border-top:1px solid #e5e5e5;text-align:center;font-size:14px;">${getLevelEmoji(dim.readinessLevel)} ${dim.readinessLevel}</td>
                     </tr>

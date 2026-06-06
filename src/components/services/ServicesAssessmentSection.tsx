@@ -36,7 +36,16 @@ const ServicesAssessmentSection = () => {
             </p>
 
             <p className="text-lg md:text-xl text-white/85 mb-10 leading-relaxed max-w-xl">
-              Based on the D.E.V.I.C.E.™ Framework published in Device Files, this quick assessment helps you identify gaps and get a clear picture of what to prioritize next.
+              Based on the D.E.V.I.C.E.™ Framework published in{" "}
+              <a
+                href="https://blythekarow.substack.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary underline underline-offset-2 hover:text-white transition-colors"
+              >
+                The Device Files
+              </a>
+              , this quick assessment helps you identify gaps and get a clear picture of what to prioritize next.
             </p>
 
             <Button
