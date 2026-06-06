@@ -45,7 +45,7 @@ const SolutionSection = () => {
               size="lg"
               className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-base font-semibold px-8 py-4 rounded-md"
             >
-              <Link to="/about">
+              <Link to="/about" state={{ scrollTo: "team" }}>
                 Meet the Team
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>

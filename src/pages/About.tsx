@@ -1,4 +1,5 @@
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
+import { useLocation } from "react-router-dom";
 import usePageSEO from "@/hooks/use-page-seo";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -12,6 +13,21 @@ import WhenLeadersSection from "@/components/WhenLeadersSection";
 import AboutFinalCTA from "@/components/about/AboutFinalCTA";
 
 const About = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const scrollTo = (location.state as { scrollTo?: string } | null)?.scrollTo;
+    if (scrollTo) {
+      setTimeout(() => {
+        const element = document.getElementById(scrollTo);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+      window.history.replaceState({}, document.title);
+    }
+  }, [location.state]);
+
   const jsonLd = useMemo(() => ({
     "@context": "https://schema.org",
     "@type": "AboutPage",
