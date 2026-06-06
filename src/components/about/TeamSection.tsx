@@ -4,7 +4,6 @@ import blytheHeadshot from "@/assets/blythe-headshot-v2.jpg";
 import thomasMoore from "@/assets/thomas-moore-v2.jpg";
 import natalieFreels from "@/assets/natalie-freels-v2.jpg";
 import adamSteadman from "@/assets/adam-steadman-v2.jpg";
-import donnaDiGangi from "@/assets/donna-digangi-v2.jpg";
 import rachelOffenburg from "@/assets/rachel-offenburg-v2.jpg";
 import ericaBreese from "@/assets/erica-breese-v2.jpg";
 import eirikLima from "@/assets/eirik-lima-v2.jpg";
@@ -31,12 +30,6 @@ const teamMembers = [
     linkedin: "https://www.linkedin.com/in/kimberly-brown-mba-pmp-entreprenuer/",
   },
   {
-    name: "Donna DiGangi",
-    title: "Regulatory Strategy & Submissions",
-    image: donnaDiGangi,
-    linkedin: "https://www.linkedin.com/in/donnadigangi/",
-  },
-  {
     name: "Natalie Freels, PA-C",
     title: "Clinical Operations Strategy",
     image: natalieFreels,
@@ -44,13 +37,13 @@ const teamMembers = [
   },
   {
     name: "Eirik Lima",
-    title: "Legal, Regulatory Compliance & Quality",
+    title: "Regulatory Strategy, Compliance, & Submissions",
     image: eirikLima,
     linkedin: "https://www.linkedin.com/in/eiriklima/",
   },
   {
     name: "Thomas Moore, PhD",
-    title: "Product Development & Manufacturing",
+    title: "Product Development & Quality Systems",
     image: thomasMoore,
     linkedin: "https://www.linkedin.com/in/thomas-moore-phd-40016753/",
   },
