@@ -89,7 +89,7 @@ export function buildReportHtml(data: ReportData, isAdmin = false): string {
             ${dim.letter} — ${dim.title}
             <span style="float:right;font-size:14px;">${dim.score}/8 (${dim.percentage}%) — ${getLevelEmoji(dim.readinessLevel)} ${dim.readinessLevel}</span>
           </div>
-          <div style="font-size:12px;font-weight:400;color:rgba(255,255,255,0.82);margin-top:3px;">${dim.subtitle}</div>
+          ${dim.subtitle && dim.subtitle !== dim.title ? `<div style="font-size:12px;font-weight:400;color:rgba(255,255,255,0.82);margin-top:3px;">${dim.subtitle}</div>` : ""}
         </div>
         <table style="width:100%;border-collapse:collapse;border:1px solid #e5e5e5;border-top:none;">
           ${questionRows}
