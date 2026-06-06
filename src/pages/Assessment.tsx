@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ArrowRight, ArrowLeft, CheckCircle2, BarChart3, Calendar, Mail, Loader2 } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
-import { supabase } from "@/integrations/supabase/client";
+import { sendReportToZapier } from "@/lib/assessmentReport";
 import { toast } from "sonner";
 
 type Answer = "yes" | "partially" | "no" | null;
@@ -186,11 +186,7 @@ const Assessment = () => {
         maxTotalScore: maxScore,
       };
 
-      const { error } = await supabase.functions.invoke("send-assessment-report", {
-        body: reportData,
-      });
-
-      if (error) throw error;
+      await sendReportToZapier(reportData);
 
       setEmailSent(true);
       toast.success("Your detailed report has been sent! Check your inbox.");
