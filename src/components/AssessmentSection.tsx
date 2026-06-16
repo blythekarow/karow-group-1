@@ -8,7 +8,7 @@ const AssessmentSection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section ref={ref} className="relative py-20 overflow-hidden">
+    <section id="assessment" ref={ref} className="relative py-20 overflow-hidden scroll-mt-20">
       {/* Background image */}
       <div className="absolute inset-0">
         <img
