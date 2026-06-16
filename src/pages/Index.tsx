@@ -33,6 +33,18 @@ const Index = () => {
     }
   }, [location.state]);
 
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.slice(1);
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
+  }, [location.hash]);
+
   const jsonLd = useMemo(() => ({
     "@context": "https://schema.org",
     "@type": "Organization",
