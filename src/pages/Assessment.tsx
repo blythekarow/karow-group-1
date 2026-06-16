@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import usePageSEO from "@/hooks/use-page-seo";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -108,6 +108,17 @@ const Assessment = () => {
   const [email, setEmail] = useState("");
   const [sendingEmail, setSendingEmail] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
+
+  // Jump to the top whenever the dimension changes or results are shown.
+  // Temporarily disables the global `scroll-behavior: smooth` so the jump is
+  // instant and isn't interrupted by the layout shift on re-render.
+  useEffect(() => {
+    const html = document.documentElement;
+    const previous = html.style.scrollBehavior;
+    html.style.scrollBehavior = "auto";
+    window.scrollTo(0, 0);
+    html.style.scrollBehavior = previous;
+  }, [currentDimension, showResults]);
 
   const totalQuestions = dimensions.reduce((sum, d) => sum + d.questions.length, 0);
   const answeredCount = answers.flat().filter((a) => a !== null).length;
@@ -333,7 +344,7 @@ const Assessment = () => {
                   How Ready Is Your Product for Commercialization?
                 </h1>
                 <p className="text-muted-foreground max-w-xl mx-auto">
-                  Answer 24 questions across 6 dimensions to identify gaps in your commercialization readiness.
+                  Answer 4 questions across each of the 6 dimensions to identify gaps in your commercialization readiness.
                 </p>
               </>
             )}
@@ -420,10 +431,7 @@ const Assessment = () => {
           <div className="flex justify-between">
             <Button
               variant="outline"
-              onClick={() => {
-                setCurrentDimension((prev) => prev - 1);
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }}
+              onClick={() => setCurrentDimension((prev) => prev - 1)}
               disabled={currentDimension === 0}
             >
               <ArrowLeft className="mr-2 h-4 w-4" />
@@ -432,10 +440,7 @@ const Assessment = () => {
 
             {currentDimension < dimensions.length - 1 ? (
               <Button
-                onClick={() => {
-                  setCurrentDimension((prev) => prev + 1);
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }}
+                onClick={() => setCurrentDimension((prev) => prev + 1)}
                 disabled={!allCurrentAnswered}
                 className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground"
               >
@@ -444,10 +449,7 @@ const Assessment = () => {
               </Button>
             ) : (
               <Button
-                onClick={() => {
-                  setShowResults(true);
-                  window.scrollTo(0, 0);
-                }}
+                onClick={() => setShowResults(true)}
                 disabled={!allAnswered}
                 className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground"
               >
