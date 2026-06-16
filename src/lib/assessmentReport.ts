@@ -50,16 +50,55 @@ function getLevelEmoji(level: string): string {
   }
 }
 
-function getDimensionGuidance(letter: string, index: number): string {
-  const guidance: Record<string, string> = {
-    "D-0": "Gaps here typically mean your product development process isn't yet built to withstand regulatory scrutiny. Without a Design History File and documented risk management, you're likely to face costly rework when you engage the FDA. This is foundational work that needs to happen early — retrofitting it later is one of the most expensive mistakes in MedTech.",
-    "E-1": "If you're uncertain about your regulatory pathway or haven't explored special FDA programs, you may be leaving time and money on the table — or heading down the wrong road entirely. Reimbursement strategy and clinical workflow impact need to be part of your commercial model from day one, not figured out after clearance.",
-    "V-2": "Gaps in V&amp;V often don't surface until a submission is rejected or a study fails. Defining pass/fail criteria and validating your real-world system early protects your timeline and your budget at the most critical stage of commercialization.",
-    "I-3": "Data governance gaps create regulatory, legal, and cybersecurity exposure that can derail a submission or a partnership. As AI becomes more central to MedTech products, regulators are paying closer attention to exactly this dimension.",
-    "C-4": "Claims gaps are among the most expensive to fix late in the process because they touch everything — your regulatory strategy, your evidence plan, your marketing, and your sales team. A claims library isn't just a compliance document; it's the strategic spine of your entire commercialization effort.",
-    "E-5": "Without an aligned evidence strategy, you risk running studies that don't support your regulatory pathway, don't satisfy payer requirements, or don't hold up under clinical scrutiny. Evidence planning is most valuable — and least expensive — when it happens before the studies are designed.",
-  };
-  return guidance[`${letter}-${index}`] || "";
+const TIER_GUIDANCE: Record<string, Record<string, string>> = {
+  "0": {
+    "found": "Strong documentation discipline is the foundation everything else in MedTech is built on, and right now it looks like that work hasn't started. It needs to happen early, beginning with documented product specifications and your Design History File. Building it now keeps you on track; retrofitting it later adds real cost to your business and creates delays in your development timeline.",
+    "early": "Strong documentation discipline is the foundation everything else is built on, and you've made a start, though significant gaps remain. Now is the time to buckle down and fully commit to the quality systems successful MedTech companies rely on: documented user needs, a living Design History File, and integrated risk management (ISO 14971). Where you are in your own product development should tell you how much of this should already be in place.",
+    "dev": "Strong documentation discipline is the foundation everything else is built on, and you're clearly building it as you go, with most pieces in place. The work now is to tighten what's only partially done and connect it: keep your Design History File current, fully integrate risk management, and build a real post-market surveillance loop back into design. Depending on where you are in development, this is likely just your next phase.",
+    "strong": "Strong documentation discipline is the foundation everything else is built on, and yours shows it. Congratulations, you clearly know what's needed to execute here and you're working in the right direction. Keep this discipline consistent as your product and team scale."
+  },
+  "1": {
+    "found": "Most teams know they need to engage the FDA; the harder question this early is how to start. Start by developing your regulatory strategy: your pathway, classification, and predicate. Only once you have that strategy is it time for the next step, a Pre-Submission (Q-Sub) meeting to confirm it, because you should never go to the FDA without knowing your strategy first. The part people most underestimate is the economics: who actually pays for this, how, and what the clinical workflow looks like. You don't need a full reimbursement study yet, but you do need to start understanding these questions now, because they shape everything that follows.",
+    "early": "By now you likely know you need the FDA; the gap is usually the economics. Many teams know they need a reimbursement strategy but treat it as expensive and put it off. You don't have to run a full reimbursement landscape or market-access plan to make progress: you can start by being able to show investors you understand your clinical workflow and the health-economics argument you'll make. What you shouldn't delay is beginning an evidence-generation plan, because waiting is where millions of dollars get misspent and years get added to your commercialization timeline.",
+    "dev": "You've got a real handle on your pathway and the basics of who pays; the next phase is turning the economics from a someday task into an active plan. You still don't need a full market-access build-out, but you should be steadily working toward an evidence-generation plan that satisfies both the FDA and the people who pay, and pressure-testing your clinical workflow and health-economics argument with real stakeholders. Doing this earlier is how you avoid expensive rework and protect your commercialization timeline.",
+    "strong": "You clearly understand both your regulatory path and your economic model, and how they shape each other. Congratulations. Keep validating your reimbursement assumptions and health-economics argument with payers and providers as you go, so there are no surprises at launch."
+  },
+  "2": {
+    "found": "Here's the basic distinction, because it's often misunderstood: verification confirms you built the product to its specifications (largely bench testing), while validation confirms the product actually meets the user's needs in the real world (the one that typically involves real users). The exact testing depends on your FDA product code. People routinely underestimate how much verification testing is required, how long it takes, and what it adds to your timeline and budget, so getting proactive here early pays off. And the user needs you write into your very first product spec are exactly what your final validation testing has to prove.",
+    "early": "Verification confirms you built to spec; validation confirms you meet the user's needs in the real world. You've started defining your testing, but there are gaps. Get clear on the verification and validation expectations for your specific FDA product code, since they vary widely device to device, and don't underestimate the amount, time, and cost of verification testing, which you can plan for proactively. Most importantly, connect the thread: the user needs in your product spec should map directly to your validation testing.",
+    "dev": "Verification confirms you built to spec; validation confirms you meet user needs in the real world. Your V&amp;V approach is taking real shape. The next phase is making it airtight: define clear pass/fail criteria for every health-impacting feature, validate the actual system you'll ship rather than isolated components, and make sure your test conditions reflect real-world use, edge cases, and misuse. Tie each test back to a regulatory requirement and to the user need it proves.",
+    "strong": "Verification confirms you built to spec; validation confirms you meet user needs in the real world, and your plan connects the two end to end, from user needs through to the system you'll ship and the claims you'll make. Congratulations. Keep that traceability tight as the design evolves so nothing drifts out of scope."
+  },
+  "3": {
+    "found": "In medical devices, everything traces back to one question: is this safe for the patient? Keeping their data safe is part of that. Right now this area needs foundational attention: you should know exactly what data you collect, where it comes from, and how it's used, and make sure personally identifiable information is protected and can't be accessed or hacked. This isn't just IT hygiene; it's patient safety, and the FDA treats it that way.",
+    "early": "In medical devices, everything traces back to one question: is this safe for the patient, and keeping their data safe is part of that. You've started on data governance, but significant gaps remain. Nail down what data you collect and the rules for how it can be used, and separate and protect PII with clear retention and deletion policies. Build out your cybersecurity in earnest, and remember the FDA now expects you to be able to push software updates remotely, which means you need the security architecture to do that safely.",
+    "dev": "In medical devices, everything traces back to one question: is this safe for the patient, and keeping their data safe is part of that. You've got real data governance in place; the next phase is hardening it. Confirm your rules for analytics and any ML or AI use are documented, your PII protections and retention policies are airtight, and your cybersecurity covers authentication, encryption, vulnerability management, and safe remote updates. Regulators are scrutinizing exactly this as AI becomes more central to devices.",
+    "strong": "In medical devices, everything traces back to one question: is this safe for the patient, and your data governance and security reflect the standard the FDA expects, including safe remote-update capability. Congratulations. Keep it current as threats and AI expectations evolve."
+  },
+  "4": {
+    "found": "Everything starts with your claims, the clear statement of who you help and how. Your regulatory strategy, your evidence, and your marketing all stem from it, which is why this gap matters so much. Right now that foundation isn't defined. Begin by writing down exactly what you want to be able to say about your product and why, before you build anything else around it.",
+    "early": "Everything starts with your claims, the statement of who you help and why; your regulatory, evidence, and marketing all stem from it. You've started articulating them, but there's significant work to do. Build a formal claims library that defines what you can and can't say for each feature, and tie each claim to the evidence that backs it and to your intended FDA indication. Claims aren't a marketing afterthought; they're the spine everything downstream depends on.",
+    "dev": "Everything starts with your claims, the statement of who you help and why, and yours are well underway. The next phase is making it a living standard: document the evidence behind every claim, align it tightly with your FDA indication for use, and get marketing, sales, product, and partnerships all working from the same claims library rather than a document that just exists. That alignment keeps your whole commercialization effort consistent.",
+    "strong": "Everything starts with your claims, the statement of who you help and why, and yours are clearly defined, evidence-backed, and actually used as the strategic spine across your teams. Congratulations. Keep the library current as your indication and evidence expand."
+  },
+  "5": {
+    "found": "Evidence is how you prove every claim you make, to the FDA, to payers, and to clinicians, and right now there's no strategy behind it. Start by listing each claim you intend to make and the level of evidence it will require. Planning this before you design any studies is the cheapest time to get it right; figuring it out afterward means redoing work.",
+    "early": "Evidence is how you prove every claim you make, to the FDA, to payers, and to clinicians. You've begun thinking about it, but it isn't yet aligned. Make sure your evidence strategy maps to both your regulatory pathway and your market-access goals, so one body of work serves the FDA and your payers. Without that alignment, you risk running studies that don't support clearance or don't satisfy the people who decide whether to pay.",
+    "dev": "Evidence is how you prove every claim you make, to the FDA, to payers, and to clinicians, and your strategy is taking shape. The next phase is sequencing it: map how your studies build on each other over time rather than running one-offs, and confirm your data reflects the populations and environments you actually claim to serve. Tie each study back to a specific claim and pathway requirement.",
+    "strong": "Evidence is how you prove every claim you make, to the FDA, to payers, and to clinicians, and yours is aligned to your pathway, your claims, and your market-access goals, building logically over time. Congratulations. Keep it synced as your claims evolve."
+  }
+};
+
+function tierKey(level: string): string {
+  if (level === "Strong") return "strong";
+  if (level === "Developing") return "dev";
+  if (level === "Early Stage") return "early";
+  return "found";
+}
+
+function getDimensionGuidance(index: number, readinessLevel: string): string {
+  const d = TIER_GUIDANCE[String(index)];
+  return d ? (d[tierKey(readinessLevel)] || "") : "";
 }
 
 export function buildReportHtml(data: ReportData, isAdmin = false): string {
@@ -75,10 +114,11 @@ export function buildReportHtml(data: ReportData, isAdmin = false): string {
       </tr>
     `).join("");
 
-    const guidance = dim.readinessLevel !== "Strong" ? getDimensionGuidance(dim.letter, idx) : "";
+    const guidance = getDimensionGuidance(idx, dim.readinessLevel);
+    const isStrong = dim.readinessLevel === "Strong";
     const guidanceBlock = guidance ? `
-      <div style="background:#FFF8E1;border-left:4px solid #F59E0B;padding:12px 16px;margin-top:0;border-radius:0 0 8px 8px;font-size:14px;color:#555;line-height:1.6;">
-        <strong style="color:#333;">Where to focus:</strong> ${guidance}
+      <div style="background:${isStrong ? "#E8F5E9" : "#FFF8E1"};border-left:4px solid ${isStrong ? "#16a34a" : "#F59E0B"};padding:12px 16px;margin-top:0;border-radius:0 0 8px 8px;font-size:14px;color:#555;line-height:1.6;">
+        ${isStrong ? "" : '<strong style="color:#333;">Where to focus:</strong> '}${guidance}
       </div>
     ` : "";
 
@@ -86,8 +126,8 @@ export function buildReportHtml(data: ReportData, isAdmin = false): string {
       <div style="margin-bottom:24px;">
         <div style="background:#004D51;color:white;padding:12px 16px;border-radius:8px 8px 0 0;">
           <div style="font-weight:700;font-size:16px;">
-            ${dim.letter} — ${dim.title}
-            <span style="float:right;font-size:14px;">${dim.score}/8 (${dim.percentage}%) — ${getLevelEmoji(dim.readinessLevel)} ${dim.readinessLevel}</span>
+            ${dim.letter} – ${dim.title}
+            <span style="float:right;font-size:14px;">${dim.score}/8 (${dim.percentage}%) – ${getLevelEmoji(dim.readinessLevel)} ${dim.readinessLevel}</span>
           </div>
           ${dim.subtitle && dim.subtitle !== dim.title ? `<div style="font-size:12px;font-weight:400;color:rgba(255,255,255,0.82);margin-top:3px;">${dim.subtitle}</div>` : ""}
         </div>
@@ -98,6 +138,23 @@ export function buildReportHtml(data: ReportData, isAdmin = false): string {
       </div>
     `;
   }).join("");
+
+  const FRAMING = "Everything in MedTech starts with one thing: knowing who you're helping and how. That single idea – your user need – flows into the claims you make, the evidence and testing required to prove them, and ultimately the marketing you're allowed to do. The D.E.V.I.C.E. framework follows that chain end to end, from your first product spec to the marketing claims in your sales documents, so you understand not just your product but how you're expected to operate as a manufacturer.";
+  const lowestSet = [...data.dimensions].sort((a, b) => a.percentage - b.percentage).slice(0, 2);
+  const lowTwo = data.dimensions.filter((d) => lowestSet.includes(d)).map((d) => `<strong>${d.title.replace(/&/g, "&amp;")}</strong>`);
+  const lowTwoStr = lowTwo.length >= 2 ? `${lowTwo[0]} and ${lowTwo[1]}` : (lowTwo[0] || "");
+  const allStrong = data.dimensions.every((d) => d.readinessLevel === "Strong");
+  const summaryBody = allStrong
+    ? `<p style="margin:0 0 10px;"><strong style="color:#004D51;">Your biggest gaps:</strong> You're in strong shape across the board. Your lowest areas are:</p>
+              <p style="margin:0 0 10px;">${lowTwoStr}</p>
+              <p style="margin:0;">These are worth a final pass. The breakdown below has tailored guidance for each.</p>`
+    : `<p style="margin:0 0 10px;"><strong style="color:#004D51;">Your biggest gaps:</strong> We've identified the areas of your readiness with the most room to grow:</p>
+              <p style="margin:0 0 10px;">${lowTwoStr}</p>
+              <p style="margin:0;">You'll find tailored guidance for these and every dimension in the breakdown below.</p>`;
+  const prioritySummary = `
+            <div style="background:#F2F7F7;border-left:4px solid #004D51;border-radius:8px;padding:16px 18px;margin-bottom:32px;font-size:15px;color:#444;line-height:1.6;">
+              ${summaryBody}
+            </div>`;
 
   const adminNote = isAdmin
     ? `<div style="background:#FFF3CD;padding:12px 16px;border-radius:8px;margin-bottom:20px;font-size:14px;"><strong>📬 New Assessment Submission</strong> from <strong>${data.email}</strong></div>`
@@ -118,6 +175,8 @@ export function buildReportHtml(data: ReportData, isAdmin = false): string {
           <div style="padding:32px 24px;">
             ${adminNote}
 
+            <p style="color:#555;font-size:15px;line-height:1.6;margin:0 0 28px;">${FRAMING}</p>
+
             <div style="text-align:center;margin-bottom:32px;">
               <div style="font-size:64px;font-weight:800;color:#004D51;">${data.percentageScore}%</div>
               <div style="font-size:20px;font-weight:700;color:${
@@ -129,6 +188,8 @@ export function buildReportHtml(data: ReportData, isAdmin = false): string {
               <p style="color:#999;font-size:13px;margin-top:4px;">Total: ${data.totalScore} out of ${data.maxTotalScore} points</p>
             </div>
 
+            ${prioritySummary}
+
             <div style="margin-bottom:32px;">
               <h2 style="font-size:18px;color:#333;margin-bottom:16px;">Your Scores</h2>
               <table style="width:100%;border-collapse:collapse;border:1px solid #e5e5e5;border-radius:8px;overflow:hidden;">
@@ -136,7 +197,7 @@ export function buildReportHtml(data: ReportData, isAdmin = false): string {
                   <tr style="background:#f5f5f5;">
                     <th style="padding:10px 12px;text-align:left;font-size:14px;color:#333;">Dimension</th>
                     <th style="padding:10px 12px;text-align:center;font-size:14px;color:#333;">Score</th>
-                    <th style="padding:10px 12px;text-align:center;font-size:14px;color:#333;">Level</th>
+                    <th style="padding:10px 12px;text-align:left;font-size:14px;color:#333;">Level</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -144,13 +205,13 @@ export function buildReportHtml(data: ReportData, isAdmin = false): string {
                     <tr>
                       <td style="padding:10px 12px;border-top:1px solid #e5e5e5;font-size:14px;color:#555;"><strong>${dim.letter}</strong> ${dim.title}</td>
                       <td style="padding:10px 12px;border-top:1px solid #e5e5e5;text-align:center;font-size:14px;font-weight:600;color:#333;">${dim.score}/8</td>
-                      <td style="padding:10px 12px;border-top:1px solid #e5e5e5;text-align:center;font-size:14px;">${getLevelEmoji(dim.readinessLevel)} ${dim.readinessLevel}</td>
+                      <td style="padding:10px 12px;border-top:1px solid #e5e5e5;text-align:left;font-size:14px;">${getLevelEmoji(dim.readinessLevel)} ${dim.readinessLevel}</td>
                     </tr>
                   `).join("")}
                   <tr style="background:#f5f5f5;font-weight:700;">
                     <td style="padding:10px 12px;border-top:2px solid #ccc;font-size:14px;">OVERALL TOTAL</td>
                     <td style="padding:10px 12px;border-top:2px solid #ccc;text-align:center;font-size:14px;">${data.totalScore}/${data.maxTotalScore}</td>
-                    <td style="padding:10px 12px;border-top:2px solid #ccc;text-align:center;font-size:14px;">${getLevelEmoji(data.readinessLevel)} ${data.readinessLevel}</td>
+                    <td style="padding:10px 12px;border-top:2px solid #ccc;text-align:left;font-size:14px;">${getLevelEmoji(data.readinessLevel)} ${data.readinessLevel}</td>
                   </tr>
                 </tbody>
               </table>
@@ -199,8 +260,8 @@ export async function sendReportToZapier(data: ReportData): Promise<void> {
     dimensions: JSON.stringify(data.dimensions),
     userReportHtml,
     adminReportHtml,
-    userEmailSubject: `Your D.E.V.I.C.E.™ Readiness Score: ${data.percentageScore}% — ${data.readinessLevel}`,
-    adminEmailSubject: `New D.E.V.I.C.E.™ Assessment: ${data.email} — ${data.percentageScore}% (${data.readinessLevel})`,
+    userEmailSubject: `Your D.E.V.I.C.E.™ Readiness Score: ${data.percentageScore}% – ${data.readinessLevel}`,
+    adminEmailSubject: `New D.E.V.I.C.E.™ Assessment: ${data.email} – ${data.percentageScore}% (${data.readinessLevel})`,
     timestamp: new Date().toISOString(),
   };
 

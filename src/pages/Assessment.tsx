@@ -22,7 +22,7 @@ const dimensions: Dimension[] = [
   {
     letter: "D",
     title: "Development",
-    subtitle: "Design History & Development Discipline",
+    subtitle: "Product Development Discipline and Design History",
     questions: [
       "Do you have documented user needs that drive your product specifications?",
       "Have you started a Design History File (DHF) or equivalent development documentation?",
