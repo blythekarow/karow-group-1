@@ -422,7 +422,7 @@ const Assessment = () => {
               variant="outline"
               onClick={() => {
                 setCurrentDimension((prev) => prev - 1);
-                window.scrollTo({ top: 0, behavior: "smooth" });
+                window.scrollTo(0, 0);
               }}
               disabled={currentDimension === 0}
             >
@@ -434,7 +434,7 @@ const Assessment = () => {
               <Button
                 onClick={() => {
                   setCurrentDimension((prev) => prev + 1);
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo(0, 0);
                 }}
                 disabled={!allCurrentAnswered}
                 className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground"
