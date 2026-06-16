@@ -333,7 +333,7 @@ const Assessment = () => {
                   How Ready Is Your Product for Commercialization?
                 </h1>
                 <p className="text-muted-foreground max-w-xl mx-auto">
-                  Answer 24 questions across 6 dimensions to identify gaps in your commercialization readiness.
+                  Answer 4 questions across each of the 6 dimensions to identify gaps in your commercialization readiness.
                 </p>
               </>
             )}
