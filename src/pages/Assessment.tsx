@@ -323,16 +323,20 @@ const Assessment = () => {
       <section className="pt-32 pb-24 bg-background">
         <div className="container mx-auto px-4 md:px-6 max-w-3xl">
           {/* Header */}
-          <div className="text-center mb-10">
+          <div className={`text-center ${currentDimension === 0 ? "mb-10" : "mb-6"}`}>
             <p className="text-sm uppercase tracking-[2px] text-primary font-semibold mb-3">
               D.E.V.I.C.E.™ Readiness Assessment
             </p>
-            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              How Ready Is Your Product for Commercialization?
-            </h1>
-            <p className="text-muted-foreground max-w-xl mx-auto">
-              Answer 24 questions across 6 dimensions to identify gaps in your commercialization readiness.
-            </p>
+            {currentDimension === 0 && (
+              <>
+                <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                  How Ready Is Your Product for Commercialization?
+                </h1>
+                <p className="text-muted-foreground max-w-xl mx-auto">
+                  Answer 24 questions across 6 dimensions to identify gaps in your commercialization readiness.
+                </p>
+              </>
+            )}
           </div>
 
           {/* Progress */}
@@ -416,7 +420,10 @@ const Assessment = () => {
           <div className="flex justify-between">
             <Button
               variant="outline"
-              onClick={() => setCurrentDimension((prev) => prev - 1)}
+              onClick={() => {
+                setCurrentDimension((prev) => prev - 1);
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
               disabled={currentDimension === 0}
             >
               <ArrowLeft className="mr-2 h-4 w-4" />
@@ -425,7 +432,10 @@ const Assessment = () => {
 
             {currentDimension < dimensions.length - 1 ? (
               <Button
-                onClick={() => setCurrentDimension((prev) => prev + 1)}
+                onClick={() => {
+                  setCurrentDimension((prev) => prev + 1);
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
                 disabled={!allCurrentAnswered}
                 className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground"
               >
