@@ -19,13 +19,13 @@ interface ServiceArea {
 const serviceAreas: ServiceArea[] = [
   {
     title: "Product & Business Case Definition",
-    description: "Product definition, market positioning, value proposition development, regulatory pathway optimization, and understanding whose pain point you're addressing and how.",
+    description: "It starts with deciding which market to lead with. Our beachhead prioritization is a rigorous, structured process that weighs your options and identifies the strongest U.S. entry market for what you're trying to accomplish strategically, not a guess or a gut call. Once your beachhead is set, we build a full, investor-ready business case around it: market sizing, go-to-market cost and timeline, the capital you'll need over the next 18 to 24 months, and a clear regulatory plan, all designed to support your fundraising.",
     items: [
       "Product strategy and roadmap development",
       "Market analysis and competitive positioning",
-      "Value proposition and business case development",
+      "Investor-ready business case and fundraising support",
       "Regulatory pathway assessment (510(k), De Novo, PMA, Breakthrough)",
-      "Target market identification and pain point validation",
+      "Beachhead market prioritization (structured, scored selection)",
       "Claims strategy foundation",
     ],
     image: businessOfficeTeamImage,
@@ -33,8 +33,8 @@ const serviceAreas: ServiceArea[] = [
     id: "product-definition",
   },
   {
-    title: "Commercialization Planning & Execution",
-    description: "Go-to-market planning, channel strategy, reimbursement planning, health economics and reimbursement, evidence strategy, market access, and clinical workflow integration.",
+    title: "Go-to-Market Strategy",
+    description: "The work that decides whether your product will actually sell, and the part investors expect you to have figured out early, not after clearance. We define who buys it, whether it fits their clinical workflow, who pays and through what pathway, and the economic case you'll need to make. Getting this right early is what keeps you from spending years and millions proving the wrong thing. It's also where our Market Access Fundamentals modules give you an affordable, defined place to start.",
     items: [
       "Go-to-market strategy and launch planning",
       "Channel strategy and partnership development",
@@ -47,11 +47,11 @@ const serviceAreas: ServiceArea[] = [
     ],
     image: commercializationPlanningImage,
     imageAlt: "Team workshop for commercialization planning",
-    id: "commercialization",
+    id: "go-to-market",
   },
   {
     title: "Strategic Advisory & Leadership",
-    description: "Fractional leadership and ongoing strategic advisory to guide complex decision-making and enable sustainable growth.",
+    description: "Sometimes what you need isn't a project, it's ongoing guidance from someone who has done this before. We provide continued advice and support, either as a strategic advisor weighing in on the decisions that matter, or as a more embedded part of your team with dedicated hours, closer to fractional leadership. Either way, you get senior commercialization experience in your corner, and the confidence that gives your team, your board, and your investors.",
     items: [
       "Fractional CPO/CCO/COO leadership",
       "Strategic planning and decision support",
