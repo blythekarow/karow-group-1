@@ -89,7 +89,6 @@ const serviceAreas: ServiceArea[] = [
         price: "$10,000",
       },
     ],
-    startupNote: "Early-stage and pre-funding startups: ask about reduced pricing.",
     image: commercializationPlanningImage,
     imageAlt: "Team mapping commercial viability and market access",
     id: "commercial-viability",
