@@ -16,20 +16,20 @@ interface ServiceCard {
 
 const services: ServiceCard[] = [
   {
-    title: "Product & Business Case Definition",
+    title: "Product Strategy & Business Case",
     description:
       "Pick the right beachhead market to lead with, and build the investor-ready business case to fund it.",
     cta: "Explore Product Strategy",
     image: businessOfficeTeamImage,
-    link: "/services#product-definition",
+    link: "/services#product-strategy",
   },
   {
-    title: "Go-to-Market Strategy",
+    title: "Commercial Viability",
     description:
-      "Understand whether the market will actually adopt and pay for your product before you commit, starting with our Market Access Fundamentals.",
-    cta: "Explore Go-to-Market Strategy",
+      "Whether your product will actually be adopted and paid for, the question that decides your whole strategy, answered early, not after clearance.",
+    cta: "Explore Commercial Viability",
     image: commercializationPlanningImage,
-    link: "/services#go-to-market",
+    link: "/services#commercial-viability",
   },
   {
     title: "Strategic Advisory & Leadership",
