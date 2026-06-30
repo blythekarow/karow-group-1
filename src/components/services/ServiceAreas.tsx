@@ -162,67 +162,72 @@ const ServiceImage = ({ service, imageLeft, blockColor, isVisible }: { service: 
 const ServiceAreaSection = ({ service, imageLeft, bgClass, blockColor }: ServiceAreaSectionProps) => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
-  // Commercial Viability (modules): image + heading row to match the other groups, then the cards
+  // Commercial Viability (modules): full-width image banner with heading over it,
+  // then module cards hanging below — mirrors the "How We Work Together" section.
   if (service.modules) {
     return (
-      <section id={service.id} ref={ref} className={`py-16 md:py-20 ${bgClass} overflow-hidden scroll-mt-20`}>
-        <div className="container mx-auto px-8 md:px-16 lg:px-24">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-14">
-            <ServiceImage service={service} imageLeft={imageLeft} blockColor={blockColor} isVisible={isVisible} />
-            <div
-              className={`${imageLeft ? "lg:order-2" : "lg:order-1"} transition-all duration-700 delay-200 ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{service.title}</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-4">{service.description}</p>
-              {service.moduleLabel && (
-                <p className="text-sm uppercase tracking-[2px] text-primary font-semibold">{service.moduleLabel}</p>
-              )}
+      <section id={service.id} ref={ref} className="relative overflow-visible scroll-mt-20">
+        {/* Image banner */}
+        <div className="relative h-[400px] md:h-[460px]">
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${service.image})` }} />
+          <div className="absolute inset-0 bg-black/60" />
+          <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4 pb-24 md:pb-28">
+            <div className={`w-16 h-1 bg-primary rounded-full mb-6 transition-all duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`} />
+            <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+              {service.title}
+            </h2>
+            <p className="text-base md:text-lg text-white/85 max-w-2xl mb-3 leading-relaxed">{service.description}</p>
+            {service.moduleLabel && (
+              <p className="text-sm uppercase tracking-[2px] text-primary font-semibold">{service.moduleLabel}</p>
+            )}
+          </div>
+        </div>
+
+        {/* Overhanging module cards, spaced with arrows */}
+        <div className="bg-cream pb-16 md:pb-20">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="flex flex-col md:flex-row items-stretch justify-center gap-4 max-w-6xl mx-auto -mt-16 md:-mt-24 relative z-20">
+              {service.modules.map((m, i) => (
+                <Fragment key={i}>
+                  <div
+                    className={`flex-1 bg-white rounded-lg shadow-xl p-6 md:p-8 flex flex-col transition-all duration-700 ${
+                      isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                    }`}
+                    style={{ transitionDelay: `${i * 150 + 200}ms` }}
+                  >
+                    <span className="text-5xl md:text-6xl font-serif font-light text-tan leading-none mb-4">{m.number}</span>
+                    <h3 className="text-lg md:text-xl font-bold text-foreground mb-3">{m.title}</h3>
+                    <p className="text-secondary font-semibold italic text-sm mb-3 leading-snug">{m.question}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-6">{m.body}</p>
+                    <div className="mt-auto pt-4 border-t border-border">
+                      <span className="text-2xl font-bold text-foreground">{m.price}</span>
+                    </div>
+                  </div>
+                  {i < service.modules!.length - 1 && (
+                    <div className="flex items-center justify-center text-tan shrink-0">
+                      <ArrowRight className="w-7 h-7 rotate-90 md:rotate-0" />
+                    </div>
+                  )}
+                </Fragment>
+              ))}
             </div>
-          </div>
 
-          <div className="flex flex-col md:flex-row items-stretch justify-center gap-4 max-w-6xl mx-auto">
-            {service.modules.map((m, i) => (
-              <Fragment key={i}>
-                <div
-                  className={`flex-1 bg-white rounded-lg shadow-lg p-6 md:p-8 flex flex-col transition-all duration-700 ${
-                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                  }`}
-                  style={{ transitionDelay: `${i * 150 + 200}ms` }}
-                >
-                  <span className="text-5xl md:text-6xl font-serif font-light text-tan leading-none mb-4">{m.number}</span>
-                  <h3 className="text-lg md:text-xl font-bold text-foreground mb-3">{m.title}</h3>
-                  <p className="text-primary font-semibold italic text-sm mb-3 leading-snug">{m.question}</p>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-6">{m.body}</p>
-                  <div className="mt-auto pt-4 border-t border-border">
-                    <span className="text-2xl font-bold text-foreground">{m.price}</span>
-                  </div>
-                </div>
-                {i < service.modules!.length - 1 && (
-                  <div className="flex items-center justify-center text-tan shrink-0">
-                    <ArrowRight className="w-7 h-7 rotate-90 md:rotate-0" />
-                  </div>
-                )}
-              </Fragment>
-            ))}
-          </div>
+            {service.startupNote && (
+              <p className="text-center text-sm text-muted-foreground/70 italic mt-8">{service.startupNote}</p>
+            )}
 
-          {service.startupNote && (
-            <p className="text-center text-sm text-muted-foreground/70 italic mt-8">{service.startupNote}</p>
-          )}
-
-          <div className="text-center mt-8">
-            <Button
-              asChild
-              size="lg"
-              className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-base font-semibold px-8 py-4 rounded-md"
-            >
-              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-                Book a Discovery Call
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </Button>
+            <div className="text-center mt-8">
+              <Button
+                asChild
+                size="lg"
+                className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-base font-semibold px-8 py-4 rounded-md"
+              >
+                <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+                  Book a Discovery Call
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
