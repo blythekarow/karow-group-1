@@ -10,23 +10,39 @@ const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-
 interface ServiceArea {
   title: string;
   description: string;
-  items: string[];
+  items?: string[];
+  steps?: { name: string; items: string[] }[];
   image: string;
   imageAlt: string;
   id: string;
 }
 
 const serviceAreas: ServiceArea[] = [
-  {
+    {
     title: "Product & Business Case Definition",
-    description: "It starts with deciding which market to lead with. Our beachhead prioritization is a rigorous, structured process that weighs your options and identifies the strongest U.S. entry market for what you're trying to accomplish strategically, not a guess or a gut call. Once your beachhead is set, we build a full, investor-ready business case around it: market sizing, go-to-market cost and timeline, the capital you'll need over the next 18 to 24 months, and a clear regulatory plan, all designed to support your fundraising.",
-    items: [
-      "Product strategy and roadmap development",
-      "Market analysis and competitive positioning",
-      "Investor-ready business case and fundraising support",
-      "Regulatory pathway assessment (510(k), De Novo, PMA, Breakthrough)",
-      "Beachhead market prioritization (structured, scored selection)",
-      "Claims strategy foundation",
+    description:
+      "Built around your company and your technology, never a template. We work through two structured steps to give you a deliberate market choice and the case to act on it, whether your next move is raising capital, partnering, or entering the market on your own terms.",
+    steps: [
+      {
+        name: "Beachhead Market Prioritization",
+        items: [
+          "Your strategic goals and your technology's real-world potential",
+          "Market opportunity and competitive landscape",
+          "Regulatory and economic signals for each option",
+          "Initial channel and adoption exploration",
+          "A clear, defensible recommendation",
+        ],
+      },
+      {
+        name: "Business Case",
+        items: [
+          "Market sizing for your beachhead",
+          "Go-to-market plan and timeline",
+          "Capital and resources required",
+          "Regulatory pathway recommendation",
+          "A case ready for investors, your board, or partners",
+        ],
+      },
     ],
     image: businessOfficeTeamImage,
     imageAlt: "Executive strategy session for product definition",
@@ -136,15 +152,35 @@ const ServiceAreaSection = ({ service, imageLeft, bgClass, blockColor }: Service
               {service.description}
             </p>
             
-            {/* Bullet list */}
-            <ul className="space-y-1.5 mb-8 pl-4">
-              {service.items.map((item, idx) => (
-                <li key={idx} className="flex items-start gap-2 text-muted-foreground">
-                  <span className="text-primary mt-0.5 shrink-0">•</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+            {/* Steps (when present) or flat bullet list */}
+            {service.steps ? (
+              <div className="space-y-6 mb-8">
+                {service.steps.map((step, sIdx) => (
+                  <div key={sIdx}>
+                    <h3 className="text-base font-bold text-foreground mb-2">
+                      <span className="text-primary">{sIdx + 1}.</span> {step.name}
+                    </h3>
+                    <ul className="space-y-1.5 pl-4">
+                      {step.items.map((item, idx) => (
+                        <li key={idx} className="flex items-start gap-2 text-muted-foreground">
+                          <span className="text-primary mt-0.5 shrink-0">•</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <ul className="space-y-1.5 mb-8 pl-4">
+                {service.items?.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-2 text-muted-foreground">
+                    <span className="text-primary mt-0.5 shrink-0">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
             
             <Button
               asChild
