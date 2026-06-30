@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import businessOfficeTeamImage from "@/assets/business-office-team.jpg";
+import commercializationPlanningImage from "@/assets/commercialization-planning.jpg";
 import strategicAdvisoryImage from "@/assets/strategic-advisory-meeting.jpg";
 
 const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
@@ -89,6 +90,8 @@ const serviceAreas: ServiceArea[] = [
       },
     ],
     startupNote: "Early-stage and pre-funding startups: ask about reduced pricing.",
+    image: commercializationPlanningImage,
+    imageAlt: "Team mapping commercial viability and market access",
     id: "commercial-viability",
   },
   {
@@ -96,11 +99,11 @@ const serviceAreas: ServiceArea[] = [
     description:
       "Sometimes what you need isn't a project, it's ongoing guidance from someone who has done this before. We provide continued advice and support, either as a strategic advisor weighing in on the decisions that matter, or as a more embedded part of your team with dedicated hours, closer to fractional leadership. Either way, you get senior commercialization experience in your corner, and the confidence that gives your team, your board, and your investors.",
     items: [
+      "Ongoing strategic advisory",
       "Fractional CPO/CCO/COO leadership",
       "Strategic planning and decision support",
-      "Cross-functional team coordination",
-      "Ongoing strategic advisory",
       "Investor and board readiness support",
+      "Cross-functional team coordination",
       "Strategic partnership facilitation",
     ],
     image: strategicAdvisoryImage,
@@ -139,26 +142,44 @@ interface ServiceAreaSectionProps {
   blockColor: string;
 }
 
+const ServiceImage = ({ service, imageLeft, blockColor, isVisible }: { service: ServiceArea; imageLeft: boolean; blockColor: string; isVisible: boolean; }) => (
+  <div
+    className={`relative ${imageLeft ? "lg:order-1" : "lg:order-2"} transition-all duration-700 ${
+      isVisible ? "opacity-100 translate-x-0" : imageLeft ? "opacity-0 -translate-x-8" : "opacity-0 translate-x-8"
+    }`}
+  >
+    <div className="relative">
+      <div className={`absolute -top-8 ${imageLeft ? "-left-8" : "-right-8"} w-[55%] h-[50%] ${blockColor} hidden lg:block`} />
+      <img
+        src={service.image}
+        alt={service.imageAlt}
+        className="relative z-10 w-full shadow-2xl object-cover h-72 lg:h-96"
+      />
+    </div>
+  </div>
+);
+
 const ServiceAreaSection = ({ service, imageLeft, bgClass, blockColor }: ServiceAreaSectionProps) => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
-  // Module layout (Commercial Viability) — big serif numbers, cards spaced with arrows
+  // Commercial Viability (modules): image + heading row to match the other groups, then the cards
   if (service.modules) {
     return (
       <section id={service.id} ref={ref} className={`py-16 md:py-20 ${bgClass} overflow-hidden scroll-mt-20`}>
-        <div className="container mx-auto px-4 md:px-6">
-          <div
-            className={`max-w-3xl mx-auto text-center mb-12 transition-all duration-700 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{service.title}</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-5">{service.description}</p>
-            {service.moduleLabel && (
-              <p className="text-sm uppercase tracking-[2px] text-primary font-semibold">
-                {service.moduleLabel}
-              </p>
-            )}
+        <div className="container mx-auto px-8 md:px-16 lg:px-24">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-14">
+            <ServiceImage service={service} imageLeft={imageLeft} blockColor={blockColor} isVisible={isVisible} />
+            <div
+              className={`${imageLeft ? "lg:order-2" : "lg:order-1"} transition-all duration-700 delay-200 ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{service.title}</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-4">{service.description}</p>
+              {service.moduleLabel && (
+                <p className="text-sm uppercase tracking-[2px] text-primary font-semibold">{service.moduleLabel}</p>
+              )}
+            </div>
           </div>
 
           <div className="flex flex-col md:flex-row items-stretch justify-center gap-4 max-w-6xl mx-auto">
@@ -170,9 +191,7 @@ const ServiceAreaSection = ({ service, imageLeft, bgClass, blockColor }: Service
                   }`}
                   style={{ transitionDelay: `${i * 150 + 200}ms` }}
                 >
-                  <span className="text-5xl md:text-6xl font-serif font-light text-tan leading-none mb-4">
-                    {m.number}
-                  </span>
+                  <span className="text-5xl md:text-6xl font-serif font-light text-tan leading-none mb-4">{m.number}</span>
                   <h3 className="text-lg md:text-xl font-bold text-foreground mb-3">{m.title}</h3>
                   <p className="text-primary font-semibold italic text-sm mb-3 leading-snug">{m.question}</p>
                   <p className="text-muted-foreground text-sm leading-relaxed mb-6">{m.body}</p>
@@ -210,26 +229,12 @@ const ServiceAreaSection = ({ service, imageLeft, bgClass, blockColor }: Service
     );
   }
 
-  // Standard layout (steps or bullet items) with offset image
+  // Standard layout (steps or bullet items)
   return (
     <section id={service.id} ref={ref} className={`py-16 ${bgClass} overflow-hidden scroll-mt-20`}>
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div
-            className={`relative ${imageLeft ? "lg:order-1" : "lg:order-2"} transition-all duration-700 ${
-              isVisible ? "opacity-100 translate-x-0" : imageLeft ? "opacity-0 -translate-x-8" : "opacity-0 translate-x-8"
-            }`}
-          >
-            <div className="relative">
-              <div className={`absolute -top-8 ${imageLeft ? "-left-8" : "-right-8"} w-[55%] h-[50%] ${blockColor} hidden lg:block`} />
-              <img
-                src={service.image}
-                alt={service.imageAlt}
-                className="relative z-10 w-full shadow-2xl object-cover h-72 lg:h-96"
-              />
-            </div>
-          </div>
-
+          <ServiceImage service={service} imageLeft={imageLeft} blockColor={blockColor} isVisible={isVisible} />
           <div
             className={`${imageLeft ? "lg:order-2" : "lg:order-1"} transition-all duration-700 delay-200 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
