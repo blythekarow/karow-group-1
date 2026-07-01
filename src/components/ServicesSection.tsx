@@ -16,25 +16,25 @@ interface ServiceCard {
 
 const services: ServiceCard[] = [
   {
-    title: "Product & Business Case Definition",
+    title: "Product Strategy & Business Case",
     description:
-      "Product definition, market positioning, value proposition development, regulatory pathway optimization, and understanding whose pain point you're addressing and how.",
+      "Pick the right beachhead market to lead with, and build the investor-ready business case to fund it.",
     cta: "Explore Product Strategy",
     image: businessOfficeTeamImage,
-    link: "/services#product-definition",
+    link: "/services#product-strategy",
   },
   {
-    title: "Commercialization Planning & Execution",
+    title: "Commercial Viability",
     description:
-      "Go-to-market planning, channel strategy, reimbursement planning, health economics and reimbursement, evidence strategy, market access, and clinical workflow integration.",
-    cta: "Explore Commercialization Services",
+      "Whether your product will actually be adopted and paid for, the question that decides your whole strategy, answered early, not after clearance.",
+    cta: "Explore Commercial Viability",
     image: commercializationPlanningImage,
-    link: "/services#commercialization",
+    link: "/services#commercial-viability",
   },
   {
     title: "Strategic Advisory & Leadership",
     description:
-      "Fractional leadership and ongoing strategic advisory to guide complex decision-making and enable sustainable growth.",
+      "Ongoing senior guidance, as an advisor or embedded in your team, through the decisions that matter most.",
     cta: "Explore Strategic Leadership",
     image: strategicAdvisoryImage,
     link: "/services#strategic-advisory",
