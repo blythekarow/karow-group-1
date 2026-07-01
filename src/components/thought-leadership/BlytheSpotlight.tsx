@@ -1,28 +1,37 @@
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Mic2 } from "lucide-react";
-import blythePhoto from "@/assets/blythe-white-blazer.png";
+import blytheMain from "@/assets/blythe-stage-main.jpg";
+import lsiPanel from "@/assets/blythe-lsi-panel.jpg";
+import medtechWorld from "@/assets/blythe-medtech-world.jpg";
+import medtechInnovator from "@/assets/blythe-medtech-innovator.jpg";
 
 const SPEAKING_INQUIRY = "mailto:blythe.karow@gmail.com?subject=Speaking%20Engagement%20Inquiry";
 
+const gallery = [
+  { src: lsiPanel, alt: "Blythe Karow on a panel at LSI USA" },
+  { src: medtechWorld, alt: "Blythe Karow speaking at MedTech World" },
+  { src: medtechInnovator, alt: "Blythe Karow at MedTech Innovator" },
+];
+
 const BlytheSpotlight = () => {
-  const { ref, isVisible } = useScrollAnimation({ threshold: 0.15 });
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.12 });
 
   return (
     <section id="the-voice" ref={ref} className="py-16 md:py-20 bg-accent overflow-hidden scroll-mt-20">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
-          {/* Photo */}
+          {/* Main stage photo */}
           <div
             className={`relative transition-all duration-700 ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
             }`}
           >
             <div className="relative">
-              <div className="absolute -top-8 -left-8 w-[55%] h-[50%] bg-primary hidden lg:block" />
+              <div className="absolute -top-6 -left-6 w-[55%] h-[55%] bg-primary hidden lg:block" />
               <img
-                src={blythePhoto}
-                alt="Blythe Karow, speaker and voice in MedTech"
+                src={blytheMain}
+                alt="Blythe Karow speaking on stage at MedTech World"
                 className="relative z-10 w-full max-w-md mx-auto shadow-2xl object-cover"
               />
             </div>
@@ -57,6 +66,23 @@ const BlytheSpotlight = () => {
               </a>
             </Button>
           </div>
+        </div>
+
+        {/* Conference gallery */}
+        <div
+          className={`grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-6xl mx-auto mt-12 transition-all duration-700 delay-300 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
+          {gallery.map((g, i) => (
+            <div key={i} className="overflow-hidden shadow-lg">
+              <img
+                src={g.src}
+                alt={g.alt}
+                className="w-full h-56 object-cover hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>
