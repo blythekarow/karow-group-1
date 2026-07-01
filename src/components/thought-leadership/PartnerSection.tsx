@@ -40,7 +40,6 @@ const tiers: Tier[] = [
       "Logo in podcast emails and visuals",
       "Category exclusivity in podcast content",
     ],
-    note: "Available only to companies serving the MedTech community.",
   },
 ];
 

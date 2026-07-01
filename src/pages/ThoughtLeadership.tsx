@@ -36,10 +36,10 @@ const ThoughtLeadership = () => {
       <ThoughtLeadershipHero />
       <BlytheSpotlight />
       <RecentArticles />
-      <NewsletterSignup />
       <DeviceFilesPodcast />
       <SpeakingSection />
       <PartnerSection />
+      <NewsletterSignup />
       <DualCTA />
       <Footer />
     </div>
