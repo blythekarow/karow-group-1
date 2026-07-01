@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { Mail } from "lucide-react";
+import { Calendar } from "lucide-react";
 
-const PARTNER_EMAIL = "mailto:thedevicefiles@gmail.com?subject=Partnership%20Inquiry%20-%20The%20Device%20Files";
+const PARTNER_CALENDLY = "https://calendly.com/blythe-karow"; // placeholder base link; swap to dedicated 30-min partnership event
 
 interface Tier {
   name: string;
@@ -93,9 +93,9 @@ const PartnerSection = () => {
             size="lg"
             className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-base font-semibold px-8 py-4 rounded-md"
           >
-            <a href={PARTNER_EMAIL}>
-              <Mail className="mr-2 h-5 w-5" />
-              Discuss a Partnership
+            <a href={PARTNER_CALENDLY} target="_blank" rel="noopener noreferrer">
+              <Calendar className="mr-2 h-5 w-5" />
+              Schedule a 30-Minute Call
             </a>
           </Button>
         </div>
