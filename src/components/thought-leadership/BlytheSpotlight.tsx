@@ -10,7 +10,7 @@ const SPEAKING_INQUIRY = "mailto:blythe.karow@gmail.com?subject=Speaking%20Engag
 
 const gallery = [
   { src: lsiPanel, alt: "Blythe Karow on a panel at LSI USA" },
-  { src: medtechWorld, alt: "Blythe Karow speaking at MedTech World" },
+  { src: medtechWorld, alt: "Blythe Karow on a panel at MedTech World North America" },
   { src: medtechInnovator, alt: "Blythe Karow at MedTech Innovator" },
 ];
 
@@ -31,7 +31,7 @@ const BlytheSpotlight = () => {
               <div className="absolute -top-6 -left-6 w-[55%] h-[55%] bg-primary hidden lg:block" />
               <img
                 src={blytheMain}
-                alt="Blythe Karow speaking on stage at MedTech World"
+                alt="Blythe Karow speaking on stage with a microphone at MedTech World"
                 className="relative z-10 w-full max-w-md mx-auto shadow-2xl object-cover"
               />
             </div>
