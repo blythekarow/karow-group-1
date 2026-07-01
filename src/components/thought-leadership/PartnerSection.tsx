@@ -34,15 +34,13 @@ const tiers: Tier[] = [
   },
   {
     name: "Premier Podcast Partner",
-    lead: "All partner benefits, plus:",
+    lead: "A standalone podcast sponsorship, separate from the publication partnerships:",
     items: [
-      "Exclusive podcast sponsor",
-      "Verbal callout in every episode",
+      "Exclusive podcast sponsor, with a verbal advertisement in every episode",
       "Logo in podcast emails and visuals",
-      "Inclusion in the weekly Top Five carousels",
-      "Category exclusivity in commercialization podcast content",
+      "Category exclusivity in podcast content",
     ],
-    note: "Available only to companies supporting commercialization in MedTech.",
+    note: "Available only to companies serving the MedTech community.",
   },
 ];
 
