@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { ArrowRight, ExternalLink } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
 
 const SUBSTACK_URL = "https://blythekarow.substack.com/";
 
@@ -22,11 +21,8 @@ const RecentArticles = () => {
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        const { data, error } = await supabase.functions.invoke('substack-feed');
-        if (error) {
-          console.error('Error fetching articles:', error);
-          return;
-        }
+        const res = await fetch('/api/substack-feed');
+        const data = await res.json();
         if (data?.posts) {
           setArticles(data.posts);
         }
