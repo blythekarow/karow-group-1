@@ -6,6 +6,7 @@ import RecentArticles from "@/components/thought-leadership/RecentArticles";
 import NewsletterSignup from "@/components/thought-leadership/NewsletterSignup";
 import DeviceFilesPodcast from "@/components/thought-leadership/DeviceFilesPodcast";
 import SpeakingSection from "@/components/thought-leadership/SpeakingSection";
+import PartnerSection from "@/components/thought-leadership/PartnerSection";
 import DualCTA from "@/components/thought-leadership/DualCTA";
 import Footer from "@/components/Footer";
 
@@ -36,6 +37,7 @@ const ThoughtLeadership = () => {
       <NewsletterSignup />
       <DeviceFilesPodcast />
       <SpeakingSection />
+      <PartnerSection />
       <DualCTA />
       <Footer />
     </div>

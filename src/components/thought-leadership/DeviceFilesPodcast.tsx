@@ -44,7 +44,7 @@ const DeviceFilesPodcast = () => {
             </div>
 
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              The Device Files Podcast: Commercialization Confidential
+              The Device Files Podcast
             </h2>
 
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
@@ -75,9 +75,9 @@ const DeviceFilesPodcast = () => {
               <Mic className="h-6 w-6 text-primary" />
             </div>
             <div>
-              <h4 className="font-bold text-foreground mb-1">Share Your Commercialization Story</h4>
+              <h4 className="font-bold text-foreground mb-1">Interested in Being on the Podcast?</h4>
               <p className="text-sm text-muted-foreground">
-                Have insights to share? We're always looking for guests with unique perspectives.
+                We're always looking for guests with a sharp perspective on bringing products to market. If that's you, or someone you know, we'd love to hear from you.
               </p>
             </div>
             <Button
@@ -86,7 +86,7 @@ const DeviceFilesPodcast = () => {
               size="sm"
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
             >
-              <a href="mailto:thedevicefiles@gmail.com?subject=Podcast Guest Nomination">Nominate</a>
+              <a href="mailto:thedevicefiles@gmail.com?subject=Podcast Guest Interest">Get in Touch</a>
             </Button>
           </CardContent>
         </Card>
