@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import usePageSEO from "@/hooks/use-page-seo";
 import Navbar from "@/components/Navbar";
 import ThoughtLeadershipHero from "@/components/thought-leadership/ThoughtLeadershipHero";
+import BlytheSpotlight from "@/components/thought-leadership/BlytheSpotlight";
 import RecentArticles from "@/components/thought-leadership/RecentArticles";
 import NewsletterSignup from "@/components/thought-leadership/NewsletterSignup";
 import DeviceFilesPodcast from "@/components/thought-leadership/DeviceFilesPodcast";
@@ -33,6 +34,7 @@ const ThoughtLeadership = () => {
     <div className="min-h-screen">
       <Navbar />
       <ThoughtLeadershipHero />
+      <BlytheSpotlight />
       <RecentArticles />
       <NewsletterSignup />
       <DeviceFilesPodcast />
