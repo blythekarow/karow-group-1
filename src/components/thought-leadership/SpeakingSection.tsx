@@ -11,8 +11,8 @@ interface SpeakingTopic {
 const topics: SpeakingTopic[] = [
   { title: "Where to draw the line between wellness and medical device" },
   { title: "Integrated commercialization strategy for medical devices" },
-  { title: "What startups get wrong about integrating subject expertise" },
-  { title: "Building investor-ready commercialization plans" },
+  { title: "The future of wearables and AI in US healthcare" },
+  { title: "When consumer wearables become medical devices: navigating the U.S. market" },
 ];
 
 interface SpeakingFormat {
