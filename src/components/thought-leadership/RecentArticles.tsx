@@ -46,7 +46,7 @@ const RecentArticles = () => {
   };
 
   return (
-    <section id="recent-articles" ref={ref} className="pt-16 pb-16 bg-cream overflow-hidden scroll-mt-20">
+    <section id="recent-articles" ref={ref} className="pt-16 pb-16 bg-accent overflow-hidden scroll-mt-20">
       <div className="container mx-auto px-4 md:px-6">
         {/* Header */}
         <div
@@ -55,10 +55,10 @@ const RecentArticles = () => {
           }`}
         >
           <p className="text-sm uppercase tracking-[2px] text-primary font-semibold mb-4">Insights</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-background mb-4">
             Join the 1,500+ Leaders Reading The Device Files Weekly
           </h2>
-          <p className="text-lg text-muted-foreground max-w-5xl mx-auto whitespace-nowrap">
+          <p className="text-lg text-background/70 max-w-5xl mx-auto whitespace-nowrap">
             Recent articles and analysis: strategic insights on what it really takes to bring medical devices to market.
           </p>
         </div>
@@ -125,7 +125,7 @@ const RecentArticles = () => {
             asChild
             size="lg"
             variant="outline"
-            className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-base font-semibold px-8 py-4"
+            className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-200 text-base font-semibold px-8 py-4"
           >
             <a href={SUBSTACK_URL} target="_blank" rel="noopener noreferrer">
               View All Articles on Substack
