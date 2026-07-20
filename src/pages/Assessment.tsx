@@ -246,14 +246,14 @@ const Assessment = () => {
               </p>
             </div>
 
-            {/* Report preview + email gate */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8 items-start">
+            {/* Report preview + email gate (equal height) */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6 items-stretch">
               {/* LEFT: live preview of the full report */}
-              <div>
+              <div className="flex flex-col">
                 <p className="text-xs uppercase tracking-[2px] text-secondary font-semibold mb-3 text-center">
                   A peek at your full report
                 </p>
-                <div className="relative bg-white border border-border rounded-xl overflow-hidden shadow-xl" style={{ maxHeight: 640 }}>
+                <div className="relative bg-white border border-border rounded-xl overflow-hidden shadow-xl flex-1" style={{ maxHeight: 640 }}>
                   <div className="text-center py-5 px-4" style={{ backgroundColor: "#0e4f4f" }}>
                     <h3 className="font-bold text-lg" style={{ color: "#C8E842" }}>D.E.V.I.C.E.™ Readiness Report</h3>
                     <p className="text-xs mt-1" style={{ color: "#cfe0df" }}>The Karow Advisory Group</p>
@@ -304,17 +304,18 @@ const Assessment = () => {
                 </div>
               </div>
 
-              {/* RIGHT: email gate + discovery call */}
-              <div className="space-y-5">
-                <div className="rounded-xl p-7 text-white" style={{ backgroundColor: "#0e4f4f" }}>
+              {/* RIGHT: email gate (stretches to match preview height) */}
+              <div className="flex flex-col">
+                <p className="text-xs uppercase tracking-[2px] font-semibold mb-3 text-center" aria-hidden="true">&nbsp;</p>
+                <div className="rounded-xl p-7 text-white flex-1 flex flex-col justify-center" style={{ backgroundColor: "#0e4f4f" }}>
                   {!emailSent ? (
                     <>
-                      <Mail className="w-8 h-8 mb-3" style={{ color: "#C8E842" }} />
-                      <h3 className="text-xl font-bold mb-2">Get your complete report</h3>
-                      <p className="text-sm mb-4" style={{ color: "#d5e4e3" }}>
+                      <Mail className="w-9 h-9 mb-3" style={{ color: "#C8E842" }} />
+                      <h3 className="text-2xl font-bold mb-2">Get your complete report</h3>
+                      <p className="text-sm mb-5" style={{ color: "#d5e4e3" }}>
                         Enter your email and we will send the full D.E.V.I.C.E.™ breakdown you are previewing, yours to keep and share.
                       </p>
-                      <ul className="space-y-1.5 mb-5">
+                      <ul className="space-y-2 mb-6">
                         {[
                           "All 6 dimensions scored question by question",
                           "Tailored where-to-focus guidance for every gap",
@@ -354,31 +355,44 @@ const Assessment = () => {
                     </>
                   ) : (
                     <>
-                      <CheckCircle2 className="w-8 h-8 mb-3" style={{ color: "#C8E842" }} />
-                      <h3 className="text-xl font-bold mb-2">Report Sent!</h3>
+                      <CheckCircle2 className="w-10 h-10 mb-3" style={{ color: "#C8E842" }} />
+                      <h3 className="text-2xl font-bold mb-2">Report Sent!</h3>
                       <p className="text-sm" style={{ color: "#d5e4e3" }}>
                         Check your inbox at <strong>{email}</strong> for your full D.E.V.I.C.E.™ Readiness Report.
                       </p>
                     </>
                   )}
                 </div>
+              </div>
+            </div>
 
-                <div className="bg-cream rounded-xl p-6 text-center">
-                  <h4 className="text-lg font-bold text-foreground mb-1.5">Ready to close the gaps?</h4>
-                  <p className="text-sm text-muted-foreground mb-4">
+            {/* Discovery call callout (full width, elevated) */}
+            <div
+              className="rounded-xl p-6 md:p-7 mb-8 shadow-lg border-l-4 flex flex-col md:flex-row md:items-center md:justify-between gap-5"
+              style={{ backgroundColor: "#F5F1E8", borderLeftColor: "#BFB431" }}
+            >
+              <div className="flex items-start md:items-center gap-4">
+                <div className="shrink-0 inline-flex items-center justify-center w-12 h-12 rounded-full" style={{ backgroundColor: "#0e4f4f" }}>
+                  <Calendar className="w-6 h-6" style={{ color: "#C8E842" }} />
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold text-foreground mb-1">Ready to close the gaps?</h4>
+                  <p className="text-sm text-muted-foreground max-w-xl">
                     If this surfaced gaps you were not sure how to address, that is exactly where The Karow Advisory Group can help.
                   </p>
-                  <Button
-                    asChild
-                    className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all"
-                  >
-                    <a href="https://calendly.com/blythe-karow/new-client-introductory-meeting">
-                      <Calendar className="mr-2 h-5 w-5" />
-                      Schedule a Discovery Call
-                    </a>
-                  </Button>
                 </div>
               </div>
+              <Button
+                asChild
+                size="lg"
+                className="shrink-0 font-bold text-white hover:opacity-90 transition-all"
+                style={{ backgroundColor: "#0e4f4f" }}
+              >
+                <a href="https://calendly.com/blythe-karow/new-client-introductory-meeting">
+                  <Calendar className="mr-2 h-5 w-5" />
+                  Schedule a Discovery Call
+                </a>
+              </Button>
             </div>
 
             <div className="text-center">
