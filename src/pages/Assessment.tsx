@@ -415,11 +415,11 @@ const Assessment = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <section className="pt-32 pb-24 bg-background">
+      <section className="pt-24 pb-12 bg-background">
         <div className="container mx-auto px-4 md:px-6 max-w-3xl">
           {/* Header */}
-          <div className={`text-center ${currentDimension === 0 ? "mb-10" : "mb-6"}`}>
-            <p className="text-sm uppercase tracking-[2px] text-primary font-semibold mb-3">
+          <div className={`text-center ${currentDimension === 0 ? "mb-6" : "mb-4"}`}>
+            <p className="text-base md:text-lg uppercase tracking-[2px] text-secondary font-bold mb-2">
               D.E.V.I.C.E.™ Readiness Assessment
             </p>
             {currentDimension === 0 && (
@@ -435,7 +435,7 @@ const Assessment = () => {
           </div>
 
           {/* Progress */}
-          <div className="mb-8">
+          <div className="mb-4">
             <div className="flex justify-between text-sm text-muted-foreground mb-2">
               <span>Progress</span>
               <span>{answeredCount} of {totalQuestions} questions</span>
@@ -444,7 +444,7 @@ const Assessment = () => {
           </div>
 
           {/* Dimension tabs */}
-          <div className="flex gap-2 mb-8 overflow-x-auto pb-2">
+          <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
             {dimensions.map((d, i) => {
               const dimAnswered = answers[i].every((a) => a !== null);
               return (
@@ -470,7 +470,7 @@ const Assessment = () => {
           </div>
 
           {/* Current dimension */}
-          <div className="bg-cream rounded-xl p-6 md:p-8 mb-8">
+          <div className="bg-cream rounded-xl p-4 md:p-6 mb-6">
             <div className="flex items-center gap-3 mb-2">
               <span className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center text-accent-foreground font-bold text-lg">
                 {dim.letter}
@@ -481,10 +481,10 @@ const Assessment = () => {
               </div>
             </div>
 
-            <div className="space-y-6 mt-6">
+            <div className="space-y-3 mt-4">
               {dim.questions.map((q, qi) => (
-                <div key={qi} className="bg-background rounded-lg p-5">
-                  <p className="font-medium text-foreground mb-4">
+                <div key={qi} className="bg-background rounded-lg p-4">
+                  <p className="font-medium text-foreground mb-3">
                     {qi + 1}. {q}
                   </p>
                   <div className="flex gap-3">
@@ -492,7 +492,7 @@ const Assessment = () => {
                       <button
                         key={val}
                         onClick={() => setAnswer(qi, val)}
-                        className={`flex-1 py-3 px-4 rounded-lg text-sm font-semibold transition-all border-2 ${
+                        className={`flex-1 py-2.5 px-4 rounded-lg text-sm font-semibold transition-all border-2 ${
                           answers[currentDimension][qi] === val
                             ? val === "yes"
                               ? "bg-green-50 border-green-500 text-green-700"
