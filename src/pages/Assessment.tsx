@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { ArrowRight, ArrowLeft, CheckCircle2, BarChart3, Calendar, Mail, Loader2 } from "lucide-react";
+import { ArrowRight, ArrowLeft, CheckCircle2, BarChart3, Calendar, Mail, Loader2, Lock } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import { sendReportToZapier } from "@/lib/assessmentReport";
 import { toast } from "sonner";
@@ -213,6 +213,16 @@ const Assessment = () => {
   };
 
   if (showResults) {
+    const dimData = dimensions.map((dim, i) => {
+      const score = dimensionScores[i];
+      const pct = Math.round((score / 8) * 100);
+      return { letter: dim.letter, title: dim.title, subtitle: dim.subtitle, score, pct, level: getReadinessLevel(pct).level, questions: dim.questions, answers: answers[i] };
+    });
+    const gaps = [...dimData].sort((a, b) => a.pct - b.pct).slice(0, 2);
+    const previewDim = dimData[0];
+    const levelDot = (lvl: string) => lvl === "Strong" ? "🟢" : lvl === "On Track" ? "🔵" : lvl === "Developing" ? "🟡" : lvl === "Early Stage" ? "🟠" : "🔴";
+    const ansIcon = (a: Answer) => a === "yes" ? "✅" : a === "partially" ? "🟡" : "❌";
+    const ansLabel = (a: Answer) => a === "yes" ? "Yes" : a === "partially" ? "Partially" : "No";
     return (
       <div className="min-h-screen">
         <Navbar />
@@ -236,30 +246,98 @@ const Assessment = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              {/* Email capture for full report */}
-              <div className="bg-accent/10 rounded-xl p-8 text-center space-y-4 flex flex-col">
-                {!emailSent ? (
-                  <>
-                    <Mail className="w-10 h-10 text-primary mx-auto" />
-                    <h3 className="text-xl font-semibold text-foreground">
-                      Want to know where to focus first?
-                    </h3>
-                    <p className="text-muted-foreground">
-                      Enter your email and we'll send you a detailed breakdown of your scores by dimension — with guidance on what each gap means and where to start.
-                    </p>
-                    <div className="flex flex-col gap-3 max-w-md mx-auto mt-auto w-full">
+            {/* Report preview + email gate */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8 items-start">
+              {/* LEFT: live preview of the full report */}
+              <div>
+                <p className="text-xs uppercase tracking-[2px] text-secondary font-semibold mb-3 text-center">
+                  A peek at your full report
+                </p>
+                <div className="relative bg-white border border-border rounded-xl overflow-hidden shadow-xl" style={{ maxHeight: 640 }}>
+                  <div className="text-center py-5 px-4" style={{ backgroundColor: "#0e4f4f" }}>
+                    <h3 className="font-bold text-lg" style={{ color: "#C8E842" }}>D.E.V.I.C.E.™ Readiness Report</h3>
+                    <p className="text-xs mt-1" style={{ color: "#cfe0df" }}>The Karow Advisory Group</p>
+                  </div>
+                  <div className="p-5">
+                    <div className="text-center mb-4">
+                      <div className="text-4xl font-bold" style={{ color: "#0e4f4f" }}>{percentageScore}%</div>
+                      <div className={`font-bold text-sm ${getLevelColor(readiness.level)}`}>{levelDot(readiness.level)} {readiness.level}</div>
+                    </div>
+                    <div className="text-sm leading-relaxed mb-4 p-3 rounded-r-md" style={{ backgroundColor: "#eef3f2", borderLeft: "4px solid #0e4f4f", color: "#333" }}>
+                      <span style={{ color: "#0e4f4f", fontWeight: 700 }}>Your biggest gaps:</span> the areas with the most room to grow are <strong>{gaps[0].title}</strong> and <strong>{gaps[1].title}</strong>. You will find tailored guidance for these and every dimension inside.
+                    </div>
+                    <table className="w-full border-collapse" style={{ fontSize: "12.5px" }}>
+                      <thead>
+                        <tr style={{ backgroundColor: "#f3f4f6" }}>
+                          <th className="text-left p-2" style={{ color: "#374151" }}>Dimension</th>
+                          <th className="text-left p-2" style={{ color: "#374151" }}>Score</th>
+                          <th className="text-left p-2" style={{ color: "#374151" }}>Level</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {dimData.map((d, i) => (
+                          <tr key={i} className="border-t border-border">
+                            <td className="p-2" style={{ color: "#333" }}>{d.letter} &middot; {d.title}</td>
+                            <td className="p-2" style={{ color: "#333" }}>{d.score}/8</td>
+                            <td className="p-2" style={{ color: "#333" }}>{levelDot(d.level)} {d.level}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                    <div className="flex justify-between items-center mt-4 px-3 py-2 rounded-t-md text-white text-xs font-bold" style={{ backgroundColor: "#0e4f4f" }}>
+                      <span>{previewDim.letter} &mdash; {previewDim.title}</span>
+                      <span style={{ color: "#C8E842" }}>{previewDim.score}/8 &middot; {levelDot(previewDim.level)}</span>
+                    </div>
+                    {previewDim.questions.slice(0, 3).map((q, i) => (
+                      <div key={i} className="flex justify-between gap-2 px-3 py-2 border border-t-0 border-border" style={{ fontSize: "11px", color: "#444" }}>
+                        <span>{ansIcon(previewDim.answers[i])} {q}</span>
+                        <span className="font-semibold whitespace-nowrap">{ansLabel(previewDim.answers[i])}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="absolute inset-x-0 bottom-0 h-52 bg-gradient-to-b from-transparent to-white pointer-events-none" />
+                  <div className="absolute inset-x-0 bottom-5 text-center px-4">
+                    <Lock className="w-6 h-6 mx-auto mb-1" style={{ color: "#0e4f4f" }} />
+                    <p className="font-bold text-sm" style={{ color: "#0e4f4f" }}>Full breakdown across all 6 dimensions</p>
+                    <p className="text-xs text-muted-foreground">with tailored &ldquo;where to focus&rdquo; guidance for every gap</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* RIGHT: email gate + discovery call */}
+              <div className="space-y-5">
+                <div className="rounded-xl p-7 text-white" style={{ backgroundColor: "#0e4f4f" }}>
+                  {!emailSent ? (
+                    <>
+                      <Mail className="w-8 h-8 mb-3" style={{ color: "#C8E842" }} />
+                      <h3 className="text-xl font-bold mb-2">Get your complete report</h3>
+                      <p className="text-sm mb-4" style={{ color: "#d5e4e3" }}>
+                        Enter your email and we will send the full D.E.V.I.C.E.™ breakdown you are previewing, yours to keep and share.
+                      </p>
+                      <ul className="space-y-1.5 mb-5">
+                        {[
+                          "All 6 dimensions scored question by question",
+                          "Tailored where-to-focus guidance for every gap",
+                          "Your biggest priorities, called out first",
+                        ].map((t, i) => (
+                          <li key={i} className="text-sm pl-6 relative" style={{ color: "#eaf3f2" }}>
+                            <span className="absolute left-0 font-bold" style={{ color: "#C8E842" }}>{"✓"}</span>
+                            {t}
+                          </li>
+                        ))}
+                      </ul>
                       <Input
                         type="email"
                         placeholder="your@email.com"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="flex-1"
+                        className="bg-white text-foreground mb-3"
                       />
                       <Button
                         onClick={handleSendReport}
                         disabled={sendingEmail || !email}
-                        className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground"
+                        className="w-full font-bold"
+                        style={{ backgroundColor: "#BFB431", color: "#0E0E0E" }}
                       >
                         {sendingEmail ? (
                           <>
@@ -268,35 +346,30 @@ const Assessment = () => {
                           </>
                         ) : (
                           <>
-                            Send My Report
+                            Send My Full Report
                             <ArrowRight className="ml-2 h-4 w-4" />
                           </>
                         )}
                       </Button>
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <CheckCircle2 className="w-10 h-10 text-green-600 mx-auto" />
-                    <h3 className="text-xl font-semibold text-foreground">Report Sent!</h3>
-                    <p className="text-muted-foreground">
-                      Check your inbox at <strong>{email}</strong> for your detailed D.E.V.I.C.E.™ Readiness Report.
-                    </p>
-                  </>
-                )}
-              </div>
+                    </>
+                  ) : (
+                    <>
+                      <CheckCircle2 className="w-8 h-8 mb-3" style={{ color: "#C8E842" }} />
+                      <h3 className="text-xl font-bold mb-2">Report Sent!</h3>
+                      <p className="text-sm" style={{ color: "#d5e4e3" }}>
+                        Check your inbox at <strong>{email}</strong> for your full D.E.V.I.C.E.™ Readiness Report.
+                      </p>
+                    </>
+                  )}
+                </div>
 
-              {/* Discovery call CTA */}
-              <div className="bg-cream rounded-xl p-8 text-center space-y-4 flex flex-col">
-                <Calendar className="w-10 h-10 text-primary mx-auto" />
-                <h3 className="text-xl font-semibold text-foreground">Ready to close the gaps?</h3>
-                <p className="text-muted-foreground">
-                  If this assessment surfaced gaps you weren't sure how to address, that's exactly where The Karow Advisory Group can help.
-                </p>
-                <div className="mt-auto pt-4">
+                <div className="bg-cream rounded-xl p-6 text-center">
+                  <h4 className="text-lg font-bold text-foreground mb-1.5">Ready to close the gaps?</h4>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    If this surfaced gaps you were not sure how to address, that is exactly where The Karow Advisory Group can help.
+                  </p>
                   <Button
                     asChild
-                    size="lg"
                     className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all"
                   >
                     <a href="https://calendly.com/blythe-karow/new-client-introductory-meeting">
