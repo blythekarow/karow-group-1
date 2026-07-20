@@ -427,20 +427,11 @@ const Assessment = () => {
                 <p className="text-base md:text-lg font-semibold text-secondary mb-2">
                   How Ready Is Your Product for Commercialization?
                 </p>
-                <p className="text-muted-foreground max-w-xl mx-auto text-sm">
+                <p className="text-muted-foreground text-sm whitespace-nowrap overflow-x-auto">
                   Answer 4 questions across each of the 6 dimensions to identify gaps in your commercialization readiness.
                 </p>
               </>
             )}
-          </div>
-
-          {/* Progress */}
-          <div className="mb-4">
-            <div className="flex justify-between text-sm text-muted-foreground mb-2">
-              <span>Progress</span>
-              <span>{answeredCount} of {totalQuestions} questions</span>
-            </div>
-            <Progress value={progressPercent} className="h-2" />
           </div>
 
           {/* Dimension tabs */}
@@ -481,10 +472,10 @@ const Assessment = () => {
               </div>
             </div>
 
-            <div className="space-y-3 mt-4">
+            <div className="mt-4 divide-y divide-border">
               {dim.questions.map((q, qi) => (
-                <div key={qi} className="bg-background rounded-lg p-4">
-                  <p className="font-medium text-foreground mb-3">
+                <div key={qi} className="py-3 first:pt-0">
+                  <p className="font-medium text-foreground mb-2">
                     {qi + 1}. {q}
                   </p>
                   <div className="flex gap-3">
