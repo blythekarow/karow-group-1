@@ -415,7 +415,7 @@ const Assessment = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <section className="pt-24 pb-12 bg-background">
+      <section className="pt-28 pb-12 bg-background">
         <div className="container mx-auto px-4 md:px-6 max-w-3xl">
           {/* Header */}
           <div className={`text-center ${currentDimension === 0 ? "mb-6" : "mb-4"}`}>
