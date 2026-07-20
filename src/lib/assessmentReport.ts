@@ -37,14 +37,15 @@ function getAnswerIcon(answer: string): string {
 
 function getAnswerLabel(answer: string): string {
   if (answer === "yes") return "Yes (2/2)";
-  if (answer === "partially") return "Partially (0.5/2)";
+  if (answer === "partially") return "Partially (0.75/2)";
   return "No (0/2)";
 }
 
 function getLevelEmoji(level: string): string {
   switch (level) {
     case "Strong": return "🟢";
-    case "Developing": return "🔵";
+    case "On Track": return "🔵";
+    case "Developing": return "🟡";
     case "Early Stage": return "🟠";
     default: return "🔴";
   }
@@ -91,6 +92,7 @@ const TIER_GUIDANCE: Record<string, Record<string, string>> = {
 
 function tierKey(level: string): string {
   if (level === "Strong") return "strong";
+  if (level === "On Track") return "dev";
   if (level === "Developing") return "dev";
   if (level === "Early Stage") return "early";
   return "found";
@@ -181,7 +183,8 @@ export function buildReportHtml(data: ReportData, isAdmin = false): string {
               <div style="font-size:64px;font-weight:800;color:#004D51;">${data.percentageScore}%</div>
               <div style="font-size:20px;font-weight:700;color:${
                 data.readinessLevel === "Strong" ? "#16a34a" :
-                data.readinessLevel === "Developing" ? "#004D51" :
+                data.readinessLevel === "On Track" ? "#0284c7" :
+                data.readinessLevel === "Developing" ? "#ca8a04" :
                 data.readinessLevel === "Early Stage" ? "#f97316" : "#ef4444"
               };">${getLevelEmoji(data.readinessLevel)} ${data.readinessLevel}</div>
               <p style="color:#666;margin-top:8px;font-size:15px;">${data.readinessDescription}</p>

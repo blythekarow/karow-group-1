@@ -88,10 +88,11 @@ const dimensions: Dimension[] = [
 ];
 
 const scoringGuide = [
-  { range: "80–100%", level: "Strong", description: "Solid foundations across most dimensions. Focus on closing remaining gaps." },
-  { range: "60–79%", level: "Developing", description: "Meaningful progress but notable gaps that could create expensive problems at later stages." },
-  { range: "40–59%", level: "Early Stage", description: "Critical gaps exist across multiple dimensions that need structured attention before moving forward." },
-  { range: "0–39%", level: "Foundation Needed", description: "Significant foundational work is required. A strategic roadmap would help prioritize next steps." },
+  { range: "85–100%", level: "Strong", description: "Solid foundations across most dimensions. Focus on closing the last few gaps." },
+  { range: "70–84%", level: "On Track", description: "You're in good shape, with most of the pieces in place. A focused push on the remaining gaps gets you commercialization-ready." },
+  { range: "55–69%", level: "Developing", description: "Meaningful progress, but notable gaps that could create expensive problems at later stages." },
+  { range: "35–54%", level: "Early Stage", description: "Critical gaps exist across multiple dimensions that need structured attention before moving forward." },
+  { range: "0–34%", level: "Foundation Needed", description: "Significant foundational work is required. A strategic roadmap would help prioritize next steps." },
 ];
 
 const Assessment = () => {
@@ -134,7 +135,7 @@ const Assessment = () => {
 
   const getScore = (answer: Answer) => {
     if (answer === "yes") return 2;
-    if (answer === "partially") return 0.5;
+    if (answer === "partially") return 0.75;
     return 0;
   };
 
@@ -146,10 +147,11 @@ const Assessment = () => {
   const percentageScore = Math.round((totalScore / maxScore) * 100);
 
   const getReadinessLevel = (pct: number) => {
-    if (pct >= 80) return scoringGuide[0];
-    if (pct >= 60) return scoringGuide[1];
-    if (pct >= 40) return scoringGuide[2];
-    return scoringGuide[3];
+    if (pct >= 85) return scoringGuide[0];
+    if (pct >= 70) return scoringGuide[1];
+    if (pct >= 55) return scoringGuide[2];
+    if (pct >= 35) return scoringGuide[3];
+    return scoringGuide[4];
   };
 
   const readiness = getReadinessLevel(percentageScore);
@@ -160,7 +162,8 @@ const Assessment = () => {
   const getLevelColor = (level: string) => {
     switch (level) {
       case "Strong": return "text-green-600";
-      case "Developing": return "text-primary";
+      case "On Track": return "text-sky-600";
+      case "Developing": return "text-yellow-600";
       case "Early Stage": return "text-orange-500";
       default: return "text-red-500";
     }
