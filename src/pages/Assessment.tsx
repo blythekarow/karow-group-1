@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { ArrowRight, ArrowLeft, CheckCircle2, BarChart3, Calendar, Mail, Loader2, Lock } from "lucide-react";
+import { ArrowRight, ArrowLeft, CheckCircle2, Calendar, Mail, Loader2, Lock } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import { sendReportToZapier } from "@/lib/assessmentReport";
 import { toast } from "sonner";
@@ -228,21 +228,15 @@ const Assessment = () => {
         <Navbar />
         <section className="pt-32 pb-24 bg-background">
           <div className="container mx-auto px-4 md:px-6 max-w-5xl">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 mb-6">
-                <BarChart3 className="w-10 h-10 text-primary" />
-              </div>
-              <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <div className="text-center mb-6">
+              <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
                 Your D.E.V.I.C.E.™ Readiness Score
               </h1>
-              <div className="text-6xl md:text-7xl font-bold text-primary mb-2">
+              <div className="text-5xl md:text-6xl font-bold text-primary mb-1">
                 {percentageScore}%
               </div>
-              <p className={`text-2xl font-semibold ${getLevelColor(readiness.level)}`}>
+              <p className={`text-xl font-semibold ${getLevelColor(readiness.level)}`}>
                 {readiness.level}
-              </p>
-              <p className="text-muted-foreground mt-3 text-lg max-w-xl mx-auto">
-                {readiness.description}
               </p>
             </div>
 
@@ -253,7 +247,7 @@ const Assessment = () => {
                 <p className="text-xs uppercase tracking-[2px] text-secondary font-semibold mb-3 text-center">
                   A peek at your full report
                 </p>
-                <div className="relative bg-white border border-border rounded-xl overflow-hidden shadow-xl flex-1" style={{ maxHeight: 640 }}>
+                <div className="relative bg-white border border-border rounded-xl overflow-hidden shadow-xl flex-1" style={{ maxHeight: 430 }}>
                   <div className="text-center py-5 px-4" style={{ backgroundColor: "#0e4f4f" }}>
                     <h3 className="font-bold text-lg" style={{ color: "#C8E842" }}>D.E.V.I.C.E.™ Readiness Report</h3>
                     <p className="text-xs mt-1" style={{ color: "#cfe0df" }}>The Karow Advisory Group</p>
@@ -295,8 +289,8 @@ const Assessment = () => {
                       </div>
                     ))}
                   </div>
-                  <div className="absolute inset-x-0 bottom-0 h-52 bg-gradient-to-b from-transparent to-white pointer-events-none" />
-                  <div className="absolute inset-x-0 bottom-5 text-center px-4">
+                  <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-b from-transparent to-white pointer-events-none" />
+                  <div className="absolute inset-x-0 bottom-4 text-center px-4">
                     <Lock className="w-6 h-6 mx-auto mb-1" style={{ color: "#0e4f4f" }} />
                     <p className="font-bold text-sm" style={{ color: "#0e4f4f" }}>Full breakdown across all 6 dimensions</p>
                     <p className="text-xs text-muted-foreground">with tailored &ldquo;where to focus&rdquo; guidance for every gap</p>
@@ -310,12 +304,12 @@ const Assessment = () => {
                 <div className="rounded-xl p-7 text-white flex-1 flex flex-col justify-center" style={{ backgroundColor: "#0e4f4f" }}>
                   {!emailSent ? (
                     <>
-                      <Mail className="w-9 h-9 mb-3" style={{ color: "#C8E842" }} />
-                      <h3 className="text-2xl font-bold mb-2">Get your complete report</h3>
-                      <p className="text-sm mb-5" style={{ color: "#d5e4e3" }}>
+                      <Mail className="w-8 h-8 mb-2" style={{ color: "#C8E842" }} />
+                      <h3 className="text-xl font-bold mb-2">Get your complete report</h3>
+                      <p className="text-sm mb-4" style={{ color: "#d5e4e3" }}>
                         Enter your email and we will send the full D.E.V.I.C.E.™ breakdown you are previewing, yours to keep and share.
                       </p>
-                      <ul className="space-y-2 mb-6">
+                      <ul className="space-y-1.5 mb-4">
                         {[
                           "All 6 dimensions scored question by question",
                           "Tailored where-to-focus guidance for every gap",
@@ -355,8 +349,8 @@ const Assessment = () => {
                     </>
                   ) : (
                     <>
-                      <CheckCircle2 className="w-10 h-10 mb-3" style={{ color: "#C8E842" }} />
-                      <h3 className="text-2xl font-bold mb-2">Report Sent!</h3>
+                      <CheckCircle2 className="w-8 h-8 mb-2" style={{ color: "#C8E842" }} />
+                      <h3 className="text-xl font-bold mb-2">Report Sent!</h3>
                       <p className="text-sm" style={{ color: "#d5e4e3" }}>
                         Check your inbox at <strong>{email}</strong> for your full D.E.V.I.C.E.™ Readiness Report.
                       </p>
