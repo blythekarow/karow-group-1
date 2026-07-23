@@ -418,20 +418,16 @@ const Assessment = () => {
       <section className="pt-28 pb-12 bg-background">
         <div className="container mx-auto px-4 md:px-6 max-w-3xl">
           {/* Header */}
-          <div className={`text-center ${currentDimension === 0 ? "mb-6" : "mb-4"}`}>
+          <div className="text-center mb-6">
             <h1 className="text-2xl md:text-4xl font-bold text-foreground mb-2">
               D.E.V.I.C.E.™ Readiness Assessment
             </h1>
-            {currentDimension === 0 && (
-              <>
-                <p className="text-base md:text-lg font-semibold text-secondary mb-2">
-                  How Ready Is Your Product for Commercialization?
-                </p>
-                <p className="text-muted-foreground text-sm whitespace-nowrap overflow-x-auto">
-                  Answer 4 questions across each of the 6 dimensions to identify gaps in your commercialization readiness.
-                </p>
-              </>
-            )}
+            <p className="text-base md:text-lg font-semibold text-secondary mb-2">
+              How Ready Is Your Product for Commercialization?
+            </p>
+            <p className="text-muted-foreground text-sm whitespace-nowrap overflow-x-auto">
+              Answer 4 questions across each of the 6 dimensions to identify gaps in your commercialization readiness.
+            </p>
           </div>
 
           {/* Dimension tabs */}
