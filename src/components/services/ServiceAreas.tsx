@@ -197,10 +197,7 @@ const ServiceAreaSection = ({ service, imageLeft, bgClass, blockColor }: Service
                     <span className="text-5xl md:text-6xl font-serif font-light text-tan leading-none mb-4">{m.number}</span>
                     <h3 className="text-lg md:text-xl font-bold text-foreground mb-3">{m.title}</h3>
                     <p className="text-secondary font-semibold italic text-sm mb-3 leading-snug">{m.question}</p>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-6">{m.body}</p>
-                    <div className="mt-auto pt-4 border-t border-border">
-                      <span className="text-2xl font-bold text-foreground">{m.price}</span>
-                    </div>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{m.body}</p>
                   </div>
                   {i < service.modules!.length - 1 && (
                     <div className="flex items-center justify-center text-tan shrink-0">
