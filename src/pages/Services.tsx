@@ -6,7 +6,6 @@ import ServicesHero from "@/components/services/ServicesHero";
 import ServiceAreas from "@/components/services/ServiceAreas";
 import ServicesAssessmentSection from "@/components/services/ServicesAssessmentSection";
 import BenefitsSection from "@/components/BenefitsSection";
-import ServicesFAQ from "@/components/services/ServicesFAQ";
 import ServicesFinalCTA from "@/components/services/ServicesFinalCTA";
 import Footer from "@/components/Footer";
 
@@ -52,7 +51,6 @@ const Services = () => {
       <ServiceAreas />
       <BenefitsSection />
       <ServicesAssessmentSection />
-      <ServicesFAQ />
       <ServicesFinalCTA />
       <Footer />
     </div>
