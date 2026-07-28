@@ -17,7 +17,7 @@ const ServicesAssessmentSection = () => {
           className="w-full h-full object-cover"
         />
         {/* Green overlay matching the StrategyCTABanner style */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 via-55% to-background/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-accent via-accent/95 via-55% to-accent/40" />
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -27,21 +27,21 @@ const ServicesAssessmentSection = () => {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
               How Ready Is Your Product for Commercialization?
             </h2>
 
-            <p className="text-xl text-secondary font-semibold mb-6">
+            <p className="text-xl text-primary font-semibold mb-6">
               Take the D.E.V.I.C.E.™ Readiness Check
             </p>
 
-            <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed max-w-xl">
+            <p className="text-lg md:text-xl text-white/85 mb-10 leading-relaxed max-w-xl">
               Based on the D.E.V.I.C.E.™ Framework published in{" "}
               <a
                 href="https://blythekarow.substack.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-secondary font-semibold underline underline-offset-2 hover:text-primary transition-colors"
+                className="text-primary underline underline-offset-2 hover:text-white transition-colors"
               >
                 The Device Files
               </a>
@@ -51,7 +51,7 @@ const ServicesAssessmentSection = () => {
             <Button
               asChild
               size="lg"
-              className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-base font-semibold px-8 py-4 rounded-md"
+              className="bg-primary text-primary-foreground hover:bg-white hover:text-accent transition-all duration-200 text-base font-semibold px-8 py-4 rounded-md"
             >
               <Link to="/assessment">
                 Take the Free Assessment
