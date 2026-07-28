@@ -17,7 +17,7 @@ const ServicesFinalCTA = () => {
           alt=""
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-accent/90" />
+        <div className="absolute inset-0 bg-background/95" />
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -27,11 +27,11 @@ const ServicesFinalCTA = () => {
           }`}
         >
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Ready to Build Your Commercialization Strategy?
           </h2>
 
-          <p className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
             Let's assess where you are, identify what's at risk, and build an integrated plan that gets you from FDA clearance to market adoption without expensive rework or lost time.
           </p>
 
