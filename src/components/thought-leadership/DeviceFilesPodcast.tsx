@@ -86,7 +86,7 @@ const DeviceFilesPodcast = () => {
               size="sm"
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
             >
-              <a href="mailto:thedevicefiles@gmail.com?subject=Podcast Guest Interest">Get in Touch</a>
+              <a href="mailto:blythe.karow@thekarowgroup.com?subject=Podcast Guest Interest">Get in Touch</a>
             </Button>
           </CardContent>
         </Card>

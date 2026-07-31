@@ -55,7 +55,7 @@ const PrivacyPolicy = () => {
 
             <section>
               <h2 className="text-xl font-semibold text-foreground mb-3">6. Your Rights</h2>
-              <p>Depending on your location, you may have the right to access, correct, delete, or restrict the processing of your personal data. To exercise these rights, please contact us at <a href="mailto:info@thekarowgroup.com" className="text-primary hover:underline">info@thekarowgroup.com</a>.</p>
+              <p>Depending on your location, you may have the right to access, correct, delete, or restrict the processing of your personal data. To exercise these rights, please contact us at <a href="mailto:blythe.karow@thekarowgroup.com" className="text-primary hover:underline">blythe.karow@thekarowgroup.com</a>.</p>
             </section>
 
             <section>
@@ -73,7 +73,7 @@ const PrivacyPolicy = () => {
               <p>If you have questions about this Privacy Policy, please contact us at:</p>
               <p className="mt-2">
                 The Karow Advisory Group<br />
-                <a href="mailto:info@thekarowgroup.com" className="text-primary hover:underline">info@thekarowgroup.com</a>
+                <a href="mailto:blythe.karow@thekarowgroup.com" className="text-primary hover:underline">blythe.karow@thekarowgroup.com</a>
               </p>
             </section>
           </div>
