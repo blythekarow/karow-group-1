@@ -73,7 +73,7 @@ const TermsOfService = () => {
               <p>If you have questions about these Terms, please contact us at:</p>
               <p className="mt-2">
                 The Karow Advisory Group<br />
-                <a href="mailto:info@thekarowgroup.com" className="text-primary hover:underline">info@thekarowgroup.com</a>
+                <a href="mailto:blythe.karow@thekarowgroup.com" className="text-primary hover:underline">blythe.karow@thekarowgroup.com</a>
               </p>
             </section>
           </div>

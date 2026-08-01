@@ -6,7 +6,7 @@ import lsiPanel from "@/assets/blythe-lsi-panel.jpg";
 import medtechWorld from "@/assets/blythe-medtech-world.jpg";
 import medtechInnovator from "@/assets/blythe-medtech-innovator.jpg";
 
-const SPEAKING_INQUIRY = "mailto:blythe.karow@gmail.com?subject=Speaking%20Engagement%20Inquiry";
+const SPEAKING_INQUIRY = "mailto:blythe.karow@thekarowgroup.com?subject=Speaking%20Engagement%20Inquiry";
 
 const gallery = [
   { src: lsiPanel, alt: "Blythe Karow on a panel at LSI USA" },

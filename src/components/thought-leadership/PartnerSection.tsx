@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Calendar } from "lucide-react";
 
-const PARTNER_CALENDLY = "https://calendly.com/blythe-karow"; // placeholder base link; swap to dedicated 30-min partnership event
+const PARTNER_CALENDLY = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
 
 interface Tier {
   name: string;
