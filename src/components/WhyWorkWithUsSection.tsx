@@ -3,6 +3,8 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
+const CALENDLY_URL = "https://calendly.com/blythe-karow/new-client-introductory-meeting";
+
 const benefits = [
   {
     title: "Big Picture AND Critical Details",
@@ -85,10 +87,10 @@ const WhyWorkWithUsSection = () => {
               asChild
               className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-sm font-semibold px-6 py-3 rounded-md"
             >
-              <Link to="/services">
+              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
                 Explore a Strategic Engagement
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              </a>
             </Button>
           </div>
         </div>
