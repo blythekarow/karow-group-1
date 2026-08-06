@@ -8,7 +8,7 @@ import tivicLogo from "@/assets/logos/tivic.png";
 import surgivanceLogo from "@/assets/logos/surgivance.png";
 import evrenLogo from "@/assets/logos/evren.png";
 import corvivoLogo from "@/assets/logos/corvivo.png";
-import smithNephewLogo from "@/assets/logos/smith-nephew.webp";
+import smithNephewLogo from "@/assets/logos/smith-nephew.png";
 import pulsettoLogo from "@/assets/logos/pulsetto.png";
 import stethomeLogo from "@/assets/logos/stethome.png";
 import naviLogo from "@/assets/logos/navi.png";
