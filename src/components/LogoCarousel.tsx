@@ -10,6 +10,9 @@ import surgivanceLogo from "@/assets/logos/surgivance.png";
 import evrenLogo from "@/assets/logos/evren.png";
 import corvivoLogo from "@/assets/logos/corvivo.png";
 import smithNephewLogo from "@/assets/logos/smith-nephew.webp";
+import pulsettoLogo from "@/assets/logos/pulsetto.png";
+import stethomeLogo from "@/assets/logos/stethome.png";
+import naviLogo from "@/assets/logos/navi.png";
 
 const logos = [
   { name: "Johnson & Johnson", src: johnsonJohnsonLogo },
@@ -21,6 +24,9 @@ const logos = [
   { name: "Evren Technologies", src: evrenLogo },
   { name: "Corvivo", src: corvivoLogo },
   { name: "Smith & Nephew", src: smithNephewLogo },
+  { name: "Pulsetto", src: pulsettoLogo },
+  { name: "StethoMe", src: stethomeLogo },
+  { name: "Navi Medical Technologies", src: naviLogo },
 ];
 
 const LogoCarousel = () => {
