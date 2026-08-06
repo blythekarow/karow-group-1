@@ -3,7 +3,6 @@ import { useEffect, useRef } from "react";
 // Import logo images
 import johnsonJohnsonLogo from "@/assets/logos/johnson-johnson.webp";
 import neurogenecesLogo from "@/assets/logos/neurogeneces.png";
-import whinLogo from "@/assets/logos/whin.png";
 import hdoHealthLogo from "@/assets/logos/hdo-health.jpg";
 import tivicLogo from "@/assets/logos/tivic.png";
 import surgivanceLogo from "@/assets/logos/surgivance.png";
@@ -26,7 +25,6 @@ const logos = [
   { name: "Evren Technologies", src: evrenLogo },
   { name: "Corvivo", src: corvivoLogo },
   { name: "Smith & Nephew", src: smithNephewLogo },
-  { name: "WHIN", src: whinLogo },
 ];
 
 const LogoCarousel = () => {
