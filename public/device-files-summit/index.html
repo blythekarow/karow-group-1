@@ -607,7 +607,7 @@
         <div class="fact"><div class="f-fig">1,300 m</div><div class="f-lbl">Altitude, on a secluded alpine plateau</div></div>
         <div class="fact"><div class="f-fig">~30 min</div><div class="f-lbl">From Innsbruck &amp; its international airport</div></div>
         <div class="fact"><div class="f-fig">5,300 m²</div><div class="f-lbl">Spa &amp; sauna village with panoramic pools</div></div>
-        <div class="fact"><div class="f-fig">★ Michelin</div><div class="f-lbl">Recognised alpine gastronomy</div></div>
+        <div class="fact"><div class="f-fig">★ Michelin</div><div class="f-lbl">Recognized alpine gastronomy</div></div>
       </div>
     </div>
 
@@ -637,12 +637,12 @@
       <div class="topic">
         <div class="t-num">Topic 02</div>
         <h3>One roof: monitoring, interpretation, routing, billing</h3>
-        <p>A single company can now detect a signal, interpret it with AI, route you to a programme, and bill for it. Physicians are barred from self-referral; platforms are not. Is this the efficiency the system needs – or a patient-trust and antitrust question we haven't named?</p>
+        <p>A single company can now detect a signal, interpret it with AI, route you to a program, and bill for it. Physicians are barred from self-referral; platforms are not. Is this the efficiency the system needs – or a patient-trust and antitrust question we haven't named?</p>
       </div>
       <div class="topic">
         <div class="t-num">Topic 03</div>
         <h3>When attention logic meets clinical judgment</h3>
-        <p>Wearables were built to optimise engagement and monetise data. Now that same optimisation is steering clinical decisions – which specialist, which programme, which subscription. Who owns the most intimate record we've ever produced, and whose interest does the nudge serve?</p>
+        <p>Wearables were built to optimize engagement and monetise data. Now that same optimization is steering clinical decisions – which specialist, which program, which subscription. Who owns the most intimate record we've ever produced, and whose interest does the nudge serve?</p>
       </div>
       <div class="topic">
         <div class="t-num">Topic 04</div>
@@ -691,7 +691,7 @@
       <div class="eyebrow">Founding partners</div>
       <h2>Help shape the inaugural summit.</h2>
       <p>The first edition of anything is the one people remember. We're inviting a small circle of founding partners to help bring the inaugural Device Files Summit to life – and to be woven into its story from the very first day.</p>
-      <p>This is not a logo on a banner. Founding partners take a seat on the summit's executive committee – helping shape the questions, sitting at the table as full participants, and recognised as co-authors of a new kind of gathering at the frontier of health.</p>
+      <p>This is not a logo on a banner. Founding partners take a seat on the summit's executive committee – helping shape the questions, sitting at the table as full participants, and recognized as co-authors of a new kind of gathering at the frontier of health.</p>
       <a href="#apply" class="btn btn-ghost">Explore founding partnership</a>
     </div>
     <div class="partner-card reveal">
@@ -700,7 +700,7 @@
       <div class="pc-sub">A limited circle · inaugural 2027 summit</div>
       <ul>
         <li>A trusted adviser's hand in shaping the day's topics – helping steer the questions, not set them</li>
-        <li>A seat on the executive committee shaping the programme</li>
+        <li>A seat on the executive committee shaping the program</li>
         <li>Recognition as a founding partner of the summit</li>
         <li>Warm introductions across the participant group</li>
         <li>Presence woven through the summit experience</li>
@@ -726,7 +726,7 @@
           <li>Welcome reception &amp; dinner</li>
           <li>Full summit day in the Alm chalet</li>
           <li>All meals &amp; refreshments</li>
-          <li>A defined role in the programme</li>
+          <li>A defined role in the program</li>
         </ul>
         <a href="#apply" class="btn btn-ghost">Request an invitation</a>
       </div>
@@ -746,7 +746,7 @@
       <div class="ticket reveal">
         <div class="t-name">Founding Partner</div>
         <div class="t-price">Bespoke</div>
-        <div class="t-desc">For organisations helping to bring the inaugural summit to life.</div>
+        <div class="t-desc">For organizations helping to bring the inaugural summit to life.</div>
         <ul>
           <li>A trusted adviser's hand in shaping the day's topics</li>
           <li>A seat on the executive committee</li>
@@ -766,7 +766,7 @@
     <div class="reveal">
       <div class="eyebrow">Join the room</div>
       <h2>Request to participate</h2>
-      <p>The Device Files Summit is invitation-only. If you'd like to be considered, tell us a little about yourself. We'll be in touch as the inaugural group and programme take shape.</p>
+      <p>The Device Files Summit is invitation-only. If you'd like to be considered, tell us a little about yourself. We'll be in touch as the inaugural group and program take shape.</p>
     </div>
     <form id="applyForm" class="reveal" onsubmit="return handleApply(event)">
       <div class="frow">
@@ -774,7 +774,7 @@
         <div class="field"><label>Email</label><input type="email" name="email" required placeholder="you@company.com"></div>
       </div>
       <div class="frow">
-        <div class="field"><label>Organisation</label><input type="text" name="org" placeholder="Where you work"></div>
+        <div class="field"><label>Organization</label><input type="text" name="org" placeholder="Where you work"></div>
         <div class="field"><label>Role / title</label><input type="text" name="role" placeholder="What you do"></div>
       </div>
       <div class="field">
@@ -856,7 +856,7 @@
         data.append('email', fd.get('email') || '');
         data.append('organization', fd.get('org') || '');
         data.append('details', 'Role: ' + (fd.get('role') || '') + '\nInterest: ' + (fd.get('interest') || '') + '\n\n' + (fd.get('why') || ''));
-        await fetch(SUMMIT_WEBHOOK_URL, { method: 'POST', mode: 'no-cors', body: data });
+        await fetch(SUMMIT_WEBHOOK_URL + '?' + data.toString(), { method: 'GET', mode: 'no-cors' });
       } catch (err) {}
     }
     form.style.display = 'none';
