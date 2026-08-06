@@ -53,7 +53,7 @@ const InquiryDialog = ({
     setSending(true);
     try {
       const data = new URLSearchParams({ formType, name: form.name, email: form.email, organization: form.organization, details: form.message });
-      await fetch(WEBHOOK_URL, { method: "POST", mode: "no-cors", body: data });
+      await fetch(WEBHOOK_URL + "?" + data.toString(), { method: "GET", mode: "no-cors" });
       setSent(true);
     } catch {
       toast.error("Something went wrong. Please email blythe.karow@thekarowgroup.com directly.");
