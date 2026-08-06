@@ -850,14 +850,19 @@
   if (new URLSearchParams(location.search).get('hero') === 'peaks') setHero('peaks');
 
   // Apply form (in-memory mock)
-  const SUMMIT_WEBHOOK_URL = ""; // TODO: paste Zapier catch-hook URL here to capture invitation requests
+  const SUMMIT_WEBHOOK_URL = "https://hooks.zapier.com/hooks/catch/26739173/46f615q/";
   async function handleApply(e){
     e.preventDefault();
     const form = document.getElementById('applyForm');
     if (SUMMIT_WEBHOOK_URL) {
       try {
-        const data = new URLSearchParams(new FormData(form));
+        const fd = new FormData(form);
+        const data = new URLSearchParams();
         data.append('formType', 'Device Files Summit Invitation');
+        data.append('name', fd.get('name') || '');
+        data.append('email', fd.get('email') || '');
+        data.append('organization', fd.get('org') || '');
+        data.append('details', 'Role: ' + (fd.get('role') || '') + '\nInterest: ' + (fd.get('interest') || '') + '\n\n' + (fd.get('why') || ''));
         await fetch(SUMMIT_WEBHOOK_URL, { method: 'POST', mode: 'no-cors', body: data });
       } catch (err) {}
     }
