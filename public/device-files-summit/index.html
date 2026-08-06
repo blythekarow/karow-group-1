@@ -411,10 +411,6 @@
       </div>
     </div>
   </div>
-  <div class="hero-toggle" role="group" aria-label="Hero background">
-    <button type="button" data-hero="photo" class="active">Photo</button>
-    <button type="button" data-hero="peaks">Illustration</button>
-  </div>
   <div class="scroll-cue"><span>Scroll</span><span class="bar"></span></div>
 </header>
 
@@ -839,15 +835,7 @@
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  // Hero background toggle (photo <-> illustration)
-  function setHero(mode){
-    document.body.classList.toggle('peaks', mode === 'peaks');
-    document.querySelectorAll('.hero-toggle button').forEach(b =>
-      b.classList.toggle('active', b.dataset.hero === mode));
-  }
-  document.querySelectorAll('.hero-toggle button').forEach(b =>
-    b.addEventListener('click', () => setHero(b.dataset.hero)));
-  if (new URLSearchParams(location.search).get('hero') === 'peaks') setHero('peaks');
+  
 
   // Apply form (in-memory mock)
   const SUMMIT_WEBHOOK_URL = "https://hooks.zapier.com/hooks/catch/26739173/46f615q/";
