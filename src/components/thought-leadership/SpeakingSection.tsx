@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import InquiryDialog from "@/components/InquiryDialog";
 import { Card, CardContent } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Mic2, Users, BookOpen, Radio } from "lucide-react";
@@ -118,15 +119,21 @@ const SpeakingSection = () => {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <Button
-              asChild
-              size="lg"
-              className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-base font-semibold px-8 py-4 rounded-md"
-            >
-              <a href="mailto:blythe.karow@thekarowgroup.com?subject=Speaking Engagement Inquiry">
-                Inquire About Speaking
-              </a>
-            </Button>
+            <InquiryDialog
+              formType="Speaking Inquiry"
+              title="Inquire About Speaking"
+              description="Tell me about your event and I'll be in touch."
+              messageLabel="About your event"
+              messagePlaceholder="Event, date, audience, topic..."
+              trigger={
+                <Button
+                  size="lg"
+                  className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-base font-semibold px-8 py-4 rounded-md"
+                >
+                  Inquire About Speaking
+                </Button>
+              }
+            />
           </div>
         </div>
       </div>
