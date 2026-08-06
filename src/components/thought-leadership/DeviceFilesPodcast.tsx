@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import InquiryDialog from "@/components/InquiryDialog";
 import { Card, CardContent } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Headphones, ExternalLink, Mic } from "lucide-react";
@@ -80,14 +81,22 @@ const DeviceFilesPodcast = () => {
                 We're always looking for guests with a sharp perspective on bringing products to market. If that's you, or someone you know, we'd love to hear from you.
               </p>
             </div>
-            <Button
-              asChild
-              variant="outline"
-              size="sm"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-            >
-              <a href="mailto:thedevicefiles@gmail.com?subject=Podcast Guest Interest">Get in Touch</a>
-            </Button>
+            <InquiryDialog
+              formType="Podcast Guest Interest"
+              title="Interested in the Podcast?"
+              description="Suggest yourself or someone great as a guest."
+              messageLabel="Who and why"
+              messagePlaceholder="Guest name, topic, why they'd be great..."
+              trigger={
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                >
+                  Get in Touch
+                </Button>
+              }
+            />
           </CardContent>
         </Card>
       </div>

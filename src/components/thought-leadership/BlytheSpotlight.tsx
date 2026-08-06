@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Mic2 } from "lucide-react";
+import InquiryDialog from "@/components/InquiryDialog";
 import blytheMain from "@/assets/blythe-stage-main.jpg";
 import lsiPanel from "@/assets/blythe-lsi-panel.jpg";
 import medtechWorld from "@/assets/blythe-medtech-world.jpg";
@@ -55,16 +56,22 @@ const BlytheSpotlight = () => {
               Innovator, AdvaMed, Medica, and CES. Thousands follow her weekly, and companies and conferences
               bring her in to speak, moderate, and host.
             </p>
-            <Button
-              asChild
-              size="lg"
-              className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-base font-semibold px-8 py-4 rounded-md"
-            >
-              <a href={SPEAKING_INQUIRY}>
-                <Mic2 className="mr-2 h-5 w-5" />
-                Book Blythe to Speak
-              </a>
-            </Button>
+            <InquiryDialog
+              formType="Speaking Inquiry"
+              title="Book Blythe to Speak"
+              description="Tell me about your event and I'll be in touch."
+              messageLabel="About your event"
+              messagePlaceholder="Event, date, audience, topic..."
+              trigger={
+                <Button
+                  size="lg"
+                  className="bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-200 text-base font-semibold px-8 py-4 rounded-md"
+                >
+                  <Mic2 className="mr-2 h-5 w-5" />
+                  Book Blythe to Speak
+                </Button>
+              }
+            />
           </div>
         </div>
 

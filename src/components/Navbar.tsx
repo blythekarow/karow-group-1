@@ -94,7 +94,7 @@ const Navbar = () => {
                   : "text-background hover:text-primary"
               }`}
             >
-              Insights
+              Thought Leadership
             </Link>
             <Button
               asChild
@@ -155,7 +155,7 @@ const Navbar = () => {
                     : "text-background hover:text-primary"
                 }`}
               >
-                Insights
+                Thought Leadership
               </Link>
               <Button
                 asChild
