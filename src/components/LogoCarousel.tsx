@@ -16,17 +16,17 @@ import naviLogo from "@/assets/logos/navi.png";
 
 const logos = [
   { name: "Johnson & Johnson", src: johnsonJohnsonLogo },
-  { name: "NeuroGeneces", src: neurogenecesLogo },
-  { name: "WHIN", src: whinLogo },
   { name: "HDO Health", src: hdoHealthLogo },
   { name: "Tivic", src: tivicLogo },
   { name: "SurgiVance", src: surgivanceLogo },
-  { name: "Evren Technologies", src: evrenLogo },
-  { name: "Corvivo", src: corvivoLogo },
-  { name: "Smith & Nephew", src: smithNephewLogo },
   { name: "Pulsetto", src: pulsettoLogo },
   { name: "StethoMe", src: stethomeLogo },
   { name: "Navi Medical Technologies", src: naviLogo },
+  { name: "NeuroGeneces", src: neurogenecesLogo },
+  { name: "Evren Technologies", src: evrenLogo },
+  { name: "Corvivo", src: corvivoLogo },
+  { name: "Smith & Nephew", src: smithNephewLogo },
+  { name: "WHIN", src: whinLogo },
 ];
 
 const LogoCarousel = () => {
@@ -78,7 +78,7 @@ const LogoCarousel = () => {
     <section className="pt-16 pb-8 bg-background overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 mb-10">
         <h2 className="text-center text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-2">
-          Experience Trusted Across the MedTech Ecosystem
+          Experience Trusted Across the Ecosystem
         </h2>
       </div>
       
