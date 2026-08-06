@@ -50,10 +50,11 @@ const SummitSection = () => {
           </h2>
           <p className="text-lg md:text-xl text-white/85 mb-4 leading-relaxed">
             An intimate, invitation-only gathering on the convergence of consumer tech, AI and medical device
-            regulation, set in the Austrian Alps, days before the Health.tech conference in Basel.
+            regulation.
           </p>
           <p className="text-lg md:text-xl text-white/85 mb-8 leading-relaxed">
-            Executives, thought leaders, operators, and innovators joining together for this inaugural experience.
+            Set in the Austrian Alps, days before the Health.tech conference in Basel, this inaugural experience
+            will join together executives, thought leaders, operators, and innovators.
           </p>
           <Button
             asChild
