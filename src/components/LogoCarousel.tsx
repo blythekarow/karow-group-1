@@ -9,6 +9,7 @@ import surgivanceLogo from "@/assets/logos/surgivance.png";
 import evrenLogo from "@/assets/logos/evren.png";
 import corvivoLogo from "@/assets/logos/corvivo.png";
 import smithNephewLogo from "@/assets/logos/smith-nephew.png";
+import whinLogo from "@/assets/logos/whin.png";
 import pulsettoLogo from "@/assets/logos/pulsetto.png";
 import stethomeLogo from "@/assets/logos/stethome.png";
 import naviLogo from "@/assets/logos/navi.png";
@@ -25,6 +26,7 @@ const logos = [
   { name: "Evren Technologies", src: evrenLogo },
   { name: "Corvivo", src: corvivoLogo },
   { name: "Smith & Nephew", src: smithNephewLogo },
+  { name: "WHIN", src: whinLogo },
 ];
 
 const LogoCarousel = () => {
