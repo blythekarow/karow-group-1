@@ -3,13 +3,13 @@ import { useEffect, useRef } from "react";
 // Import logo images
 import johnsonJohnsonLogo from "@/assets/logos/johnson-johnson.webp";
 import neurogenecesLogo from "@/assets/logos/neurogeneces.png";
-import whinLogo from "@/assets/logos/whin.png";
 import hdoHealthLogo from "@/assets/logos/hdo-health.jpg";
 import tivicLogo from "@/assets/logos/tivic.png";
 import surgivanceLogo from "@/assets/logos/surgivance.png";
 import evrenLogo from "@/assets/logos/evren.png";
 import corvivoLogo from "@/assets/logos/corvivo.png";
-import smithNephewLogo from "@/assets/logos/smith-nephew.webp";
+import smithNephewLogo from "@/assets/logos/smith-nephew.png";
+import whinLogo from "@/assets/logos/whin.png";
 import pulsettoLogo from "@/assets/logos/pulsetto.png";
 import stethomeLogo from "@/assets/logos/stethome.png";
 import naviLogo from "@/assets/logos/navi.png";
