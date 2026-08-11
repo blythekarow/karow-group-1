@@ -43,7 +43,7 @@ const SummitSection = () => {
           }`}
         >
           <p className="text-sm uppercase tracking-[2px] text-primary font-semibold mb-3">
-            Inaugural &middot; By Invitation &middot; February 26, 2027
+            Inaugural &middot; By Invitation &middot; February 25–27, 2027
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
             The Device Files Summit
@@ -53,7 +53,7 @@ const SummitSection = () => {
             regulation.
           </p>
           <p className="text-lg md:text-xl text-white/85 mb-8 leading-relaxed">
-            Set in the Austrian Alps, days before the Health.tech conference in Basel, this inaugural experience
+            Set on the shores of Lake Geneva, days before the Health.tech conference in Basel, this inaugural experience
             will join together executives, thought leaders, operators, and innovators.
           </p>
           <Button
