@@ -43,7 +43,7 @@ const SummitSection = () => {
           }`}
         >
           <p className="text-sm uppercase tracking-[2px] text-primary font-semibold mb-3">
-            Inaugural &middot; By Invitation &middot; February 25–27, 2027
+            Inaugural &middot; By Invitation &middot; Winter / Spring 2028
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
             The Device Files Summit
