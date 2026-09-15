@@ -43,14 +43,14 @@ const SummitSection = () => {
           }`}
         >
           <p className="text-sm uppercase tracking-[2px] text-primary font-semibold mb-3">
-            Inaugural &middot; By Invitation &middot; Winter / Spring 2028
+            2026 to 2027 &middot; By Invitation
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
-            The Device Files Summit
+            The Device Files Thought Leadership Series
           </h2>
           <p className="text-lg md:text-xl text-white/85 mb-4 leading-relaxed">
-            An invitation-only European summit for leaders at the convergence of consumer tech, AI, and medical
-            devices.
+            Private tables for leaders at the convergence of consumer tech, AI, and medical devices, held during
+            MedTech World in Malta, CES in Las Vegas, and health.tech in Basel.
           </p>
           <p className="text-lg md:text-xl text-white/85 mb-8 leading-relaxed">
             Executives, thought leaders, operators, and innovators, coming together to connect and to discuss
@@ -61,8 +61,8 @@ const SummitSection = () => {
             size="lg"
             className="bg-primary text-primary-foreground hover:bg-white hover:text-accent transition-all duration-200 text-base font-semibold px-8 py-4 rounded-md"
           >
-            <a href="/device-files-summit">
-              Explore the Summit
+            <a href="/the-device-files">
+              Explore the Series
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
           </Button>
