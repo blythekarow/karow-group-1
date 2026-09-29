@@ -26,7 +26,7 @@ const services: ServiceCard[] = [
   {
     title: "Go-to-Market Strategy",
     description:
-      "Whether your product will actually be adopted and paid for, the question that decides your whole strategy, answered early, not after clearance.",
+      "Understand whether the market will actually adopt and pay for your product before you commit.",
     cta: "Explore Go-to-Market Strategy",
     image: commercializationPlanningImage,
     link: "/services#go-to-market",

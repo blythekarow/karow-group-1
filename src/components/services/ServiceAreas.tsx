@@ -63,7 +63,7 @@ const serviceAreas: ServiceArea[] = [
   {
     title: "Go-to-Market Strategy",
     description:
-      "Who adopts your product, who pays, and why: the market and payer path to pursue, the evidence behind it, and the commercialization pipeline that follows. It's the clarity investors look for, and it de-risks your commercial strategy before you spend years building on the wrong assumptions.",
+      "The work that decides whether your product will actually sell, and the part investors expect you to have figured out early, not after clearance. We define who buys it, whether it fits their clinical workflow, who pays and through what pathway, and the economic case you'll need to make. Getting this right early is what keeps you from spending years and millions proving the wrong thing.",
     image: commercializationPlanningImage,
     imageAlt: "Team mapping commercial viability and market access",
     id: "commercial-viability",

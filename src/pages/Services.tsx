@@ -49,8 +49,8 @@ const Services = () => {
     <div className="min-h-screen">
       <Navbar />
       <ServicesHero />
-      <ServiceAreas />
       <ServicesEngagement />
+      <ServiceAreas />
       <BenefitsSection />
       <ServicesAssessmentSection />
       <ServicesFinalCTA />

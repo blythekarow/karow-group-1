@@ -77,8 +77,8 @@ const BlytheSpotlight = () => {
                 As featured in
               </p>
               <div className="flex items-center gap-6 opacity-50">
-                <a href="#" className="font-serif text-lg text-foreground hover:opacity-70" aria-label="Barron's">Barron&rsquo;s</a>
-                <a href="#" className="font-semibold text-lg text-foreground hover:opacity-70" aria-label="JMIR">JMIR</a>
+                <a href="https://www.barrons.com/articles/oura-ipo-cancels-stock-ring-5cdadb9a" target="_blank" rel="noopener noreferrer" className="font-serif text-lg text-foreground hover:opacity-70" aria-label="Barron's">Barron&rsquo;s</a>
+                <a href="https://www.jmir.org/2026/1/e101881" target="_blank" rel="noopener noreferrer" className="font-semibold text-lg text-foreground hover:opacity-70" aria-label="JMIR">JMIR</a>
                 <a href="https://blythekarow.substack.com/" target="_blank" rel="noopener noreferrer" className="font-serif italic text-lg text-foreground hover:opacity-70" aria-label="The Device Files">The Device Files</a>
               </div>
             </div>
