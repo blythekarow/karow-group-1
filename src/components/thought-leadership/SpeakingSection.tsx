@@ -64,6 +64,23 @@ const SpeakingSection = () => {
             </h2>
           </div>
 
+          <div
+            className={`max-w-2xl mx-auto mb-12 bg-background/10 border border-primary/40 rounded-lg p-6 text-center transition-all duration-700 ${
+              isVisible ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <p className="text-xs uppercase tracking-[2px] text-primary font-semibold mb-2">
+              The Keynote
+            </p>
+            <h3 className="text-2xl font-bold text-background mb-2">
+              Regulation Is the De-Risking Strategy
+            </h3>
+            <p className="text-background/80">
+              Why the riskiest path is the one around the FDA, and how companies winning the convergence
+              of consumer tech, AI, and health treat the line as strategy.
+            </p>
+          </div>
+
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Topics */}
             <div

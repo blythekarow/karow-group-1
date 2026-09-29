@@ -13,6 +13,8 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import ServicesSection from "@/components/ServicesSection";
 import AssessmentSection from "@/components/AssessmentSection";
 import FounderSection from "@/components/FounderSection";
+import AudienceSection from "@/components/AudienceSection";
+import PressStrip from "@/components/PressStrip";
 
 import FinalCTASection from "@/components/FinalCTASection";
 import Footer from "@/components/Footer";
@@ -73,12 +75,14 @@ const Index = () => {
       <Hero />
       <LogoCarousel />
       <ProblemSection />
+      <AudienceSection />
       <BenefitsSection />
       <SolutionSection />
       <ProcessSection />
       <TestimonialsSection />
       <ServicesSection />
       <AssessmentSection />
+      <PressStrip />
       <FounderSection />
       <FinalCTASection />
       <Footer />

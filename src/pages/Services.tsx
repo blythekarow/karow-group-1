@@ -4,6 +4,7 @@ import usePageSEO from "@/hooks/use-page-seo";
 import Navbar from "@/components/Navbar";
 import ServicesHero from "@/components/services/ServicesHero";
 import ServiceAreas from "@/components/services/ServiceAreas";
+import ServicesEngagement from "@/components/services/ServicesEngagement";
 import ServicesAssessmentSection from "@/components/services/ServicesAssessmentSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import ServicesFinalCTA from "@/components/services/ServicesFinalCTA";
@@ -49,6 +50,7 @@ const Services = () => {
       <Navbar />
       <ServicesHero />
       <ServiceAreas />
+      <ServicesEngagement />
       <BenefitsSection />
       <ServicesAssessmentSection />
       <ServicesFinalCTA />

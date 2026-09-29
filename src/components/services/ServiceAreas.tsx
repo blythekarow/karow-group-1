@@ -64,31 +64,6 @@ const serviceAreas: ServiceArea[] = [
     title: "Commercial Viability",
     description:
       "Forget the overpriced, basic reimbursement landscapes. These three modules are laid out to give you a clear read on far more than coverage and coding: a real understanding of who actually adopts your product and the economic case behind it, the full picture of your commercial viability. It's the clarity investors look for, and it de-risks your commercial strategy before you spend years building on the wrong assumptions.",
-    moduleLabel: "The First Three Steps to Commercial Viability",
-    modules: [
-      {
-        number: "1",
-        title: "Clinical Workflow Analysis",
-        question:
-          "Who are you selling to, and does your product solve a real pain point that fits their workflow?",
-        body: "We pin down who actually buys your product, whether it solves a pain point they truly feel, and exactly where it fits in their clinical workflow.",
-        price: "$5,000",
-      },
-      {
-        number: "2",
-        title: "Reimbursement Overview",
-        question: "Who really pays for it, and is there an existing pathway to get paid?",
-        body: "We determine whether healthcare coverage exists for your offering, who actually pays, and whether there's an established reimbursement pathway.",
-        price: "$7,500",
-      },
-      {
-        number: "3",
-        title: "Health Economics Strategy",
-        question: "What will you have to prove to win the purchaser over?",
-        body: "We define the economic story you'll need to tell to gain traction with the people who hold the budget. It becomes the blueprint for the evidence and models you build later.",
-        price: "$7,500",
-      },
-    ],
     image: commercializationPlanningImage,
     imageAlt: "Team mapping commercial viability and market access",
     id: "commercial-viability",

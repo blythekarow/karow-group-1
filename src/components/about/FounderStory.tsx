@@ -62,6 +62,9 @@ const FounderStory = () => {
               <p>
                 Getting a medical device to market is not something that can be solved solo, and your reimbursement or regulatory advisor cannot figure out your entire Go-to-Market strategy. What you need is a leader and a team who can help you captain the ship and navigate the full journey.
               </p>
+              <p>
+                And one belief has hardened over those years: most companies treat the medical device pathway as extra risk and steer around it. I have watched avoiding the line cost far more than crossing it well. Following regulation de-risks your company.
+              </p>
               <p className="font-medium text-foreground">
                 The Karow Advisory Group provides that leadership & expertise.
               </p>
