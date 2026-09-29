@@ -61,9 +61,9 @@ const serviceAreas: ServiceArea[] = [
     id: "product-strategy",
   },
   {
-    title: "Commercial Viability",
+    title: "Go-to-Market Strategy",
     description:
-      "Forget the overpriced, basic reimbursement landscapes. These three modules are laid out to give you a clear read on far more than coverage and coding: a real understanding of who actually adopts your product and the economic case behind it, the full picture of your commercial viability. It's the clarity investors look for, and it de-risks your commercial strategy before you spend years building on the wrong assumptions.",
+      "Who adopts your product, who pays, and why: the market and payer path to pursue, the evidence behind it, and the commercialization pipeline that follows. It's the clarity investors look for, and it de-risks your commercial strategy before you spend years building on the wrong assumptions.",
     image: commercializationPlanningImage,
     imageAlt: "Team mapping commercial viability and market access",
     id: "commercial-viability",

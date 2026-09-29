@@ -35,8 +35,8 @@ const ThoughtLeadership = () => {
     <div className="min-h-screen">
       <Navbar />
       <ThoughtLeadershipHero />
-      <SummitSection />
       <BlytheSpotlight />
+      <SummitSection />
       <RecentArticles />
       <DeviceFilesPodcast />
       <SpeakingSection />

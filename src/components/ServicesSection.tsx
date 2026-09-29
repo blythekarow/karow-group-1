@@ -24,12 +24,12 @@ const services: ServiceCard[] = [
     link: "/services#product-strategy",
   },
   {
-    title: "Commercial Viability",
+    title: "Go-to-Market Strategy",
     description:
       "Whether your product will actually be adopted and paid for, the question that decides your whole strategy, answered early, not after clearance.",
-    cta: "Explore Commercial Viability",
+    cta: "Explore Go-to-Market Strategy",
     image: commercializationPlanningImage,
-    link: "/services#commercial-viability",
+    link: "/services#go-to-market",
   },
   {
     title: "Strategic Advisory & Leadership",
