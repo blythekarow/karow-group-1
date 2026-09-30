@@ -45,7 +45,7 @@ const AboutHero = () => {
 
               {/* Body Text */}
               <p className="text-base md:text-lg text-background/80 max-w-2xl leading-relaxed">
-                Medical device commercialization requires more than specialists working in silos. The Karow Advisory Group brings integrated product and commercialization strategy to MedTech and wearables companies navigating the path from concept to market — led by senior operators with real-world experience, with the boutique attention and strategic coordination that large firms can't offer.
+                The Karow Advisory Group works at the convergence of consumer tech, AI, and regulated medical products, helping companies find where the line into medical devices is, and when to cross it, before it gets expensive. Senior operators with real-world experience, and the boutique attention and strategic coordination that large firms can't offer.
               </p>
             </div>
           </div>

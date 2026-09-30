@@ -19,7 +19,7 @@ const ProblemSection = () => {
             }`}
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
-              Every Decision Matters in MedTech - Don't Let Uncertainty Burn Money and Slow You Down
+              Every Decision Matters – Don't Let Uncertainty Burn Money and Slow You Down
             </h2>
             
             <div className="space-y-4 text-muted-foreground leading-relaxed mb-8 text-lg">
@@ -27,7 +27,7 @@ const ProblemSection = () => {
                 Without a clear commercialization roadmap, you risk choosing the wrong regulatory pathway, running studies that don't support reimbursement, and missing critical investor or market access milestones.
               </p>
               <p>
-                In MedTech, moving fast without integrated strategy doesn't accelerate success. It leads to stalled clearances, wasted capital, and lost competitive opportunities.
+                In regulated health, moving fast without integrated strategy doesn't accelerate success. It leads to stalled clearances, wasted capital, and lost competitive opportunities.
               </p>
             </div>
             
