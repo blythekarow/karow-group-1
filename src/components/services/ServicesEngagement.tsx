@@ -6,10 +6,10 @@ const ServicesEngagement = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto">
           <p className="text-sm uppercase tracking-[2px] text-primary font-semibold mb-4">
-            How Engagements Begin
+            Strategic Assessment
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            It starts with a strategic assessment.
+            Most engagements start with a strategic assessment.
           </h2>
           <div className="space-y-5 text-muted-foreground text-lg leading-relaxed">
             <p>
