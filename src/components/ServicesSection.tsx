@@ -26,7 +26,7 @@ const services: ServiceCard[] = [
   {
     title: "Commercial Viability",
     description:
-      "Whether your product will actually be adopted and paid for, the question that decides your whole strategy, answered early, not after clearance.",
+      "Understand whether the market will actually adopt and pay for your product before you commit.",
     cta: "Explore Commercial Viability",
     image: commercializationPlanningImage,
     link: "/services#commercial-viability",

@@ -27,7 +27,7 @@ const SolutionSection = () => {
             
             <div className="space-y-4 text-muted-foreground leading-relaxed mb-8">
               <p>
-                We help medical device and wearables companies navigate commercialization with integrated strategy from day one - so regulatory, reimbursement, and commercial plans don't just coexist, they reinforce each other.
+                We help medical device, wearable, and consumer health companies navigate commercialization at the convergence of consumer tech, AI, and regulated health tech, with integrated strategy from day one - so regulatory, reimbursement, and commercial plans don't just coexist, they reinforce each other.
               </p>
               <p>
                 Led by Blythe Karow - startup CEO, Fortune 50 product leader, and management consultant - we guide companies from concept to market launch, helping you identify what needs attention now versus later, invest strategically at each milestone, and avoid the blind spots that create expensive problems down the road.

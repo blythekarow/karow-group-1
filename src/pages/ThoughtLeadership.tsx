@@ -4,12 +4,10 @@ import Navbar from "@/components/Navbar";
 import ThoughtLeadershipHero from "@/components/thought-leadership/ThoughtLeadershipHero";
 import SummitSection from "@/components/thought-leadership/SummitSection";
 import BlytheSpotlight from "@/components/thought-leadership/BlytheSpotlight";
-import RecentArticles from "@/components/thought-leadership/RecentArticles";
 import NewsletterSignup from "@/components/thought-leadership/NewsletterSignup";
 import DeviceFilesPodcast from "@/components/thought-leadership/DeviceFilesPodcast";
 import SpeakingSection from "@/components/thought-leadership/SpeakingSection";
 import PartnerSection from "@/components/thought-leadership/PartnerSection";
-import DualCTA from "@/components/thought-leadership/DualCTA";
 import Footer from "@/components/Footer";
 
 const ThoughtLeadership = () => {
@@ -35,14 +33,12 @@ const ThoughtLeadership = () => {
     <div className="min-h-screen">
       <Navbar />
       <ThoughtLeadershipHero />
-      <SummitSection />
       <BlytheSpotlight />
-      <RecentArticles />
-      <DeviceFilesPodcast />
       <SpeakingSection />
+      <DeviceFilesPodcast />
+      <SummitSection />
       <PartnerSection />
       <NewsletterSignup />
-      <DualCTA />
       <Footer />
     </div>
   );

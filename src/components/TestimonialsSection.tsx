@@ -32,6 +32,12 @@ const testimonials: Testimonial[] = [
     title: "CEO",
     company: "SurgiVance",
   },
+  {
+    quote:
+      "Blythe has a rare gift for cutting through the chaos of daily founder thoughts and putting reality into clear, structured words.",
+    name: "Pawe\u0142 Elbanowski",
+    title: "CEO, StethoMe",
+  },
 ];
 
 const TestimonialsSection = () => {
